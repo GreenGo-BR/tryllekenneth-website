@@ -1,0 +1,246 @@
+{
+  "navigation": {
+    "home": "Home",
+    "childrensMagic": "Children's Magic",
+    "standUpMagic": "Stand-up Magic",
+    "closeUpMagic": "Close-up Magic",
+    "santa": "Santa Claus",
+    "gallery": "Gallery",
+    "faq": "FAQ",
+    "contact": "Contact",
+    "language": "English"
+  },
+  "hero": {
+    "title": "Magical entertainment for children, adults and unforgettable events",
+    "subtitle": "TrylleKenneth brings fun, humor and magic to birthdays, family parties, company events and seasonal celebrations.",
+    "cta1": "Book a show",
+    "cta2": "Call Kenneth",
+    "cta3": "See shows"
+  },
+  "footer": {
+    "copyright": "Magician TrylleKenneth © 2026",
+    "madeBy": "Made by ESL Marketing — https://www.eslmarketing.com/",
+    "phone": "40 85 27 28",
+    "email": "kenneth@tryllekenneth.dk",
+    "services": "Services",
+    "information": "Information",
+    "contact": "Contact",
+    "rights": "© 2026 TrylleKenneth. All rights reserved."
+  },
+  "about": {
+    "title": "About Kenneth",
+    "subtitle": "An experienced magician with a passion for creating magical experiences",
+    "description": "With over 15 years of experience in magic and entertainment, Kenneth has made wonder his mission. Kenneth is known for his warm personality, creative show format, and dedication to creating unforgettable memories for all ages.",
+    "features": [
+      "Over 15 years of professional experience",
+      "Customized entertainment for any event",
+      "Family-friendly and engaging performance",
+      "Dedicated to customer satisfaction"
+    ],
+    "cta": "See Kenneth's Shows"
+  },
+  "about": {
+    "label": "About Kenneth",
+    "title": "Magician with Heart",
+    "description": "Kenneth is a professional magician dedicated to creating unforgettable magical moments for every occasion. With over 15 years of experience, he crafts genuine wonder and joy for children and adults alike."
+  },
+  "performances": {
+    "title": "International Performances",
+    "subtitle": "From intimate shows to grand theater performances – Kenneth performs worldwide",
+    "outdoor": "Outdoor Events & Festivals",
+    "outdoorDesc": "Magical entertainment for families",
+    "church": "Churches & Sacred Spaces",
+    "churchDesc": "Magical entertainment in special and ceremonial settings",
+    "theater": "Theater Performances",
+    "theaterDesc": "Professional shows for large audiences",
+    "closeup": "Close-up Magic",
+    "closeupDesc": "Intimate personal magic at every table"
+  },
+  "moments": {
+    "title": "More Live Moments",
+    "subtitle": "Explore additional performances and magical experiences"
+  },
+  "services": {
+    "title": "Our services",
+    "subtitle": "Magical entertainment for every occasion",
+    "childrensMagic": {
+      "title": "Children's Magic",
+      "description": "Colorful, fun and unforgettable magic for birthdays, family events, schools and kindergartens."
+    },
+    "standUpMagic": {
+      "title": "Stand-up Magic",
+      "description": "Professional magic for adults with humor, charm and respect for the audience. No one gets humiliated."
+    },
+    "closeUpMagic": {
+      "title": "Close-up Magic",
+      "description": "Close-up magic with cards, coins, banknotes and objects near the audience."
+    },
+    "santa": {
+      "title": "Santa Claus & Seasonal Shows",
+      "description": "Santa and magical entertainment for Christmas, Halloween, Fastelavn and special events."
+    },
+    "readMore": "Read more"
+  },
+  "cta": {
+    "title": "Ready to experience magic?",
+    "subtitle": "Contact Kenneth today and book a magical experience for your event.",
+    "bookShow": "Book now",
+    "callKenneth": "Call: 40 85 27 28"
+  },
+  "video": {
+    "title": "Watch the Magic Live",
+    "subtitle": "Real moments from children's shows, family parties and magical events",
+    "autoplay": "Autoplay • HD Quality"
+  },
+  "trust": {
+    "message": "✓ Trusted by families and companies across Denmark"
+  },
+  "childrensMagicPage": {
+    "title": "Children's Magic",
+    "subtitle": "Magical entertainment that makes children dream and adults smile",
+    "bookButton": "Book performance",
+    "about": "About Children's Magic",
+    "aboutText1": "TrylleKenneth specializes in colorful and fun magic for children's birthdays, family events, schools and kindergartens. With over 20 years of experience, Kenneth creates magical moments for children of all ages.",
+    "aboutText2": "Each performance is tailored to the age group and event, with interactive magic that makes children part of the magic.",
+    "interactiveTitle": "Interactive Magic",
+    "interactiveText": "The children are part of the magic and become part of the performance",
+    "laughsTitle": "Lots of laughs",
+    "laughsText": "Fun, humor and joy guaranteed for the whole audience",
+    "memoryTitle": "Unforgettable memories",
+    "memoryText": "Magic that children and adults will talk about for years",
+    "detailsTitle": "Perfect for all ages",
+    "detailsText": "From toddlers to teenagers - there is magic for everyone",
+    "focusTitle": "We maintain focus",
+    "focusText": "Kenneth knows how to keep children engaged and excited",
+    "backToHome": "Back to home"
+  },
+  "standUpMagicPage": {
+    "title": "Stand-up Magic",
+    "subtitle": "Professional magic with humor, charm and respect for the audience",
+    "bookButton": "Book performance",
+    "about": "About Stand-up Magic",
+    "aboutText1": "TrylleKenneth's stand-up magic is perfect for corporate events, parties, team building and entertainment evenings. With over 20 years of experience, Kenneth combines technical skill with natural charisma.",
+    "aboutText2": "The performances are engaging, funny and never humiliating. The audience is amazed by Kenneth's technical skills and wit.",
+    "professionalTitle": "Professional experience",
+    "professionalText": "Over 20 years of experience with corporate and private events",
+    "humorTitle": "Humor and charm",
+    "humorText": "Funny magic that entertains both individuals and large audiences",
+    "respectTitle": "Respectful entertainment",
+    "respectText": "No one gets humiliated - only amazed and entertained",
+    "adaptTitle": "Adaptable format",
+    "adaptText": "Perfect for restaurants, hotels, company events and private parties",
+    "cardsTitle": "Card magic",
+    "cardsText": "Amazing card tricks that create astonishment and wonder",
+    "coinsTitle": "Coin magic",
+    "coinsText": "Coins appear, disappear and transform right in your hand",
+    "objectsTitle": "Object manipulation",
+    "objectsText": "Magic with everyday objects that amazes the audience",
+    "backToHome": "Back to home"
+  },
+  "closeUpMagicPage": {
+    "title": "Close-up Magic",
+    "subtitle": "Magic with cards, coins and objects right in front of the audience",
+    "bookButton": "Book performance",
+    "about": "About Close-up Magic",
+    "aboutText1": "Close-up magic is perfect for creating intimate moments at larger events. Kenneth works with cards, coins, banknotes and everyday objects to create magical moments right in front of the audience.",
+    "aboutText2": "The close contact creates a special connection between Kenneth and the audience, making every magic moment unforgettable.",
+    "cardsTitle": "Card magic",
+    "cardsText": "Amazing card tricks that create astonishment and wonder",
+    "coinsTitle": "Coin magic",
+    "coinsText": "Coins appear, disappear and transform right in your hand",
+    "objectsTitle": "Object manipulation",
+    "objectsText": "Magic with everyday objects that amazes the audience",
+    "intimateTitle": "Intimate moments",
+    "intimateText": "Personal connection between magician and audience",
+    "backToHome": "Back to home"
+  },
+  "santaPage": {
+    "title": "Santa Claus & Seasonal Shows",
+    "subtitle": "Santa and magical entertainment for Christmas, Halloween, Fastelavn and special events",
+    "bookButton": "Book Santa",
+    "about": "About Santa & Seasonal Shows",
+    "aboutText1": "Make your seasonal event unforgettable with Kenneth as Santa Claus or with magical seasonal entertainment. Perfect for Christmas parties, Halloween events, Fastelavn celebrations and other special occasions.",
+    "aboutText2": "Kenneth brings joy, magic and unforgettable memories to every seasonal celebration. Each performance is tailored to the occasion and audience.",
+    "christmasTitle": "Christmas Magic",
+    "christmasText": "Santa Claus and Christmas magic for the whole family",
+    "halloweenTitle": "Halloween Magic",
+    "halloweenText": "Spooky and fun magic for Halloween celebrations",
+    "fastelavnTitle": "Fastelavn Entertainment",
+    "fastelavnText": "Fun magic and entertainment for Fastelavn festivities",
+    "customTitle": "Custom events",
+    "customText": "Seasonal magic tailored to your specific occasion",
+    "backToHome": "Back to home"
+  },
+  "galleryPage": {
+    "title": "Gallery",
+    "subtitle": "Photos and testimonials from happy customers",
+    "galleryTitle": "Gallery",
+    "reviewsTitle": "Customer Reviews",
+    "reviewsSubtitle": "What people say about TrylleKenneth's performances",
+    "filterAll": "All",
+    "filterChildrensMagic": "Children's Magic",
+    "filterCloseUpMagic": "Close-up Magic",
+    "filterStandUpMagic": "Stand-up Comedy",
+    "filterSantaChristmas": "Santa & Christmas",
+    "filterEvents": "Events",
+    "backToHome": "Back to home"
+  },
+  "faqPage": {
+    "title": "Frequently Asked Questions",
+    "subtitle": "Common questions about TrylleKenneth's services",
+    "bookingTitle": "Booking & availability",
+    "pricingTitle": "Pricing",
+    "performanceTitle": "About performances",
+    "bookingQ1": "How do I book Kenneth?",
+    "bookingA1": "You can contact Kenneth through the contact form on this website, call at 40 85 27 28, or email kenneth@tryllekenneth.dk.",
+    "bookingQ2": "How much notice do you need?",
+    "bookingA2": "Ideally 2-3 weeks notice, but we try to accommodate last-minute bookings when possible.",
+    "pricingQ1": "What are your prices?",
+    "pricingA1": "Pricing depends on the type of performance, duration and location. Contact Kenneth for a custom quote.",
+    "performanceQ1": "How long are the performances?",
+    "performanceA1": "Performances typically last 30-60 minutes, but can be tailored to your needs.",
+    "performanceQ2": "Do you travel outside the area?",
+    "performanceA2": "Yes, Kenneth performs throughout Denmark and is happy to discuss travel arrangements.",
+    "backToHome": "Back to home"
+  },
+  "contactPage": {
+    "title": "Contact TrylleKenneth",
+    "subtitle": "Get in touch to book your magical experience",
+    "formTitle": "Send a message",
+    "infoTitle": "Contact information",
+    "nameLabel": "Name",
+    "emailLabel": "Email",
+    "phoneLabel": "Phone",
+    "eventDateLabel": "Event date",
+    "eventTypeLabel": "Event type",
+    "guestsLabel": "Number of guests",
+    "messageLabel": "Message",
+    "sendButton": "Send message",
+    "callButton": "Call Kenneth",
+    "phoneNumber": "40 85 27 28",
+    "emailAddress": "kenneth@tryllekenneth.dk",
+    "responseMessage": "Thank you for your message! I will contact you soon.",
+    "backToHome": "Back to home",
+    "childrenBirthday": "Children's birthday",
+    "familyEvent": "Family event",
+    "corporateEvent": "Corporate event",
+    "weddingEvent": "Wedding",
+    "otherEvent": "Other",
+    "closeUpOption": "Close-up Magic",
+    "phoneCardLabel": "Phone",
+    "emailCardLabel": "Email",
+    "availabilityLabel": "Availability",
+    "availabilityTime": "Mon-Sun\n09:00 - 21:00",
+    "importantInfoTitle": "Important Information",
+    "locationTitle": "Location",
+    "locationText": "I can meet you throughout Denmark. My home base is Copenhagen, but I offer travel throughout the country.",
+    "bookingTimeTitle": "Booking Time",
+    "bookingTimeText": "I recommend booking at least 2-4 weeks before your event. For large events, longer lead times may be necessary.",
+    "whatsIncludedTitle": "What's Included?",
+    "whatIncludedItems": ["✓ Professional magic show", "✓ Customized to your theme/wishes", "✓ Audience interaction", "✓ Reliable and professional", "✓ Fully insured"],
+    "needQuickResponseTitle": "Need a Quick Response?",
+    "needQuickResponseText": "Contact me directly by phone for the quickest response.",
+    "ctaTitle": "See You Soon!",
+    "ctaText": "I look forward to creating magical memories for your next event"
+  }
+}
