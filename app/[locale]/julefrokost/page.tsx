@@ -8,9 +8,8 @@ import { Card } from '@/components/ui/card';
 import { VideoSchema } from '@/components/video-schema';
 import { StructuredData } from '@/components/structured-data';
 import { ServiceSchema } from '@/lib/structured-data';
-import { Sparkles, Users, Gift, Music, Star, Wand2, Heart } from 'lucide-react';
+import { Gift, Sparkles, Users, Music, Star, CheckCircle, Play } from 'lucide-react';
 import Link from 'next/link';
-import Image from 'next/image';
 
 export default function ChristmasParty() {
   const locale = useLocale();
@@ -18,95 +17,6 @@ export default function ChristmasParty() {
   
   const videoUrl = 'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/videoplayback%20%281%29-Q1D2bD05QCGGjQE987CDIoehLKbY9v.mp4';
   const videoThumbnail = 'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/ChatGPT%20Image%20May%2019%2C%202026%2C%2011_23_07%20AM-gWtRtuxpmElUZTtT93c23mlTcM76sD.png';
-
-  const christmasPhotos = [
-    {
-      src: '/christmas-celebration.jpg',
-      alt: 'Juleunderholdning ved firmajulefrokost',
-      title: 'Festlig Stemning',
-      desc: 'Medarbejdere i julemagi og latter',
-    },
-    {
-      src: '/christmas-magic.jpg',
-      alt: 'Magisk opvisning til julefesten',
-      title: 'Julemagi Live',
-      desc: 'Trylleri der skaber undren og glæde',
-    },
-    {
-      src: '/christmas-gathering.jpg',
-      alt: 'Gæster samlet til julemagi',
-      title: 'Samlet i Glæde',
-      desc: 'Magik der forbinder hele holdet',
-    },
-  ];
-
-  const performanceOptions = [
-    {
-      icon: <Heart className="w-6 h-6" />,
-      title: t('performance1'),
-      desc: t('performance1Desc'),
-    },
-    {
-      icon: <Music className="w-6 h-6" />,
-      title: t('performance2'),
-      desc: t('performance2Desc'),
-    },
-    {
-      icon: <Gift className="w-6 h-6" />,
-      title: t('performance3'),
-      desc: t('performance3Desc'),
-    },
-    {
-      icon: <Sparkles className="w-6 h-6" />,
-      title: t('performance4'),
-      desc: t('performance4Desc'),
-    },
-  ];
-
-  const timingOptions = [
-    {
-      title: t('timing1'),
-      desc: t('timing1Desc'),
-    },
-    {
-      title: t('timing2'),
-      desc: t('timing2Desc'),
-    },
-    {
-      title: t('timing3'),
-      desc: t('timing3Desc'),
-    },
-    {
-      title: t('timing4'),
-      desc: t('timing4Desc'),
-    },
-  ];
-
-  const testimonials = [
-    {
-      name: t('testimonial1Name'),
-      role: t('testimonial1Role'),
-      text: t('testimonial1Text'),
-    },
-    {
-      name: t('testimonial2Name'),
-      role: t('testimonial2Role'),
-      text: t('testimonial2Text'),
-    },
-    {
-      name: t('testimonial3Name'),
-      role: t('testimonial3Role'),
-      text: t('testimonial3Text'),
-    },
-  ];
-
-  const faqs = [
-    { q: t('faqQ1'), a: t('faqA1') },
-    { q: t('faqQ2'), a: t('faqA2') },
-    { q: t('faqQ3'), a: t('faqA3') },
-    { q: t('faqQ4'), a: t('faqA4') },
-    { q: t('faqQ5'), a: t('faqA5') },
-  ];
 
   return (
     <>
@@ -122,83 +32,78 @@ export default function ChristmasParty() {
       />
       
       <main className="min-h-screen">
-        {/* Premium Festive Hero Section */}
-        <section className="relative min-h-screen flex items-center justify-center overflow-hidden py-20 px-4 sm:px-6 lg:px-8">
-          <div className="absolute inset-0 bg-gradient-to-br from-red-950/8 via-amber-900/8 to-green-950/8 z-0"></div>
-          
-          {/* Festive floating elements */}
-          <div className="absolute inset-0 overflow-hidden z-0 pointer-events-none">
-            <div className="absolute -top-1/2 -right-1/4 w-96 h-96 bg-red-200/6 rounded-full blur-3xl animate-float-slow"></div>
-            <div className="absolute -bottom-1/3 -left-1/4 w-80 h-80 bg-green-200/5 rounded-full blur-3xl animate-float-slow" style={{ animationDelay: '2s' }}></div>
-            <div className="absolute top-1/3 right-1/3 w-72 h-72 bg-amber-200/5 rounded-full blur-3xl animate-drift-right" style={{ animationDelay: '1s' }}></div>
-          </div>
-
-          <div className="max-w-5xl mx-auto relative z-10 w-full text-center space-y-8">
-            <div className="inline-flex items-center justify-center space-x-2 bg-background/50 backdrop-blur-md px-4 py-2 rounded-full border border-border/20">
-              <Gift className="w-4 h-4 text-accent" />
-              <span className="text-sm font-medium">{t('heroTitle')}</span>
-            </div>
-
-            <div>
-              <h1 className="text-5xl sm:text-6xl lg:text-7xl font-light text-foreground mb-6 leading-tight">
-                {t('heroTitle')}
-              </h1>
-              <p className="text-lg sm:text-xl text-foreground/70 max-w-3xl mx-auto font-light leading-relaxed">
-                {t('heroSubtitle')}
-              </p>
-            </div>
-
-            <div className="flex flex-col sm:flex-row gap-4 justify-center pt-8">
-              <Button size="lg" className="text-base h-12 px-8 rounded-lg">
-                {t('bookButton')}
-              </Button>
-              <Button variant="outline" size="lg" className="text-base h-12 px-8 rounded-lg">
-                {t('callButton')}
-              </Button>
+        {/* Hero Section */}
+        <section className="relative py-24 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-accent/10 via-primary/10 to-secondary/10">
+          <div className="max-w-4xl mx-auto text-center">
+            <h1 className="text-5xl sm:text-6xl font-bold mb-6 bg-gradient-to-r from-accent via-primary to-secondary bg-clip-text text-transparent">
+              {t('heroTitle')}
+            </h1>
+            <p className="text-xl text-muted-foreground mb-8 max-w-2xl mx-auto leading-relaxed">
+              {t('heroSubtitle')}
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Link href={`/${locale}/contact`}>
+                <Button size="lg" className="bg-gradient-to-r from-accent to-primary hover:opacity-90 text-white text-base font-semibold h-14 px-8">
+                  {t('bookButton')}
+                </Button>
+              </Link>
+              <a href="tel:+4540852728">
+                <Button size="lg" variant="outline" className="text-base font-semibold h-14 px-8">
+                  {t('callButton')}
+                </Button>
+              </a>
             </div>
           </div>
         </section>
 
         {/* Intro Section */}
-        <section className="py-24 px-4 sm:px-6 lg:px-8 max-w-6xl mx-auto">
-          <div className="space-y-8">
-            <div className="text-center space-y-4">
-              <h2 className="text-4xl sm:text-5xl font-light text-foreground">{t('introTitle')}</h2>
-              <p className="text-lg text-foreground/70 font-light leading-relaxed max-w-3xl mx-auto">
-                {t('introText')}
-              </p>
-            </div>
+        <section className="py-20 px-4 sm:px-6 lg:px-8 max-w-4xl mx-auto">
+          <h2 className="text-4xl font-bold mb-8">{t('introTitle')}</h2>
+          <p className="text-lg text-muted-foreground mb-12 leading-relaxed">
+            {t('introText')}
+          </p>
+          <div className="grid md:grid-cols-3 gap-8">
+            {[t('introFeature1'), t('introFeature2'), t('introFeature3')].map((feature, i) => (
+              <div key={i} className="flex gap-4">
+                <CheckCircle className="w-6 h-6 text-accent flex-shrink-0 mt-1" />
+                <p className="text-foreground leading-relaxed">{feature}</p>
+              </div>
+            ))}
+          </div>
+        </section>
 
-            <div className="grid md:grid-cols-3 gap-6 mt-12">
-              {[t('introFeature1'), t('introFeature2'), t('introFeature3')].map((feature, idx) => (
-                <div key={idx} className="flex items-start space-x-3">
-                  <div className="text-accent mt-1">•</div>
-                  <p className="text-foreground/80 font-light">{feature}</p>
+        {/* Performance Video Section */}
+        <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-accent/10 via-primary/10 to-secondary/10">
+          <div className="max-w-5xl mx-auto">
+            <h2 className="text-4xl font-bold mb-12 text-center">Se Julemagi i Aktion</h2>
+            <div className="relative aspect-video rounded-2xl overflow-hidden shadow-2xl group cursor-pointer">
+              <img
+                src={videoThumbnail}
+                alt="Juleunderholdning"
+                className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+              />
+              <div className="absolute inset-0 bg-black/40 group-hover:bg-black/50 transition-colors" />
+              <div className="absolute inset-0 flex items-center justify-center">
+                <div className="w-16 h-16 bg-accent rounded-full flex items-center justify-center group-hover:scale-110 transition-transform">
+                  <Play className="w-8 h-8 text-white ml-1 fill-white" />
                 </div>
-              ))}
+              </div>
             </div>
           </div>
         </section>
 
         {/* Benefits Section */}
-        <section className="py-24 px-4 sm:px-6 lg:px-8 max-w-6xl mx-auto">
-          <div className="space-y-12">
-            <div className="text-center space-y-4">
-              <h2 className="text-4xl sm:text-5xl font-light text-foreground">{t('benefitsTitle')}</h2>
-              <p className="text-lg text-foreground/70 font-light">{t('benefitsIntro')}</p>
-            </div>
-
-            <div className="grid md:grid-cols-2 lg:grid-cols-5 gap-4">
-              {[
-                { title: t('benefit1Title'), desc: t('benefit1Desc') },
-                { title: t('benefit2Title'), desc: t('benefit2Desc') },
-                { title: t('benefit3Title'), desc: t('benefit3Desc') },
-                { title: t('benefit4Title'), desc: t('benefit4Desc') },
-                { title: t('benefit5Title'), desc: t('benefit5Desc') },
-              ].map((benefit, idx) => (
-                <Card key={idx} className="p-6 border-border/40 bg-white/50 backdrop-blur hover:border-accent/50 transition-all duration-300">
-                  <h3 className="font-light text-lg text-foreground mb-3">{benefit.title}</h3>
-                  <p className="text-sm text-foreground/70 font-light leading-relaxed">{benefit.desc}</p>
+        <section className="py-20 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-6xl mx-auto">
+            <h2 className="text-4xl font-bold mb-4 text-center">{t('benefitsTitle')}</h2>
+            <p className="text-lg text-muted-foreground mb-16 text-center max-w-2xl mx-auto">
+              {t('benefitsIntro')}
+            </p>
+            <div className="grid md:grid-cols-2 lg:grid-cols-5 gap-6">
+              {Array.from({ length: 5 }, (_, i) => (
+                <Card key={i} className="p-8 border-2 border-accent/20 hover:border-accent/50 transition-all magic-card-hover bg-white">
+                  <h3 className="text-lg font-bold mb-3 text-accent">{t(`benefit${i + 1}Title`)}</h3>
+                  <p className="text-muted-foreground text-sm">{t(`benefit${i + 1}Desc`)}</p>
                 </Card>
               ))}
             </div>
@@ -206,74 +111,34 @@ export default function ChristmasParty() {
         </section>
 
         {/* Performance Options */}
-        <section className="py-24 px-4 sm:px-6 lg:px-8 max-w-6xl mx-auto">
-          <div className="space-y-12">
-            <div className="text-center space-y-4">
-              <h2 className="text-4xl sm:text-5xl font-light text-foreground">{t('performanceTitle')}</h2>
-              <p className="text-lg text-foreground/70 font-light">{t('performanceIntro')}</p>
-            </div>
-
-            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-              {performanceOptions.map((option, idx) => (
-                <Card key={idx} className="p-6 border-border/40 bg-gradient-to-br from-red-50/50 to-amber-50/50 backdrop-blur hover:from-red-50 hover:to-amber-50 transition-all duration-300">
-                  <div className="text-accent mb-4">{option.icon}</div>
-                  <h3 className="font-light text-lg text-foreground mb-2">{option.title}</h3>
-                  <p className="text-sm text-foreground/70 font-light">{option.desc}</p>
+        <section className="py-20 px-4 sm:px-6 lg:px-8 bg-card">
+          <div className="max-w-6xl mx-auto">
+            <h2 className="text-4xl font-bold mb-16 text-center">{t('performanceTitle')}</h2>
+            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+              {Array.from({ length: 4 }, (_, i) => (
+                <Card key={i} className="p-8 border-2 border-accent/20 hover:border-accent/50 transition-all magic-card-hover bg-white">
+                  <h3 className="text-xl font-bold mb-3 text-accent">{t(`performance${i + 1}`)}</h3>
+                  <p className="text-muted-foreground leading-relaxed">{t(`performance${i + 1}Desc`)}</p>
                 </Card>
               ))}
             </div>
           </div>
         </section>
 
-        {/* Photo Gallery */}
-        <section className="py-24 px-4 sm:px-6 lg:px-8 max-w-6xl mx-auto">
-          <div className="space-y-12">
-            <div className="text-center space-y-4">
-              <h2 className="text-4xl sm:text-5xl font-light text-foreground">{t('galleryTitle')}</h2>
-              <p className="text-lg text-foreground/70 font-light">{t('gallerySubtitle')}</p>
-            </div>
-
-            <div className="grid md:grid-cols-3 gap-6">
-              {christmasPhotos.map((photo, idx) => (
-                <div
-                  key={idx}
-                  className="relative h-64 rounded-lg overflow-hidden group cursor-pointer"
-                >
-                  <Image
-                    src={photo.src}
-                    alt={photo.alt}
-                    fill
-                    className="object-cover group-hover:scale-105 transition-transform duration-500"
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col items-center justify-center">
-                    <div className="text-white text-center space-y-2">
-                      <p className="text-lg font-light">{photo.title}</p>
-                      <p className="text-sm text-white/80">{photo.desc}</p>
-                    </div>
-                  </div>
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
-
         {/* Timing Section */}
-        <section className="py-24 px-4 sm:px-6 lg:px-8 max-w-6xl mx-auto">
-          <div className="space-y-12">
-            <div className="text-center space-y-4">
-              <h2 className="text-4xl sm:text-5xl font-light text-foreground">{t('timingTitle')}</h2>
-            </div>
-
+        <section className="py-20 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-6xl mx-auto">
+            <h2 className="text-4xl font-bold mb-16 text-center">{t('timingTitle')}</h2>
             <div className="space-y-4">
-              {timingOptions.map((timing, idx) => (
+              {Array.from({ length: 4 }, (_, i) => (
                 <div
-                  key={idx}
-                  className="flex items-start space-x-6 p-6 border-l-4 border-accent/30 hover:border-accent/60 transition-colors duration-300 bg-gradient-to-r from-accent/5 to-transparent"
+                  key={i}
+                  className="flex items-start gap-6 p-6 border-l-4 border-accent/30 hover:border-accent/60 transition-colors duration-300 bg-gradient-to-r from-accent/5 to-transparent rounded-r-lg"
                 >
-                  <div className="text-2xl font-light text-accent min-w-fit">{idx + 1}.</div>
+                  <div className="text-2xl font-bold text-accent min-w-fit">{i + 1}.</div>
                   <div className="space-y-2">
-                    <h3 className="text-lg font-light text-foreground">{timing.title}</h3>
-                    <p className="text-foreground/70 font-light">{timing.desc}</p>
+                    <h3 className="text-lg font-bold text-foreground">{t(`timing${i + 1}`)}</h3>
+                    <p className="text-muted-foreground leading-relaxed">{t(`timing${i + 1}Desc`)}</p>
                   </div>
                 </div>
               ))}
@@ -281,25 +146,56 @@ export default function ChristmasParty() {
           </div>
         </section>
 
-        {/* Testimonials */}
-        <section className="py-24 px-4 sm:px-6 lg:px-8 max-w-6xl mx-auto">
-          <div className="space-y-12">
-            <div className="text-center space-y-4">
-              <h2 className="text-4xl sm:text-5xl font-light text-foreground">{t('testimonialTitle')}</h2>
-            </div>
-
+        {/* Gallery Section */}
+        <section className="py-20 px-4 sm:px-6 lg:px-8 bg-card">
+          <div className="max-w-6xl mx-auto">
+            <h2 className="text-4xl font-bold mb-4 text-center">{t('galleryTitle')}</h2>
+            <p className="text-lg text-muted-foreground mb-16 text-center">{t('gallerySubtitle')}</p>
             <div className="grid md:grid-cols-3 gap-6">
-              {testimonials.map((testimonial, idx) => (
-                <Card key={idx} className="p-8 border-border/40 bg-white/50 backdrop-blur">
-                  <div className="flex items-center gap-1 mb-4">
-                    {[...Array(5)].map((_, i) => (
-                      <Star key={i} className="w-4 h-4 fill-amber-400 text-amber-400" />
+              <div className="relative h-80 rounded-lg overflow-hidden shadow-lg group cursor-pointer">
+                <img
+                  src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/ChatGPT%20Image%20May%2019%2C%202026%2C%2011_23_07%20AM-gWtRtuxpmElUZTtT93c23mlTcM76sD.png"
+                  alt="Juleunderholdning fest"
+                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                />
+                <div className="absolute inset-0 bg-black/40 group-hover:bg-black/50 transition-colors" />
+              </div>
+              <div className="relative h-80 rounded-lg overflow-hidden shadow-lg group cursor-pointer">
+                <img
+                  src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/WhatsApp%20Image%202026-05-19%20at%2010.48.13%20%281%29-A5bNILaPPqzkKWoS1Is5CAZBKHfmRZ.jpeg"
+                  alt="Julemagi opvisning"
+                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                />
+                <div className="absolute inset-0 bg-black/40 group-hover:bg-black/50 transition-colors" />
+              </div>
+              <div className="relative h-80 rounded-lg overflow-hidden shadow-lg group cursor-pointer">
+                <img
+                  src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/WhatsApp%20Image%202026-05-19%20at%2010.48.13-270qN2OP2gez2uC7jEvcEzAJNz5r0O.jpeg"
+                  alt="Gæster i julefest"
+                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                />
+                <div className="absolute inset-0 bg-black/40 group-hover:bg-black/50 transition-colors" />
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Testimonials Section */}
+        <section className="py-20 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-6xl mx-auto">
+            <h2 className="text-4xl font-bold mb-16 text-center">{t('testimonialTitle')}</h2>
+            <div className="grid md:grid-cols-3 gap-8">
+              {Array.from({ length: 3 }, (_, i) => (
+                <Card key={i} className="p-8 border-0 bg-white hover:shadow-lg transition-shadow">
+                  <div className="flex gap-1 mb-6">
+                    {Array.from({ length: 5 }, (_, j) => (
+                      <span key={j} className="text-accent">★</span>
                     ))}
                   </div>
-                  <p className="text-foreground/80 font-light leading-relaxed mb-6">{testimonial.text}</p>
-                  <div className="pt-4 border-t border-border/20">
-                    <p className="font-light text-foreground">{testimonial.name}</p>
-                    <p className="text-sm text-foreground/60 font-light">{testimonial.role}</p>
+                  <p className="text-foreground mb-6 italic leading-relaxed">&quot;{t(`testimonial${i + 1}Text`)}&quot;</p>
+                  <div>
+                    <p className="font-bold text-foreground">{t(`testimonial${i + 1}Name`)}</p>
+                    <p className="text-sm text-muted-foreground">{t(`testimonial${i + 1}Role`)}</p>
                   </div>
                 </Card>
               ))}
@@ -308,50 +204,44 @@ export default function ChristmasParty() {
         </section>
 
         {/* FAQ Section */}
-        <section className="py-24 px-4 sm:px-6 lg:px-8 max-w-4xl mx-auto">
-          <div className="space-y-12">
-            <div className="text-center space-y-4">
-              <h2 className="text-4xl sm:text-5xl font-light text-foreground">{t('faqTitle')}</h2>
-            </div>
-
-            <div className="space-y-4">
-              {faqs.map((faq, idx) => (
-                <details key={idx} className="group border-b border-border/40 pb-4">
-                  <summary className="flex items-center justify-between cursor-pointer py-2">
-                    <h3 className="font-light text-lg text-foreground group-open:text-accent transition-colors">
-                      {faq.q}
-                    </h3>
-                    <Wand2 className="w-5 h-5 text-foreground/40 group-open:text-accent group-open:rotate-12 transition-all" />
-                  </summary>
-                  <p className="text-foreground/70 font-light leading-relaxed pt-4">{faq.a}</p>
-                </details>
+        <section className="py-20 px-4 sm:px-6 lg:px-8 bg-card">
+          <div className="max-w-3xl mx-auto">
+            <h2 className="text-4xl font-bold mb-16 text-center">{t('faqTitle')}</h2>
+            <div className="space-y-6">
+              {Array.from({ length: 5 }, (_, i) => (
+                <Card key={i} className="p-8 border-0 bg-white hover:shadow-lg transition-shadow">
+                  <h3 className="font-bold text-lg mb-4 text-accent">{t(`faqQ${i + 1}`)}</h3>
+                  <p className="text-muted-foreground leading-relaxed">{t(`faqA${i + 1}`)}</p>
+                </Card>
               ))}
             </div>
           </div>
         </section>
 
-        {/* Final CTA */}
-        <section className="py-24 px-4 sm:px-6 lg:px-8">
-          <div className="max-w-4xl mx-auto text-center space-y-8 bg-gradient-to-br from-red-950/5 via-amber-900/5 to-green-950/5 rounded-2xl p-12">
-            <Gift className="w-12 h-12 text-accent mx-auto" />
-            <div className="space-y-4">
-              <h2 className="text-4xl sm:text-5xl font-light text-foreground">{t('ctaTitle')}</h2>
-              <p className="text-lg text-foreground/70 font-light">{t('ctaSubtitle')}</p>
+        {/* Final CTA Section */}
+        <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-accent/10 via-primary/10 to-secondary/10">
+          <div className="max-w-4xl mx-auto text-center">
+            <h2 className="text-4xl font-bold mb-6">{t('ctaTitle')}</h2>
+            <p className="text-xl text-muted-foreground mb-10 leading-relaxed">
+              {t('ctaSubtitle')}
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+              <Link href={`/${locale}/contact`}>
+                <Button size="lg" className="bg-gradient-to-r from-accent to-primary hover:opacity-90 text-white text-base font-semibold h-14 px-8">
+                  {t('ctaButton')}
+                </Button>
+              </Link>
+              <a href="tel:+4540852728">
+                <Button size="lg" variant="outline" className="text-base font-semibold h-14 px-8">
+                  {t('ctaPhone')}
+                </Button>
+              </a>
+              <a href="mailto:kenneth@tryllekenneth.dk">
+                <Button size="lg" variant="outline" className="text-base font-semibold h-14 px-8">
+                  {t('ctaEmail')}
+                </Button>
+              </a>
             </div>
-
-            <div className="flex flex-col sm:flex-row gap-4 justify-center pt-8">
-              <Button size="lg" className="text-base h-12 px-8 rounded-lg">
-                {t('ctaButton')}
-              </Button>
-              <Button variant="outline" size="lg" className="text-base h-12 px-8 rounded-lg">
-                {t('ctaPhone')}
-              </Button>
-              <Button variant="outline" size="lg" className="text-base h-12 px-8 rounded-lg">
-                {t('ctaEmail')}
-              </Button>
-            </div>
-
-            <p className="text-foreground/60 font-light pt-6">{t('ctaFinal')}</p>
           </div>
         </section>
       </main>

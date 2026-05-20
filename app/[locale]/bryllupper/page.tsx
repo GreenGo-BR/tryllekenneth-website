@@ -8,78 +8,15 @@ import { Card } from '@/components/ui/card';
 import { VideoSchema } from '@/components/video-schema';
 import { StructuredData } from '@/components/structured-data';
 import { ServiceSchema } from '@/lib/structured-data';
-import { Heart, Sparkles, Users, Star, Phone, Mail } from 'lucide-react';
+import { Heart, Sparkles, Users, Star, CheckCircle, Play } from 'lucide-react';
 import Link from 'next/link';
-import Image from 'next/image';
 
 export default function WeddingPage() {
   const locale = useLocale();
-  const t = useTranslations();
+  const t = useTranslations('weddingPage');
+  
   const videoUrl = 'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/videoplayback%20%281%29-Q1D2bD05QCGGjQE987CDIoehLKbY9v.mp4';
   const videoThumbnail = 'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/WhatsApp%20Image%202026-05-19%20at%2010.48.13-270qN2OP2gez2uC7jEvcEzAJNz5r0O.jpeg';
-
-  const weddingPhotos = [
-    {
-      src: '/wedding-intimate-magic.jpg',
-      alt: 'Nærmagi ved bryllup - intime magiske møder',
-      title: 'Intime Magiske Møder',
-      desc: 'Hver guest får en personlig magisk oplevelse helt tæt på',
-    },
-    {
-      src: '/wedding-connection.jpg',
-      alt: 'Gæster forbundet gennem magik ved bryllup',
-      title: 'Forbundethed',
-      desc: 'Magik der naturligt samler mennesker i fælles undren',
-    },
-    {
-      src: '/wedding-refinement.jpg',
-      alt: 'Elegance ved bryllupsbord - raffineret nærmagi',
-      title: 'Raffinement',
-      desc: 'Elegant underholdning der passer til ethvert bryllup',
-    },
-  ];
-
-  const moments = [
-    {
-      icon: Heart,
-      title: t('weddingPage.moment1'),
-      desc: t('weddingPage.moment1Desc'),
-    },
-    {
-      icon: Sparkles,
-      title: t('weddingPage.moment2'),
-      desc: t('weddingPage.moment2Desc'),
-    },
-    {
-      icon: Users,
-      title: t('weddingPage.moment3'),
-      desc: t('weddingPage.moment3Desc'),
-    },
-    {
-      icon: Star,
-      title: t('weddingPage.moment4'),
-      desc: t('weddingPage.moment4Desc'),
-    },
-  ];
-
-  const placements = [
-    {
-      title: t('weddingPage.placement1'),
-      desc: t('weddingPage.placement1Desc'),
-    },
-    {
-      title: t('weddingPage.placement2'),
-      desc: t('weddingPage.placement2Desc'),
-    },
-    {
-      title: t('weddingPage.placement3'),
-      desc: t('weddingPage.placement3Desc'),
-    },
-    {
-      title: t('weddingPage.placement4'),
-      desc: t('weddingPage.placement4Desc'),
-    },
-  ];
 
   return (
     <>
@@ -87,201 +24,162 @@ export default function WeddingPage() {
       <VideoSchema videoUrl={videoUrl} thumbnailUrl={videoThumbnail} videoId="wedding-video-schema" />
       <StructuredData 
         schema={ServiceSchema(locale, {
-          name: 'Nærmagi til Bryllup',
-          description: 'Elegant nærmagi underholdning til brylluppet - intime magiske øjeblikke der forbinder gæster',
+          name: 'Magisk Nærmagi til Bryllup',
+          description: 'Elegant nærmagi til brylluppet - magisk underholdning der skaber intime øjeblikke og forbinder gæster',
           url: `https://tryllekenneth.dk/${locale}/bryllupper`,
           image: videoThumbnail,
         })}
       />
       <main className="min-h-screen">
-        {/* Hero Section - Luxury Scandinavian */}
-        <section className="relative py-32 px-4 sm:px-6 lg:px-8 bg-white overflow-hidden">
-          {/* Subtle background element */}
-          <div className="absolute inset-0 opacity-5">
-            <div className="absolute top-20 right-0 w-96 h-96 bg-gradient-to-br from-primary via-accent to-secondary rounded-full blur-3xl"></div>
-          </div>
-          
-          <div className="max-w-5xl mx-auto relative z-10">
-            <div className="text-center space-y-6">
-              <Heart className="w-12 h-12 mx-auto text-accent opacity-60" />
-              <h1 className="text-5xl sm:text-6xl lg:text-7xl font-light tracking-tight text-foreground leading-tight">
-                {t('weddingPage.heroTitle')}
-              </h1>
-              <p className="text-xl text-muted-foreground font-light max-w-2xl mx-auto leading-relaxed">
-                {t('weddingPage.heroSubtitle')}
-              </p>
-              
-              <div className="flex flex-col sm:flex-row gap-4 justify-center pt-8">
-                <Link href={`/${locale}/contact`}>
-                  <Button size="lg" className="rounded-full px-8 font-light">
-                    {t('weddingPage.bookButton')}
-                  </Button>
-                </Link>
-                <Button size="lg" variant="outline" className="rounded-full px-8 font-light" asChild>
-                  <a href="tel:+4540852728">{t('weddingPage.callButton')}</a>
+        {/* Hero Section */}
+        <section className="relative py-24 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-accent/10 via-primary/10 to-secondary/10">
+          <div className="max-w-4xl mx-auto text-center">
+            <h1 className="text-5xl sm:text-6xl font-bold mb-6 bg-gradient-to-r from-accent via-primary to-secondary bg-clip-text text-transparent">
+              {t('heroTitle')}
+            </h1>
+            <p className="text-xl text-muted-foreground mb-8 max-w-2xl mx-auto leading-relaxed">
+              {t('heroSubtitle')}
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Link href={`/${locale}/contact`}>
+                <Button size="lg" className="bg-gradient-to-r from-accent to-primary hover:opacity-90 text-white text-base font-semibold h-14 px-8">
+                  {t('bookButton')}
                 </Button>
-              </div>
+              </Link>
+              <a href="tel:+4540852728">
+                <Button size="lg" variant="outline" className="text-base font-semibold h-14 px-8">
+                  {t('callButton')}
+                </Button>
+              </a>
             </div>
           </div>
         </section>
 
         {/* Intro Section */}
-        <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-white via-white to-muted/30">
-          <div className="max-w-4xl mx-auto">
-            <h2 className="text-4xl font-light text-center mb-4 text-foreground">
-              {t('weddingPage.introTitle')}
-            </h2>
-            <p className="text-lg text-muted-foreground text-center font-light leading-relaxed mb-12">
-              {t('weddingPage.introText')}
-            </p>
-            
-            <div className="grid md:grid-cols-3 gap-6">
-              {[
-                t('weddingPage.introFeature1'),
-                t('weddingPage.introFeature2'),
-                t('weddingPage.introFeature3'),
-              ].map((feature, idx) => (
-                <div key={idx} className="flex items-start gap-3">
-                  <div className="w-6 h-6 rounded-full bg-accent/20 flex items-center justify-center flex-shrink-0 mt-1">
-                    <div className="w-2 h-2 rounded-full bg-accent"></div>
-                  </div>
-                  <p className="text-foreground font-light">{feature}</p>
+        <section className="py-20 px-4 sm:px-6 lg:px-8 max-w-4xl mx-auto">
+          <h2 className="text-4xl font-bold mb-8">{t('introTitle')}</h2>
+          <p className="text-lg text-muted-foreground mb-12 leading-relaxed">
+            {t('introText')}
+          </p>
+          <div className="grid md:grid-cols-3 gap-8">
+            {[t('introFeature1'), t('introFeature2'), t('introFeature3')].map((feature, i) => (
+              <div key={i} className="flex gap-4">
+                <CheckCircle className="w-6 h-6 text-accent flex-shrink-0 mt-1" />
+                <p className="text-foreground leading-relaxed">{feature}</p>
+              </div>
+            ))}
+          </div>
+        </section>
+
+        {/* Performance Video Section */}
+        <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-accent/10 via-primary/10 to-secondary/10">
+          <div className="max-w-5xl mx-auto">
+            <h2 className="text-4xl font-bold mb-12 text-center">Se Nærmagi i Aktion</h2>
+            <div className="relative aspect-video rounded-2xl overflow-hidden shadow-2xl group cursor-pointer">
+              <img
+                src={videoThumbnail}
+                alt="Nærmagi til bryllup"
+                className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+              />
+              <div className="absolute inset-0 bg-black/40 group-hover:bg-black/50 transition-colors" />
+              <div className="absolute inset-0 flex items-center justify-center">
+                <div className="w-16 h-16 bg-accent rounded-full flex items-center justify-center group-hover:scale-110 transition-transform">
+                  <Play className="w-8 h-8 text-white ml-1 fill-white" />
                 </div>
-              ))}
+              </div>
             </div>
           </div>
         </section>
 
-        {/* Benefits Section - Elegant Cards */}
-        <section className="py-24 px-4 sm:px-6 lg:px-8 bg-white">
+        {/* Benefits Section */}
+        <section className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-6xl mx-auto">
-            <h2 className="text-4xl font-light text-center mb-16 text-foreground">
-              {t('weddingPage.benefitsTitle')}
-            </h2>
-            
+            <h2 className="text-4xl font-bold mb-4 text-center">{t('benefitsTitle')}</h2>
+            <p className="text-lg text-muted-foreground mb-16 text-center max-w-2xl mx-auto">
+              Nærmagi skabes helt tæt på gæsterne og skaber naturlige forbindelser
+            </p>
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {[
-                { title: t('weddingPage.benefit1Title'), desc: t('weddingPage.benefit1Desc') },
-                { title: t('weddingPage.benefit2Title'), desc: t('weddingPage.benefit2Desc') },
-                { title: t('weddingPage.benefit3Title'), desc: t('weddingPage.benefit3Desc') },
-                { title: t('weddingPage.benefit4Title'), desc: t('weddingPage.benefit4Desc') },
-                { title: t('weddingPage.benefit5Title'), desc: t('weddingPage.benefit5Desc') },
-              ].map((benefit, idx) => (
-                <Card key={idx} className="p-6 border border-border/30 hover:border-primary/30 transition-all duration-300 hover:shadow-lg bg-white/50 backdrop-blur-sm">
-                  <h3 className="text-lg font-medium text-foreground mb-3">{benefit.title}</h3>
-                  <p className="text-muted-foreground font-light leading-relaxed">{benefit.desc}</p>
+              <Card className="p-8 border-2 border-accent/20 hover:border-accent/50 transition-all magic-card-hover bg-white">
+                <Heart className="w-12 h-12 text-accent mb-4" />
+                <h3 className="text-xl font-bold mb-3">{t('benefit1Title')}</h3>
+                <p className="text-muted-foreground">{t('benefit1Desc')}</p>
+              </Card>
+              <Card className="p-8 border-2 border-primary/20 hover:border-primary/50 transition-all magic-card-hover bg-white">
+                <Sparkles className="w-12 h-12 text-primary mb-4" />
+                <h3 className="text-xl font-bold mb-3">{t('benefit2Title')}</h3>
+                <p className="text-muted-foreground">{t('benefit2Desc')}</p>
+              </Card>
+              <Card className="p-8 border-2 border-secondary/20 hover:border-secondary/50 transition-all magic-card-hover bg-white">
+                <Users className="w-12 h-12 text-secondary mb-4" />
+                <h3 className="text-xl font-bold mb-3">{t('benefit3Title')}</h3>
+                <p className="text-muted-foreground">{t('benefit3Desc')}</p>
+              </Card>
+              <Card className="p-8 border-2 border-accent/20 hover:border-accent/50 transition-all magic-card-hover bg-white">
+                <Star className="w-12 h-12 text-accent mb-4" />
+                <h3 className="text-xl font-bold mb-3">{t('benefit4Title')}</h3>
+                <p className="text-muted-foreground">{t('benefit4Desc')}</p>
+              </Card>
+              <Card className="p-8 border-2 border-primary/20 hover:border-primary/50 transition-all magic-card-hover bg-white">
+                <Heart className="w-12 h-12 text-primary mb-4" />
+                <h3 className="text-xl font-bold mb-3">{t('benefit5Title')}</h3>
+                <p className="text-muted-foreground">{t('benefit5Desc')}</p>
+              </Card>
+            </div>
+          </div>
+        </section>
+
+        {/* Magical Moments Section */}
+        <section className="py-20 px-4 sm:px-6 lg:px-8 bg-card">
+          <div className="max-w-6xl mx-auto">
+            <h2 className="text-4xl font-bold mb-4 text-center">{t('momentTitle')}</h2>
+            <p className="text-lg text-muted-foreground mb-16 text-center max-w-2xl mx-auto">
+              {t('momentIntro')}
+            </p>
+            <div className="grid md:grid-cols-2 gap-8">
+              {Array.from({ length: 4 }, (_, i) => (
+                <Card key={i} className="p-8 border-2 border-accent/20 hover:border-accent/50 transition-all magic-card-hover bg-white">
+                  <h3 className="text-xl font-bold mb-3 text-accent">{t(`moment${i + 1}`)}</h3>
+                  <p className="text-muted-foreground leading-relaxed">{t(`moment${i + 1}Desc`)}</p>
                 </Card>
               ))}
             </div>
           </div>
         </section>
 
-        {/* Wedding Photos Gallery */}
-        <section className="py-24 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-muted/30 to-white">
+        {/* Placement Timing Section */}
+        <section className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-6xl mx-auto">
-            <h2 className="text-4xl font-light text-center mb-6 text-foreground">
-              {t('weddingPage.momentTitle')}
-            </h2>
-            <p className="text-lg text-muted-foreground text-center font-light mb-16 max-w-2xl mx-auto">
-              {t('weddingPage.momentIntro')}
+            <h2 className="text-4xl font-bold mb-4 text-center">{t('placementTitle')}</h2>
+            <p className="text-lg text-muted-foreground mb-16 text-center max-w-2xl mx-auto">
+              Nærmagi kan tilpasses præcist hvor det passer bedst ind i jeres bryllupsprogram
             </p>
-            
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
-              {moments.map((moment, idx) => {
-                const Icon = moment.icon;
-                return (
-                  <div key={idx} className="group">
-                    <div className="relative mb-4 p-8 rounded-lg bg-gradient-to-br from-primary/5 via-accent/5 to-secondary/5 border border-border/20 group-hover:border-primary/30 transition-all">
-                      <Icon className="w-8 h-8 text-accent mb-4" />
-                      <h3 className="text-lg font-medium text-foreground mb-2">{moment.title}</h3>
-                      <p className="text-muted-foreground font-light text-sm">{moment.desc}</p>
-                    </div>
-                  </div>
-                );
-              })}
-            </div>
-
-            {/* Gallery Images */}
-            <div className="grid md:grid-cols-3 gap-6 mb-16">
-              {weddingPhotos.map((photo, idx) => (
-                <div
-                  key={idx}
-                  className="group relative overflow-hidden rounded-lg aspect-video bg-muted"
-                >
-                  <Image
-                    src={photo.src}
-                    alt={photo.alt}
-                    fill
-                    className="object-cover group-hover:scale-105 transition-transform duration-500"
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-6">
-                    <div>
-                      <p className="text-white font-medium text-sm">{photo.title}</p>
-                      <p className="text-white/80 text-xs font-light">{photo.desc}</p>
-                    </div>
-                  </div>
-                </div>
+            <div className="grid md:grid-cols-2 gap-8">
+              {Array.from({ length: 4 }, (_, i) => (
+                <Card key={i} className="p-8 border-0 bg-white hover:shadow-lg transition-shadow">
+                  <h3 className="text-xl font-bold mb-3 text-accent">{t(`placement${i + 1}`)}</h3>
+                  <p className="text-muted-foreground leading-relaxed">{t(`placement${i + 1}Desc`)}</p>
+                </Card>
               ))}
             </div>
           </div>
         </section>
 
-        {/* Placement Section */}
-        <section className="py-24 px-4 sm:px-6 lg:px-8 bg-white">
-          <div className="max-w-4xl mx-auto">
-            <h2 className="text-4xl font-light text-center mb-16 text-foreground">
-              {t('weddingPage.placementTitle')}
-            </h2>
-            
-            <div className="grid md:grid-cols-2 gap-6">
-              {placements.map((placement, idx) => (
-                <div key={idx} className="relative pl-8 py-6 border-l-2 border-accent/30 hover:border-accent/60 transition-colors">
-                  <div className="absolute -left-3 top-8 w-4 h-4 rounded-full bg-accent/40 border-2 border-white"></div>
-                  <h3 className="text-lg font-medium text-foreground mb-2">{placement.title}</h3>
-                  <p className="text-muted-foreground font-light">{placement.desc}</p>
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        {/* Testimonials */}
-        <section className="py-24 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-muted/30 to-white">
-          <div className="max-w-5xl mx-auto">
-            <h2 className="text-4xl font-light text-center mb-16 text-foreground">
-              {t('weddingPage.testimonialTitle')}
-            </h2>
-            
+        {/* Testimonials Section */}
+        <section className="py-20 px-4 sm:px-6 lg:px-8 bg-card">
+          <div className="max-w-6xl mx-auto">
+            <h2 className="text-4xl font-bold mb-16 text-center">{t('testimonialTitle')}</h2>
             <div className="grid md:grid-cols-3 gap-8">
-              {[
-                {
-                  name: t('weddingPage.testimonial1Name'),
-                  role: t('weddingPage.testimonial1Role'),
-                  text: t('weddingPage.testimonial1Text'),
-                },
-                {
-                  name: t('weddingPage.testimonial2Name'),
-                  role: t('weddingPage.testimonial2Role'),
-                  text: t('weddingPage.testimonial2Text'),
-                },
-                {
-                  name: t('weddingPage.testimonial3Name'),
-                  role: t('weddingPage.testimonial3Role'),
-                  text: t('weddingPage.testimonial3Text'),
-                },
-              ].map((testimonial, idx) => (
-                <Card key={idx} className="p-6 border border-border/30 bg-white/50">
-                  <div className="flex gap-1 mb-4">
-                    {[...Array(5)].map((_, i) => (
-                      <Star key={i} className="w-4 h-4 fill-accent text-accent" />
+              {Array.from({ length: 3 }, (_, i) => (
+                <Card key={i} className="p-8 border-0 bg-white hover:shadow-lg transition-shadow">
+                  <div className="flex gap-1 mb-6">
+                    {Array.from({ length: 5 }, (_, j) => (
+                      <span key={j} className="text-accent">★</span>
                     ))}
                   </div>
-                  <p className="text-muted-foreground font-light mb-6 leading-relaxed italic">
-                    {testimonial.text}
-                  </p>
-                  <div className="border-t border-border/30 pt-4">
-                    <p className="font-medium text-foreground">{testimonial.name}</p>
-                    <p className="text-xs text-muted-foreground font-light">{testimonial.role}</p>
+                  <p className="text-foreground mb-6 italic leading-relaxed">&quot;{t(`testimonial${i + 1}Text`)}&quot;</p>
+                  <div>
+                    <p className="font-bold text-foreground">{t(`testimonial${i + 1}Name`)}</p>
+                    <p className="text-sm text-muted-foreground">{t(`testimonial${i + 1}Role`)}</p>
                   </div>
                 </Card>
               ))}
@@ -290,67 +188,44 @@ export default function WeddingPage() {
         </section>
 
         {/* FAQ Section */}
-        <section className="py-24 px-4 sm:px-6 lg:px-8 bg-white">
+        <section className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-3xl mx-auto">
-            <h2 className="text-4xl font-light text-center mb-16 text-foreground">
-              {t('weddingPage.faqTitle')}
-            </h2>
-            
+            <h2 className="text-4xl font-bold mb-16 text-center">{t('faqTitle')}</h2>
             <div className="space-y-6">
-              {[
-                { q: t('weddingPage.faqQ1'), a: t('weddingPage.faqA1') },
-                { q: t('weddingPage.faqQ2'), a: t('weddingPage.faqA2') },
-                { q: t('weddingPage.faqQ3'), a: t('weddingPage.faqA3') },
-                { q: t('weddingPage.faqQ4'), a: t('weddingPage.faqA4') },
-                { q: t('weddingPage.faqQ5'), a: t('weddingPage.faqA5') },
-              ].map((item, idx) => (
-                <div key={idx} className="pb-6 border-b border-border/30 last:border-0">
-                  <h3 className="text-lg font-medium text-foreground mb-3">{item.q}</h3>
-                  <p className="text-muted-foreground font-light leading-relaxed">{item.a}</p>
-                </div>
+              {Array.from({ length: 5 }, (_, i) => (
+                <Card key={i} className="p-8 border-0 bg-white hover:shadow-lg transition-shadow">
+                  <h3 className="font-bold text-lg mb-4 text-accent">{t(`faqQ${i + 1}`)}</h3>
+                  <p className="text-muted-foreground leading-relaxed">{t(`faqA${i + 1}`)}</p>
+                </Card>
               ))}
             </div>
           </div>
         </section>
 
-        {/* Final CTA */}
-        <section className="py-24 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-primary/5 via-accent/5 to-secondary/5 relative overflow-hidden">
-          <div className="absolute inset-0 opacity-10">
-            <div className="absolute top-0 left-1/4 w-96 h-96 bg-gradient-to-br from-primary via-accent to-secondary rounded-full blur-3xl"></div>
-          </div>
-          
-          <div className="max-w-3xl mx-auto relative z-10 text-center space-y-8">
-            <Heart className="w-12 h-12 mx-auto text-accent opacity-60" />
-            <h2 className="text-4xl sm:text-5xl font-light text-foreground leading-tight">
-              {t('weddingPage.ctaTitle')}
-            </h2>
-            <p className="text-lg text-muted-foreground font-light">
-              {t('weddingPage.ctaSubtitle')}
+        {/* Final CTA Section */}
+        <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-accent/10 via-primary/10 to-secondary/10">
+          <div className="max-w-4xl mx-auto text-center">
+            <h2 className="text-4xl font-bold mb-6">{t('ctaTitle')}</h2>
+            <p className="text-xl text-muted-foreground mb-10 leading-relaxed">
+              {t('ctaSubtitle')}
             </p>
-            
-            <div className="flex flex-col sm:flex-row gap-4 justify-center pt-4">
+            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
               <Link href={`/${locale}/contact`}>
-                <Button size="lg" className="rounded-full px-8">
-                  {t('weddingPage.ctaButton')}
+                <Button size="lg" className="bg-gradient-to-r from-accent to-primary hover:opacity-90 text-white text-base font-semibold h-14 px-8">
+                  {t('ctaButton')}
                 </Button>
               </Link>
-              <Button size="lg" variant="outline" className="rounded-full px-8" asChild>
-                <a href="tel:+4540852728">
-                  <Phone className="w-4 h-4 mr-2" />
-                  {t('weddingPage.ctaPhone')}
-                </a>
-              </Button>
-              <Button size="lg" variant="outline" className="rounded-full px-8" asChild>
-                <a href="mailto:kenneth@tryllekenneth.dk">
-                  <Mail className="w-4 h-4 mr-2" />
-                  {t('weddingPage.ctaEmail')}
-                </a>
-              </Button>
+              <a href="tel:+4540852728">
+                <Button size="lg" variant="outline" className="text-base font-semibold h-14 px-8">
+                  {t('ctaPhone')}
+                </Button>
+              </a>
+              <a href="mailto:kenneth@tryllekenneth.dk">
+                <Button size="lg" variant="outline" className="text-base font-semibold h-14 px-8">
+                  {t('ctaEmail')}
+                </Button>
+              </a>
             </div>
-
-            <p className="text-muted-foreground font-light italic pt-6">
-              {t('weddingPage.ctaFinal')}
-            </p>
           </div>
         </section>
       </main>
