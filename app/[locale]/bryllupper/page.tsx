@@ -20,20 +20,20 @@ export default function WeddingPage() {
 
   const weddingPhotos = [
     {
-      src: 'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/ChatGPT%20Image%20May%2019%2C%202026%2C%2011_23_07%20AM-gWtRtuxpmElUZTtT93c23mlTcM76sD.png',
-      alt: 'Nærmagi ved bryllup',
+      src: '/wedding-intimate-magic.jpg',
+      alt: 'Nærmagi ved bryllup - intime magiske møder',
       title: 'Intime Magiske Møder',
       desc: 'Hver guest får en personlig magisk oplevelse helt tæt på',
     },
     {
-      src: 'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/WhatsApp%20Image%202026-05-19%20at%2010.48.13%20%281%29-A5bNILaPPqzkKWoS1Is5CAZBKHfmRZ.jpeg',
-      alt: 'Gæster forbundet gennem magik',
+      src: '/wedding-connection.jpg',
+      alt: 'Gæster forbundet gennem magik ved bryllup',
       title: 'Forbundethed',
       desc: 'Magik der naturligt samler mennesker i fælles undren',
     },
     {
-      src: 'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/ChatGPT%20Image%20May%2019%2C%202026%2C%2011_27_15%20AM-MBK00G4m2ZbI61vtY46vHeI8xZy0ZU.png',
-      alt: 'Elegance ved bordet',
+      src: '/wedding-refinement.jpg',
+      alt: 'Elegance ved bryllupsbord - raffineret nærmagi',
       title: 'Raffinement',
       desc: 'Elegant underholdning der passer til ethvert bryllup',
     },
