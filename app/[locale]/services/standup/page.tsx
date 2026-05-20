@@ -139,7 +139,7 @@ export default function StandUpMagic() {
             {/* Premium Live Performance Video */}
             <div className="group relative overflow-hidden rounded-2xl shadow-lg hover:shadow-xl transition-all duration-500">
               <ProductionVideo
-                src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/TrylleKenneth%20Stand-up-qJbYkPt5kL7nM9pQsRvWxYzAbCdEfGhIj.mp4"
+                src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/videoplayback%20%281%29-Q1D2bD05QCGGjQE987CDIoehLKbY9v.mp4"
                 poster="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/ChatGPT%20Image%20May%2019%2C%202026%2C%2011_23_07%20AM-gWtRtuxpmElUZTtT93c23mlTcM76sD.png"
                 autoPlay={true}
                 muted={true}
