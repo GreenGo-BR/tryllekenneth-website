@@ -6,15 +6,19 @@ import { Footer } from '@/components/Footer';
 import { Button } from '@/components/ui/button';
 import { Card } from '@/components/ui/card';
 import { ProductionVideo } from '@/components/ProductionVideo';
+import { VideoSchema } from '@/components/video-schema';
 import { Coins, Wand2, Hand } from 'lucide-react';
 import Link from 'next/link';
 
 export default function CloseupMagic() {
   const locale = useLocale();
   const t = useTranslations();
+  const videoUrl = 'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/videoplayback%20%281%29-Q1D2bD05QCGGjQE987CDIoehLKbY9v.mp4';
+  const videoThumbnail = 'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/WhatsApp%20Image%202026-05-19%20at%2010.48.13-270qN2OP2gez2uC7jEvcEzAJNz5r0O.jpeg';
   return (
     <>
       <Header />
+      <VideoSchema videoUrl={videoUrl} thumbnailUrl={videoThumbnail} videoId="naermagi-video-schema" />
       <main className="min-h-screen bg-gradient-to-br from-slate-50 via-white to-slate-50">
         {/* Premium Hero Section - Sophisticated Close-up Magic */}
         <section className="relative py-16 px-4 sm:px-6 lg:px-8 overflow-hidden">
