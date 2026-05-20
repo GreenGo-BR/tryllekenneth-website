@@ -34,8 +34,9 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode
 }>) {
+  // Default to Danish as the primary locale
   return (
-    <html lang="en" className="bg-background">
+    <html lang="da" className="bg-background">
       <body className="font-sans antialiased">
         {children}
         {process.env.NODE_ENV === 'production' && <Analytics />}
