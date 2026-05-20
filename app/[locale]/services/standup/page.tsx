@@ -108,8 +108,8 @@ export default function StandUpMagic() {
         <section className="py-24 px-4 sm:px-6 lg:px-8 max-w-6xl mx-auto">
           {/* Section Header */}
           <div className="mb-16">
-            <h2 className="text-4xl sm:text-5xl font-bold mb-4">{locale === 'da' ? 'Optræden på Scenen' : 'Stage Performances'}</h2>
-            <p className="text-lg text-muted-foreground max-w-3xl">{locale === 'da' ? 'Spektakulær stand-up magi fyldt med dramatik, humor og imponerende illusioner der fascinerer publikum' : 'Spectacular stand-up magic filled with drama, humor and stunning illusions that captivate audiences'}</p>
+            <h2 className="text-4xl sm:text-5xl font-bold mb-4">{locale === 'da' ? 'Stand-up Trylleri på Scenen' : 'Stage Performances'}</h2>
+            <p className="text-lg text-muted-foreground max-w-3xl">{locale === 'da' ? 'Spektakulær stand-up trylleri fyldt med dramatik, humor og forundring der fascinerer publikum' : 'Spectacular stand-up magic filled with drama, humor and stunning illusions that captivate audiences'}</p>
           </div>
 
           {/* Featured Large Image - Full Width */}
@@ -117,7 +117,7 @@ export default function StandUpMagic() {
             <div className="relative w-full" style={{ aspectRatio: '16/9' }}>
               <img
                 src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/ChatGPT%20Image%20May%2019%2C%202026%2C%2011_27_15%20AM-MBK00G4m2ZbI61vtY46vHeI8xZy0ZU.png"
-                alt="Kenneth performing stand-up comedy magic on stage"
+                alt={locale === 'da' ? 'Kenneth optræder med stand-up trylleri på scenen' : 'Kenneth performing stand-up comedy magic on stage'}
                 className="w-full h-full object-contain group-hover:scale-105 transition-transform duration-700"
               />
             </div>
@@ -130,7 +130,7 @@ export default function StandUpMagic() {
               <div className="relative w-full" style={{ aspectRatio: '4/3' }}>
                 <img
                   src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/ChatGPT%20Image%20May%2019%2C%202026%2C%2011_28_57%20AM-M1g6gMeHaNoj02b2nuP0m621igvvZY.png"
-                  alt="Kenneth with large stage magic apparatus and props"
+                  alt={locale === 'da' ? 'Kenneth med stort trylleapparat og rekvisitter' : 'Kenneth with large stage magic apparatus and props'}
                   className="w-full h-full object-contain group-hover:scale-105 transition-transform duration-700"
                 />
               </div>
@@ -157,7 +157,7 @@ export default function StandUpMagic() {
             <div className="relative w-full" style={{ aspectRatio: '16/9' }}>
               <img
                 src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/ChatGPT%20Image%20May%2019%2C%202026%2C%2011_44_49%20AM-UMJLIfVVDcDujc57Mgy9Cm2yMKYkuU.png"
-                alt="Kenneth performing magic with audience engagement"
+                alt={locale === 'da' ? 'Kenneth optræder med trylleri og publikumsinteraktion' : 'Kenneth performing magic with audience engagement'}
                 className="w-full h-full object-contain group-hover:scale-105 transition-transform duration-700"
               />
             </div>
