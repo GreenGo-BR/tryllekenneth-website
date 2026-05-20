@@ -34,9 +34,15 @@ export function PremiumNav() {
         { key: 'childrensMagic', href: `/${locale}/services/childrens` },
         { key: 'standUpMagic', href: `/${locale}/services/standup` },
         { key: 'closeUpMagic', href: `/${locale}/services/closeup` },
-        { key: 'santa', href: `/${locale}/services/santa` },
         { key: 'corporateEvents', href: `/${locale}/firmaarrangementer` },
         { key: 'weddings', href: `/${locale}/bryllupper` },
+      ],
+    },
+    seasonal: {
+      key: 'seasonal',
+      href: '#',
+      children: [
+        { key: 'santa', href: `/${locale}/services/santa` },
         { key: 'christmasParty', href: `/${locale}/julefrokost` },
       ],
     },
@@ -54,8 +60,9 @@ export function PremiumNav() {
     },
   };
 
-  // Translation mapping for "Optrædener" (Performances) label
+  // Translation mapping for dropdown labels
   const performancesLabel = locale === 'da' ? 'Optrædener' : 'Performances';
+  const seasonalLabel = t('seasonal');
 
   // Close dropdown on outside click
   useEffect(() => {
@@ -90,7 +97,7 @@ export function PremiumNav() {
                 : 'hover:bg-muted/50 group-hover:bg-muted'
             }`}
           >
-            {item.key === 'performances' ? performancesLabel : t(item.key as any)}
+            {item.key === 'performances' ? performancesLabel : item.key === 'seasonal' ? seasonalLabel : t(item.key as any)}
             <ChevronDown
               size={16}
               className={`transition-transform duration-200 ${
