@@ -570,8 +570,8 @@ export default function Home() {
 
               {/* Image */}
               <img 
-                src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/ChatGPT%20Image%20May%2019%2C%202026%2C%2010_07_08%20AM-EK3Y0tFtmm9mTAOaPHZe9jPjdIBgFr.png"
-                alt="Kenneth performing at large outdoor festival with full audience"
+                src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/ChatGPT%20Image%20May%2020%2C%202026%2C%2012_16_08%20PM-2Eu7GA9AAjNF4OFNQnO9LiwwkGlkrD.png"
+                alt="Kenneth performing at outdoor festival in Austrian mountains with large enthusiastic audience and blue sky"
                 className="w-full h-auto display-block object-cover"
                 style={{ aspectRatio: '16 / 9' }}
               />
