@@ -52,26 +52,21 @@
       "label4": "Glade gæster"
     }
   },
-  "about": {
-    "label": "Om Kenneth",
-    "title": "Magiker med Hjerte",
-    "description": "Kenneth er en professionel tryllekunstner dedikeret til at skabe uforglemmelige magiske øjeblikke for enhver begivenhed. Med over 15 års erfaring skaber han moments af ægte undren og glæde hos børn og voksne."
-  },
   "performances": {
-    "title": "Internationale Optræder",
-    "subtitle": "Fra intimate events til store teater-spektakler – Kenneth performer verden over",
-    "outdoor": "Outdoor Events & Festivaler",
+    "title": "Internationale optrædener",
+    "subtitle": "Fra intime arrangementer til store teaterforestillinger – Kenneth optræder verden over",
+    "outdoor": "Udendørs events og festivaler",
     "outdoorDesc": "Magisk underholdning for hele familien",
     "church": "Kirke & Hellige Steder",
     "churchDesc": "Magisk underholdning i specielle og højtidelige omgivelser",
-    "theater": "Teateroptræder",
+    "theater": "Teateroptrædener",
     "theaterDesc": "Professionelle shows for store publikum",
-    "closeup": "Tæt på Magi",
+    "closeup": "Nærmagi",
     "closeupDesc": "Intim og personlig magi ved hvert bord"
   },
   "moments": {
-    "title": "Flere Live Øjeblikke",
-    "subtitle": "Udforsk flere opvisninger og magiske oplevelser"
+    "title": "Flere live-øjeblikke",
+    "subtitle": "Se flere optrædener og magiske oplevelser"
   },
   "services": {
     "title": "Vores ydelser",
@@ -101,12 +96,20 @@
     "callKenneth": "Ring: 40 85 27 28"
   },
   "video": {
-    "title": "Se Magien Live",
+    "title": "Se magien live",
     "subtitle": "Rigtige øjeblikke fra børneshows, familiefester og magiske arrangementer",
     "autoplay": "Autoplay • HD Kvalitet"
   },
   "trust": {
     "message": "✓ Betroet af familier og virksomheder i hele Danmark"
+  },
+  "adultServices": {
+    "title": "Trylleri til voksenarrangementer",
+    "description": "Nærmagi, publikumsinteraktion og professionel underholdning til private fester, firmaevents og særlige arrangementer."
+  },
+  "livePerformances": {
+    "title": "Liveoptrædener for publikum",
+    "subtitle": "Kenneth optræder for store publikum ved festivaler, offentlige arrangementer og særlige begivenheder i både Danmark og udlandet. Med over 30 års erfaring leverer han professionel liveunderholdning, der fascinerer og underholder mennesker i alle aldre."
   },
   "childrensMagicPage": {
     "title": "Børnetrylleri",
@@ -132,12 +135,12 @@
     "subtitle": "Professionelt trylleri med humor, charme og respekt for publikum",
     "bookButton": "Book opvisning",
     "about": "Om Stand-up Trylleri",
-    "aboutText1": "TrylleKenneth's stand-up trylleri er perfekt til firmaarrangementer, fester, teambuilding og underholdningsaftener. Med over 20 års erfaring kombinerer Kenneth teknisk kunnen med naturlig karisma.",
-    "aboutText2": "Opvisningerne er engagerende, sjove og aldrig krænkende. Publikum bliver forundret over Kenneth's tekniske dygtighed og vittighed.",
+    "aboutText1": "Kenneths stand-up trylleri er perfekt til firmaarrangementer, fester, teambuilding og underholdningsaftener. Med over 20 års erfaring kombinerer Kenneth teknisk kunnen med naturlig karisma.",
+    "aboutText2": "Opvisningerne er engagerende, sjove og aldrig krænkende. Publikum bliver forundret over Kenneths tekniske dygtighed og humor.",
     "professionalTitle": "Professionel erfaring",
     "professionalText": "Over 20 års erfaring med firmaarrangementer og private fester",
     "humorTitle": "Humor og charme",
-    "humorText": "Sjovt trylleri der underholder både enkelte og store publikum",
+    "humorText": "Sjovt trylleri der underholder både små og store publikum",
     "respectTitle": "Respektfuld underholdning",
     "respectText": "Ingen bliver gjort til grin - kun forundret og underholdt",
     "adaptTitle": "Fleksibelt format",
@@ -156,7 +159,9 @@
     "bookButton": "Book opvisning",
     "about": "Om Nærmagi",
     "aboutText1": "Nærmagi er perfekt til at skabe intime øjeblikke på større arrangementer. Kenneth arbejder med kort, mønter, sedler og hverdagsgenstande for at skabe magiske øjeblikke helt foran publikum.",
-    "aboutText2": "Den tætte kontakt skaber en særlig forbindelse mellem Kenneth og publikum, hvilket gør hvert magisk øjeblik uforglemmelig.",
+    "aboutText2": "Den tætte kontakt skaber en særlig forbindelse mellem Kenneth og publikum, hvilket gør hvert magisk øjeblik uforglemmeligt.",
+    "premiumTitle": "Eksklusiv nærmagi",
+    "premiumDesc": "Eksklusiv nærmagi fanget i flotte detaljer",
     "cardsTitle": "Korttricks",
     "cardsText": "Fantastiske korttricks der skaber forundring og undren",
     "coinsTitle": "Møntmagi",
@@ -172,7 +177,7 @@
     "subtitle": "Julemand og magisk underholdning til jul, Halloween, fastelavn og særlige arrangementer",
     "bookButton": "Book Julemand",
     "about": "Om Julemand & Sæsonunderholdning",
-    "aboutText1": "Gør dit sæsonarrangement uforglemmelig med Kenneth som Julemand eller med magisk sæsonunderholdning. Perfekt til julefester, Halloweenevenementer, fastelavnsarrangementer og andre særlige lejligheder.",
+    "aboutText1": "Gør dit sæsonarrangement uforglemmeligt med Kenneth som Julemand eller med magisk sæsonunderholdning. Perfekt til julefester, halloweenarrangementer, fastelavnsarrangementer og andre særlige lejligheder.",
     "aboutText2": "Kenneth bringer glæde, trylleri og uforglemmelige minder til hver sæsonbegivenhed. Hver opvisning er tilpasset lejligheden og publikum.",
     "christmasTitle": "Julemagi",
     "christmasText": "Julemand og julemagi for hele familien",
@@ -182,6 +187,8 @@
     "fastelavnText": "Sjovt trylleri og underholdning til fastelavnsfestlighederne",
     "customTitle": "Brugerdefinerede arrangementer",
     "customText": "Sæsonbetonet trylleri tilpasset din specifikke lejlighed",
+    "autenticSantaTitle": "Autentisk julemand",
+    "familyMagicTitle": "Familievenlig magi",
     "backToHome": "Tilbage til forside"
   },
   "galleryPage": {
@@ -189,23 +196,23 @@
     "subtitle": "Billeder og anmeldelser fra glade kunder",
     "galleryTitle": "Galleri",
     "reviewsTitle": "Kundeanmeldelser",
-    "reviewsSubtitle": "Hvad folk siger om TrylleKenneth's opvisninger",
+    "reviewsSubtitle": "Hvad folk siger om Kenneths opvisninger",
     "filterAll": "Alle",
     "filterChildrensMagic": "Børnetrylleri",
     "filterCloseUpMagic": "Nærmagi",
     "filterStandUpMagic": "Stand-up Trylleri",
     "filterSantaChristmas": "Julemand & Jul",
-    "filterEvents": "Events",
+    "filterEvents": "Arrangementer",
     "backToHome": "Tilbage til forside"
   },
   "faqPage": {
     "title": "Ofte Stillede Spørgsmål",
-    "subtitle": "Almindelige spørgsmål om TrylleKenneth's ydelser",
+    "subtitle": "Almindelige spørgsmål om Kenneths ydelser",
     "bookingTitle": "Booking & Tilgængelighed",
     "pricingTitle": "Prissætning",
     "performanceTitle": "Om opvisninger",
     "bookingQ1": "Hvordan booker jeg Kenneth?",
-    "bookingA1": "Du kan kontakte Kenneth gennem kontaktformularen på dette website, ring til 40 85 27 28, eller send en email til kenneth@tryllekenneth.dk.",
+    "bookingA1": "Du kan kontakte Kenneth gennem kontaktformularen på dette website, ring til 40 85 27 28, eller send en e-mail til kenneth@tryllekenneth.dk.",
     "bookingQ2": "Hvor meget varsel skal I bruge?",
     "bookingA2": "Ideelt set 2-3 ugers varsel, men vi prøver at imødekomme booking i sidste øjeblik når det er muligt.",
     "pricingQ1": "Hvad er jeres priser?",
@@ -225,7 +232,7 @@
     "emailLabel": "E-mail",
     "phoneLabel": "Telefon",
     "eventDateLabel": "Arrangementsdato",
-    "eventTypeLabel": "Arrangementype",
+    "eventTypeLabel": "Arrangementstype",
     "guestsLabel": "Antal gæster",
     "messageLabel": "Besked",
     "sendButton": "Send besked",
@@ -234,7 +241,7 @@
     "emailAddress": "kenneth@tryllekenneth.dk",
     "responseMessage": "Tak for din besked! Jeg kontakter dig snart.",
     "backToHome": "Tilbage til forside",
-    "childrenBirthday": "Børnefødseldag",
+    "childrenBirthday": "Børnefødselsdag",
     "familyEvent": "Familiearrangement",
     "corporateEvent": "Firmaarrangement",
     "weddingEvent": "Bryllup",
@@ -246,13 +253,13 @@
     "availabilityTime": "Man-Søn\n09:00 - 21:00",
     "importantInfoTitle": "Vigtig information",
     "locationTitle": "Lokation",
-    "locationText": "Jeg kan møde dig i hele Danmark. Mit hjemmebase er København, men jeg optræder over hele landet.",
+    "locationText": "Jeg kan møde dig i hele Danmark. Min base er København, men jeg optræder over hele landet.",
     "bookingTimeTitle": "Bookingperiode",
     "bookingTimeText": "Jeg anbefaler at booke mindst 2-4 uger før dit arrangement. For større events kan længere varsel være nødvendigt.",
     "whatsIncludedTitle": "Hvad er inkluderet?",
     "whatIncludedItems": ["✓ Professionelt trylleshow", "✓ Tilpasset til dit tema/ønsker", "✓ Publikumsinteraktion", "✓ Pålidelig og professionel", "✓ Fuldt forsikret"],
-    "needQuickResponseTitle": "Brug for hurtig svar?",
-    "needQuickResponseText": "Kontakt mig direkte på telefon for hurtigste svar.",
+    "needQuickResponseTitle": "Brug for et hurtigt svar?",
+    "needQuickResponseText": "Kontakt mig direkte på telefon for det hurtigste svar.",
     "ctaTitle": "Vi ses snart!",
     "ctaText": "Jeg glæder mig til at skabe magiske minder til dit næste arrangement"
   }
