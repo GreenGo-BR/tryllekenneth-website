@@ -24,8 +24,27 @@ export const metadata: Metadata = {
         url: '/icon.svg',
         type: 'image/svg+xml',
       },
+      {
+        url: '/favicon.ico',
+        sizes: '32x32',
+      },
     ],
     apple: '/apple-icon.png',
+  },
+  openGraph: {
+    title: 'TrylleKenneth - Magisk Underholdning',
+    description: 'Magisk underholdning til børnefødselsdage, familiedage og firmaarrangementer',
+    type: 'website',
+    locale: 'da_DK',
+    alternateLocale: ['en_US'],
+    siteName: 'TrylleKenneth',
+  },
+  alternates: {
+    canonical: 'https://tryllekenneth.dk',
+    languages: {
+      'da-DK': 'https://tryllekenneth.dk/da',
+      'en-US': 'https://tryllekenneth.dk/en',
+    },
   },
 }
 
@@ -35,7 +54,7 @@ export default function RootLayout({
   children: React.ReactNode
 }>) {
   return (
-    <html lang="en" className="bg-background">
+    <html lang="da" className="bg-background">
       <body className="font-sans antialiased">
         {children}
         {process.env.NODE_ENV === 'production' && <Analytics />}
