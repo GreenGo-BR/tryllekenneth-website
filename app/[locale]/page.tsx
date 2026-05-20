@@ -2,14 +2,19 @@
 
 import { useTranslations, useLocale } from 'next-intl';
 import Link from 'next/link';
+import dynamic from 'next/dynamic';
 import { Header } from '@/components/Header';
-import { Footer } from '@/components/Footer';
 import { ProductionVideo } from '@/components/ProductionVideo';
 import { VideoSchema } from '@/components/video-schema';
 import { Button } from '@/components/ui/button';
 import { Card } from '@/components/ui/card';
 import { Sparkles, Star, Wand2, Music, CheckCircle, Zap, Heart, Smile } from 'lucide-react';
 import { useRef, useEffect, useState } from 'react';
+
+// Dynamic import for below-the-fold component
+const Footer = dynamic(() => import('@/components/Footer').then(mod => mod.Footer), {
+  loading: () => <div className="h-96 bg-background" />,
+});
 
 export default function Home() {
   const t = useTranslations();
@@ -76,8 +81,11 @@ export default function Home() {
           {/* Background Image with Enhanced Overlay */}
           <div className="absolute inset-0 z-0 pointer-events-none">
             <img 
-              src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/ChatGPT%20Image%20May%2019%2C%202026%2C%2011_34_15%20AM-uFrLxqdtG9SkMxgcePQK2lG9ViKb3p.png"
+              src="/hero-bg-optimized.jpg"
               alt="Hero background - Kenneth magic show with family"
+              loading="lazy"
+              decoding="async"
+              sizes="(max-width: 640px) 100vw, (max-width: 1024px) 100vw, 100vw"
               className="w-full h-full object-cover opacity-40"
             />
             {/* Elegant gradient overlay - stronger on bottom for text visibility */}
@@ -251,13 +259,14 @@ export default function Home() {
               {/* Video Element */}
               <ProductionVideo
                 src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/TrylleKenneth%20show-BcdHB40bje44mvtgNoULMLWdckbAzj.mp4"
+                poster="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/ChatGPT%20Image%20May%2019%2C%202026%2C%2011_23_07%20AM-gWtRtuxpmElUZTtT93c23mlTcM76sD.png"
                 videoId="featured-video"
-                autoPlay={true}
+                autoPlay={false}
                 muted={true}
                 loop={true}
                 playsInline={true}
-                preload="metadata"
-                lazy={false}
+                preload="none"
+                lazy={true}
                 aspectRatio="16/9"
                 className="premium-video"
               />
@@ -363,6 +372,7 @@ export default function Home() {
                 <img 
                   src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/WhatsApp%20Image%202026-05-19%20at%2009.29.40%20%285%29-bYEX8wJKhjS21S5AWDXpk60sUxgHWC.jpeg"
                   alt="Kenneth the magician - professional performer"
+                  loading="lazy"
                   className="w-full h-full object-cover hover:scale-105 transition-transform duration-700"
                 />
               </div>
@@ -519,11 +529,12 @@ export default function Home() {
               {/* Video Element - Secondary with Production Grade System */}
               <ProductionVideo
                 src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/TrylleKenneth-24BnI1Ltz7yasQ0N6wNRvJtVkWOQyw.mp4"
-                autoPlay={true}
+                poster="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/WhatsApp%20Image%202026-05-19%20at%2010.48.13%20%281%29-A5bNILaPPqzkKWoS1Is5CAZBKHfmRZ.jpeg"
+                autoPlay={false}
                 muted={true}
                 loop={true}
                 playsInline={true}
-                preload="metadata"
+                preload="none"
                 lazy={true}
                 aspectRatio="16/9"
               />

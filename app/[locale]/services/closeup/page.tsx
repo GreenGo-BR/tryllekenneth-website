@@ -71,7 +71,8 @@ export default function CloseupMagic() {
               {/* Video Element - Production Grade */}
               <ProductionVideo
                 src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/TrylleKenneth%20Close-up-G9bBfYukuP3t82YylZW3gZILIbCkJo.mp4"
-                autoPlay={true}
+                poster="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/WhatsApp%20Image%202026-05-19%20at%2010.48.13%20%281%29-A5bNILaPPqzkKWoS1Is5CAZBKHfmRZ.jpeg"
+                autoPlay={false}
                 muted={true}
                 loop={true}
                 playsInline={true}
