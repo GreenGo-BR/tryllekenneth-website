@@ -26,15 +26,16 @@ export function LanguageSwitcher() {
   // Use the browser-detected locale, fall back to intlLocale
   const locale = browserLocale || (intlLocale as 'en' | 'da');
   
-  const routeWithoutLocale = pathname || '/';
+  // pathname from usePathname() is already without locale prefix
+  const currentRoute = pathname || '/';
   
   // Get the equivalent route in the other language
   const otherLocale = locale === 'da' ? 'en' : 'da';
-  const equivalentRoute = getEquivalentRoute(routeWithoutLocale, locale, otherLocale);
-  const targetPath = `/${otherLocale}${equivalentRoute === '/' ? '' : equivalentRoute}`;
+  const equivalentRoute = getEquivalentRoute(currentRoute, locale, otherLocale);
   
-  // Current language path
-  const currentPath = `/${locale}${routeWithoutLocale === '/' ? '' : routeWithoutLocale}`;
+  // Construct paths with explicit locale prefixes
+  const daPath = `/da${currentRoute === '/' ? '' : getEquivalentRoute(currentRoute, locale, 'da')}`;
+  const enPath = `/en${currentRoute === '/' ? '' : getEquivalentRoute(currentRoute, locale, 'en')}`;
 
   const handleLanguageSwitch = (path: string) => {
     router.push(path);
@@ -43,7 +44,7 @@ export function LanguageSwitcher() {
   return (
     <div className="flex items-center bg-muted rounded-lg p-1 pointer-events-auto">
       <button
-        onClick={() => handleLanguageSwitch(currentPath)}
+        onClick={() => handleLanguageSwitch(daPath)}
         className={`px-3 py-1 rounded-md text-sm font-medium transition-colors cursor-pointer pointer-events-auto ${
           locale === 'da'
             ? 'bg-primary text-primary-foreground'
@@ -54,7 +55,7 @@ export function LanguageSwitcher() {
         DA
       </button>
       <button
-        onClick={() => handleLanguageSwitch(targetPath)}
+        onClick={() => handleLanguageSwitch(enPath)}
         className={`px-3 py-1 rounded-md text-sm font-medium transition-colors cursor-pointer pointer-events-auto ${
           locale === 'en'
             ? 'bg-primary text-primary-foreground'
