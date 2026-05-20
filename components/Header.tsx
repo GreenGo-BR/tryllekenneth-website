@@ -40,6 +40,9 @@ export function Header() {
             <Link href={`/${locale}/services/santa`} className="px-3 py-2 rounded-lg text-sm font-medium hover:bg-muted transition-colors">
               {t('santa')}
             </Link>
+            <Link href={`/${locale}/bryllupper`} className="px-3 py-2 rounded-lg text-sm font-medium hover:bg-muted transition-colors">
+              {t('weddings')}
+            </Link>
             <Link href={`/${locale}/firmaarrangementer`} className="px-3 py-2 rounded-lg text-sm font-medium hover:bg-muted transition-colors text-accent font-semibold">
               {t('corporateEvents')}
             </Link>
@@ -85,6 +88,9 @@ export function Header() {
             </Link>
             <Link href={`/${locale}/services/santa`} className="block px-3 py-2 rounded-lg text-sm font-medium hover:bg-muted transition-colors">
               {t('santa')}
+            </Link>
+            <Link href={`/${locale}/bryllupper`} className="block px-3 py-2 rounded-lg text-sm font-medium hover:bg-muted transition-colors">
+              {t('weddings')}
             </Link>
             <Link href={`/${locale}/firmaarrangementer`} className="block px-3 py-2 rounded-lg text-sm font-medium hover:bg-muted transition-colors text-accent font-semibold">
               {t('corporateEvents')}
