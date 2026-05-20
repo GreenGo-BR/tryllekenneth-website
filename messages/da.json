@@ -13,9 +13,9 @@
   "hero": {
     "title": "Magisk underholdning for alle",
     "subtitle": "TrylleKenneth skaber sjov, humor og magi til børnefødselsdage, familiefester, firmaarrangementer og sæsonfester.",
-    "cta1": "Book et show",
+    "cta1": "Book opvisning",
     "cta2": "Ring til Kenneth",
-    "cta3": "Se shows"
+    "cta3": "Se optrædener"
   },
   "footer": {
     "copyright": "Tryllekunstner TrylleKenneth © 2026",
@@ -41,7 +41,7 @@
         "description": "Tilpasset humor og magiske tricks til ethvert publikum"
       },
       {
-        "title": "Mere end bare et trylleshow",
+        "title": "Mere end bare en opvisning",
         "description": "Interaktive oplevelser der skaber minder hele livet"
       }
     ],
@@ -53,19 +53,19 @@
     }
   },
   "performances": {
-    "title": "Internationale optrædener",
+    "title": "Optrædener verden over",
     "subtitle": "Fra intime arrangementer til store teaterforestillinger – Kenneth optræder verden over",
-    "outdoor": "Udendørs events og festivaler",
+    "outdoor": "Udendørs arrangementer og festivaler",
     "outdoorDesc": "Magisk underholdning for hele familien",
     "church": "Kirke & Hellige Steder",
     "churchDesc": "Magisk underholdning i specielle og højtidelige omgivelser",
     "theater": "Teateroptrædener",
-    "theaterDesc": "Professionelle shows for store publikum",
+    "theaterDesc": "Professionelle opvisninger for store publikum",
     "closeup": "Nærmagi",
     "closeupDesc": "Intim og personlig magi ved hvert bord"
   },
   "moments": {
-    "title": "Flere live-øjeblikke",
+    "title": "Flere magiske øjeblikke",
     "subtitle": "Se flere optrædener og magiske oplevelser"
   },
   "services": {
@@ -97,8 +97,8 @@
   },
   "video": {
     "title": "Se magien live",
-    "subtitle": "Rigtige øjeblikke fra børneshows, familiefester og magiske arrangementer",
-    "autoplay": "Autoplay • HD Kvalitet"
+    "subtitle": "Ægte øjeblikke fra børneopvisninger, familiefester og optrædener",
+    "autoplay": "Automatisk afspilning • HD Kvalitet"
   },
   "trust": {
     "message": "✓ Betroet af familier og virksomheder i hele Danmark"
@@ -108,8 +108,8 @@
     "description": "Nærmagi, publikumsinteraktion og professionel underholdning til private fester, firmaevents og særlige arrangementer."
   },
   "livePerformances": {
-    "title": "Liveoptrædener for publikum",
-    "subtitle": "Kenneth optræder for store publikum ved festivaler, offentlige arrangementer og særlige begivenheder i både Danmark og udlandet. Med over 30 års erfaring leverer han professionel liveunderholdning, der fascinerer og underholder mennesker i alle aldre."
+    "title": "Optrædener for publikum",
+    "subtitle": "Kenneth optræder for publikum ved festivaler, offentlige arrangementer og særlige begivenheder i både Danmark og udlandet. Med over 30 års erfaring leverer han professionel underholdning, der fascinerer og underholder mennesker i alle aldre."
   },
   "childrensMagicPage": {
     "title": "Børnetrylleri",
@@ -257,7 +257,7 @@
     "bookingTimeTitle": "Bookingperiode",
     "bookingTimeText": "Jeg anbefaler at booke mindst 2-4 uger før dit arrangement. For større events kan længere varsel være nødvendigt.",
     "whatsIncludedTitle": "Hvad er inkluderet?",
-    "whatIncludedItems": ["✓ Professionelt trylleshow", "✓ Tilpasset til dit tema/ønsker", "✓ Publikumsinteraktion", "✓ Pålidelig og professionel", "✓ Fuldt forsikret"],
+    "whatIncludedItems": ["✓ Professionel opvisning", "✓ Tilpasset til dit tema/ønsker", "✓ Publikumsinteraktion", "✓ Pålidelig og professionel", "✓ Fuldt forsikret"],
     "needQuickResponseTitle": "Brug for et hurtigt svar?",
     "needQuickResponseText": "Kontakt mig direkte på telefon for det hurtigste svar.",
     "ctaTitle": "Vi ses snart!",
