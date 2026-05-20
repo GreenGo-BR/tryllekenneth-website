@@ -81,9 +81,11 @@ export default function Home() {
           {/* Background Image with Enhanced Overlay */}
           <div className="absolute inset-0 z-0 pointer-events-none">
             <img 
-              src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/ChatGPT%20Image%20May%2019%2C%202026%2C%2011_34_15%20AM-uFrLxqdtG9SkMxgcePQK2lG9ViKb3p.png"
+              src="/hero-bg-optimized.jpg"
               alt="Hero background - Kenneth magic show with family"
               loading="lazy"
+              decoding="async"
+              sizes="(max-width: 640px) 100vw, (max-width: 1024px) 100vw, 100vw"
               className="w-full h-full object-cover opacity-40"
             />
             {/* Elegant gradient overlay - stronger on bottom for text visibility */}
