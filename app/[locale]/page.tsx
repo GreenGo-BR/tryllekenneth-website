@@ -78,6 +78,7 @@ export default function Home() {
             <img 
               src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/ChatGPT%20Image%20May%2019%2C%202026%2C%2011_34_15%20AM-uFrLxqdtG9SkMxgcePQK2lG9ViKb3p.png"
               alt="Hero background - Kenneth magic show with family"
+              loading="lazy"
               className="w-full h-full object-cover opacity-40"
             />
             {/* Elegant gradient overlay - stronger on bottom for text visibility */}
@@ -252,12 +253,12 @@ export default function Home() {
               <ProductionVideo
                 src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/TrylleKenneth%20show-BcdHB40bje44mvtgNoULMLWdckbAzj.mp4"
                 videoId="featured-video"
-                autoPlay={true}
+                autoPlay={false}
                 muted={true}
                 loop={true}
                 playsInline={true}
-                preload="metadata"
-                lazy={false}
+                preload="none"
+                lazy={true}
                 aspectRatio="16/9"
                 className="premium-video"
               />

@@ -79,6 +79,7 @@ export default function WeddingPage() {
               <img
                 src={videoThumbnail}
                 alt="Nærmagi til bryllup"
+                loading="lazy"
                 className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
               />
               <div className="absolute inset-0 bg-black/40 group-hover:bg-black/50 transition-colors" />
