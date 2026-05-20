@@ -6,6 +6,7 @@ import { Footer } from '@/components/Footer';
 import { Button } from '@/components/ui/button';
 import { Card } from '@/components/ui/card';
 import { Sparkles, Zap, Users } from 'lucide-react';
+import { ProductionVideo } from '@/components/ProductionVideo';
 import Link from 'next/link';
 
 export default function StandUpMagic() {
@@ -122,20 +123,9 @@ export default function StandUpMagic() {
             </div>
           </div>
 
-          {/* Clean 2-Column Grid */}
+          {/* Clean 2-Column Grid - Image and Video */}
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
             {/* Image 1 */}
-            <div className="group relative overflow-hidden rounded-2xl shadow-lg hover:shadow-xl transition-all duration-500 bg-background">
-              <div className="relative w-full" style={{ aspectRatio: '4/3' }}>
-                <img
-                  src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/ChatGPT%20Image%20May%2019%2C%202026%2C%2011_23_07%20AM-gWtRtuxpmElUZTtT93c23mlTcM76sD.png"
-                  alt="Kenneth in pirate costume performing themed comedy"
-                  className="w-full h-full object-contain group-hover:scale-105 transition-transform duration-700"
-                />
-              </div>
-            </div>
-
-            {/* Image 2 */}
             <div className="group relative overflow-hidden rounded-2xl shadow-lg hover:shadow-xl transition-all duration-500 bg-background">
               <div className="relative w-full" style={{ aspectRatio: '4/3' }}>
                 <img
@@ -144,6 +134,21 @@ export default function StandUpMagic() {
                   className="w-full h-full object-contain group-hover:scale-105 transition-transform duration-700"
                 />
               </div>
+            </div>
+
+            {/* Premium Live Performance Video */}
+            <div className="group relative overflow-hidden rounded-2xl shadow-lg hover:shadow-xl transition-all duration-500">
+              <ProductionVideo
+                src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/videoplayback%20%281%29-Q1D2bD05QCGGjQE987CDIoehLKbY9v.mp4"
+                poster="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/ChatGPT%20Image%20May%2019%2C%202026%2C%2011_23_07%20AM-gWtRtuxpmElUZTtT93c23mlTcM76sD.png"
+                autoPlay={true}
+                muted={true}
+                loop={true}
+                containerClassName="w-full rounded-2xl overflow-hidden"
+                aspectRatio="4/3"
+                lazy={true}
+                videoId="standup-performance-video"
+              />
             </div>
           </div>
 
