@@ -2,6 +2,15 @@ import { ReactNode } from 'react';
 import { notFound } from 'next/navigation';
 import { getMessages } from 'next-intl/server';
 import { NextIntlClientProvider } from 'next-intl';
+import { StructuredData, MultipleStructuredData } from '@/components/structured-data';
+import {
+  PersonSchema,
+  LocalBusinessSchema,
+  PerformerSchema,
+  OrganizationSchema,
+  WebsiteSchema,
+  FAQSchema,
+} from '@/lib/structured-data';
 
 const locales = ['en', 'da'];
 
@@ -27,8 +36,19 @@ export default async function LocaleLayout({
   // Pass locale explicitly to getMessages
   const messages = await getMessages({ locale });
 
+  // Generate structured data schemas for this locale
+  const schemas = [
+    PersonSchema(locale),
+    LocalBusinessSchema(locale),
+    PerformerSchema(locale),
+    OrganizationSchema(locale),
+    WebsiteSchema(locale),
+    FAQSchema(locale),
+  ];
+
   return (
     <NextIntlClientProvider messages={messages} locale={locale}>
+      <MultipleStructuredData schemas={schemas} />
       {children}
     </NextIntlClientProvider>
   );

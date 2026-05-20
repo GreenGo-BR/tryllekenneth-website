@@ -7,14 +7,18 @@ import { Button } from '@/components/ui/button';
 import { Card } from '@/components/ui/card';
 import { Sparkles, Zap, Users } from 'lucide-react';
 import { ProductionVideo } from '@/components/ProductionVideo';
+import { VideoSchema } from '@/components/video-schema';
 import Link from 'next/link';
 
 export default function StandUpMagic() {
   const locale = useLocale();
   const t = useTranslations();
+  const videoUrl = 'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/videoplayback%20%281%29-Q1D2bD05QCGGjQE987CDIoehLKbY9v.mp4';
+  const videoThumbnail = 'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/ChatGPT%20Image%20May%2019%2C%202026%2C%2011_27_15%20AM-MBK00G4m2ZbI61vtY46vHeI8xZy0ZU.png';
   return (
     <>
       <Header />
+      <VideoSchema videoUrl={videoUrl} thumbnailUrl={videoThumbnail} videoId="standup-video-schema" />
       <main className="min-h-screen">
         {/* Hero Section */}
         <section className="relative py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-accent/10 via-primary/10 to-secondary/10">

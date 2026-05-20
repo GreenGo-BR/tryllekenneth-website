@@ -5,6 +5,7 @@ import Link from 'next/link';
 import { Header } from '@/components/Header';
 import { Footer } from '@/components/Footer';
 import { ProductionVideo } from '@/components/ProductionVideo';
+import { VideoSchema } from '@/components/video-schema';
 import { Button } from '@/components/ui/button';
 import { Card } from '@/components/ui/card';
 import { Sparkles, Star, Wand2, Music, CheckCircle, Zap, Heart, Smile } from 'lucide-react';
@@ -16,6 +17,9 @@ export default function Home() {
   const heroRef = useRef<HTMLDivElement>(null);
   const [stars, setStars] = useState<Array<{ id: number; left: number; top: number; delay: number }>>([]);
   const [cards, setCards] = useState<Array<{ id: number; left: number; top: number; rotation: number; delay: number }>>([]);
+
+  const videoUrl = 'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/videoplayback%20%281%29-Q1D2bD05QCGGjQE987CDIoehLKbY9v.mp4';
+  const videoThumbnail = 'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/ChatGPT%20Image%20May%2019%2C%202026%2C%2011_23_07%20AM-gWtRtuxpmElUZTtT93c23mlTcM76sD.png';
 
   useEffect(() => {
     // Generate minimal, elegant stars for premium cinematic feel (reduced from 12 to 8)
@@ -65,6 +69,7 @@ export default function Home() {
   return (
     <>
       <Header />
+      <VideoSchema videoUrl={videoUrl} thumbnailUrl={videoThumbnail} videoId="homepage-video-schema" />
       <main className="min-h-screen">
         {/* Hero Section */}
         <section ref={heroRef} className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-background via-primary/5 to-background pt-16 pb-20 sm:pt-24">
