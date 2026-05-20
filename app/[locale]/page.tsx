@@ -2,14 +2,19 @@
 
 import { useTranslations, useLocale } from 'next-intl';
 import Link from 'next/link';
+import dynamic from 'next/dynamic';
 import { Header } from '@/components/Header';
-import { Footer } from '@/components/Footer';
 import { ProductionVideo } from '@/components/ProductionVideo';
 import { VideoSchema } from '@/components/video-schema';
 import { Button } from '@/components/ui/button';
 import { Card } from '@/components/ui/card';
 import { Sparkles, Star, Wand2, Music, CheckCircle, Zap, Heart, Smile } from 'lucide-react';
 import { useRef, useEffect, useState } from 'react';
+
+// Dynamic import for below-the-fold component
+const Footer = dynamic(() => import('@/components/Footer').then(mod => mod.Footer), {
+  loading: () => <div className="h-96 bg-background" />,
+});
 
 export default function Home() {
   const t = useTranslations();
