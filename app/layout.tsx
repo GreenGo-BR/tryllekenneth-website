@@ -7,8 +7,8 @@ const _geist = Geist({ subsets: ["latin"] });
 const _geistMono = Geist_Mono({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: 'TrylleKenneth - Magisk Underholdning',
-  description: 'Magisk underholdning til børnefødselsdage, familiedage og firmaarrangementer',
+  title: 'TrylleKenneth - Professionel Tryllekunstner i København | Magisk Underholdning til Events',
+  description: 'Tryllekunstner i København med magisk underholdning til firmaarrangementer, børnefødselsdage og events i hele Danmark. Over 15 års erfaring med professionel underholdning til alle arrangementer.',
   generator: 'v0.app',
   icons: {
     icon: [
@@ -32,8 +32,8 @@ export const metadata: Metadata = {
     apple: '/apple-icon.png',
   },
   openGraph: {
-    title: 'TrylleKenneth - Magisk Underholdning',
-    description: 'Magisk underholdning til børnefødselsdage, familiedage og firmaarrangementer',
+    title: 'TrylleKenneth - Tryllekunstner i København | Magisk Underholdning til Events',
+    description: 'Professionel underholdning til firmaarrangementer, børnefødselsdage og corporate events i København og Danmark',
     type: 'website',
     locale: 'da_DK',
     alternateLocale: ['en_US'],
