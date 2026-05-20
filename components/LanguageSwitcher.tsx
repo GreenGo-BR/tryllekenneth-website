@@ -9,16 +9,16 @@ export function LanguageSwitcher() {
   const intlLocale = useLocale();
   const pathname = usePathname();
   const router = useRouter();
-  const [browserLocale, setBrowserLocale] = useState<'en' | 'da'>('en');
+  const [browserLocale, setBrowserLocale] = useState<'en' | 'da'>('da');
 
   // Detect locale from actual browser URL on mount
   useEffect(() => {
     if (typeof window !== 'undefined') {
       const fullPath = window.location.pathname;
-      if (fullPath.startsWith('/da')) {
-        setBrowserLocale('da');
-      } else {
+      if (fullPath.startsWith('/en')) {
         setBrowserLocale('en');
+      } else {
+        setBrowserLocale('da');
       }
     }
   }, []);
@@ -29,7 +29,7 @@ export function LanguageSwitcher() {
   const routeWithoutLocale = pathname || '/';
   
   // Get the equivalent route in the other language
-  const otherLocale = locale === 'en' ? 'da' : 'en';
+  const otherLocale = locale === 'da' ? 'en' : 'da';
   const equivalentRoute = getEquivalentRoute(routeWithoutLocale, locale, otherLocale);
   const targetPath = `/${otherLocale}${equivalentRoute === '/' ? '' : equivalentRoute}`;
   
@@ -45,17 +45,6 @@ export function LanguageSwitcher() {
       <button
         onClick={() => handleLanguageSwitch(currentPath)}
         className={`px-3 py-1 rounded-md text-sm font-medium transition-colors cursor-pointer pointer-events-auto ${
-          locale === 'en'
-            ? 'bg-primary text-primary-foreground'
-            : 'text-muted-foreground hover:text-foreground'
-        }`}
-        aria-label="Switch to English"
-      >
-        EN
-      </button>
-      <button
-        onClick={() => handleLanguageSwitch(targetPath)}
-        className={`px-3 py-1 rounded-md text-sm font-medium transition-colors cursor-pointer pointer-events-auto ${
           locale === 'da'
             ? 'bg-primary text-primary-foreground'
             : 'text-muted-foreground hover:text-foreground'
@@ -63,6 +52,17 @@ export function LanguageSwitcher() {
         aria-label="Switch to Danish"
       >
         DA
+      </button>
+      <button
+        onClick={() => handleLanguageSwitch(targetPath)}
+        className={`px-3 py-1 rounded-md text-sm font-medium transition-colors cursor-pointer pointer-events-auto ${
+          locale === 'en'
+            ? 'bg-primary text-primary-foreground'
+            : 'text-muted-foreground hover:text-foreground'
+        }`}
+        aria-label="Switch to English"
+      >
+        EN
       </button>
     </div>
   );
