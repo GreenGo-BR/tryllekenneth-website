@@ -21,9 +21,9 @@ export function Footer() {
               <Image
                 src="/tryllekenneth-logo.png"
                 alt="TrylleKenneth - Magisk Underholdning til Dig"
-                width={160}
-                height={48}
-                className="h-12 w-auto"
+                width={192}
+                height={60}
+                className="h-16 w-auto"
               />
             </Link>
             <p className="text-sm text-muted-foreground">{t('copyright')}</p>

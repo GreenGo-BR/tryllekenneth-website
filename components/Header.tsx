@@ -21,9 +21,9 @@ export function Header() {
             <Image
               src="/tryllekenneth-logo.png"
               alt="TrylleKenneth - Magisk Underholdning til Dig"
-              width={200}
-              height={60}
-              className="h-14 w-auto"
+              width={240}
+              height={72}
+              className="h-16 w-auto"
               priority
             />
           </Link>
