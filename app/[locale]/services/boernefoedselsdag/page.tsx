@@ -85,9 +85,9 @@ export default function BirthdayPartiesPage() {
 
                   {/* Birthday Party Image */}
                   <img 
-                    src="/kenneth-family-garden.png"
-                    alt="Kenneth performing magic at children's birthday party"
-                    className="w-full h-auto object-cover object-top"
+                    src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Birthday%20Parties-AP2pTUOWbTJj2mJfSMwXqEU3Jf4TDO.png"
+                    alt="Kenneth performing magic at children's birthday party with balloons and decorations"
+                    className="w-full h-auto object-cover object-center lg:object-center"
                   />
 
                   {/* Magical glow on hover */}

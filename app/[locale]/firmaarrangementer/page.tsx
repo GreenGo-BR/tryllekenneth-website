@@ -85,9 +85,9 @@ export default function CorporateEventsPage() {
 
                   {/* Corporate Event Image */}
               <img 
-                src="/kenneth-stage-audience.png"
-                alt="Kenneth performing stage magic for corporate audience"
-                className="w-full h-auto object-cover object-top"
+                src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Corporate%20Events-KnhDCGk5jvxPEFyCejsbutD5bqUwty.png"
+                alt="Kenneth performing magic for business guests at corporate event with elegant lighting and professional atmosphere"
+                className="w-full h-auto object-cover object-center"
               />
 
                   {/* Magical glow on hover */}
