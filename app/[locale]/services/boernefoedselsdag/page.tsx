@@ -16,7 +16,7 @@ export default function BirthdayPartiesPage() {
   const t = useTranslations('birthdayPartiesPage');
   
   const videoUrl = 'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/TrylleKenneth%20show-BcdHB40bje44mvtgNoULMLWdckbAzj.mp4';
-  const videoThumbnail = 'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/ChatGPT%20Image%20May%2019%2C%202026%2C%2011_23_07%20AM-gWtRtuxpmElUZTtT93c23mlTcM76sD.png';
+  const videoThumbnail = '/kenneth-hero-original.png';
 
   return (
     <>

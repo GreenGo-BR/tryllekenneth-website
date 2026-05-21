@@ -14,7 +14,7 @@ export default function CloseupMagic() {
   const locale = useLocale();
   const t = useTranslations();
   const videoUrl = 'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/videoplayback%20%281%29-Q1D2bD05QCGGjQE987CDIoehLKbY9v.mp4';
-  const videoThumbnail = 'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/WhatsApp%20Image%202026-05-19%20at%2010.48.13%20%281%29-A5bNILaPPqzkKWoS1Is5CAZBKHfmRZ.jpeg';
+  const videoThumbnail = '/kenneth-hero-original.png';
   return (
     <>
       <Header />
@@ -71,7 +71,7 @@ export default function CloseupMagic() {
               {/* Video Element - Production Grade */}
               <ProductionVideo
                 src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/TrylleKenneth%20Close-up-G9bBfYukuP3t82YylZW3gZILIbCkJo.mp4"
-                poster="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/WhatsApp%20Image%202026-05-19%20at%2010.48.13%20%281%29-A5bNILaPPqzkKWoS1Is5CAZBKHfmRZ.jpeg"
+                poster="/kenneth-hero-original.png"
                 autoPlay={false}
                 muted={true}
                 loop={true}

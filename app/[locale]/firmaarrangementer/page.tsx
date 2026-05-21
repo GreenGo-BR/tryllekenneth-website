@@ -16,7 +16,7 @@ export default function CorporateEventsPage() {
   const t = useTranslations('corporateEventsPage');
   
   const videoUrl = 'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/videoplayback%20%281%29-Q1D2bD05QCGGjQE987CDIoehLKbY9v.mp4';
-  const videoThumbnail = 'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/ChatGPT%20Image%20May%2019%2C%202026%2C%2011_27_15%20AM-MBK00G4m2ZbI61vtY46vHeI8xZy0ZU.png';
+  const videoThumbnail = '/wedding-connection.jpg';
 
   return (
     <>
@@ -154,7 +154,7 @@ export default function CorporateEventsPage() {
             <div className="grid md:grid-cols-3 gap-6">
               <div className="relative h-80 rounded-lg overflow-hidden shadow-lg group cursor-pointer">
                 <img
-                  src="/kenneth-hero-original.png"
+                  src="/wedding-connection.jpg"
                   alt="Firmaarrangement magisk underholdning"
                   loading="lazy"
                   className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
@@ -163,7 +163,7 @@ export default function CorporateEventsPage() {
               </div>
               <div className="relative h-80 rounded-lg overflow-hidden shadow-lg group cursor-pointer">
                 <img
-                  src="/kenneth-hero-original.png"
+                  src="/wedding-intimate-magic.jpg"
                   alt="Corporate magic performance"
                   loading="lazy"
                   className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
@@ -172,7 +172,7 @@ export default function CorporateEventsPage() {
               </div>
               <div className="relative h-80 rounded-lg overflow-hidden shadow-lg group cursor-pointer">
                 <img
-                  src="/kenneth-hero-original.png"
+                  src="/wedding-refinement.jpg"
                   alt="Magisk underholdning event"
                   loading="lazy"
                   className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
