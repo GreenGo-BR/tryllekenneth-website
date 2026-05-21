@@ -133,8 +133,8 @@ export default function StandUpMagic() {
             <div className="group relative overflow-hidden rounded-2xl shadow-lg hover:shadow-xl transition-all duration-500 bg-background">
               <div className="relative w-full" style={{ aspectRatio: '4/3' }}>
                 <img
-                  src="/wedding-connection.jpg"
-                  alt={locale === 'da' ? 'Kenneth med engageret publikum under trylleoptræden' : 'Kenneth with engaged audience during magic performance'}
+                  src="/kenneth-stage-audience.png"
+                  alt={locale === 'da' ? 'Kenneth med publikum under stand-up trylleri' : 'Kenneth performing stand-up with audience engagement'}
                   className="w-full h-full object-contain group-hover:scale-105 transition-transform duration-700"
                 />
               </div>
@@ -160,8 +160,8 @@ export default function StandUpMagic() {
           <div className="group relative overflow-hidden rounded-2xl shadow-lg hover:shadow-xl transition-all duration-500 bg-background">
             <div className="relative w-full" style={{ aspectRatio: '16/9' }}>
               <img
-                src="/wedding-refinement.jpg"
-                alt={locale === 'da' ? 'Kenneth med publikumsinteraktion og magic performance' : 'Kenneth with audience interaction and magic performance'}
+                src="/kenneth-stage-rubiks-cube.png"
+                alt={locale === 'da' ? 'Kenneth optræder med stor stand-up trylleri performance' : 'Kenneth performing spectacular stage magic'}
                 className="w-full h-full object-contain group-hover:scale-105 transition-transform duration-700"
               />
             </div>

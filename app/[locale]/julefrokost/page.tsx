@@ -152,11 +152,11 @@ export default function ChristmasParty() {
           <div className="max-w-6xl mx-auto">
             <h2 className="text-4xl font-bold mb-4 text-center">{t('galleryTitle')}</h2>
             <p className="text-lg text-muted-foreground mb-16 text-center">{t('gallerySubtitle')}</p>
-            <div className="grid md:grid-cols-2 gap-6">
+            <div className="grid md:grid-cols-3 gap-6">
               <div className="relative h-80 rounded-lg overflow-hidden shadow-lg group cursor-pointer">
                 <img
-                  src="/kenneth-christmas-elegant.png"
-                  alt="Juleunderholdning fest"
+                  src="/kenneth-christmas-entrance.png"
+                  alt="Kenneth julemand entrée"
                   loading="lazy"
                   className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
                 />
@@ -164,8 +164,17 @@ export default function ChristmasParty() {
               </div>
               <div className="relative h-80 rounded-lg overflow-hidden shadow-lg group cursor-pointer">
                 <img
-                  src="/kenneth-santa.png"
-                  alt="Kenneth som julemand"
+                  src="/kenneth-christmas-hallway.png"
+                  alt="Kenneth med julemand kostume"
+                  loading="lazy"
+                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                />
+                <div className="absolute inset-0 bg-black/40 group-hover:bg-black/50 transition-colors" />
+              </div>
+              <div className="relative h-80 rounded-lg overflow-hidden shadow-lg group cursor-pointer">
+                <img
+                  src="/kenneth-christmas-fireplace.png"
+                  alt="Kenneth ved julepyntet lune"
                   loading="lazy"
                   className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
                 />
