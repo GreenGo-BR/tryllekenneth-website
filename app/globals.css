@@ -1316,14 +1316,42 @@ video::-moz-media-controls {
   }
 }
 
+/* CTA Button Premium - Golden Glow */
+@keyframes cta-button-premium-glow {
+  0%, 100% {
+    box-shadow: 0 0 10px rgba(255, 192, 203, 0.3), 0 0 20px rgba(255, 215, 0, 0.2), inset 0 0 10px rgba(255, 255, 255, 0.1);
+  }
+  50% {
+    box-shadow: 0 0 20px rgba(255, 215, 0, 0.5), 0 0 40px rgba(255, 192, 203, 0.4), inset 0 0 15px rgba(255, 255, 255, 0.2);
+  }
+}
+
 .cta-button-premium {
   animation: cta-button-premium-glow 2s ease-in-out infinite;
-  transition: all 0.3s ease;
+  transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  backdrop-filter: blur(8px);
+  background: linear-gradient(135deg, rgba(250, 204, 21, 0.9) 0%, rgba(236, 72, 153, 0.8) 50%, rgba(168, 85, 247, 0.7) 100%);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  box-shadow: 0 8px 32px rgba(255, 215, 0, 0.2), inset 0 1px 0 rgba(255, 255, 255, 0.3);
 }
 
 .cta-button-premium:hover {
-  transform: translateY(-3px) scale(1.02);
-  animation: cta-button-premium-glow 1.5s ease-in-out infinite;
+  transform: translateY(-4px) scale(1.03);
+  animation: cta-button-premium-glow 1.2s ease-in-out infinite;
+  box-shadow: 0 16px 48px rgba(255, 215, 0, 0.35), inset 0 1px 0 rgba(255, 255, 255, 0.4);
+  border-color: rgba(255, 255, 255, 0.5);
+}
+
+/* Secondary CTA - White Border Glow */
+@keyframes secondary-cta-glow {
+  0%, 100% {
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.3), inset 0 0 0px rgba(255, 255, 255, 0);
+    border-color: rgba(255, 255, 255, 0.5);
+  }
+  50% {
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.6), inset 0 0 10px rgba(255, 255, 255, 0.1);
+    border-color: rgba(255, 255, 255, 0.8);
+  }
 }
 
 /* Secondary CTA - White Border Glow */
@@ -1340,11 +1368,19 @@ video::-moz-media-controls {
 
 .secondary-cta-premium {
   animation: secondary-cta-glow 2.5s ease-in-out infinite;
+  transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  backdrop-filter: blur(10px);
+  background: linear-gradient(135deg, rgba(168, 85, 247, 0.15) 0%, rgba(168, 85, 247, 0.1) 100%);
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  box-shadow: 0 8px 32px rgba(168, 85, 247, 0.1), inset 0 1px 0 rgba(255, 255, 255, 0.25);
 }
 
 .secondary-cta-premium:hover {
-  box-shadow: 0 0 25px rgba(255, 255, 255, 0.8), inset 0 0 15px rgba(255, 255, 255, 0.2) !important;
-  border-color: rgba(255, 255, 255, 0.9) !important;
+  transform: translateY(-4px) scale(1.03);
+  animation: secondary-cta-glow 1.5s ease-in-out infinite;
+  box-shadow: 0 16px 48px rgba(168, 85, 247, 0.2), inset 0 1px 0 rgba(255, 255, 255, 0.35);
+  border-color: rgba(255, 255, 255, 0.7);
+  background: linear-gradient(135deg, rgba(168, 85, 247, 0.25) 0%, rgba(168, 85, 247, 0.15) 100%);
 }
 
 /* Trust Indicator Text - Subtle Shimmer */
@@ -1362,3 +1398,317 @@ video::-moz-media-controls {
 .trust-indicator-premium {
   animation: trust-shimmer 3s ease-in-out infinite;
 }
+
+/* ===== CINEMATIC HERO LIGHTING ===== */
+
+/* Elegant Dark Overlay - Cinemat ic atmosphere */
+@keyframes cinematic-overlay-glow {
+  0%, 100% {
+    background: radial-gradient(ellipse 800px 600px at 20% 50%, rgba(0, 0, 0, 0.35) 0%, rgba(0, 0, 0, 0.55) 50%, rgba(0, 0, 0, 0.7) 100%);
+  }
+  50% {
+    background: radial-gradient(ellipse 800px 600px at 20% 50%, rgba(0, 0, 0, 0.32) 0%, rgba(0, 0, 0, 0.52) 50%, rgba(0, 0, 0, 0.68) 100%);
+  }
+}
+
+.hero-cinematic-overlay {
+  position: absolute;
+  inset: 0;
+  z-index: 5;
+  animation: cinematic-overlay-glow 4s ease-in-out infinite;
+  backdrop-filter: blur(0.5px);
+}
+
+/* Soft spotlight effect - Left side lighting */
+@keyframes spotlight-left {
+  0%, 100% {
+    opacity: 0.4;
+  }
+  50% {
+    opacity: 0.35;
+  }
+}
+
+.hero-spotlight-left {
+  position: absolute;
+  left: -10%;
+  top: 10%;
+  width: 600px;
+  height: 600px;
+  background: radial-gradient(circle, rgba(255, 215, 0, 0.15) 0%, transparent 70%);
+  border-radius: 50%;
+  z-index: 4;
+  filter: blur(60px);
+  animation: spotlight-left 5s ease-in-out infinite;
+  pointer-events: none;
+}
+
+/* Atmospheric glow - Right side accent */
+@keyframes atmospheric-glow {
+  0%, 100% {
+    opacity: 0.25;
+  }
+  50% {
+    opacity: 0.2;
+  }
+}
+
+.hero-atmospheric-glow {
+  position: absolute;
+  right: -15%;
+  top: -20%;
+  width: 800px;
+  height: 800px;
+  background: radial-gradient(circle, rgba(168, 85, 247, 0.1) 0%, transparent 70%);
+  border-radius: 50%;
+  z-index: 3;
+  filter: blur(80px);
+  animation: atmospheric-glow 6s ease-in-out infinite;
+  pointer-events: none;
+}
+
+/* Bottom gradient fade - Luxury depth */
+.hero-bottom-fade {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 200px;
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.3) 100%);
+  z-index: 6;
+  pointer-events: none;
+}
+
+/* Vignette effect for Kenneth's image - Subtle edge darkening */
+@keyframes vignette-pulse {
+  0%, 100% {
+    box-shadow: inset 0 0 80px rgba(0, 0, 0, 0.4), inset 0 0 30px rgba(0, 0, 0, 0.2);
+  }
+  50% {
+    box-shadow: inset 0 0 80px rgba(0, 0, 0, 0.35), inset 0 0 30px rgba(0, 0, 0, 0.15);
+  }
+}
+
+.kenneth-vignette {
+  animation: vignette-pulse 4s ease-in-out infinite;
+}
+
+/* Soft edge glow for Kenneth - Premium cinema look */
+@keyframes kenneth-edge-glow {
+  0%, 100% {
+    filter: drop-shadow(-40px 0 60px rgba(255, 215, 0, 0.1)) drop-shadow(0 40px 80px rgba(0, 0, 0, 0.4));
+  }
+  50% {
+    filter: drop-shadow(-40px 0 60px rgba(255, 215, 0, 0.12)) drop-shadow(0 40px 80px rgba(0, 0, 0, 0.35));
+  }
+}
+
+/* Kenneth Premium Image Enhancement */
+img[src*="kenneth"],
+img[src*="Kenneth"] {
+  filter: contrast(1.05) brightness(0.98);
+  transition: filter 0.4s ease;
+}
+
+/* Enhance contrast on hover for interactive images */
+.group:hover img[src*="kenneth"],
+.group:hover img[src*="Kenneth"],
+.magic-card-hover:hover img[src*="kenneth"],
+.magic-card-hover:hover img[src*="Kenneth"] {
+  filter: contrast(1.12) brightness(0.95) saturate(1.1);
+}
+
+/* ===== PREMIUM TYPOGRAPHY HIERARCHY ===== */
+
+/* Global heading enhancements */
+h1 {
+  letter-spacing: -0.02em;
+  line-height: 1.1;
+  font-weight: 900;
+}
+
+h2 {
+  letter-spacing: -0.015em;
+  line-height: 1.2;
+  font-weight: 800;
+  margin-top: 1.5em;
+  margin-bottom: 0.75em;
+}
+
+h3 {
+  letter-spacing: -0.01em;
+  line-height: 1.3;
+  font-weight: 700;
+  margin-top: 1.25em;
+  margin-bottom: 0.6em;
+}
+
+/* Cinematic heading text shadow effect */
+h1, h2, h3 {
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Premium paragraph styling */
+p {
+  max-width: 65ch;
+  line-height: 1.7;
+}
+
+/* Section spacing rhythm - luxury breathing room */
+section {
+  scroll-margin-top: 5rem;
+}
+
+main > section:not(:first-child) {
+  padding-top: 5rem;
+  padding-bottom: 5rem;
+}
+
+@media (max-width: 640px) {
+  main > section:not(:first-child) {
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+  }
+}
+
+/* ===== ATMOSPHERIC BACKGROUND ===== */
+
+/* Soft animated gradient background */
+@keyframes atmosphere-shift {
+  0%, 100% {
+    background: linear-gradient(135deg, #fafaf9 0%, #f5f5f4 25%, #f0f0ed 50%, #f5f5f4 75%, #fafaf9 100%);
+  }
+  50% {
+    background: linear-gradient(135deg, #ffffff 0%, #fafaf9 25%, #f5f5f4 50%, #fafaf9 75%, #ffffff 100%);
+  }
+}
+
+body {
+  animation: atmosphere-shift 15s ease-in-out infinite;
+  position: relative;
+}
+
+/* Subtle cinematic light overlay */
+body::before {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(ellipse at 50% 0%, rgba(255, 215, 0, 0.05) 0%, transparent 50%);
+  pointer-events: none;
+  z-index: -1;
+}
+
+/* Luxury dark texture overlay - very subtle */
+body::after {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: 
+    repeating-linear-gradient(
+      90deg,
+      transparent,
+      rgba(0, 0, 0, 0.01) 1px,
+      transparent 2px,
+      transparent 4px
+    ),
+    repeating-linear-gradient(
+      0deg,
+      transparent,
+      rgba(0, 0, 0, 0.01) 1px,
+      transparent 2px,
+      transparent 4px
+    );
+  background-size: 4px 4px;
+  pointer-events: none;
+  z-index: -1;
+}
+
+/* ===== PREMIUM LOGO RED BRANDING ===== */
+
+/* Logo with subtle premium glow */
+@keyframes logo-red-glow {
+  0%, 100% {
+    filter: drop-shadow(0 2px 8px rgba(239, 68, 68, 0.15));
+  }
+  50% {
+    filter: drop-shadow(0 4px 16px rgba(239, 68, 68, 0.25));
+  }
+}
+
+header img[alt*="TrylleKenneth"],
+header img[alt*="Magisk"] {
+  animation: logo-red-glow 4s ease-in-out infinite;
+  transition: filter 0.4s ease;
+}
+
+/* Logo hover enhancement */
+header a:hover img[alt*="TrylleKenneth"],
+header a:hover img[alt*="Magisk"] {
+  animation: logo-red-glow 2s ease-in-out infinite;
+}
+
+/* ===== FINAL SPACING & LUXURY RHYTHM ===== */
+
+/* Premium section transitions */
+section {
+  transition: all 0.6s ease-out;
+  position: relative;
+}
+
+/* Smooth scroll behavior for luxury feel */
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 6rem;
+}
+
+/* Extra breathing room between major sections */
+section + section {
+  margin-top: 2rem;
+}
+
+/* Card spacing rhythm */
+.grid > * + * {
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+/* Luxury divider between sections - subtle gradient */
+section::after {
+  content: '';
+  display: block;
+  height: 1px;
+  background: linear-gradient(to right, transparent 0%, rgba(0, 0, 0, 0.05) 25%, rgba(0, 0, 0, 0.05) 75%, transparent 100%);
+  margin-top: 4rem;
+  margin-bottom: 2rem;
+}
+
+/* Remove last section divider */
+section:last-of-type::after {
+  display: none;
+}
+
+/* Premium container spacing */
+.max-w-6xl, .max-w-7xl {
+  transition: all 0.5s ease;
+}
+
+/* Smooth gaps in grid layouts */
+.grid {
+  gap: 2rem;
+}
+
+@media (max-width: 768px) {
+  .grid {
+    gap: 1.5rem;
+  }
+  
+  section + section {
+    margin-top: 1rem;
+  }
+}
+
