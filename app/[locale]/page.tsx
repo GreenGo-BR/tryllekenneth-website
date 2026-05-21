@@ -83,7 +83,7 @@ export default function Home() {
             <img 
               src="/kenneth-hero-novo.png"
               alt="Kenneth performing premium magic entertainment with theatrical presentation"
-              className="w-full h-full object-cover object-center"
+              className="w-full h-full object-cover object-top"
             />
           </div>
 
