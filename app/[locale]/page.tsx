@@ -111,32 +111,34 @@ export default function Home() {
           {/* Content - Text Centered */}
           <div className="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12 w-full">
             <div className="text-center">
-              {/* Badge */}
+              {/* Badge - Premium Glow */}
               <div className="mb-6 inline-block animate-float-slow">
-                <span className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-white/15 backdrop-blur-sm border border-white/20 text-white font-medium text-xs sm:text-sm">
-                  <Wand2 size={14} className="text-white animate-spin" style={{ animationDuration: '3s' }} />
-                  <span>✨ {locale === 'da' ? 'TrylleKenneth' : 'TrylleKenneth'}</span>
+                <span className="hero-badge-premium inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/10 backdrop-blur-md border border-white/30 text-white font-semibold text-xs sm:text-sm hover:bg-white/15 transition-all">
+                  <Wand2 size={16} className="text-yellow-300 animate-spin" style={{ animationDuration: '3s' }} />
+                  <span className="bg-gradient-to-r from-yellow-200 via-pink-200 to-yellow-100 bg-clip-text text-transparent font-bold">
+                    ✨ {locale === 'da' ? 'TrylleKenneth' : 'TrylleKenneth'}
+                  </span>
                 </span>
               </div>
 
-              {/* Main Title */}
-              <div className="mb-4">
-                <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white drop-shadow-2xl leading-tight text-balance">
+              {/* Main Title - Premium Gradient */}
+              <div className="mb-6">
+                <h1 className="hero-title-premium text-5xl sm:text-6xl lg:text-7xl font-black leading-tight text-balance bg-gradient-to-br from-yellow-200 via-pink-100 to-yellow-50 bg-clip-text text-transparent">
                   {t('hero.title')}
                 </h1>
               </div>
 
-              {/* Subtitle */}
-              <p className="text-base sm:text-lg lg:text-xl text-white/95 mb-8 text-pretty leading-relaxed max-w-2xl mx-auto drop-shadow-lg">
+              {/* Subtitle - Elegant Glow */}
+              <p className="hero-subtitle-premium text-lg sm:text-xl lg:text-2xl text-white/90 mb-10 text-pretty leading-relaxed max-w-3xl mx-auto font-medium">
                 {t('hero.subtitle')}
               </p>
 
-              {/* CTA Buttons */}
-              <div className="flex flex-col sm:flex-row gap-2 sm:gap-3 justify-center mb-8">
+              {/* CTA Buttons - Premium Effects */}
+              <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center mb-10">
                 <Link href={`/${locale}/contact`}>
                   <Button
                     size="lg"
-                    className="magic-button w-full sm:w-auto bg-white text-primary hover:bg-white/90 text-sm font-semibold h-11 sm:h-12 px-6 sm:px-7 shadow-lg shadow-black/30 hover:shadow-xl hover:shadow-black/40 transition-all"
+                    className="cta-button-premium w-full sm:w-auto bg-gradient-to-r from-yellow-300 to-yellow-100 text-gray-900 hover:from-yellow-200 hover:to-yellow-50 text-base font-bold h-13 sm:h-14 px-8 sm:px-10 rounded-xl shadow-2xl shadow-yellow-500/40 hover:shadow-yellow-500/60 transition-all duration-300"
                   >
                     {t('hero.cta1')}
                   </Button>
@@ -144,7 +146,7 @@ export default function Home() {
                 <a href="tel:+4540852728" className="w-full sm:w-auto">
                   <Button
                     size="lg"
-                    className="magic-button w-full sm:w-auto text-sm font-semibold h-11 sm:h-12 px-6 sm:px-7 border-2 border-white bg-transparent text-white hover:bg-white/10 transition-all"
+                    className="secondary-cta-premium w-full sm:w-auto text-base font-bold h-13 sm:h-14 px-8 sm:px-10 border-2 border-white/60 bg-white/5 text-white hover:bg-white/15 rounded-xl backdrop-blur-sm transition-all duration-300"
                   >
                     {t('hero.cta2')}
                   </Button>
@@ -152,8 +154,8 @@ export default function Home() {
               </div>
 
               {/* Trust Indicators */}
-              <div className="pt-4 border-t border-white/20">
-                <p className="text-xs text-white/80 font-medium">
+              <div className="trust-indicator-premium pt-6 border-t border-white/20">
+                <p className="text-sm sm:text-base text-white/85 font-semibold">
                   {t('trust.message')}
                 </p>
               </div>
