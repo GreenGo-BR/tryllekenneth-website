@@ -249,7 +249,7 @@ export default function Home() {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
             {/* Children's Magic - Warm playful elegance */}
             <Card className="premium-service-card group rounded-2xl overflow-hidden border border-primary/30 bg-gradient-to-br from-primary/8 to-primary/3 shadow-lg hover:shadow-2xl transition-all duration-500 hover:-translate-y-2">
               <div className="relative p-6 h-full flex flex-col">
@@ -290,6 +290,36 @@ export default function Home() {
                 <h3 className="text-lg font-bold mb-2 text-foreground">{t('services.closeUpMagic.title')}</h3>
                 <p className="text-muted-foreground mb-5 flex-grow text-sm leading-relaxed">{t('services.closeUpMagic.description')}</p>
                 <Link href={`/${locale}/services/closeup`} className="inline-block px-4 py-2 rounded-lg bg-purple-600/15 text-purple-800 font-semibold text-sm hover:bg-purple-600/30 hover:shadow-lg transition-all duration-300">
+                  {t('services.readMore')} →
+                </Link>
+              </div>
+            </Card>
+
+            {/* Wedding Magic - Romantic elegance */}
+            <Card className="premium-service-card group rounded-2xl overflow-hidden border border-rose-400/30 bg-gradient-to-br from-rose-500/8 to-rose-500/3 shadow-lg hover:shadow-2xl transition-all duration-500 hover:-translate-y-2">
+              <div className="relative p-6 h-full flex flex-col">
+                <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-rose-400/80 via-pink-400/60 to-transparent"></div>
+                <div className="mb-4 inline-flex p-3.5 rounded-xl bg-rose-500/15 group-hover:bg-rose-500/25 transition-all duration-300 group-hover:scale-110 shadow-md">
+                  <Heart className="text-rose-700/90" size={28} />
+                </div>
+                <h3 className="text-lg font-bold mb-2 text-foreground">{t('services.weddingMagic.title')}</h3>
+                <p className="text-muted-foreground mb-5 flex-grow text-sm leading-relaxed">{t('services.weddingMagic.description')}</p>
+                <Link href={`/${locale}/bryllupper`} className="inline-block px-4 py-2 rounded-lg bg-rose-500/15 text-rose-700 font-semibold text-sm hover:bg-rose-500/30 hover:shadow-lg transition-all duration-300">
+                  {t('services.readMore')} →
+                </Link>
+              </div>
+            </Card>
+
+            {/* Corporate Events - Professional elegance */}
+            <Card className="premium-service-card group rounded-2xl overflow-hidden border border-blue-400/30 bg-gradient-to-br from-blue-500/8 to-blue-500/3 shadow-lg hover:shadow-2xl transition-all duration-500 hover:-translate-y-2">
+              <div className="relative p-6 h-full flex flex-col">
+                <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-blue-400/80 via-cyan-400/60 to-transparent"></div>
+                <div className="mb-4 inline-flex p-3.5 rounded-xl bg-blue-500/15 group-hover:bg-blue-500/25 transition-all duration-300 group-hover:scale-110 shadow-md">
+                  <Zap className="text-blue-700/90" size={28} />
+                </div>
+                <h3 className="text-lg font-bold mb-2 text-foreground">{t('services.corporateEvents.title')}</h3>
+                <p className="text-muted-foreground mb-5 flex-grow text-sm leading-relaxed">{t('services.corporateEvents.description')}</p>
+                <Link href={`/${locale}/firmaarrangementer`} className="inline-block px-4 py-2 rounded-lg bg-blue-500/15 text-blue-700 font-semibold text-sm hover:bg-blue-500/30 hover:shadow-lg transition-all duration-300">
                   {t('services.readMore')} →
                 </Link>
               </div>
