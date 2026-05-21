@@ -14,7 +14,7 @@ export default function StandUpMagic() {
   const locale = useLocale();
   const t = useTranslations();
   const videoUrl = 'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/videoplayback%20%281%29-Q1D2bD05QCGGjQE987CDIoehLKbY9v.mp4';
-  const videoThumbnail = 'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/ChatGPT%20Image%20May%2019%2C%202026%2C%2011_27_15%20AM-MBK00G4m2ZbI61vtY46vHeI8xZy0ZU.png';
+  const videoThumbnail = '/kenneth-hero-original.png';
   return (
     <>
       <Header />
@@ -120,7 +120,7 @@ export default function StandUpMagic() {
           <div className="group relative overflow-hidden rounded-3xl shadow-lg hover:shadow-xl transition-all duration-500 mb-12 bg-background">
             <div className="relative w-full" style={{ aspectRatio: '16/9' }}>
               <img
-                src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/ChatGPT%20Image%20May%2019%2C%202026%2C%2011_27_15%20AM-MBK00G4m2ZbI61vtY46vHeI8xZy0ZU.png"
+                src="/kenneth-hero-original.png"
                 alt={locale === 'da' ? 'Kenneth optræder med stand-up trylleri på scenen' : 'Kenneth performing stand-up comedy magic on stage'}
                 className="w-full h-full object-contain group-hover:scale-105 transition-transform duration-700"
               />
@@ -133,8 +133,8 @@ export default function StandUpMagic() {
             <div className="group relative overflow-hidden rounded-2xl shadow-lg hover:shadow-xl transition-all duration-500 bg-background">
               <div className="relative w-full" style={{ aspectRatio: '4/3' }}>
                 <img
-                  src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/ChatGPT%20Image%20May%2019%2C%202026%2C%2011_28_57%20AM-M1g6gMeHaNoj02b2nuP0m621igvvZY.png"
-                  alt={locale === 'da' ? 'Kenneth med stort trylleapparat og rekvisitter' : 'Kenneth with large stage magic apparatus and props'}
+                  src="/wedding-connection.jpg"
+                  alt={locale === 'da' ? 'Kenneth med engageret publikum under trylleoptræden' : 'Kenneth with engaged audience during magic performance'}
                   className="w-full h-full object-contain group-hover:scale-105 transition-transform duration-700"
                 />
               </div>
@@ -144,7 +144,7 @@ export default function StandUpMagic() {
             <div className="group relative overflow-hidden rounded-2xl shadow-lg hover:shadow-xl transition-all duration-500">
               <ProductionVideo
                 src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/videoplayback%20%281%29-Q1D2bD05QCGGjQE987CDIoehLKbY9v.mp4"
-                poster="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/ChatGPT%20Image%20May%2019%2C%202026%2C%2011_23_07%20AM-gWtRtuxpmElUZTtT93c23mlTcM76sD.png"
+                poster="/kenneth-hero-original.png"
                 autoPlay={true}
                 muted={true}
                 loop={true}
@@ -160,8 +160,8 @@ export default function StandUpMagic() {
           <div className="group relative overflow-hidden rounded-2xl shadow-lg hover:shadow-xl transition-all duration-500 bg-background">
             <div className="relative w-full" style={{ aspectRatio: '16/9' }}>
               <img
-                src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/ChatGPT%20Image%20May%2019%2C%202026%2C%2011_44_49%20AM-UMJLIfVVDcDujc57Mgy9Cm2yMKYkuU.png"
-                alt={locale === 'da' ? 'Kenneth optræder med trylleri og publikumsinteraktion' : 'Kenneth performing magic with audience engagement'}
+                src="/wedding-refinement.jpg"
+                alt={locale === 'da' ? 'Kenneth med publikumsinteraktion og magic performance' : 'Kenneth with audience interaction and magic performance'}
                 className="w-full h-full object-contain group-hover:scale-105 transition-transform duration-700"
               />
             </div>

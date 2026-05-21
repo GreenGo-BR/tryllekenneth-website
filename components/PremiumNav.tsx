@@ -32,6 +32,7 @@ export function PremiumNav() {
       href: '#',
       children: [
         { key: 'childrensMagic', href: `/${locale}/services/childrens` },
+        { key: 'birthdayParties', href: locale === 'da' ? `/${locale}/services/boernefoedselsdag` : `/${locale}/services/birthday-parties` },
         { key: 'standUpMagic', href: `/${locale}/services/standup` },
         { key: 'closeUpMagic', href: `/${locale}/services/closeup` },
         { key: 'corporateEvents', href: `/${locale}/firmaarrangementer` },

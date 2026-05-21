@@ -8,25 +8,25 @@ import { Card } from '@/components/ui/card';
 import { VideoSchema } from '@/components/video-schema';
 import { StructuredData } from '@/components/structured-data';
 import { ServiceSchema } from '@/lib/structured-data';
-import { Heart, Sparkles, Users, Star, CheckCircle, Play } from 'lucide-react';
+import { Cake, Smile, Users, Sparkles, Heart, Star, CheckCircle, Play } from 'lucide-react';
 import Link from 'next/link';
 
-export default function WeddingPage() {
+export default function BirthdayPartiesPage() {
   const locale = useLocale();
-  const t = useTranslations('weddingPage');
+  const t = useTranslations('birthdayPartiesPage');
   
-  const videoUrl = 'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/videoplayback%20%281%29-Q1D2bD05QCGGjQE987CDIoehLKbY9v.mp4';
+  const videoUrl = 'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/TrylleKenneth%20show-BcdHB40bje44mvtgNoULMLWdckbAzj.mp4';
   const videoThumbnail = '/kenneth-family-garden.png';
 
   return (
     <>
       <Header />
-      <VideoSchema videoUrl={videoUrl} thumbnailUrl={videoThumbnail} videoId="wedding-video-schema" />
+      <VideoSchema videoUrl={videoUrl} thumbnailUrl={videoThumbnail} videoId="birthday-video-schema" />
       <StructuredData 
         schema={ServiceSchema(locale, {
-          name: 'Magisk Nærmagi til Bryllup',
-          description: 'Elegant nærmagi til brylluppet - magisk underholdning der skaber intime øjeblikke og forbinder gæster',
-          url: `https://tryllekenneth.dk/${locale}/bryllupper`,
+          name: locale === 'da' ? 'Tryllekunstner til børnefødselsdage' : 'Magician for Children\'s Birthday Parties',
+          description: locale === 'da' ? 'Professionelt børnetrylleri til fødselsdage i København og Danmark - magisk underholdning der gør børnefødselsdagen uforglemmelig' : 'Professional children\'s magic entertainment for birthday parties in Copenhagen and Denmark',
+          url: `https://tryllekenneth.dk/${locale}/services/boernefoedselsdag`,
           image: videoThumbnail,
         })}
       />
@@ -74,12 +74,11 @@ export default function WeddingPage() {
         {/* Performance Video Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-accent/10 via-primary/10 to-secondary/10">
           <div className="max-w-5xl mx-auto">
-            <h2 className="text-4xl font-bold mb-12 text-center">Se Nærmagi i Aktion</h2>
+            <h2 className="text-4xl font-bold mb-12 text-center">{t('videoTitle')}</h2>
             <div className="relative aspect-video rounded-2xl overflow-hidden shadow-2xl group cursor-pointer">
               <img
                 src={videoThumbnail}
-                alt="Nærmagi til bryllup"
-                loading="lazy"
+                alt={t('videoAlt')}
                 className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
               />
               <div className="absolute inset-0 bg-black/40 group-hover:bg-black/50 transition-colors" />
@@ -92,98 +91,103 @@ export default function WeddingPage() {
           </div>
         </section>
 
-        {/* Benefits Section */}
+        {/* Why Children Love It Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-6xl mx-auto">
-            <h2 className="text-4xl font-bold mb-4 text-center">{t('benefitsTitle')}</h2>
+            <h2 className="text-4xl font-bold mb-4 text-center">{t('whyTitle')}</h2>
             <p className="text-lg text-muted-foreground mb-16 text-center max-w-2xl mx-auto">
-              Nærmagi skabes helt tæt på gæsterne og skaber naturlige forbindelser
+              {t('whyIntro')}
             </p>
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
               <Card className="p-8 border-2 border-accent/20 hover:border-accent/50 transition-all magic-card-hover bg-white">
-                <Heart className="w-12 h-12 text-accent mb-4" />
-                <h3 className="text-xl font-bold mb-3">{t('benefit1Title')}</h3>
-                <p className="text-muted-foreground">{t('benefit1Desc')}</p>
+                <Smile className="w-12 h-12 text-accent mb-4" />
+                <h3 className="text-xl font-bold mb-3">{t('why1Title')}</h3>
+                <p className="text-muted-foreground">{t('why1Desc')}</p>
               </Card>
               <Card className="p-8 border-2 border-primary/20 hover:border-primary/50 transition-all magic-card-hover bg-white">
                 <Sparkles className="w-12 h-12 text-primary mb-4" />
-                <h3 className="text-xl font-bold mb-3">{t('benefit2Title')}</h3>
-                <p className="text-muted-foreground">{t('benefit2Desc')}</p>
+                <h3 className="text-xl font-bold mb-3">{t('why2Title')}</h3>
+                <p className="text-muted-foreground">{t('why2Desc')}</p>
               </Card>
               <Card className="p-8 border-2 border-secondary/20 hover:border-secondary/50 transition-all magic-card-hover bg-white">
-                <Users className="w-12 h-12 text-secondary mb-4" />
-                <h3 className="text-xl font-bold mb-3">{t('benefit3Title')}</h3>
-                <p className="text-muted-foreground">{t('benefit3Desc')}</p>
+                <Heart className="w-12 h-12 text-secondary mb-4" />
+                <h3 className="text-xl font-bold mb-3">{t('why3Title')}</h3>
+                <p className="text-muted-foreground">{t('why3Desc')}</p>
               </Card>
               <Card className="p-8 border-2 border-accent/20 hover:border-accent/50 transition-all magic-card-hover bg-white">
-                <Star className="w-12 h-12 text-accent mb-4" />
-                <h3 className="text-xl font-bold mb-3">{t('benefit4Title')}</h3>
-                <p className="text-muted-foreground">{t('benefit4Desc')}</p>
+                <Users className="w-12 h-12 text-accent mb-4" />
+                <h3 className="text-xl font-bold mb-3">{t('why4Title')}</h3>
+                <p className="text-muted-foreground">{t('why4Desc')}</p>
               </Card>
               <Card className="p-8 border-2 border-primary/20 hover:border-primary/50 transition-all magic-card-hover bg-white">
-                <Heart className="w-12 h-12 text-primary mb-4" />
-                <h3 className="text-xl font-bold mb-3">{t('benefit5Title')}</h3>
-                <p className="text-muted-foreground">{t('benefit5Desc')}</p>
+                <Star className="w-12 h-12 text-primary mb-4" />
+                <h3 className="text-xl font-bold mb-3">{t('why5Title')}</h3>
+                <p className="text-muted-foreground">{t('why5Desc')}</p>
               </Card>
             </div>
           </div>
         </section>
 
-        {/* Magical Moments Section */}
+        {/* Interactive Participation Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8 bg-card">
           <div className="max-w-6xl mx-auto">
-            <h2 className="text-4xl font-bold mb-4 text-center">{t('momentTitle')}</h2>
+            <h2 className="text-4xl font-bold mb-4 text-center">{t('interactiveTitle')}</h2>
             <p className="text-lg text-muted-foreground mb-16 text-center max-w-2xl mx-auto">
-              {t('momentIntro')}
+              {t('interactiveIntro')}
             </p>
             <div className="grid md:grid-cols-2 gap-8">
               {Array.from({ length: 4 }, (_, i) => (
                 <Card key={i} className="p-8 border-2 border-accent/20 hover:border-accent/50 transition-all magic-card-hover bg-white">
-                  <h3 className="text-xl font-bold mb-3 text-accent">{t(`moment${i + 1}`)}</h3>
-                  <p className="text-muted-foreground leading-relaxed">{t(`moment${i + 1}Desc`)}</p>
+                  <h3 className="text-xl font-bold mb-3 text-accent">{t(`interactive${i + 1}`)}</h3>
+                  <p className="text-muted-foreground leading-relaxed">{t(`interactive${i + 1}Desc`)}</p>
                 </Card>
               ))}
             </div>
           </div>
         </section>
 
-        {/* Placement Timing Section */}
+        {/* Birthday Child Spotlight Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-6xl mx-auto">
-            <h2 className="text-4xl font-bold mb-4 text-center">{t('placementTitle')}</h2>
+            <h2 className="text-4xl font-bold mb-4 text-center">{t('spotlightTitle')}</h2>
             <p className="text-lg text-muted-foreground mb-16 text-center max-w-2xl mx-auto">
-              Nærmagi kan tilpasses præcist hvor det passer bedst ind i jeres bryllupsprogram
+              {t('spotlightIntro')}
             </p>
             <div className="grid md:grid-cols-2 gap-8">
               {Array.from({ length: 4 }, (_, i) => (
                 <Card key={i} className="p-8 border-0 bg-white hover:shadow-lg transition-shadow">
-                  <h3 className="text-xl font-bold mb-3 text-accent">{t(`placement${i + 1}`)}</h3>
-                  <p className="text-muted-foreground leading-relaxed">{t(`placement${i + 1}Desc`)}</p>
+                  <h3 className="text-xl font-bold mb-3 text-accent">{t(`spotlight${i + 1}`)}</h3>
+                  <p className="text-muted-foreground leading-relaxed">{t(`spotlight${i + 1}Desc`)}</p>
                 </Card>
               ))}
             </div>
           </div>
         </section>
 
-        {/* Testimonials Section */}
-        <section className="py-20 px-4 sm:px-6 lg:px-8 bg-card">
+        {/* Gallery Section */}
+        <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-accent/10 via-primary/10 to-secondary/10">
           <div className="max-w-6xl mx-auto">
-            <h2 className="text-4xl font-bold mb-16 text-center">{t('testimonialTitle')}</h2>
-            <div className="grid md:grid-cols-3 gap-8">
-              {Array.from({ length: 3 }, (_, i) => (
-                <Card key={i} className="p-8 border-0 bg-white hover:shadow-lg transition-shadow">
-                  <div className="flex gap-1 mb-6">
-                    {Array.from({ length: 5 }, (_, j) => (
-                      <span key={j} className="text-accent">★</span>
-                    ))}
-                  </div>
-                  <p className="text-foreground mb-6 italic leading-relaxed">&quot;{t(`testimonial${i + 1}Text`)}&quot;</p>
-                  <div>
-                    <p className="font-bold text-foreground">{t(`testimonial${i + 1}Name`)}</p>
-                    <p className="text-sm text-muted-foreground">{t(`testimonial${i + 1}Role`)}</p>
-                  </div>
-                </Card>
-              ))}
+            <h2 className="text-4xl font-bold mb-4 text-center">{t('galleryTitle')}</h2>
+            <p className="text-lg text-muted-foreground mb-16 text-center">{t('gallerySubtitle')}</p>
+            <div className="grid md:grid-cols-2 gap-6">
+              <div className="relative h-80 rounded-lg overflow-hidden shadow-lg group cursor-pointer">
+                <img
+                  src="/kenneth-family-garden.png"
+                  alt="Children's birthday party magic show"
+                  loading="lazy"
+                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                />
+                <div className="absolute inset-0 bg-black/40 group-hover:bg-black/50 transition-colors" />
+              </div>
+              <div className="relative h-80 rounded-lg overflow-hidden shadow-lg group cursor-pointer">
+                <img
+                  src="/kenneth-garden-party-performance.png"
+                  alt="Birthday party entertainment Copenhagen"
+                  loading="lazy"
+                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                />
+                <div className="absolute inset-0 bg-black/40 group-hover:bg-black/50 transition-colors" />
+              </div>
             </div>
           </div>
         </section>
@@ -193,10 +197,28 @@ export default function WeddingPage() {
           <div className="max-w-3xl mx-auto">
             <h2 className="text-4xl font-bold mb-16 text-center">{t('faqTitle')}</h2>
             <div className="space-y-6">
-              {Array.from({ length: 5 }, (_, i) => (
+              {Array.from({ length: 6 }, (_, i) => (
                 <Card key={i} className="p-8 border-0 bg-white hover:shadow-lg transition-shadow">
                   <h3 className="font-bold text-lg mb-4 text-accent">{t(`faqQ${i + 1}`)}</h3>
                   <p className="text-muted-foreground leading-relaxed">{t(`faqA${i + 1}`)}</p>
+                </Card>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* Family-Friendly Entertainment Section */}
+        <section className="py-20 px-4 sm:px-6 lg:px-8 bg-card">
+          <div className="max-w-6xl mx-auto">
+            <h2 className="text-4xl font-bold mb-4 text-center">{t('familyTitle')}</h2>
+            <p className="text-lg text-muted-foreground mb-16 text-center max-w-2xl mx-auto">
+              {t('familyIntro')}
+            </p>
+            <div className="grid md:grid-cols-3 gap-8">
+              {Array.from({ length: 3 }, (_, i) => (
+                <Card key={i} className="p-8 border-2 border-accent/20 hover:border-accent/50 transition-all magic-card-hover bg-white">
+                  <h3 className="text-xl font-bold mb-3 text-accent">{t(`family${i + 1}`)}</h3>
+                  <p className="text-muted-foreground leading-relaxed">{t(`family${i + 1}Desc`)}</p>
                 </Card>
               ))}
             </div>

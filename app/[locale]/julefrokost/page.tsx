@@ -16,7 +16,7 @@ export default function ChristmasParty() {
   const t = useTranslations('christmasPartyPage');
   
   const videoUrl = 'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/videoplayback%20%281%29-Q1D2bD05QCGGjQE987CDIoehLKbY9v.mp4';
-  const videoThumbnail = 'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/ChatGPT%20Image%20May%2019%2C%202026%2C%2011_23_07%20AM-gWtRtuxpmElUZTtT93c23mlTcM76sD.png';
+  const videoThumbnail = '/kenneth-christmas-elegant.png';
 
   return (
     <>
@@ -152,10 +152,10 @@ export default function ChristmasParty() {
           <div className="max-w-6xl mx-auto">
             <h2 className="text-4xl font-bold mb-4 text-center">{t('galleryTitle')}</h2>
             <p className="text-lg text-muted-foreground mb-16 text-center">{t('gallerySubtitle')}</p>
-            <div className="grid md:grid-cols-3 gap-6">
+            <div className="grid md:grid-cols-2 gap-6">
               <div className="relative h-80 rounded-lg overflow-hidden shadow-lg group cursor-pointer">
                 <img
-                  src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/ChatGPT%20Image%20May%2019%2C%202026%2C%2011_23_07%20AM-gWtRtuxpmElUZTtT93c23mlTcM76sD.png"
+                  src="/kenneth-christmas-elegant.png"
                   alt="Juleunderholdning fest"
                   loading="lazy"
                   className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
@@ -164,17 +164,8 @@ export default function ChristmasParty() {
               </div>
               <div className="relative h-80 rounded-lg overflow-hidden shadow-lg group cursor-pointer">
                 <img
-                  src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/WhatsApp%20Image%202026-05-19%20at%2010.48.13%20%281%29-A5bNILaPPqzkKWoS1Is5CAZBKHfmRZ.jpeg"
-                  alt="Julemagi opvisning"
-                  loading="lazy"
-                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
-                />
-                <div className="absolute inset-0 bg-black/40 group-hover:bg-black/50 transition-colors" />
-              </div>
-              <div className="relative h-80 rounded-lg overflow-hidden shadow-lg group cursor-pointer">
-                <img
-                  src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/WhatsApp%20Image%202026-05-19%20at%2010.48.13-270qN2OP2gez2uC7jEvcEzAJNz5r0O.jpeg"
-                  alt="Gæster i julefest"
+                  src="/kenneth-santa.png"
+                  alt="Kenneth som julemand"
                   loading="lazy"
                   className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
                 />
