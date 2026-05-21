@@ -17,13 +17,13 @@ export function Header() {
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="flex h-16 items-center justify-between overflow-hidden">
           {/* Logo */}
-          <Link href={`/${locale}`} className="shrink-0 flex items-center -my-2">
+          <Link href={`/${locale}`} className="shrink-0 flex items-center -my-4">
             <Image
               src="/tryllekenneth-logo.png"
               alt="TrylleKenneth - Magisk Underholdning til Dig"
-              width={480}
-              height={144}
-              className="h-32 w-auto"
+              width={720}
+              height={216}
+              className="h-48 w-auto"
               priority
             />
           </Link>

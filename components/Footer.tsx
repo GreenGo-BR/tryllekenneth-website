@@ -17,13 +17,13 @@ export function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           {/* Branding */}
           <div className="flex flex-col gap-3 overflow-hidden">
-            <Link href={`/${locale}`} className="shrink-0 w-fit -my-1">
+            <Link href={`/${locale}`} className="shrink-0 w-fit -my-3">
               <Image
                 src="/tryllekenneth-logo.png"
                 alt="TrylleKenneth - Magisk Underholdning til Dig"
-                width={384}
-                height={120}
-                className="h-32 w-auto"
+                width={576}
+                height={173}
+                className="h-48 w-auto"
               />
             </Link>
             <p className="text-sm text-muted-foreground">{t('copyright')}</p>
