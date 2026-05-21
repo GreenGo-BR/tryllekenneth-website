@@ -13,9 +13,9 @@ export function Header() {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <header className="sticky top-0 z-50 w-full border-b border-border/50 bg-background/95 backdrop-blur overflow-hidden">
+    <header className="sticky top-0 z-50 w-full border-b border-border/50 bg-background/95 backdrop-blur">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        <div className="flex h-16 items-center justify-between overflow-hidden">
+        <div className="flex h-16 items-center justify-between">
           {/* Logo */}
           <Link href={`/${locale}`} className="shrink-0 flex items-center -my-4">
             <Image
