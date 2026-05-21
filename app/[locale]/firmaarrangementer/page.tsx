@@ -16,7 +16,7 @@ export default function CorporateEventsPage() {
   const t = useTranslations('corporateEventsPage');
   
   const videoUrl = 'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/videoplayback%20%281%29-Q1D2bD05QCGGjQE987CDIoehLKbY9v.mp4';
-  const videoThumbnail = '/wedding-connection.jpg';
+  const videoThumbnail = '/kenneth-stage-audience.png';
 
   return (
     <>
@@ -154,7 +154,7 @@ export default function CorporateEventsPage() {
             <div className="grid md:grid-cols-3 gap-6">
               <div className="relative h-80 rounded-lg overflow-hidden shadow-lg group cursor-pointer">
                 <img
-                  src="/wedding-connection.jpg"
+                  src="/kenneth-stage-audience.png"
                   alt="Firmaarrangement magisk underholdning"
                   loading="lazy"
                   className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
@@ -163,7 +163,7 @@ export default function CorporateEventsPage() {
               </div>
               <div className="relative h-80 rounded-lg overflow-hidden shadow-lg group cursor-pointer">
                 <img
-                  src="/wedding-intimate-magic.jpg"
+                  src="/kenneth-stage-rubiks-cube.png"
                   alt="Corporate magic performance"
                   loading="lazy"
                   className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
@@ -172,7 +172,7 @@ export default function CorporateEventsPage() {
               </div>
               <div className="relative h-80 rounded-lg overflow-hidden shadow-lg group cursor-pointer">
                 <img
-                  src="/wedding-refinement.jpg"
+                  src="/kenneth-garden-party-performance.png"
                   alt="Magisk underholdning event"
                   loading="lazy"
                   className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"

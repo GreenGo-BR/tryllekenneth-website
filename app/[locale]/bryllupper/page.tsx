@@ -16,7 +16,7 @@ export default function WeddingPage() {
   const t = useTranslations('weddingPage');
   
   const videoUrl = 'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/videoplayback%20%281%29-Q1D2bD05QCGGjQE987CDIoehLKbY9v.mp4';
-  const videoThumbnail = '/wedding-refinement.jpg';
+  const videoThumbnail = '/kenneth-family-garden.png';
 
   return (
     <>

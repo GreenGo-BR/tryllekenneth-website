@@ -16,7 +16,7 @@ export default function BirthdayPartiesPage() {
   const t = useTranslations('birthdayPartiesPage');
   
   const videoUrl = 'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/TrylleKenneth%20show-BcdHB40bje44mvtgNoULMLWdckbAzj.mp4';
-  const videoThumbnail = '/kenneth-hero-original.png';
+  const videoThumbnail = '/kenneth-family-garden.png';
 
   return (
     <>
@@ -169,10 +169,10 @@ export default function BirthdayPartiesPage() {
           <div className="max-w-6xl mx-auto">
             <h2 className="text-4xl font-bold mb-4 text-center">{t('galleryTitle')}</h2>
             <p className="text-lg text-muted-foreground mb-16 text-center">{t('gallerySubtitle')}</p>
-            <div className="grid md:grid-cols-3 gap-6">
+            <div className="grid md:grid-cols-2 gap-6">
               <div className="relative h-80 rounded-lg overflow-hidden shadow-lg group cursor-pointer">
                 <img
-                  src="/kenneth-hero-original.png"
+                  src="/kenneth-family-garden.png"
                   alt="Children's birthday party magic show"
                   loading="lazy"
                   className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
@@ -181,17 +181,8 @@ export default function BirthdayPartiesPage() {
               </div>
               <div className="relative h-80 rounded-lg overflow-hidden shadow-lg group cursor-pointer">
                 <img
-                  src="/kenneth-hero-original.png"
+                  src="/kenneth-garden-party-performance.png"
                   alt="Birthday party entertainment Copenhagen"
-                  loading="lazy"
-                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
-                />
-                <div className="absolute inset-0 bg-black/40 group-hover:bg-black/50 transition-colors" />
-              </div>
-              <div className="relative h-80 rounded-lg overflow-hidden shadow-lg group cursor-pointer">
-                <img
-                  src="/kenneth-hero-original.png"
-                  alt="Kids birthday magic performance"
                   loading="lazy"
                   className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
                 />
