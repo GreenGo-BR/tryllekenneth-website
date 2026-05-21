@@ -261,11 +261,11 @@ export default function Home() {
                 src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/TrylleKenneth%20show-BcdHB40bje44mvtgNoULMLWdckbAzj.mp4"
                 poster="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/ChatGPT%20Image%20May%2019%2C%202026%2C%2011_23_07%20AM-gWtRtuxpmElUZTtT93c23mlTcM76sD.png"
                 videoId="featured-video"
-                autoPlay={false}
+                autoPlay={true}
                 muted={true}
                 loop={true}
                 playsInline={true}
-                preload="none"
+                preload="metadata"
                 lazy={true}
                 aspectRatio="16/9"
                 className="premium-video"
@@ -530,11 +530,11 @@ export default function Home() {
               <ProductionVideo
                 src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/TrylleKenneth-24BnI1Ltz7yasQ0N6wNRvJtVkWOQyw.mp4"
                 poster="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/WhatsApp%20Image%202026-05-19%20at%2010.48.13%20%281%29-A5bNILaPPqzkKWoS1Is5CAZBKHfmRZ.jpeg"
-                autoPlay={false}
+                autoPlay={true}
                 muted={true}
                 loop={true}
                 playsInline={true}
-                preload="none"
+                preload="metadata"
                 lazy={true}
                 aspectRatio="16/9"
               />

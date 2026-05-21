@@ -34,12 +34,13 @@ export function ProductionVideo({
   onSoundToggle,
 }: ProductionVideoProps) {
   const [isVisible, setIsVisible] = useState(!lazy);
-  const [isLoading, setIsLoading] = useState(true);
+  const [isPlaying, setIsPlaying] = useState(false);
   const [hasError, setHasError] = useState(false);
+  const [autoplayBlocked, setAutoplayBlocked] = useState(false);
   const containerRef = useRef<HTMLDivElement>(null);
   const videoRef = useRef<HTMLVideoElement>(null);
 
-  // Intersection Observer for lazy loading
+  // IntersectionObserver for lazy loading - triggers autoplay when visible
   useEffect(() => {
     if (!lazy || isVisible) return;
 
@@ -50,7 +51,7 @@ export function ProductionVideo({
           observer.unobserve(entry.target);
         }
       },
-      { threshold: 0.1 }
+      { threshold: 0.25 }
     );
 
     if (containerRef.current) {
@@ -60,15 +61,59 @@ export function ProductionVideo({
     return () => observer.disconnect();
   }, [lazy, isVisible]);
 
+  // Handle autoplay attempt
+  useEffect(() => {
+    if (!isVisible || !videoRef.current || !autoPlay) return;
+
+    const attemptAutoplay = async () => {
+      try {
+        // Set muted before attempting autoplay (required for autoplay policy)
+        videoRef.current!.muted = muted;
+        await videoRef.current!.play();
+        setIsPlaying(true);
+        setAutoplayBlocked(false);
+        setHasError(false);
+      } catch (err) {
+        // Autoplay was blocked - show fallback button
+        console.log('[v0] Autoplay blocked, showing manual play button');
+        setAutoplayBlocked(true);
+        setIsPlaying(false);
+      }
+    };
+
+    // Small delay to ensure video element is ready
+    const timer = setTimeout(attemptAutoplay, 100);
+    return () => clearTimeout(timer);
+  }, [isVisible, autoPlay, muted]);
+
+  // Handle manual play click
+  const handlePlayClick = () => {
+    if (videoRef.current) {
+      videoRef.current.muted = muted;
+      videoRef.current.play().catch(err => {
+        console.error('[v0] Video playback failed:', err);
+        setHasError(true);
+      });
+    }
+  };
+
   const handleCanPlay = () => {
-    setIsLoading(false);
+    setIsPlaying(true);
     setHasError(false);
   };
 
   const handleError = () => {
-    setIsLoading(false);
+    setIsPlaying(false);
     setHasError(true);
     console.error('[v0] Video failed to load:', src);
+  };
+
+  const handlePlay = () => {
+    setIsPlaying(true);
+  };
+
+  const handlePause = () => {
+    setIsPlaying(false);
   };
 
   const handleSoundToggle = () => {
@@ -80,55 +125,33 @@ export function ProductionVideo({
     }
   };
 
-  // Fallback poster image
+  // Use provided poster or generate a fallback
   const defaultPoster = poster || 'data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 16 9%22%3E%3Crect fill=%22%23000%22 width=%2216%22 height=%229%22/%3E%3C/svg%3E';
 
   return (
     <div
       ref={containerRef}
-      className={`relative overflow-hidden ${containerClassName}`}
+      className={`relative overflow-hidden bg-black group ${containerClassName}`}
       style={{ aspectRatio }}
       data-video-container={videoId}
     >
-      {/* Loading state */}
-      {isLoading && (
-        <div className="absolute inset-0 bg-gradient-to-b from-slate-900 via-slate-950 to-black flex items-center justify-center z-30">
-          <div className="flex flex-col items-center gap-3">
-            <div className="w-12 h-12 border-4 border-slate-700 border-t-indigo-500 rounded-full animate-spin"></div>
-            <p className="text-slate-400 text-sm">Loading video...</p>
-          </div>
-        </div>
+      {/* Poster Image - Always visible until video plays */}
+      {!isPlaying && (
+        <div 
+          className="absolute inset-0 bg-center bg-cover"
+          style={{
+            backgroundImage: `url(${defaultPoster})`,
+            backgroundSize: 'cover',
+          }}
+        />
       )}
 
-      {/* Error state */}
-      {hasError && (
-        <div className="absolute inset-0 bg-gradient-to-b from-slate-900 via-slate-950 to-black flex items-center justify-center z-30">
-          <div className="flex flex-col items-center gap-3 text-center px-4">
-            <div className="text-4xl">🎬</div>
-            <p className="text-slate-300 text-sm font-medium">Video unavailable</p>
-            <p className="text-slate-500 text-xs">Please try refreshing or check back later</p>
-            <button
-              onClick={() => {
-                setHasError(false);
-                setIsLoading(true);
-                if (videoRef.current) {
-                  videoRef.current.load();
-                }
-              }}
-              className="mt-3 px-4 py-2 bg-indigo-600 hover:bg-indigo-700 text-white rounded-lg text-xs font-medium transition-colors"
-            >
-              Retry
-            </button>
-          </div>
-        </div>
-      )}
-
-      {/* Video Element - Only render when visible (lazy loading) */}
+      {/* Video Element - Mounted when visible */}
       {isVisible && (
         <video
           ref={videoRef}
           id={videoId}
-          className={`w-full h-full display-block bg-black ${className}`}
+          className={`w-full h-full display-block ${className}`}
           autoPlay={autoPlay}
           muted={muted}
           loop={loop}
@@ -137,32 +160,60 @@ export function ProductionVideo({
           poster={defaultPoster}
           onCanPlay={handleCanPlay}
           onError={handleError}
-          // Accessibility
+          onPlay={handlePlay}
+          onPause={handlePause}
           aria-label="Premium performance video"
-          // Performance
           webkit-playsinline="true"
         >
           <source src={src} type="video/mp4" />
-          {/* Fallback message for very old browsers */}
           <p className="text-white text-center p-4">
-            Your browser does not support the video tag. Please use a modern browser like Chrome, Safari, Firefox, or Edge.
+            Your browser does not support the video tag.
           </p>
         </video>
       )}
 
-      {/* Lazy loading placeholder - Show poster image */}
-      {!isVisible && (
-        <div 
-          className="absolute inset-0 bg-center bg-cover"
-          style={{
-            backgroundImage: `url(${defaultPoster})`,
-          }}
+      {/* Play Button Overlay - Show when autoplay is blocked */}
+      {autoplayBlocked && !isPlaying && (
+        <button
+          onClick={handlePlayClick}
+          className="absolute inset-0 flex items-center justify-center bg-black/30 hover:bg-black/50 transition-all duration-300 z-20 group cursor-pointer"
+          aria-label="Play video"
+          type="button"
         >
-          <div className="absolute inset-0 bg-black/20 flex items-center justify-center">
-            <div className="text-center">
-              <div className="text-4xl mb-2">▶</div>
-              <p className="text-slate-300 text-sm font-medium">Scroll to play video</p>
+          <div className="flex flex-col items-center gap-3 pointer-events-none group-hover:scale-110 transition-transform duration-300">
+            {/* Play Icon */}
+            <div className="w-16 h-16 rounded-full bg-white/90 flex items-center justify-center shadow-lg">
+              <svg className="w-8 h-8 text-slate-900 ml-1" fill="currentColor" viewBox="0 0 24 24">
+                <polygon points="5 3 19 12 5 21" />
+              </svg>
             </div>
+            <span className="text-white text-sm font-medium bg-black/50 px-3 py-1 rounded-full">
+              Click to play
+            </span>
+          </div>
+        </button>
+      )}
+
+      {/* Error state */}
+      {hasError && !isPlaying && (
+        <div className="absolute inset-0 bg-gradient-to-b from-slate-900 via-slate-950 to-black flex items-center justify-center z-30">
+          <div className="flex flex-col items-center gap-3 text-center px-4">
+            <div className="text-4xl">🎬</div>
+            <p className="text-slate-300 text-sm font-medium">Video unavailable</p>
+            <p className="text-slate-500 text-xs">Please try refreshing</p>
+            <button
+              onClick={() => {
+                setHasError(false);
+                setAutoplayBlocked(false);
+                if (videoRef.current) {
+                  videoRef.current.load();
+                  handlePlayClick();
+                }
+              }}
+              className="mt-3 px-4 py-2 bg-indigo-600 hover:bg-indigo-700 text-white rounded-lg text-xs font-medium transition-colors"
+            >
+              Try again
+            </button>
           </div>
         </div>
       )}
