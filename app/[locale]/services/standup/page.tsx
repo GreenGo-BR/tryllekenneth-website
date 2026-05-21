@@ -86,7 +86,7 @@ export default function StandUpMagic() {
                   <img 
                     src="/kenneth-stage-audience.png"
                     alt="Kenneth performing stand-up magic on stage"
-                    className="w-full h-auto object-cover"
+                    className="w-full h-auto object-cover object-top"
                   />
 
                   {/* Magical glow on hover */}
@@ -114,7 +114,7 @@ export default function StandUpMagic() {
               <img 
                 src="/kenneth-stage-audience.png"
                 alt="Kenneth performing stand-up magic on stage"
-                className="w-full h-auto object-cover"
+                className="w-full h-auto object-cover object-top"
               />
             </div>
           </div>

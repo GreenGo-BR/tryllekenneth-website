@@ -82,7 +82,7 @@ export default function ChildrensMagic() {
                   <img 
                     src="/kenneth-family-garden.png"
                     alt="Kenneth performing magic for children and families"
-                    className="w-full h-auto object-cover"
+                    className="w-full h-auto object-cover object-top"
                   />
 
                   {/* Magical glow on hover */}
@@ -110,7 +110,7 @@ export default function ChildrensMagic() {
               <img 
                 src="/kenneth-family-garden.png"
                 alt="Kenneth performing magic for children and families"
-                className="w-full h-auto object-cover"
+                className="w-full h-auto object-cover object-top"
               />
             </div>
           </div>

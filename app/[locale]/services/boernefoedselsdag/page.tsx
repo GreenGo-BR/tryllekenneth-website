@@ -87,7 +87,7 @@ export default function BirthdayPartiesPage() {
                   <img 
                     src="/kenneth-family-garden.png"
                     alt="Kenneth performing magic at children's birthday party"
-                    className="w-full h-auto object-cover"
+                    className="w-full h-auto object-cover object-top"
                   />
 
                   {/* Magical glow on hover */}
@@ -115,7 +115,7 @@ export default function BirthdayPartiesPage() {
               <img 
                 src="/kenneth-family-garden.png"
                 alt="Kenneth performing magic at children's birthday party"
-                className="w-full h-auto object-cover"
+                className="w-full h-auto object-cover object-top"
               />
             </div>
           </div>

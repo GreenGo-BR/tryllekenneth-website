@@ -86,8 +86,8 @@ export default function ChristmasPartyPage() {
                   {/* Christmas Image */}
                   <img 
                     src="/kenneth-christmas-fireplace.png"
-                    alt="Kenneth performing magic at Christmas party"
-                    className="w-full h-auto object-cover"
+                    alt="Kenneth performing magic at Christmas celebration"
+                    className="w-full h-auto object-cover object-top"
                   />
 
                   {/* Magical glow on hover */}
@@ -114,8 +114,8 @@ export default function ChristmasPartyPage() {
             <div className="relative overflow-hidden rounded-3xl shadow-2xl border border-amber-200/30">
               <img 
                 src="/kenneth-christmas-fireplace.png"
-                alt="Kenneth performing magic at Christmas party"
-                className="w-full h-auto object-cover"
+                alt="Kenneth performing magic at Christmas celebration"
+                className="w-full h-auto object-cover object-top"
               />
             </div>
           </div>

@@ -84,11 +84,11 @@ export default function CorporateEventsPage() {
                   <div className="absolute top-1/3 -right-1 text-2xl animate-twinkle z-30 pointer-events-none opacity-50" style={{ animationDelay: '1.4s' }}>✨</div>
 
                   {/* Corporate Event Image */}
-                  <img 
-                    src="/kenneth-stage-audience.png"
-                    alt="Kenneth performing magic at corporate event"
-                    className="w-full h-auto object-cover"
-                  />
+              <img 
+                src="/kenneth-stage-audience.png"
+                alt="Kenneth performing stage magic for corporate audience"
+                className="w-full h-auto object-cover object-top"
+              />
 
                   {/* Magical glow on hover */}
                   <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none rounded-3xl" style={{
