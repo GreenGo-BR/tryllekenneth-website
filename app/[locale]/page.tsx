@@ -77,23 +77,17 @@ export default function Home() {
       <VideoSchema videoUrl={videoUrl} thumbnailUrl={videoThumbnail} videoId="homepage-video-schema" />
       <main className="min-h-screen">
         {/* Hero Section */}
-        <section ref={heroRef} className="relative min-h-screen flex items-center justify-center overflow-hidden pt-16 pb-20 sm:pt-24">
-          {/* Full Background Image */}
-          <div className="absolute inset-0 z-0">
+        <section ref={heroRef} className="relative h-screen flex items-center justify-start overflow-hidden">
+          {/* Full Background Image - Optimized to preserve Kenneth's full figure */}
+          <div className="absolute inset-0 z-0 w-full h-full">
             <img 
               src="/kenneth-hero-novo.png"
               alt="Kenneth performing premium magic entertainment with theatrical presentation"
-              className="w-full h-full object-cover"
+              className="w-full h-full object-cover object-center"
             />
-            
-            {/* Dark Overlay for Text Readability */}
-            <div className="absolute inset-0 bg-black/40"></div>
-            
-            {/* Gradient Overlay - Enhanced for text contrast */}
-            <div className="absolute inset-0 bg-gradient-to-r from-black/60 via-black/30 to-transparent"></div>
           </div>
 
-          {/* Animated Stars - Over the image */}
+          {/* Animated Stars */}
           {stars.map((star) => (
             <div
               key={star.id}
@@ -108,43 +102,45 @@ export default function Home() {
             />
           ))}
 
-          {/* Content - Text Centered */}
-          <div className="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12 w-full">
-            <div className="text-center">
-              {/* Badge */}
-              <div className="mb-6 inline-block animate-float-slow">
-                <span className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-white/15 backdrop-blur-sm border border-white/20 text-white font-medium text-xs sm:text-sm">
-                  <Wand2 size={14} className="text-white animate-spin" style={{ animationDuration: '3s' }} />
-                  <span>✨ {locale === 'da' ? 'TrylleKenneth' : 'TrylleKenneth'}</span>
+          {/* Left Side Content - Text and CTAs (No overlap with image) */}
+          <div className="relative z-10 max-w-xl px-4 sm:px-6 lg:px-8 py-12 h-full flex flex-col justify-center">
+            <div className="flex flex-col justify-center">
+              {/* Badge - Premium Glow */}
+              <div className="mb-6 inline-block w-fit animate-float-slow">
+                <span className="hero-badge-premium inline-flex items-center gap-2 px-4 py-2 rounded-full bg-gradient-to-r from-purple-500/20 to-pink-500/20 backdrop-blur-md border border-purple-400/50 text-white font-semibold text-xs sm:text-sm hover:border-pink-400/70 transition-all">
+                  <Wand2 size={16} className="text-yellow-300 animate-spin" style={{ animationDuration: '3s' }} />
+                  <span className="bg-gradient-to-r from-yellow-300 via-pink-300 to-purple-300 bg-clip-text text-transparent font-bold">
+                    ✨ {locale === 'da' ? 'TrylleKenneth' : 'TrylleKenneth'}
+                  </span>
                 </span>
               </div>
 
-              {/* Main Title */}
-              <div className="mb-4">
-                <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white drop-shadow-2xl leading-tight text-balance">
+              {/* Main Title - Premium Vibrant Gradient */}
+              <div className="mb-6">
+                <h1 className="hero-title-premium text-4xl sm:text-5xl lg:text-6xl font-black leading-tight text-balance bg-gradient-to-br from-yellow-300 via-pink-300 to-purple-400 bg-clip-text text-transparent">
                   {t('hero.title')}
                 </h1>
               </div>
 
-              {/* Subtitle */}
-              <p className="text-base sm:text-lg lg:text-xl text-white/95 mb-8 text-pretty leading-relaxed max-w-2xl mx-auto drop-shadow-lg">
+              {/* Subtitle - Vibrant Glow */}
+              <p className="hero-subtitle-premium text-base sm:text-lg lg:text-xl text-white/90 mb-8 text-pretty leading-relaxed max-w-xl font-medium">
                 {t('hero.subtitle')}
               </p>
 
-              {/* CTA Buttons */}
-              <div className="flex flex-col sm:flex-row gap-2 sm:gap-3 justify-center mb-8">
+              {/* CTA Buttons - Vibrant Premium Effects */}
+              <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 mb-8 w-fit">
                 <Link href={`/${locale}/contact`}>
                   <Button
                     size="lg"
-                    className="magic-button w-full sm:w-auto bg-white text-primary hover:bg-white/90 text-sm font-semibold h-11 sm:h-12 px-6 sm:px-7 shadow-lg shadow-black/30 hover:shadow-xl hover:shadow-black/40 transition-all"
+                    className="cta-button-premium bg-gradient-to-r from-yellow-400 via-pink-400 to-purple-400 text-gray-900 hover:from-yellow-300 hover:via-pink-300 hover:to-purple-300 text-base font-bold h-12 sm:h-13 px-8 sm:px-10 rounded-xl shadow-2xl shadow-pink-500/50 hover:shadow-pink-500/70 transition-all duration-300"
                   >
                     {t('hero.cta1')}
                   </Button>
                 </Link>
-                <a href="tel:+4540852728" className="w-full sm:w-auto">
+                <a href="tel:+4540852728" className="inline-block">
                   <Button
                     size="lg"
-                    className="magic-button w-full sm:w-auto text-sm font-semibold h-11 sm:h-12 px-6 sm:px-7 border-2 border-white bg-transparent text-white hover:bg-white/10 transition-all"
+                    className="secondary-cta-premium text-base font-bold h-12 sm:h-13 px-8 sm:px-10 border-2 border-purple-400/60 bg-purple-500/10 text-white hover:bg-purple-500/20 rounded-xl backdrop-blur-sm transition-all duration-300"
                   >
                     {t('hero.cta2')}
                   </Button>
@@ -152,8 +148,8 @@ export default function Home() {
               </div>
 
               {/* Trust Indicators */}
-              <div className="pt-4 border-t border-white/20">
-                <p className="text-xs text-white/80 font-medium">
+              <div className="trust-indicator-premium pt-6 border-t border-purple-400/30">
+                <p className="text-sm sm:text-base text-white/85 font-semibold">
                   {t('trust.message')}
                 </p>
               </div>

@@ -1259,3 +1259,106 @@ video::-moz-media-controls {
     opacity: 1 !important;
   }
 }
+
+/* ===== PREMIUM HERO TYPOGRAPHY EFFECTS ===== */
+
+/* Hero Title - Luxe Gradient with Glow */
+@keyframes hero-title-glow {
+  0%, 100% {
+    text-shadow: 0 0 10px rgba(255, 192, 203, 0.4), 0 0 20px rgba(255, 215, 0, 0.2), 0 0 30px rgba(255, 105, 180, 0.15), 0 4px 8px rgba(0, 0, 0, 0.3);
+  }
+  50% {
+    text-shadow: 0 0 20px rgba(255, 192, 203, 0.8), 0 0 40px rgba(255, 215, 0, 0.4), 0 0 60px rgba(255, 105, 180, 0.3), 0 4px 8px rgba(0, 0, 0, 0.3);
+  }
+}
+
+.hero-title-premium {
+  animation: hero-title-glow 3s ease-in-out infinite;
+}
+
+/* Hero Badge - Elegant Glow */
+@keyframes badge-pulse-glow {
+  0%, 100% {
+    box-shadow: 0 0 0px rgba(255, 192, 203, 0.3), inset 0 0 10px rgba(255, 255, 255, 0.1);
+    border-color: rgba(255, 192, 203, 0.4);
+  }
+  50% {
+    box-shadow: 0 0 20px rgba(255, 215, 0, 0.5), 0 0 40px rgba(255, 192, 203, 0.3), inset 0 0 15px rgba(255, 255, 255, 0.2);
+    border-color: rgba(255, 215, 0, 0.6);
+  }
+}
+
+.hero-badge-premium {
+  animation: badge-pulse-glow 2.5s ease-in-out infinite;
+}
+
+/* Hero Subtitle - Elegant Glow Text */
+@keyframes subtitle-soft-glow {
+  0%, 100% {
+    text-shadow: 0 0 5px rgba(255, 192, 203, 0.3), 0 0 10px rgba(255, 255, 255, 0.1);
+  }
+  50% {
+    text-shadow: 0 0 10px rgba(255, 192, 203, 0.6), 0 0 20px rgba(255, 215, 0, 0.2), 0 0 30px rgba(255, 105, 180, 0.1);
+  }
+}
+
+.hero-subtitle-premium {
+  animation: subtitle-soft-glow 3.5s ease-in-out infinite;
+}
+
+/* CTA Button Premium - Golden Glow */
+@keyframes cta-button-premium-glow {
+  0%, 100% {
+    box-shadow: 0 0 10px rgba(255, 192, 203, 0.3), 0 0 20px rgba(255, 215, 0, 0.2), inset 0 0 10px rgba(255, 255, 255, 0.1);
+  }
+  50% {
+    box-shadow: 0 0 20px rgba(255, 215, 0, 0.5), 0 0 40px rgba(255, 192, 203, 0.4), inset 0 0 15px rgba(255, 255, 255, 0.2);
+  }
+}
+
+.cta-button-premium {
+  animation: cta-button-premium-glow 2s ease-in-out infinite;
+  transition: all 0.3s ease;
+}
+
+.cta-button-premium:hover {
+  transform: translateY(-3px) scale(1.02);
+  animation: cta-button-premium-glow 1.5s ease-in-out infinite;
+}
+
+/* Secondary CTA - White Border Glow */
+@keyframes secondary-cta-glow {
+  0%, 100% {
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.3), inset 0 0 0px rgba(255, 255, 255, 0);
+    border-color: rgba(255, 255, 255, 0.5);
+  }
+  50% {
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.6), inset 0 0 10px rgba(255, 255, 255, 0.1);
+    border-color: rgba(255, 255, 255, 0.8);
+  }
+}
+
+.secondary-cta-premium {
+  animation: secondary-cta-glow 2.5s ease-in-out infinite;
+}
+
+.secondary-cta-premium:hover {
+  box-shadow: 0 0 25px rgba(255, 255, 255, 0.8), inset 0 0 15px rgba(255, 255, 255, 0.2) !important;
+  border-color: rgba(255, 255, 255, 0.9) !important;
+}
+
+/* Trust Indicator Text - Subtle Shimmer */
+@keyframes trust-shimmer {
+  0%, 100% {
+    color: rgba(255, 255, 255, 0.7);
+    text-shadow: 0 0 5px rgba(255, 192, 203, 0.2);
+  }
+  50% {
+    color: rgba(255, 255, 255, 0.95);
+    text-shadow: 0 0 10px rgba(255, 215, 0, 0.3);
+  }
+}
+
+.trust-indicator-premium {
+  animation: trust-shimmer 3s ease-in-out infinite;
+}
