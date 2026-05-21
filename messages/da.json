@@ -92,6 +92,14 @@
       "title": "Julemand og sæsonunderholdning",
       "description": "Julemand med trylleri og magisk underholdning til jul, Halloween, fastelavn og sæsonbegivenheder i København og Danmark."
     },
+    "weddingMagic": {
+      "title": "Bryllupstrylleri og trylleri til bryllupper",
+      "description": "Elegant magisk underholdning til bryllupper og bryllupsfester der skaber uforglemmelige magiske øjeblikke for bruden og gommen."
+    },
+    "corporateEvents": {
+      "title": "Firmaarrangementer og professionel underholdning",
+      "description": "Professionel trylleri og underholdning til firmafester, teambuilding, konferencer og professionelle arrangementer."
+    },
     "readMore": "Læs mere"
   },
   "cta": {

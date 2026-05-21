@@ -84,6 +84,14 @@
       "title": "Santa Claus & Seasonal Shows",
       "description": "Santa and magical entertainment for Christmas, Halloween, Fastelavn and special events."
     },
+    "weddingMagic": {
+      "title": "Wedding Magic",
+      "description": "Elegant magic entertainment that creates unforgettable moments for your wedding reception and celebration."
+    },
+    "corporateEvents": {
+      "title": "Corporate Events",
+      "description": "Professional entertainment for company events, team building, conferences and corporate celebrations."
+    },
     "readMore": "Read more"
   },
   "cta": {
