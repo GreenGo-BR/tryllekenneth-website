@@ -1,6 +1,6 @@
 'use client';
 
-import { useState, useRef } from 'react';
+import { useState, useEffect, useRef } from 'react';
 
 interface ProductionVideoProps {
   src: string;
@@ -25,7 +25,7 @@ export function ProductionVideo({
   muted = true,
   loop = true,
   playsInline = true,
-  preload = 'none',
+  preload = 'metadata',
   className = '',
   containerClassName = '',
   aspectRatio = '16/9',
@@ -33,24 +33,68 @@ export function ProductionVideo({
   videoId,
   onSoundToggle,
 }: ProductionVideoProps) {
-  const [isLoaded, setIsLoaded] = useState(false);
+  const [isVisible, setIsVisible] = useState(!lazy);
   const [isPlaying, setIsPlaying] = useState(false);
   const [hasError, setHasError] = useState(false);
+  const [autoplayBlocked, setAutoplayBlocked] = useState(false);
   const containerRef = useRef<HTMLDivElement>(null);
   const videoRef = useRef<HTMLVideoElement>(null);
 
-  // Load video when user clicks play button
-  const handlePlayClick = () => {
-    setIsLoaded(true);
-    // Auto-play after loading
-    setTimeout(() => {
-      if (videoRef.current) {
-        videoRef.current.play().catch(err => {
-          console.error('[v0] Video playback failed:', err);
-          setHasError(true);
-        });
+  // IntersectionObserver for lazy loading - triggers autoplay when visible
+  useEffect(() => {
+    if (!lazy || isVisible) return;
+
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setIsVisible(true);
+          observer.unobserve(entry.target);
+        }
+      },
+      { threshold: 0.25 }
+    );
+
+    if (containerRef.current) {
+      observer.observe(containerRef.current);
+    }
+
+    return () => observer.disconnect();
+  }, [lazy, isVisible]);
+
+  // Handle autoplay attempt
+  useEffect(() => {
+    if (!isVisible || !videoRef.current || !autoPlay) return;
+
+    const attemptAutoplay = async () => {
+      try {
+        // Set muted before attempting autoplay (required for autoplay policy)
+        videoRef.current!.muted = muted;
+        await videoRef.current!.play();
+        setIsPlaying(true);
+        setAutoplayBlocked(false);
+        setHasError(false);
+      } catch (err) {
+        // Autoplay was blocked - show fallback button
+        console.log('[v0] Autoplay blocked, showing manual play button');
+        setAutoplayBlocked(true);
+        setIsPlaying(false);
       }
-    }, 0);
+    };
+
+    // Small delay to ensure video element is ready
+    const timer = setTimeout(attemptAutoplay, 100);
+    return () => clearTimeout(timer);
+  }, [isVisible, autoPlay, muted]);
+
+  // Handle manual play click
+  const handlePlayClick = () => {
+    if (videoRef.current) {
+      videoRef.current.muted = muted;
+      videoRef.current.play().catch(err => {
+        console.error('[v0] Video playback failed:', err);
+        setHasError(true);
+      });
+    }
   };
 
   const handleCanPlay = () => {
@@ -58,7 +102,7 @@ export function ProductionVideo({
     setHasError(false);
   };
 
-  const handleError = (e: Event) => {
+  const handleError = () => {
     setIsPlaying(false);
     setHasError(true);
     console.error('[v0] Video failed to load:', src);
@@ -102,8 +146,8 @@ export function ProductionVideo({
         />
       )}
 
-      {/* Video Element - Loaded on demand */}
-      {isLoaded && (
+      {/* Video Element - Mounted when visible */}
+      {isVisible && (
         <video
           ref={videoRef}
           id={videoId}
@@ -128,8 +172,8 @@ export function ProductionVideo({
         </video>
       )}
 
-      {/* Play Button Overlay - Show when not playing */}
-      {!isPlaying && (
+      {/* Play Button Overlay - Show when autoplay is blocked */}
+      {autoplayBlocked && !isPlaying && (
         <button
           onClick={handlePlayClick}
           className="absolute inset-0 flex items-center justify-center bg-black/30 hover:bg-black/50 transition-all duration-300 z-20 group cursor-pointer"
@@ -160,7 +204,11 @@ export function ProductionVideo({
             <button
               onClick={() => {
                 setHasError(false);
-                setIsLoaded(false);
+                setAutoplayBlocked(false);
+                if (videoRef.current) {
+                  videoRef.current.load();
+                  handlePlayClick();
+                }
               }}
               className="mt-3 px-4 py-2 bg-indigo-600 hover:bg-indigo-700 text-white rounded-lg text-xs font-medium transition-colors"
             >
