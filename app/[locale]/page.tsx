@@ -78,23 +78,7 @@ export default function Home() {
       <main className="min-h-screen">
         {/* Hero Section */}
         <section ref={heroRef} className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-background via-primary/5 to-background pt-16 pb-20 sm:pt-24">
-          {/* Background Image with Enhanced Overlay */}
-          <div className="absolute inset-0 z-0 pointer-events-none">
-            <img 
-              src="/kenneth-hero-original.png"
-              alt="Hero background - Kenneth magic show with family"
-              loading="lazy"
-              decoding="async"
-              sizes="(max-width: 640px) 100vw, (max-width: 1024px) 100vw, 100vw"
-              className="w-full h-full object-cover opacity-40"
-            />
-            {/* Elegant gradient overlay - stronger on bottom for text visibility */}
-            <div className="absolute inset-0 bg-gradient-to-br from-background/60 via-background/40 to-primary/25 mix-blend-multiply"></div>
-            {/* Additional soft overlay for text contrast */}
-            <div className="absolute inset-0 bg-gradient-to-t from-background/80 via-transparent to-background/20"></div>
-          </div>
-
-          {/* Gradient Orbs Background - Reduced for elegant restraint */}
+          {/* Gradient Orbs Background */}
           <div className="absolute inset-0 overflow-hidden z-0 pointer-events-none">
             <div className="absolute -top-1/2 -right-1/4 w-96 h-96 bg-primary/8 rounded-full blur-3xl animate-float-slow"></div>
             <div className="absolute -bottom-1/2 -left-1/4 w-80 h-80 bg-secondary/8 rounded-full blur-3xl animate-float-slow" style={{ animationDelay: '2s' }}></div>
@@ -108,7 +92,7 @@ export default function Home() {
             </div>
           </div>
 
-          {/* Animated Stars - Enhanced */}
+          {/* Animated Stars */}
           {stars.map((star) => (
             <div
               key={star.id}
@@ -123,7 +107,7 @@ export default function Home() {
             />
           ))}
 
-          {/* Floating Playing Cards - Premium Larger Design */}
+          {/* Floating Playing Cards */}
           {cards.map((card) => {
             const suits = ['♠', '♥', '♦', '♣'];
             const values = ['A', 'K', 'Q', 'J', '10', '9', '8', '7', '6', '5', '4', '3', '2'];
@@ -183,53 +167,96 @@ export default function Home() {
             );
           })}
 
-          <div className="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-            <div className="text-center">
-              {/* Badge - More subtle */}
-              <div className="mb-4 inline-block animate-float-slow">
-                <span className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-gradient-to-r from-primary/20 to-secondary/20 border border-primary/30 text-secondary-foreground font-medium text-xs sm:text-sm">
-                  <Wand2 size={14} className="text-primary animate-spin" style={{ animationDuration: '3s' }} />
-                  <span>✨ {locale === 'da' ? 'TrylleKenneth' : 'TrylleKenneth'}</span>
-                </span>
-              </div>
+          {/* Two-Column Hero Layout */}
+          <div className="relative z-10 max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-12 w-full">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center">
+              {/* Left Column - Text Content */}
+              <div>
+                {/* Badge */}
+                <div className="mb-6 inline-block animate-float-slow">
+                  <span className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-gradient-to-r from-primary/20 to-secondary/20 border border-primary/30 text-secondary-foreground font-medium text-xs sm:text-sm">
+                    <Wand2 size={14} className="text-primary animate-spin" style={{ animationDuration: '3s' }} />
+                    <span>✨ {locale === 'da' ? 'TrylleKenneth' : 'TrylleKenneth'}</span>
+                  </span>
+                </div>
 
-              {/* Main Title - Improved contrast and sizing */}
-              <div className="mb-4">
-                <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold bg-gradient-to-r from-primary via-accent to-secondary bg-clip-text text-transparent leading-tight text-balance">
-                  {t('hero.title')}
-                </h1>
-              </div>
+                {/* Main Title */}
+                <div className="mb-4">
+                  <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold bg-gradient-to-r from-primary via-accent to-secondary bg-clip-text text-transparent leading-tight text-balance">
+                    {t('hero.title')}
+                  </h1>
+                </div>
 
-              {/* Subtitle with better legibility */}
-              <p className="text-sm sm:text-base lg:text-lg text-foreground/85 mb-6 text-pretty max-w-2xl mx-auto leading-relaxed">
-                {t('hero.subtitle')}
-              </p>
-
-              {/* CTA Buttons - Optimized spacing */}
-              <div className="flex flex-col sm:flex-row gap-2 sm:gap-3 justify-center mb-8">
-                <Link href={`/${locale}/contact`}>
-                  <Button
-                    size="lg"
-                    className="magic-button w-full sm:w-auto bg-gradient-to-r from-primary to-accent hover:opacity-90 text-white text-sm font-semibold h-11 sm:h-12 px-6 sm:px-7 shadow-lg shadow-primary/30 hover:shadow-xl hover:shadow-primary/40 transition-all"
-                  >
-                    {t('hero.cta1')}
-                  </Button>
-                </Link>
-                <a href="tel:+4540852728" className="w-full sm:w-auto">
-                  <Button
-                    size="lg"
-                    className="magic-button w-full sm:w-auto text-sm font-semibold h-11 sm:h-12 px-6 sm:px-7 border-2 border-secondary bg-transparent text-secondary-foreground hover:bg-secondary/10 transition-all"
-                  >
-                    {t('hero.cta2')}
-                  </Button>
-                </a>
-              </div>
-
-              {/* Trust Indicators - More subtle */}
-              <div className="pt-4 border-t border-primary/10">
-                <p className="text-xs text-muted-foreground font-medium">
-                  {t('trust.message')}
+                {/* Subtitle */}
+                <p className="text-sm sm:text-base lg:text-lg text-foreground/85 mb-8 text-pretty leading-relaxed">
+                  {t('hero.subtitle')}
                 </p>
+
+                {/* CTA Buttons */}
+                <div className="flex flex-col sm:flex-row gap-2 sm:gap-3 mb-8">
+                  <Link href={`/${locale}/contact`}>
+                    <Button
+                      size="lg"
+                      className="magic-button w-full sm:w-auto bg-gradient-to-r from-primary to-accent hover:opacity-90 text-white text-sm font-semibold h-11 sm:h-12 px-6 sm:px-7 shadow-lg shadow-primary/30 hover:shadow-xl hover:shadow-primary/40 transition-all"
+                    >
+                      {t('hero.cta1')}
+                    </Button>
+                  </Link>
+                  <a href="tel:+4540852728" className="w-full sm:w-auto">
+                    <Button
+                      size="lg"
+                      className="magic-button w-full sm:w-auto text-sm font-semibold h-11 sm:h-12 px-6 sm:px-7 border-2 border-secondary bg-transparent text-secondary-foreground hover:bg-secondary/10 transition-all"
+                    >
+                      {t('hero.cta2')}
+                    </Button>
+                  </a>
+                </div>
+
+                {/* Trust Indicators */}
+                <div className="pt-6 border-t border-primary/10">
+                  <p className="text-xs text-muted-foreground font-medium">
+                    {t('trust.message')}
+                  </p>
+                </div>
+              </div>
+
+              {/* Right Column - Hero Image */}
+              <div className="relative group hidden lg:block">
+                {/* Outer glow */}
+                <div className="absolute -inset-1 bg-gradient-to-r from-primary/40 via-accent/30 to-secondary/40 rounded-3xl opacity-75 blur-2xl group-hover:opacity-100 transition-all duration-500 -z-10"></div>
+                
+                {/* Image container with cinematic overlays */}
+                <div className="relative overflow-hidden rounded-3xl shadow-2xl group-hover:shadow-3xl transition-all duration-500 border border-primary/20">
+                  
+                  {/* Cinematic top overlay */}
+                  <div className="absolute top-0 left-0 right-0 h-24 bg-gradient-to-b from-black/30 via-black/10 to-transparent z-20 pointer-events-none"></div>
+                  
+                  {/* Cinematic bottom overlay */}
+                  <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-black/40 via-black/10 to-transparent z-20 pointer-events-none"></div>
+
+                  {/* Hero Image */}
+                  <img 
+                    src="/kenneth-hero-novo.png"
+                    alt="Kenneth performing premium magic entertainment with theatrical presentation"
+                    className="w-full h-auto object-cover group-hover:scale-105 transition-transform duration-700"
+                  />
+
+                  {/* Magical glow on hover */}
+                  <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none rounded-3xl" style={{
+                    boxShadow: 'inset 0 0 60px rgba(139, 92, 246, 0.15), inset 0 0 100px rgba(168, 85, 247, 0.08)'
+                  }}></div>
+
+                  {/* Floating sparkles */}
+                  <div className="absolute -top-1 right-8 text-4xl animate-twinkle z-30 pointer-events-none">✨</div>
+                  <div className="absolute -bottom-2 left-8 text-3xl animate-twinkle z-30 pointer-events-none" style={{ animationDelay: '0.8s' }}>✨</div>
+                </div>
+
+                {/* Premium badge below image */}
+                <div className="mt-6 flex items-center justify-center gap-2 text-primary font-semibold">
+                  <div className="w-2 h-2 bg-gradient-to-r from-primary to-accent rounded-full animate-pulse"></div>
+                  <p className="text-sm">{locale === 'da' ? 'Premium Professionel • Teaterisk • Magisk' : 'Premium Professional • Theatrical • Magical'}</p>
+                  <div className="w-2 h-2 bg-gradient-to-r from-accent to-secondary rounded-full animate-pulse" style={{ animationDelay: '0.5s' }}></div>
+                </div>
               </div>
             </div>
           </div>
