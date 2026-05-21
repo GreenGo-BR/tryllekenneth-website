@@ -2,6 +2,7 @@
 
 import { useLocale } from 'next-intl';
 import Link from 'next/link';
+import Image from 'next/image';
 import { useState } from 'react';
 import { Menu, X } from 'lucide-react';
 import { LanguageSwitcher } from './LanguageSwitcher';
@@ -16,10 +17,15 @@ export function Header() {
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="flex h-16 items-center justify-between">
           {/* Logo */}
-          <Link href={`/${locale}`} className="shrink-0 flex items-center gap-2">
-            <span className="text-2xl font-bold bg-gradient-to-r from-primary via-accent to-secondary bg-clip-text text-transparent animate-float">
-              ✨ TrylleKenneth
-            </span>
+          <Link href={`/${locale}`} className="shrink-0 flex items-center">
+            <Image
+              src="/tryllekenneth-logo.png"
+              alt="TrylleKenneth - Magisk Underholdning til Dig"
+              width={240}
+              height={72}
+              className="h-16 w-auto"
+              priority
+            />
           </Link>
 
           {/* Premium Navigation - Desktop only, integrated into header */}
