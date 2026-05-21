@@ -83,33 +83,52 @@ export function PremiumNav() {
     }
   };
 
+  const handleDesktopMouseEnter = (key: string) => {
+    // On hover, show the dropdown (don't close if already open from click)
+    setOpenDropdown(key);
+  };
+
+  const handleDesktopMouseLeave = (key: string) => {
+    // On hover out, close if it's not pinned by click
+    setOpenDropdown(null);
+  };
+
   const renderNavItem = (item: NavItem, isMobile = false) => {
     const isDropdown = item.children && item.children.length > 0;
     const isOpen = openDropdown === item.key;
 
     if (isDropdown) {
       return (
-        <div key={item.key} className={isMobile ? 'relative' : 'group relative'}>
+        <div 
+          key={item.key} 
+          className={isMobile ? 'relative' : 'relative'}
+          onMouseEnter={() => !isMobile && handleDesktopMouseEnter(item.key)}
+          onMouseLeave={() => !isMobile && handleDesktopMouseLeave(item.key)}
+        >
           <button
             onClick={() => handleDropdownToggle(item.key, true)}
             className={`flex items-center gap-1 px-3 py-2 rounded-lg text-sm font-medium transition-colors ${
               isMobile
                 ? 'w-full text-left hover:bg-muted'
-                : 'hover:bg-muted/50 group-hover:bg-muted'
-            }`}
+                : 'hover:bg-muted/50'
+            } ${isOpen && !isMobile ? 'bg-muted' : ''}`}
           >
             {item.key === 'performances' ? performancesLabel : item.key === 'seasonal' ? seasonalLabel : t(item.key as any)}
             <ChevronDown
               size={16}
               className={`transition-transform duration-200 ${
-                isMobile && isOpen ? 'rotate-180' : 'group-hover:rotate-180'
+                isOpen ? 'rotate-180' : ''
               }`}
             />
           </button>
 
           {/* Desktop Dropdown */}
           {!isMobile && (
-            <div className="absolute left-0 top-full mt-0 w-48 rounded-lg border border-border/50 bg-background/95 backdrop-blur shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
+            <div className={`absolute left-0 top-full mt-0 w-48 rounded-lg border border-border/50 bg-background/95 backdrop-blur shadow-lg transition-all duration-200 z-50 ${
+              isOpen
+                ? 'opacity-100 visible pointer-events-auto'
+                : 'opacity-0 invisible pointer-events-none'
+            }`}>
               {item.children.map((child) => (
                 <Link
                   key={child.key}
