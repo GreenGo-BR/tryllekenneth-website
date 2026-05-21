@@ -84,9 +84,9 @@ export default function StandUpMagic() {
 
                   {/* Stand-up Magic Image */}
                   <img 
-                    src="/kenneth-stage-audience.png"
-                    alt="Kenneth performing stand-up magic on stage"
-                    className="w-full h-auto object-cover object-top"
+                    src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Stand-up%20Magic-iGoHqm2jyrPd5G4urajOpYSHlzcpnd.png"
+                    alt="Kenneth performing stand-up magic on stage with fire effect and audience interaction"
+                    className="w-full h-auto object-cover object-center lg:object-center-top"
                   />
 
                   {/* Magical glow on hover */}
