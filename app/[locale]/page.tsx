@@ -77,13 +77,13 @@ export default function Home() {
       <VideoSchema videoUrl={videoUrl} thumbnailUrl={videoThumbnail} videoId="homepage-video-schema" />
       <main className="min-h-screen">
         {/* Hero Section */}
-        <section ref={heroRef} className="relative min-h-screen flex items-center justify-start overflow-hidden pt-16 pb-20 sm:pt-24">
-          {/* Full Background Image */}
-          <div className="absolute inset-0 z-0">
+        <section ref={heroRef} className="relative h-screen flex items-center justify-start overflow-hidden">
+          {/* Full Background Image - Optimized to preserve Kenneth's full figure */}
+          <div className="absolute inset-0 z-0 w-full h-full">
             <img 
               src="/kenneth-hero-novo.png"
               alt="Kenneth performing premium magic entertainment with theatrical presentation"
-              className="w-full h-full object-cover"
+              className="w-full h-full object-cover object-center"
             />
           </div>
 
@@ -102,8 +102,8 @@ export default function Home() {
             />
           ))}
 
-          {/* Left Side Content - Text and CTAs */}
-          <div className="relative z-10 max-w-2xl mx-auto px-4 sm:px-6 lg:px-8 py-12 w-full">
+          {/* Left Side Content - Text and CTAs (No overlap with image) */}
+          <div className="relative z-10 max-w-xl px-4 sm:px-6 lg:px-8 py-12 h-full flex flex-col justify-center">
             <div className="flex flex-col justify-center">
               {/* Badge - Premium Glow */}
               <div className="mb-6 inline-block w-fit animate-float-slow">
@@ -117,22 +117,22 @@ export default function Home() {
 
               {/* Main Title - Premium Vibrant Gradient */}
               <div className="mb-6">
-                <h1 className="hero-title-premium text-5xl sm:text-6xl lg:text-7xl font-black leading-tight text-balance bg-gradient-to-br from-yellow-300 via-pink-300 to-purple-400 bg-clip-text text-transparent">
+                <h1 className="hero-title-premium text-4xl sm:text-5xl lg:text-6xl font-black leading-tight text-balance bg-gradient-to-br from-yellow-300 via-pink-300 to-purple-400 bg-clip-text text-transparent">
                   {t('hero.title')}
                 </h1>
               </div>
 
               {/* Subtitle - Vibrant Glow */}
-              <p className="hero-subtitle-premium text-lg sm:text-xl lg:text-2xl text-white/90 mb-10 text-pretty leading-relaxed max-w-2xl font-medium">
+              <p className="hero-subtitle-premium text-base sm:text-lg lg:text-xl text-white/90 mb-8 text-pretty leading-relaxed max-w-xl font-medium">
                 {t('hero.subtitle')}
               </p>
 
               {/* CTA Buttons - Vibrant Premium Effects */}
-              <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 mb-10 w-fit">
+              <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 mb-8 w-fit">
                 <Link href={`/${locale}/contact`}>
                   <Button
                     size="lg"
-                    className="cta-button-premium bg-gradient-to-r from-yellow-400 via-pink-400 to-purple-400 text-gray-900 hover:from-yellow-300 hover:via-pink-300 hover:to-purple-300 text-base font-bold h-13 sm:h-14 px-8 sm:px-10 rounded-xl shadow-2xl shadow-pink-500/50 hover:shadow-pink-500/70 transition-all duration-300"
+                    className="cta-button-premium bg-gradient-to-r from-yellow-400 via-pink-400 to-purple-400 text-gray-900 hover:from-yellow-300 hover:via-pink-300 hover:to-purple-300 text-base font-bold h-12 sm:h-13 px-8 sm:px-10 rounded-xl shadow-2xl shadow-pink-500/50 hover:shadow-pink-500/70 transition-all duration-300"
                   >
                     {t('hero.cta1')}
                   </Button>
@@ -140,7 +140,7 @@ export default function Home() {
                 <a href="tel:+4540852728" className="inline-block">
                   <Button
                     size="lg"
-                    className="secondary-cta-premium text-base font-bold h-13 sm:h-14 px-8 sm:px-10 border-2 border-purple-400/60 bg-purple-500/10 text-white hover:bg-purple-500/20 rounded-xl backdrop-blur-sm transition-all duration-300"
+                    className="secondary-cta-premium text-base font-bold h-12 sm:h-13 px-8 sm:px-10 border-2 border-purple-400/60 bg-purple-500/10 text-white hover:bg-purple-500/20 rounded-xl backdrop-blur-sm transition-all duration-300"
                   >
                     {t('hero.cta2')}
                   </Button>
