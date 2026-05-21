@@ -27,13 +27,37 @@ export default function Home() {
   const videoThumbnail = 'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/ChatGPT%20Image%20May%2019%2C%202026%2C%2011_23_07%20AM-gWtRtuxpmElUZTtT93c23mlTcM76sD.png';
 
   useEffect(() => {
-    // Generate minimal, elegant stars for premium cinematic feel (reduced from 12 to 8)
-    const newStars = Array.from({ length: 8 }, (_, i) => ({
-      id: i,
-      left: Math.random() * 100,
-      top: Math.random() * 100,
-      delay: Math.random() * 3,
-    }));
+    // Generate elegant stars for premium cinematic feel - avoiding Kenneth's face area
+    const newStars = Array.from({ length: 8 }, (_, i) => {
+      let left, top;
+      const zone = i % 4;
+
+      // Distribute stars across safe zones, avoiding the left-center area where Kenneth's face is
+      if (zone === 0) {
+        // Top-right area (safe)
+        left = 60 + Math.random() * 40;
+        top = Math.random() * 30;
+      } else if (zone === 1) {
+        // Right side (safe)
+        left = 70 + Math.random() * 30;
+        top = 30 + Math.random() * 40;
+      } else if (zone === 2) {
+        // Bottom area (safe)
+        left = Math.random() * 100;
+        top = 70 + Math.random() * 30;
+      } else {
+        // Top-left corner, but high up to avoid face (safe)
+        left = Math.random() * 30;
+        top = Math.random() * 25;
+      }
+
+      return {
+        id: i,
+        left,
+        top,
+        delay: Math.random() * 3,
+      };
+    });
     setStars(newStars);
 
     // Generate fewer floating cards for elegant simplicity (reduced from 6 to 4)
