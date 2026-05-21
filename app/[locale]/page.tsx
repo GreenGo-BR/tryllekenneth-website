@@ -77,42 +77,27 @@ export default function Home() {
       <VideoSchema videoUrl={videoUrl} thumbnailUrl={videoThumbnail} videoId="homepage-video-schema" />
       <main className="min-h-screen">
         {/* Hero Section */}
-        <section ref={heroRef} className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-background via-primary/5 to-background pt-16 pb-20 sm:pt-24">
-          {/* Background Image with Enhanced Overlay */}
-          <div className="absolute inset-0 z-0 pointer-events-none">
+        <section ref={heroRef} className="relative min-h-screen flex items-center justify-center overflow-hidden pt-16 pb-20 sm:pt-24">
+          {/* Full Background Image */}
+          <div className="absolute inset-0 z-0">
             <img 
-              src="/kenneth-hero-original.png"
-              alt="Hero background - Kenneth magic show with family"
-              loading="lazy"
-              decoding="async"
-              sizes="(max-width: 640px) 100vw, (max-width: 1024px) 100vw, 100vw"
-              className="w-full h-full object-cover opacity-40"
+              src="/kenneth-hero-novo.png"
+              alt="Kenneth performing premium magic entertainment with theatrical presentation"
+              className="w-full h-full object-cover"
             />
-            {/* Elegant gradient overlay - stronger on bottom for text visibility */}
-            <div className="absolute inset-0 bg-gradient-to-br from-background/60 via-background/40 to-primary/25 mix-blend-multiply"></div>
-            {/* Additional soft overlay for text contrast */}
-            <div className="absolute inset-0 bg-gradient-to-t from-background/80 via-transparent to-background/20"></div>
-          </div>
-
-          {/* Gradient Orbs Background - Reduced for elegant restraint */}
-          <div className="absolute inset-0 overflow-hidden z-0 pointer-events-none">
-            <div className="absolute -top-1/2 -right-1/4 w-96 h-96 bg-primary/8 rounded-full blur-3xl animate-float-slow"></div>
-            <div className="absolute -bottom-1/2 -left-1/4 w-80 h-80 bg-secondary/8 rounded-full blur-3xl animate-float-slow" style={{ animationDelay: '2s' }}></div>
             
-            {/* Centered Radial Glow - Kenneth spotlight effect */}
-            <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-80 h-80 rounded-full blur-3xl pointer-events-none"
-              style={{
-                background: 'radial-gradient(circle at center, rgba(139, 92, 246, 0.15) 0%, rgba(139, 92, 246, 0.08) 30%, transparent 70%)',
-                animation: 'float-slow 6s ease-in-out infinite'
-              }}>
-            </div>
+            {/* Dark Overlay for Text Readability */}
+            <div className="absolute inset-0 bg-black/40"></div>
+            
+            {/* Gradient Overlay - Enhanced for text contrast */}
+            <div className="absolute inset-0 bg-gradient-to-r from-black/60 via-black/30 to-transparent"></div>
           </div>
 
-          {/* Animated Stars - Enhanced */}
+          {/* Animated Stars - Over the image */}
           {stars.map((star) => (
             <div
               key={star.id}
-              className="absolute rounded-full bg-primary hero-sparkle pointer-events-none"
+              className="absolute rounded-full bg-white hero-sparkle pointer-events-none z-20"
               style={{
                 left: `${star.left}%`,
                 top: `${star.top}%`,
@@ -123,94 +108,35 @@ export default function Home() {
             />
           ))}
 
-          {/* Floating Playing Cards - Premium Larger Design */}
-          {cards.map((card) => {
-            const suits = ['♠', '♥', '♦', '♣'];
-            const values = ['A', 'K', 'Q', 'J', '10', '9', '8', '7', '6', '5', '4', '3', '2'];
-            const suit = suits[card.id % 4];
-            const value = values[card.id % values.length];
-            const isRed = suit === '♥' || suit === '♦';
-            
-            return (
-              <div
-                key={`card-${card.id}`}
-                className="absolute rounded-lg pointer-events-none"
-                style={{
-                  left: `${card.left}%`,
-                  top: `${card.top}%`,
-                  '--rotation': `${card.rotation}deg`,
-                  '--tx': `${(Math.random() - 0.5) * 40}px`,
-                  width: '75px',
-                  height: '105px',
-                  background: 'linear-gradient(135deg, #ffffff 0%, #f5f6f7 100%)',
-                  border: '2px solid #1a1a1a',
-                  borderRadius: '8px',
-                  boxShadow: '0 16px 32px rgba(0, 0, 0, 0.35), inset 0 1px 1px rgba(255, 255, 255, 0.95)',
-                  animation: `float-card 8s cubic-bezier(0.42, 0, 0.58, 1) ${card.delay}s infinite`,
-                  transformStyle: 'preserve-3d',
-                } as any}
-              >
-                {/* Card Corner Value and Suit - Top Left */}
-                <div className="absolute top-1.5 left-1.5 text-center leading-none">
-                  <div style={{ fontSize: '10px', fontWeight: 'bold', color: isRed ? '#e74c3c' : '#000' }}>
-                    {value}
-                  </div>
-                  <div style={{ fontSize: '12px', color: isRed ? '#e74c3c' : '#000' }}>
-                    {suit}
-                  </div>
-                </div>
-                
-                {/* Central Suit Symbol - Large */}
-                <div className="absolute inset-0 flex items-center justify-center">
-                  <div style={{ fontSize: '36px', color: isRed ? '#e74c3c' : '#000', opacity: 0.95 }}>
-                    {suit}
-                  </div>
-                </div>
-                
-                {/* Card Corner Value and Suit - Bottom Right (Rotated) */}
-                <div className="absolute bottom-1.5 right-1.5 text-center leading-none transform rotate-180">
-                  <div style={{ fontSize: '10px', fontWeight: 'bold', color: isRed ? '#e74c3c' : '#000' }}>
-                    {value}
-                  </div>
-                  <div style={{ fontSize: '12px', color: isRed ? '#e74c3c' : '#000' }}>
-                    {suit}
-                  </div>
-                </div>
-
-                {/* Premium shine effect */}
-                <div className="absolute inset-0 rounded-lg bg-gradient-to-br from-white/50 via-transparent to-transparent opacity-40 pointer-events-none"></div>
-              </div>
-            );
-          })}
-
-          <div className="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+          {/* Content - Text Centered */}
+          <div className="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12 w-full">
             <div className="text-center">
-              {/* Badge - More subtle */}
-              <div className="mb-4 inline-block animate-float-slow">
-                <span className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-gradient-to-r from-primary/20 to-secondary/20 border border-primary/30 text-secondary-foreground font-medium text-xs sm:text-sm">
-                  <Wand2 size={14} className="text-primary animate-spin" style={{ animationDuration: '3s' }} />
+              {/* Badge */}
+              <div className="mb-6 inline-block animate-float-slow">
+                <span className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-white/15 backdrop-blur-sm border border-white/20 text-white font-medium text-xs sm:text-sm">
+                  <Wand2 size={14} className="text-white animate-spin" style={{ animationDuration: '3s' }} />
                   <span>✨ {locale === 'da' ? 'TrylleKenneth' : 'TrylleKenneth'}</span>
                 </span>
               </div>
 
-              {/* Main Title - Improved contrast and sizing */}
+              {/* Main Title */}
               <div className="mb-4">
-                <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold bg-gradient-to-r from-primary via-accent to-secondary bg-clip-text text-transparent leading-tight text-balance">
+                <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white drop-shadow-2xl leading-tight text-balance">
                   {t('hero.title')}
                 </h1>
               </div>
 
-              {/* Subtitle with better legibility */}
-              <p className="text-sm sm:text-base lg:text-lg text-foreground/85 mb-6 text-pretty max-w-2xl mx-auto leading-relaxed">
+              {/* Subtitle */}
+              <p className="text-base sm:text-lg lg:text-xl text-white/95 mb-8 text-pretty leading-relaxed max-w-2xl mx-auto drop-shadow-lg">
                 {t('hero.subtitle')}
               </p>
 
-              {/* CTA Buttons - Optimized spacing */}
+              {/* CTA Buttons */}
               <div className="flex flex-col sm:flex-row gap-2 sm:gap-3 justify-center mb-8">
                 <Link href={`/${locale}/contact`}>
                   <Button
                     size="lg"
-                    className="magic-button w-full sm:w-auto bg-gradient-to-r from-primary to-accent hover:opacity-90 text-white text-sm font-semibold h-11 sm:h-12 px-6 sm:px-7 shadow-lg shadow-primary/30 hover:shadow-xl hover:shadow-primary/40 transition-all"
+                    className="magic-button w-full sm:w-auto bg-white text-primary hover:bg-white/90 text-sm font-semibold h-11 sm:h-12 px-6 sm:px-7 shadow-lg shadow-black/30 hover:shadow-xl hover:shadow-black/40 transition-all"
                   >
                     {t('hero.cta1')}
                   </Button>
@@ -218,16 +144,16 @@ export default function Home() {
                 <a href="tel:+4540852728" className="w-full sm:w-auto">
                   <Button
                     size="lg"
-                    className="magic-button w-full sm:w-auto text-sm font-semibold h-11 sm:h-12 px-6 sm:px-7 border-2 border-secondary bg-transparent text-secondary-foreground hover:bg-secondary/10 transition-all"
+                    className="magic-button w-full sm:w-auto text-sm font-semibold h-11 sm:h-12 px-6 sm:px-7 border-2 border-white bg-transparent text-white hover:bg-white/10 transition-all"
                   >
                     {t('hero.cta2')}
                   </Button>
                 </a>
               </div>
 
-              {/* Trust Indicators - More subtle */}
-              <div className="pt-4 border-t border-primary/10">
-                <p className="text-xs text-muted-foreground font-medium">
+              {/* Trust Indicators */}
+              <div className="pt-4 border-t border-white/20">
+                <p className="text-xs text-white/80 font-medium">
                   {t('trust.message')}
                 </p>
               </div>
