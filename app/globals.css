@@ -1712,3 +1712,102 @@ section:last-of-type::after {
   }
 }
 
+/* ===== PREMIUM PERFORMANCE SHOWCASE ===== */
+
+/* Cinematic image overlay with elegant fade */
+.performance-card-overlay {
+  background: linear-gradient(135deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.2) 30%, rgba(0, 0, 0, 0.6) 100%);
+  transition: all 0.5s ease-out;
+}
+
+/* Subtle smooth animations for image cards */
+@keyframes showcase-zoom {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.02);
+  }
+}
+
+@keyframes showcase-glow {
+  0%, 100% {
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2), 0 1px 3px rgba(0, 0, 0, 0.1);
+  }
+  50% {
+    box-shadow: 0 8px 40px rgba(0, 0, 0, 0.3), 0 2px 6px rgba(0, 0, 0, 0.15);
+  }
+}
+
+/* Elegant performance card styling */
+.lg\:grid-cols-12 > div {
+  transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.lg\:grid-cols-12 > div:hover {
+  animation: showcase-glow 0.6s ease-in-out;
+}
+
+/* Smooth text appearance on hover */
+.group:hover h3 {
+  animation: text-fade-in 0.5s ease-out forwards;
+}
+
+@keyframes text-fade-in {
+  from {
+    opacity: 0.9;
+    transform: translateY(2px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Elegant gradient overlays for text readability */
+.bg-gradient-to-t {
+  background-image: linear-gradient(180deg, var(--tw-gradient-stops));
+}
+
+.bg-gradient-to-r {
+  background-image: linear-gradient(90deg, var(--tw-gradient-stops));
+}
+
+/* Premium shadow hierarchy */
+.shadow-2xl {
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+}
+
+.hover\:shadow-3xl:hover {
+  box-shadow: 0 35px 60px -15px rgba(0, 0, 0, 0.3);
+}
+
+/* Fine-tune button hover states in showcase */
+.performance-card-btn {
+  transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  backdrop-filter: blur(4px);
+}
+
+.performance-card-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 16px rgba(255, 215, 0, 0.3);
+}
+
+/* Cinematic border styling */
+.border-border\/30 {
+  border-color: hsl(var(--border) / 0.3);
+  transition: border-color 0.4s ease;
+}
+
+.group:hover .border-border\/30 {
+  border-color: hsl(var(--border) / 0.5);
+}
+
+/* Smooth image transitions */
+img {
+  transition: transform 0.7s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.group:hover img {
+  transform: scale(1.05);
+}

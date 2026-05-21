@@ -238,107 +238,291 @@ export default function Home() {
           </div>
         </section>
 
-        {/* Services Section - Cleaner Design */}
-        <section className="py-16 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
-          <div className="text-center mb-10">
-            <h2 className="text-3xl sm:text-4xl font-bold mb-2 bg-gradient-to-r from-primary via-accent to-secondary bg-clip-text text-transparent">
-              {t('services.title')}
+        {/* Premium Performance Showcase - Asymmetrical Masonry Editorial Layout */}
+        <section className="py-20 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
+          {/* Section Header */}
+          <div className="mb-16">
+            <h2 className="text-4xl sm:text-5xl font-bold mb-4 bg-gradient-to-r from-primary via-accent to-secondary bg-clip-text text-transparent">
+              {locale === 'da' ? 'Optræder & Underholdning' : 'Performances & Entertainment'}
             </h2>
-            <p className="text-base text-muted-foreground max-w-2xl mx-auto">
-              {t('services.subtitle')}
+            <p className="text-lg text-muted-foreground max-w-2xl">
+              {locale === 'da' 
+                ? 'Udforsk vores førsteklasses magiske underholdning til enhver lejlighed' 
+                : 'Explore our premium magical entertainment for every occasion'}
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
-            {/* Children's Magic - Warm playful elegance */}
-            <Card className="premium-service-card group rounded-2xl overflow-hidden border border-primary/30 bg-gradient-to-br from-primary/8 to-primary/3 shadow-lg hover:shadow-2xl transition-all duration-500 hover:-translate-y-2">
-              <div className="relative p-6 h-full flex flex-col">
-                <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-primary/80 via-accent/60 to-transparent"></div>
-                <div className="mb-4 inline-flex p-3.5 rounded-xl bg-primary/15 group-hover:bg-primary/25 transition-all duration-300 group-hover:scale-110 shadow-md">
-                  <Star className="text-primary/90" size={28} />
-                </div>
-                <h3 className="text-lg font-bold mb-2 text-foreground">{t('services.childrensMagic.title')}</h3>
-                <p className="text-muted-foreground mb-5 flex-grow text-sm leading-relaxed">{t('services.childrensMagic.description')}</p>
-                <Link href={`/${locale}/services/childrens`} className="inline-block px-4 py-2 rounded-lg bg-primary/15 text-primary font-semibold text-sm hover:bg-primary/30 hover:shadow-lg transition-all duration-300">
+          {/* Desktop: Asymmetrical Masonry Layout */}
+          <div className="hidden lg:grid lg:grid-cols-12 lg:gap-6 auto-rows-max">
+            {/* 1. Wedding Magic - Large Featured (3x2) */}
+            <div className="lg:col-span-6 lg:row-span-2 group relative rounded-2xl overflow-hidden shadow-2xl hover:shadow-3xl transition-all duration-500 bg-background/50 border border-border/30">
+              <div className="relative h-96 overflow-hidden">
+                <img 
+                  src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/1.%20Wedding%20Magic%20%20Luxury%20Wedding-fR2FfEgsmq8KZQKDU2kZtPew51PolW.png"
+                  alt="Kenneth performing close-up magic at luxury wedding reception"
+                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+                />
+              </div>
+              <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent opacity-100 group-hover:opacity-90 transition-opacity duration-500"></div>
+              <div className="absolute bottom-0 left-0 right-0 p-6">
+                <h3 className="text-2xl font-bold text-white mb-2">
+                  {locale === 'da' ? 'Bryllupstrylleri' : 'Wedding Magic'}
+                </h3>
+                <p className="text-white/80 text-sm mb-4">
+                  {locale === 'da' 
+                    ? 'Elegant magisk underholdning for uforglemmelige bryllupper'
+                    : 'Elegant close-up magic for unforgettable weddings and luxury celebrations'}
+                </p>
+                <Link href={`/${locale}/bryllupper`} className="inline-flex items-center gap-2 px-4 py-2 bg-primary/90 hover:bg-primary text-white rounded-lg text-sm font-semibold transition-all duration-300">
                   {t('services.readMore')} →
                 </Link>
               </div>
-            </Card>
+            </div>
 
-            {/* Stand-up Magic - Theatrical elegance */}
-            <Card className="premium-service-card group rounded-2xl overflow-hidden border border-orange-400/30 bg-gradient-to-br from-orange-500/8 to-orange-500/3 shadow-lg hover:shadow-2xl transition-all duration-500 hover:-translate-y-2">
-              <div className="relative p-6 h-full flex flex-col">
-                <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-orange-400/80 via-amber-400/60 to-transparent"></div>
-                <div className="mb-4 inline-flex p-3.5 rounded-xl bg-orange-500/15 group-hover:bg-orange-500/25 transition-all duration-300 group-hover:scale-110 shadow-md">
-                  <Music className="text-orange-600/90" size={28} />
-                </div>
-                <h3 className="text-lg font-bold mb-2 text-foreground">{t('services.standUpMagic.title')}</h3>
-                <p className="text-muted-foreground mb-5 flex-grow text-sm leading-relaxed">{t('services.standUpMagic.description')}</p>
-                <Link href={`/${locale}/services/standup`} className="inline-block px-4 py-2 rounded-lg bg-orange-500/15 text-orange-700 font-semibold text-sm hover:bg-orange-500/30 hover:shadow-lg transition-all duration-300">
+            {/* 2. Close-up Magic - Medium (3x1) */}
+            <div className="lg:col-span-3 group relative rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-500 bg-background/50 border border-border/30">
+              <div className="relative h-48 overflow-hidden">
+                <img 
+                  src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Close-up%20Magic-NOF8ZeYflPoQ3vTvYbjS7Z1PTyYBHm.png"
+                  alt="Kenneth performing close-up card magic"
+                  className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
+                />
+              </div>
+              <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/10 to-transparent"></div>
+              <div className="absolute bottom-0 left-0 right-0 p-4">
+                <h3 className="text-lg font-bold text-white mb-1">
+                  {locale === 'da' ? 'Nærmagi' : 'Close-up Magic'}
+                </h3>
+                <p className="text-white/70 text-xs mb-3">
+                  {locale === 'da' 
+                    ? 'Mindblowing magic direkte foran dine gæster'
+                    : 'Mind-blowing magic performed directly in front of your guests'}
+                </p>
+                <Link href={`/${locale}/services/closeup`} className="inline-flex items-center gap-2 px-3 py-1.5 bg-primary/80 hover:bg-primary text-white rounded text-xs font-semibold transition-all">
                   {t('services.readMore')} →
                 </Link>
               </div>
-            </Card>
+            </div>
 
-            {/* Close-up Magic - Mysterious elegance */}
-            <Card className="premium-service-card group rounded-2xl overflow-hidden border border-purple-400/30 bg-gradient-to-br from-purple-600/8 to-purple-600/3 shadow-lg hover:shadow-2xl transition-all duration-500 hover:-translate-y-2">
-              <div className="relative p-6 h-full flex flex-col">
-                <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-purple-400/80 via-indigo-400/60 to-transparent"></div>
-                <div className="mb-4 inline-flex p-3.5 rounded-xl bg-purple-600/15 group-hover:bg-purple-600/25 transition-all duration-300 group-hover:scale-110 shadow-md">
-                  <Sparkles className="text-purple-700/90" size={28} />
-                </div>
-                <h3 className="text-lg font-bold mb-2 text-foreground">{t('services.closeUpMagic.title')}</h3>
-                <p className="text-muted-foreground mb-5 flex-grow text-sm leading-relaxed">{t('services.closeUpMagic.description')}</p>
-                <Link href={`/${locale}/services/closeup`} className="inline-block px-4 py-2 rounded-lg bg-purple-600/15 text-purple-800 font-semibold text-sm hover:bg-purple-600/30 hover:shadow-lg transition-all duration-300">
+            {/* 3. Christmas Shows - Medium (3x1) */}
+            <div className="lg:col-span-3 group relative rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-500 bg-background/50 border border-border/30">
+              <div className="relative h-48 overflow-hidden">
+                <img 
+                  src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Christmas%20Shows-T96GGsu8S3PilLsx3MxwQAV4QkeiM3.png"
+                  alt="Kenneth performing Christmas magic with festive decorations"
+                  className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
+                />
+              </div>
+              <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/10 to-transparent"></div>
+              <div className="absolute bottom-0 left-0 right-0 p-4">
+                <h3 className="text-lg font-bold text-white mb-1">
+                  {locale === 'da' ? 'Jule Shows' : 'Christmas Shows'}
+                </h3>
+                <p className="text-white/70 text-xs mb-3">
+                  {locale === 'da' 
+                    ? 'Festlig magisk underholdning til julearrangementer'
+                    : 'Festive magical performances for Christmas dinners and holiday parties'}
+                </p>
+                <Link href={`/${locale}/julefrokost`} className="inline-flex items-center gap-2 px-3 py-1.5 bg-primary/80 hover:bg-primary text-white rounded text-xs font-semibold transition-all">
                   {t('services.readMore')} →
                 </Link>
               </div>
-            </Card>
+            </div>
 
-            {/* Wedding Magic - Romantic elegance */}
-            <Card className="premium-service-card group rounded-2xl overflow-hidden border border-rose-400/30 bg-gradient-to-br from-rose-500/8 to-rose-500/3 shadow-lg hover:shadow-2xl transition-all duration-500 hover:-translate-y-2">
-              <div className="relative p-6 h-full flex flex-col">
-                <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-rose-400/80 via-pink-400/60 to-transparent"></div>
-                <div className="mb-4 inline-flex p-3.5 rounded-xl bg-rose-500/15 group-hover:bg-rose-500/25 transition-all duration-300 group-hover:scale-110 shadow-md">
-                  <Heart className="text-rose-700/90" size={28} />
-                </div>
-                <h3 className="text-lg font-bold mb-2 text-foreground">{t('services.weddingMagic.title')}</h3>
-                <p className="text-muted-foreground mb-5 flex-grow text-sm leading-relaxed">{t('services.weddingMagic.description')}</p>
-                <Link href={`/${locale}/bryllupper`} className="inline-block px-4 py-2 rounded-lg bg-rose-500/15 text-rose-700 font-semibold text-sm hover:bg-rose-500/30 hover:shadow-lg transition-all duration-300">
+            {/* 4. Stand-up Magic - Wide (6x1) */}
+            <div className="lg:col-span-6 group relative rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-500 bg-background/50 border border-border/30">
+              <div className="relative h-48 overflow-hidden">
+                <img 
+                  src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Stand-up%20Magic%20%282%29-T3funrlf5Wlx2emFiaC8cpbT2Ja60M.png"
+                  alt="Kenneth performing stand-up magic on stage with full production"
+                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+                />
+              </div>
+              <div className="absolute inset-0 bg-gradient-to-r from-black/60 via-black/20 to-transparent"></div>
+              <div className="absolute top-1/2 left-0 transform -translate-y-1/2 p-6">
+                <h3 className="text-xl font-bold text-white mb-1">
+                  {locale === 'da' ? 'Stand-up Trylleri' : 'Stage & Stand-up Magic'}
+                </h3>
+                <p className="text-white/70 text-sm mb-3 max-w-sm">
+                  {locale === 'da' 
+                    ? 'Storskala komedie og magic optrædener til teatre og livepublikum'
+                    : 'Large-scale comedy and magic performances for theaters and live audiences'}
+                </p>
+                <Link href={`/${locale}/services/standup`} className="inline-flex items-center gap-2 px-4 py-2 bg-primary/90 hover:bg-primary text-white rounded-lg text-sm font-semibold transition-all">
                   {t('services.readMore')} →
                 </Link>
               </div>
-            </Card>
+            </div>
 
-            {/* Corporate Events - Professional elegance */}
-            <Card className="premium-service-card group rounded-2xl overflow-hidden border border-blue-400/30 bg-gradient-to-br from-blue-500/8 to-blue-500/3 shadow-lg hover:shadow-2xl transition-all duration-500 hover:-translate-y-2">
-              <div className="relative p-6 h-full flex flex-col">
-                <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-blue-400/80 via-cyan-400/60 to-transparent"></div>
-                <div className="mb-4 inline-flex p-3.5 rounded-xl bg-blue-500/15 group-hover:bg-blue-500/25 transition-all duration-300 group-hover:scale-110 shadow-md">
-                  <Zap className="text-blue-700/90" size={28} />
-                </div>
-                <h3 className="text-lg font-bold mb-2 text-foreground">{t('services.corporateEvents.title')}</h3>
-                <p className="text-muted-foreground mb-5 flex-grow text-sm leading-relaxed">{t('services.corporateEvents.description')}</p>
-                <Link href={`/${locale}/firmaarrangementer`} className="inline-block px-4 py-2 rounded-lg bg-blue-500/15 text-blue-700 font-semibold text-sm hover:bg-blue-500/30 hover:shadow-lg transition-all duration-300">
+            {/* 5. Corporate Events - Medium (3x1) */}
+            <div className="lg:col-span-3 group relative rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-500 bg-background/50 border border-border/30">
+              <div className="relative h-48 overflow-hidden">
+                <img 
+                  src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Corporate%20Events%20%282%29-pwH6MmovIIqboDlwmKqk0z3TcU9ZG6.png"
+                  alt="Kenneth performing interactive magic at corporate dinner event"
+                  className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
+                />
+              </div>
+              <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/10 to-transparent"></div>
+              <div className="absolute bottom-0 left-0 right-0 p-4">
+                <h3 className="text-lg font-bold text-white mb-1">
+                  {locale === 'da' ? 'Firmaarrangementer' : 'Corporate Events'}
+                </h3>
+                <p className="text-white/70 text-xs mb-3">
+                  {locale === 'da' 
+                    ? 'Interaktiv underholdning til konferencer og firmafester'
+                    : 'Interactive entertainment for conferences, company parties, and business events'}
+                </p>
+                <Link href={`/${locale}/firmaarrangementer`} className="inline-flex items-center gap-2 px-3 py-1.5 bg-primary/80 hover:bg-primary text-white rounded text-xs font-semibold transition-all">
                   {t('services.readMore')} →
                 </Link>
               </div>
-            </Card>
+            </div>
 
-            {/* Santa Claus - Warm emotional elegance */}
-            <Card className="premium-service-card group rounded-2xl overflow-hidden border border-red-400/30 bg-gradient-to-br from-red-500/8 to-red-500/3 shadow-lg hover:shadow-2xl transition-all duration-500 hover:-translate-y-2">
-              <div className="relative p-6 h-full flex flex-col">
-                <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-red-500/80 via-red-400/60 to-transparent"></div>
-                <div className="mb-4 inline-flex p-3.5 rounded-xl bg-red-500/15 group-hover:bg-red-500/25 transition-all duration-300 group-hover:scale-110 shadow-md">
-                  <Heart className="text-red-700/90" size={28} />
-                </div>
-                <h3 className="text-lg font-bold mb-2 text-foreground">{t('services.santa.title')}</h3>
-                <p className="text-muted-foreground mb-5 flex-grow text-sm leading-relaxed">{t('services.santa.description')}</p>
-                <Link href={`/${locale}/services/santa`} className="inline-block px-4 py-2 rounded-lg bg-red-500/15 text-red-800 font-semibold text-sm hover:bg-red-500/30 hover:shadow-lg transition-all duration-300">
+            {/* 6. Family & Outdoor Festivals - Medium (3x1) */}
+            <div className="lg:col-span-3 group relative rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-500 bg-background/50 border border-border/30">
+              <div className="relative h-48 overflow-hidden">
+                <img 
+                  src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Family%20%20Outdoor%20Festivals-JCrmVbqV49OfIvoIIf4Prw9GcXEUNI.png"
+                  alt="Kenneth performing magic outdoors for families at festival"
+                  className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
+                />
+              </div>
+              <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/10 to-transparent"></div>
+              <div className="absolute bottom-0 left-0 right-0 p-4">
+                <h3 className="text-lg font-bold text-white mb-1">
+                  {locale === 'da' ? 'Familie & Festivaler' : 'Family & Outdoor Festivals'}
+                </h3>
+                <p className="text-white/70 text-xs mb-3">
+                  {locale === 'da' 
+                    ? 'Sjov og engagerende optrædener for familier og festivaler'
+                    : 'Fun and engaging outdoor performances for families, festivals, and public events'}
+                </p>
+                <Link href={`/${locale}/services/childrens`} className="inline-flex items-center gap-2 px-3 py-1.5 bg-primary/80 hover:bg-primary text-white rounded text-xs font-semibold transition-all">
                   {t('services.readMore')} →
                 </Link>
               </div>
-            </Card>
+            </div>
+          </div>
+
+          {/* Tablet: 2-Column Layout */}
+          <div className="hidden md:grid lg:hidden grid-cols-2 gap-5">
+            {[
+              {
+                title: locale === 'da' ? 'Bryllupstrylleri' : 'Wedding Magic',
+                desc: locale === 'da' ? 'Elegant magisk underholdning for uforglemmelige bryllupper' : 'Elegant close-up magic for unforgettable weddings',
+                img: 'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/1.%20Wedding%20Magic%20%20Luxury%20Wedding-fR2FfEgsmq8KZQKDU2kZtPew51PolW.png',
+                href: `/${locale}/bryllupper`
+              },
+              {
+                title: locale === 'da' ? 'Nærmagi' : 'Close-up Magic',
+                desc: locale === 'da' ? 'Mindblowing magic direkte foran dine gæster' : 'Mind-blowing magic performed directly in front of your guests',
+                img: 'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Close-up%20Magic-NOF8ZeYflPoQ3vTvYbjS7Z1PTyYBHm.png',
+                href: `/${locale}/services/closeup`
+              },
+              {
+                title: locale === 'da' ? 'Jule Shows' : 'Christmas Shows',
+                desc: locale === 'da' ? 'Festlig magisk underholdning til julearrangementer' : 'Festive magical performances for Christmas dinners',
+                img: 'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Christmas%20Shows-T96GGsu8S3PilLsx3MxwQAV4QkeiM3.png',
+                href: `/${locale}/julefrokost`
+              },
+              {
+                title: locale === 'da' ? 'Stand-up Trylleri' : 'Stage & Stand-up Magic',
+                desc: locale === 'da' ? 'Storskala komedie og magic optrædener' : 'Large-scale comedy and magic performances',
+                img: 'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Stand-up%20Magic%20%282%29-T3funrlf5Wlx2emFiaC8cpbT2Ja60M.png',
+                href: `/${locale}/services/standup`
+              },
+              {
+                title: locale === 'da' ? 'Firmaarrangementer' : 'Corporate Events',
+                desc: locale === 'da' ? 'Interaktiv underholdning til konferencer og firmafester' : 'Interactive entertainment for conferences and company parties',
+                img: 'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Corporate%20Events%20%282%29-pwH6MmovIIqboDlwmKqk0z3TcU9ZG6.png',
+                href: `/${locale}/firmaarrangementer`
+              },
+              {
+                title: locale === 'da' ? 'Familie & Festivaler' : 'Family & Outdoor Festivals',
+                desc: locale === 'da' ? 'Sjov og engagerende optrædener for familier' : 'Fun and engaging outdoor performances for families',
+                img: 'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Family%20%20Outdoor%20Festivals-JCrmVbqV49OfIvoIIf4Prw9GcXEUNI.png',
+                href: `/${locale}/services/childrens`
+              }
+            ].map((item, idx) => (
+              <div key={idx} className="group relative rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-500 bg-background/50 border border-border/30">
+                <div className="relative h-56 overflow-hidden">
+                  <img 
+                    src={item.img}
+                    alt={item.title}
+                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+                  />
+                </div>
+                <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent"></div>
+                <div className="absolute bottom-0 left-0 right-0 p-4">
+                  <h3 className="text-lg font-bold text-white mb-1">{item.title}</h3>
+                  <p className="text-white/70 text-xs mb-3">{item.desc}</p>
+                  <Link href={item.href} className="inline-flex items-center gap-2 px-3 py-1.5 bg-primary/90 hover:bg-primary text-white rounded text-xs font-semibold transition-all">
+                    {t('services.readMore')} →
+                  </Link>
+                </div>
+              </div>
+            ))}
+          </div>
+
+          {/* Mobile: Stacked Vertical Layout */}
+          <div className="md:hidden space-y-4">
+            {[
+              {
+                title: locale === 'da' ? 'Bryllupstrylleri' : 'Wedding Magic',
+                desc: locale === 'da' ? 'Elegant magisk underholdning for uforglemmelige bryllupper' : 'Elegant close-up magic for unforgettable weddings',
+                img: 'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/1.%20Wedding%20Magic%20%20Luxury%20Wedding-fR2FfEgsmq8KZQKDU2kZtPew51PolW.png',
+                href: `/${locale}/bryllupper`
+              },
+              {
+                title: locale === 'da' ? 'Nærmagi' : 'Close-up Magic',
+                desc: locale === 'da' ? 'Mindblowing magic direkte foran dine gæster' : 'Mind-blowing magic performed directly in front of your guests',
+                img: 'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Close-up%20Magic-NOF8ZeYflPoQ3vTvYbjS7Z1PTyYBHm.png',
+                href: `/${locale}/services/closeup`
+              },
+              {
+                title: locale === 'da' ? 'Jule Shows' : 'Christmas Shows',
+                desc: locale === 'da' ? 'Festlig magisk underholdning til julearrangementer' : 'Festive magical performances for Christmas dinners',
+                img: 'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Christmas%20Shows-T96GGsu8S3PilLsx3MxwQAV4QkeiM3.png',
+                href: `/${locale}/julefrokost`
+              },
+              {
+                title: locale === 'da' ? 'Stand-up Trylleri' : 'Stage & Stand-up Magic',
+                desc: locale === 'da' ? 'Storskala komedie og magic optrædener' : 'Large-scale comedy and magic performances',
+                img: 'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Stand-up%20Magic%20%282%29-T3funrlf5Wlx2emFiaC8cpbT2Ja60M.png',
+                href: `/${locale}/services/standup`
+              },
+              {
+                title: locale === 'da' ? 'Firmaarrangementer' : 'Corporate Events',
+                desc: locale === 'da' ? 'Interaktiv underholdning til konferencer og firmafester' : 'Interactive entertainment for conferences and company parties',
+                img: 'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Corporate%20Events%20%282%29-pwH6MmovIIqboDlwmKqk0z3TcU9ZG6.png',
+                href: `/${locale}/firmaarrangementer`
+              },
+              {
+                title: locale === 'da' ? 'Familie & Festivaler' : 'Family & Outdoor Festivals',
+                desc: locale === 'da' ? 'Sjov og engagerende optrædener for familier' : 'Fun and engaging outdoor performances for families',
+                img: 'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Family%20%20Outdoor%20Festivals-JCrmVbqV49OfIvoIIf4Prw9GcXEUNI.png',
+                href: `/${locale}/services/childrens`
+              }
+            ].map((item, idx) => (
+              <div key={idx} className="group relative rounded-lg overflow-hidden shadow-md hover:shadow-lg transition-all duration-500 bg-background/50 border border-border/30">
+                <div className="relative h-48 overflow-hidden">
+                  <img 
+                    src={item.img}
+                    alt={item.title}
+                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+                  />
+                </div>
+                <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent"></div>
+                <div className="absolute bottom-0 left-0 right-0 p-4">
+                  <h3 className="text-base font-bold text-white mb-1">{item.title}</h3>
+                  <p className="text-white/70 text-xs mb-3 line-clamp-2">{item.desc}</p>
+                  <Link href={item.href} className="inline-flex items-center gap-2 px-3 py-1.5 bg-primary/90 hover:bg-primary text-white rounded text-xs font-semibold transition-all">
+                    {t('services.readMore')} →
+                  </Link>
+                </div>
+              </div>
+            ))}
           </div>
         </section>
 
