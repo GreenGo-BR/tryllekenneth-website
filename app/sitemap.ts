@@ -8,9 +8,10 @@ export default function sitemap(): MetadataRoute.Sitemap {
   const corePages = [
     '',
     '/services/naermagi',
-    '/services/standup',
     '/services/boernetrylleri',
+    '/services/standup',
     '/services/santa',
+    '/services/boernefoedselsdag',
     '/bryllupper',
     '/firmaarrangementer',
     '/julefrokost',
@@ -19,6 +20,13 @@ export default function sitemap(): MetadataRoute.Sitemap {
     '/kontakt',
     '/privacy',
     '/terms',
+  ]
+
+  // English-specific pages (alternative URLs for English locale)
+  const englishPages = [
+    '/services/childrens',
+    '/services/closeup',
+    '/services/birthday-parties',
   ]
 
   // Generate sitemap entries for all locale + page combinations
@@ -34,6 +42,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
 
   // Add all locale-specific pages
   locales.forEach((locale) => {
+    // Add core pages for both locales
     corePages.forEach((page) => {
       const url = page === '' 
         ? `${baseUrl}/${locale}`
@@ -59,6 +68,22 @@ export default function sitemap(): MetadataRoute.Sitemap {
         priority,
       })
     })
+
+    // Add English-specific pages only for English locale
+    if (locale === 'en') {
+      englishPages.forEach((page) => {
+        const url = `${baseUrl}/${locale}${page}`
+        const priority = page.includes('services') ? 0.9 : 0.7
+        const changeFrequency: 'daily' | 'weekly' | 'monthly' | 'yearly' | 'never' | 'always' = 'yearly'
+
+        sitemapEntries.push({
+          url,
+          lastModified: new Date(),
+          changeFrequency,
+          priority,
+        })
+      })
+    }
   })
 
   return sitemapEntries
