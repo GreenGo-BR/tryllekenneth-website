@@ -80,9 +80,25 @@
       "title": "Close-up Magic",
       "description": "Close-up magic with cards, coins, banknotes and objects near the audience."
     },
+    "weddingMagic": {
+      "title": "Wedding Magic",
+      "description": "Elegant and romantic magic for unforgettable wedding moments and ceremonies."
+    },
+    "corporateEvents": {
+      "title": "Corporate Events",
+      "description": "Professional entertainment for company events, team building and business celebrations."
+    },
+    "halloween": {
+      "title": "Halloween & Seasonal Shows",
+      "description": "Magical entertainment for Halloween, Fastelavn, Easter and seasonal celebrations."
+    },
+    "schoolKindergarten": {
+      "title": "School & Kindergarten Shows",
+      "description": "Educational and entertaining magic shows designed for schools and kindergarten groups."
+    },
     "santa": {
-      "title": "Santa Claus & Seasonal Shows",
-      "description": "Santa and magical entertainment for Christmas, Halloween, Fastelavn and special events."
+      "title": "Santa Claus & Christmas",
+      "description": "Santa and magical entertainment for Christmas parties and festive celebrations."
     },
     "readMore": "Read more"
   },
