@@ -85,9 +85,9 @@ export default function ChristmasPartyPage() {
 
                   {/* Christmas Image */}
                   <img 
-                    src="/kenneth-christmas-fireplace.png"
-                    alt="Kenneth performing magic at Christmas celebration"
-                    className="w-full h-auto object-cover object-top"
+                    src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Christmas%20Party-oHBkGCnPUnc92XokSIjzImDYfJzsXM.png"
+                    alt="Kenneth performing magic at Christmas party with festive decorations and warm holiday atmosphere"
+                    className="w-full h-auto object-cover object-center"
                   />
 
                   {/* Magical glow on hover */}
