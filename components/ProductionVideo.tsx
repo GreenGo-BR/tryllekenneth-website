@@ -150,12 +150,19 @@ export function ProductionVideo({
         </video>
       )}
 
-      {/* Lazy loading placeholder */}
+      {/* Lazy loading placeholder - Show poster image */}
       {!isVisible && (
-        <div className="absolute inset-0 bg-gradient-to-b from-slate-900 via-slate-950 to-black flex items-center justify-center">
-          <div className="text-center">
-            <div className="text-4xl mb-2">🎭</div>
-            <p className="text-slate-500 text-sm">Video will load when you scroll here</p>
+        <div 
+          className="absolute inset-0 bg-center bg-cover"
+          style={{
+            backgroundImage: `url(${defaultPoster})`,
+          }}
+        >
+          <div className="absolute inset-0 bg-black/20 flex items-center justify-center">
+            <div className="text-center">
+              <div className="text-4xl mb-2">▶</div>
+              <p className="text-slate-300 text-sm font-medium">Scroll to play video</p>
+            </div>
           </div>
         </div>
       )}

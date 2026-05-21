@@ -81,7 +81,7 @@ export default function Home() {
           {/* Background Image with Enhanced Overlay */}
           <div className="absolute inset-0 z-0 pointer-events-none">
             <img 
-              src="/hero-bg-optimized.jpg"
+              src="/kenneth-hero-original.png"
               alt="Hero background - Kenneth magic show with family"
               loading="lazy"
               decoding="async"
