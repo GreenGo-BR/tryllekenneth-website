@@ -103,13 +103,19 @@ export default function Home() {
         {/* Hero Section */}
         <section ref={heroRef} className="relative h-screen flex items-center justify-start overflow-hidden">
           {/* Full Background Image - Optimized to preserve Kenneth's full figure */}
-          <div className="absolute inset-0 z-0 w-full h-full">
+          <div className="absolute inset-0 z-0 w-full h-full kenneth-premium-glow">
             <img 
               src="/kenneth-hero-novo.png"
               alt="Kenneth performing premium magic entertainment with theatrical presentation"
-              className="w-full h-full object-cover object-top"
+              className="w-full h-full object-cover object-top kenneth-vignette"
             />
           </div>
+
+          {/* Cinematic Lighting Layers */}
+          <div className="hero-spotlight-left"></div>
+          <div className="hero-atmospheric-glow"></div>
+          <div className="hero-cinematic-overlay"></div>
+          <div className="hero-bottom-fade"></div>
 
           {/* Animated Stars */}
           {stars.map((star) => (

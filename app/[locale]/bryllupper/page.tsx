@@ -87,7 +87,7 @@ export default function WeddingPage() {
                   <img 
                     src="/kenneth-wedding-rainbow.png"
                     alt="Kenneth performing magic at wedding reception"
-                    className="w-full h-auto object-cover"
+                    className="w-full h-auto object-cover object-top"
                   />
 
                   {/* Magical glow on hover */}
@@ -115,7 +115,7 @@ export default function WeddingPage() {
               <img 
                 src="/kenneth-wedding-rainbow.png"
                 alt="Kenneth performing magic at wedding reception"
-                className="w-full h-auto object-cover"
+                className="w-full h-auto object-cover object-top"
               />
             </div>
           </div>
