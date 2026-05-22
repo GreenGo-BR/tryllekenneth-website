@@ -1662,84 +1662,42 @@ video::-moz-media-controls {
 
 /* ===== CINEMATIC HERO LIGHTING ===== */
 
-/* Premium Milky White Glow - MUCH STRONGER left-side luxury studio light */
-@keyframes milky-white-glow {
-  0%, 100% {
-    background: linear-gradient(
-      to right,
-      rgba(255, 255, 250, 0.70) 0%,
-      rgba(255, 253, 245, 0.60) 20%,
-      rgba(255, 250, 240, 0.40) 40%,
-      rgba(255, 248, 242, 0.15) 65%,
-      rgba(255, 255, 255, 0) 90%
-    );
-  }
-  50% {
-    background: linear-gradient(
-      to right,
-      rgba(255, 255, 250, 0.75) 0%,
-      rgba(255, 253, 245, 0.65) 20%,
-      rgba(255, 250, 240, 0.45) 40%,
-      rgba(255, 248, 242, 0.18) 65%,
-      rgba(255, 255, 255, 0) 90%
-    );
-  }
-}
-
+/* Premium Milky White Glow - STABLE, no animation */
 .hero-milky-white-glow {
   position: absolute;
   inset: 0;
   z-index: 5;
-  animation: milky-white-glow 6s ease-in-out infinite;
+  background: linear-gradient(
+    to right,
+    rgba(255, 255, 250, 0.72) 0%,
+    rgba(255, 253, 245, 0.62) 20%,
+    rgba(255, 250, 240, 0.42) 40%,
+    rgba(255, 248, 242, 0.16) 65%,
+    rgba(255, 255, 255, 0) 90%
+  );
   pointer-events: none;
 }
 
-/* White bloom haze - Subtle light diffusion around lights */
-@keyframes white-bloom-haze {
-  0%, 100% {
-    background: radial-gradient(ellipse 1000px 800px at 15% 40%, rgba(255, 255, 255, 0.08) 0%, rgba(255, 255, 255, 0.04) 30%, rgba(255, 255, 255, 0) 70%);
-  }
-  50% {
-    background: radial-gradient(ellipse 1000px 800px at 15% 40%, rgba(255, 255, 255, 0.12) 0%, rgba(255, 255, 255, 0.06) 30%, rgba(255, 255, 255, 0) 70%);
-  }
-}
-
+/* White bloom haze - STABLE overlay */
 .hero-white-bloom-haze {
   position: absolute;
   inset: 0;
   z-index: 5.05;
-  animation: white-bloom-haze 7s ease-in-out infinite;
+  background: radial-gradient(ellipse 1000px 800px at 15% 40%, rgba(255, 255, 255, 0.10) 0%, rgba(255, 255, 255, 0.05) 30%, rgba(255, 255, 255, 0) 70%);
   pointer-events: none;
 }
 
-/* Elegant Dark Overlay - Very light cinematic atmosphere */
-@keyframes cinematic-overlay-glow {
-  0%, 100% {
-    background: radial-gradient(ellipse 900px 600px at 25% 50%, rgba(0, 0, 0, 0.02) 0%, rgba(0, 0, 0, 0.05) 50%, rgba(0, 0, 0, 0.08) 100%);
-  }
-  50% {
-    background: radial-gradient(ellipse 900px 600px at 25% 50%, rgba(0, 0, 0, 0.01) 0%, rgba(0, 0, 0, 0.03) 50%, rgba(0, 0, 0, 0.06) 100%);
-  }
-}
-
+/* Elegant Dark Overlay - STABLE, no animation */
 .hero-cinematic-overlay {
   position: absolute;
   inset: 0;
   z-index: 5.2;
-  animation: cinematic-overlay-glow 4s ease-in-out infinite;
+  background: radial-gradient(ellipse 900px 600px at 25% 50%, rgba(0, 0, 0, 0.015) 0%, rgba(0, 0, 0, 0.04) 50%, rgba(0, 0, 0, 0.07) 100%);
   backdrop-filter: blur(0.2px);
+  pointer-events: none;
 }
 
-/* Soft spotlight effect - Left side warm studio lighting */
-@keyframes spotlight-left {
-  0%, 100% {
-    opacity: 0.9;
-  }
-  50% {
-    opacity: 0.85;
-  }
-}
-
+/* Soft spotlight effect - STABLE, left side warm studio lighting */
 .hero-spotlight-left {
   position: absolute;
   left: -10%;
@@ -1750,20 +1708,10 @@ video::-moz-media-controls {
   border-radius: 50%;
   z-index: 4;
   filter: blur(80px);
-  animation: spotlight-left 5s ease-in-out infinite;
   pointer-events: none;
 }
 
-/* Atmospheric glow - Right side accent */
-@keyframes atmospheric-glow {
-  0%, 100% {
-    opacity: 0.35;
-  }
-  50% {
-    opacity: 0.30;
-  }
-}
-
+/* Atmospheric glow - STABLE right side accent */
 .hero-atmospheric-glow {
   position: absolute;
   right: -15%;
@@ -1774,11 +1722,10 @@ video::-moz-media-controls {
   border-radius: 50%;
   z-index: 3;
   filter: blur(80px);
-  animation: atmospheric-glow 6s ease-in-out infinite;
   pointer-events: none;
 }
 
-/* Bottom gradient fade - Minimal scenic depth, preserve brightness */
+/* Bottom gradient fade - Static, no animation */
 .hero-bottom-fade {
   position: absolute;
   bottom: 0;
@@ -1796,61 +1743,23 @@ video::-moz-media-controls {
   pointer-events: none;
 }
 
-/* Atmospheric contrast separation - Light background falloff for elegant depth */
-@keyframes atmospheric-depth {
-  0%, 100% {
-    background: radial-gradient(
-      ellipse 900px 700px at 35% 45%,
-      rgba(0, 0, 0, 0) 0%,
-      rgba(0, 0, 0, 0.02) 40%,
-      rgba(0, 0, 0, 0.08) 100%
-    );
-  }
-  50% {
-    background: radial-gradient(
-      ellipse 900px 700px at 35% 45%,
-      rgba(0, 0, 0, 0) 0%,
-      rgba(0, 0, 0, 0.01) 40%,
-      rgba(0, 0, 0, 0.06) 100%
-    );
-  }
-}
-
+/* Atmospheric contrast separation - STABLE depth */
 .hero-atmospheric-depth {
   position: absolute;
   inset: 0;
   z-index: 5.1;
-  animation: atmospheric-depth 5s ease-in-out infinite;
+  background: radial-gradient(
+    ellipse 900px 700px at 35% 45%,
+    rgba(0, 0, 0, 0) 0%,
+    rgba(0, 0, 0, 0.015) 40%,
+    rgba(0, 0, 0, 0.07) 100%
+  );
   pointer-events: none;
 }
 
-/* Vignette effect for Kenneth's image - Minimal, preserve brightness for left side */
-@keyframes vignette-pulse {
-  0%, 100% {
-    box-shadow: 
-      inset 0 0 60px rgba(0, 0, 0, 0.01),
-      inset 0 0 30px rgba(0, 0, 0, 0.005);
-  }
-  50% {
-    box-shadow: 
-      inset 0 0 60px rgba(0, 0, 0, 0.005),
-      inset 0 0 30px rgba(0, 0, 0, 0.002);
-  }
-}
-
+/* Vignette effect - STATIC, no animation */
 .kenneth-vignette {
-  animation: vignette-pulse 4s ease-in-out infinite;
   filter: brightness(1.25) contrast(1.10);
-}
-
-/* Soft edge glow for Kenneth - Premium cinema look */
-@keyframes kenneth-edge-glow {
-  0%, 100% {
-    filter: drop-shadow(-40px 0 60px rgba(255, 215, 0, 0.15)) drop-shadow(0 40px 80px rgba(0, 0, 0, 0.15));
-  }
-  50% {
-    filter: drop-shadow(-40px 0 60px rgba(255, 215, 0, 0.18)) drop-shadow(0 40px 80px rgba(0, 0, 0, 0.12));
-  }
 }
 
 /* Kenneth Premium Image Enhancement - Bright, clean luxury look */
