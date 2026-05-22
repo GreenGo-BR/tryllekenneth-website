@@ -203,7 +203,7 @@ export default function ChristmasPartyPage() {
                 </Button>
               </Link>
               <a href="tel:+4540852728">
-                <Button size="lg" className="border-2 border-white text-white hover:bg-white/10 text-base font-semibold h-14 px-8 transition-all duration-300">
+                <Button size="lg" className="cta-secondary text-base h-14 px-8">
                   {locale === 'da' ? 'Ring: 40 85 27 28' : 'Call: 40 85 27 28'}
                 </Button>
               </a>

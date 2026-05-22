@@ -115,7 +115,7 @@ export default function ChildrensMagic() {
                 </Button>
               </Link>
               <Link href={`tel:${t('footer.phone')}`}>
-                <Button size="lg" variant="outline" className="border-white text-white hover:bg-white/10 font-semibold h-12 px-8">
+                <Button size="lg" className="cta-secondary h-12 px-8">
                   {t('cta.callKenneth')}
                 </Button>
               </Link>

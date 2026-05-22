@@ -253,7 +253,7 @@ export default function SantaMagic() {
                 </Button>
               </Link>
               <a href="tel:+4540852728">
-                <Button size="lg" className="border-2 border-white text-white hover:bg-white/10 text-base font-semibold h-14 px-8 transition-all duration-300">
+                <Button size="lg" className="cta-secondary text-base h-14 px-8">
                   {t('cta.callKenneth')}
                 </Button>
               </a>
