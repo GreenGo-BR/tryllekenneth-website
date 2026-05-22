@@ -89,7 +89,7 @@ export function Footer() {
               >
                 <Phone size={18} className="text-amber-400 mt-0.5 flex-shrink-0" />
                 <div className="flex flex-col gap-1">
-                  <span className="text-xs text-gray-400 font-light">{locale === 'da' ? 'Telefon' : 'Phone'}</span>
+                  <span className="text-xs text-gray-400 font-light">{locale === 'da' ? 'Telefon:' : 'Phone:'}</span>
                   <span className="text-gray-200 font-light group-hover:text-white transition-colors duration-300">40 85 27 28</span>
                 </div>
               </a>
@@ -99,15 +99,15 @@ export function Footer() {
               >
                 <Mail size={18} className="text-amber-400 mt-0.5 flex-shrink-0" />
                 <div className="flex flex-col gap-1">
-                  <span className="text-xs text-gray-400 font-light">{locale === 'da' ? 'Email' : 'Email'}</span>
+                  <span className="text-xs text-gray-400 font-light">{locale === 'da' ? 'E-mail:' : 'Email:'}</span>
                   <span className="text-gray-200 font-light group-hover:text-white transition-colors duration-300">kenneth@tryllekenneth.dk</span>
                 </div>
               </a>
               <div className="group flex items-start gap-3 pt-2">
                 <MapPin size={18} className="text-amber-400 mt-0.5 flex-shrink-0" />
                 <div className="flex flex-col gap-1">
-                  <span className="text-xs text-gray-400 font-light">{locale === 'da' ? 'Område' : 'Service Area'}</span>
-                  <span className="text-gray-200 font-light">Denmark</span>
+                  <span className="text-xs text-gray-400 font-light">{locale === 'da' ? 'Område:' : 'Service Area:'}</span>
+                  <span className="text-gray-200 font-light">{locale === 'da' ? 'Dækker hele Danmark' : 'Denmark'}</span>
                 </div>
               </div>
             </div>

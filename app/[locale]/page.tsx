@@ -270,7 +270,7 @@ export default function Home() {
                   </h3>
                   <p className="text-xs text-white/70 mb-3 line-clamp-2">
                     {locale === 'da' 
-                      ? 'Elegant magisk underholdning for uforglemmelige bryllupper'
+                      ? 'Elegant magisk underholdning til uforglemmelige bryllupper'
                       : 'Elegant magic for unforgettable weddings'}
                   </p>
                   <Link href={`/${locale}/bryllupper`} className="inline-flex items-center gap-1 text-xs font-medium text-primary hover:text-accent transition-colors">
@@ -290,11 +290,11 @@ export default function Home() {
                 </div>
                 <div className="p-4">
                   <h3 className="text-base font-semibold text-white mb-1">
-                    {locale === 'da' ? 'Nærmagi' : 'Close-up Magic'}
+                    {locale === 'da' ? 'Close-up magi' : 'Close-up Magic'}
                   </h3>
                   <p className="text-xs text-white/70 mb-3 line-clamp-2">
                     {locale === 'da' 
-                      ? 'Mindblowing magic direkte foran dine gæster'
+                      ? 'Magiske øjeblikke direkte foran dine gæster'
                       : 'Magic performed directly in front of your guests'}
                   </p>
                   <Link href={`/${locale}/services/closeup`} className="inline-flex items-center gap-1 text-xs font-medium text-primary hover:text-accent transition-colors">
@@ -314,7 +314,7 @@ export default function Home() {
                 </div>
                 <div className="p-4">
                   <h3 className="text-base font-semibold text-white mb-1">
-                    {locale === 'da' ? 'Jule Shows' : 'Christmas Shows'}
+                    {locale === 'da' ? 'Juleshows' : 'Christmas Shows'}
                   </h3>
                   <p className="text-xs text-white/70 mb-3 line-clamp-2">
                     {locale === 'da' 
@@ -338,11 +338,11 @@ export default function Home() {
                 </div>
                 <div className="p-4">
                   <h3 className="text-base font-semibold text-white mb-1">
-                    {locale === 'da' ? 'Stand-up Trylleri' : 'Stage & Stand-up'}
+                    {locale === 'da' ? 'Stand-up trylleri' : 'Stage & Stand-up'}
                   </h3>
                   <p className="text-xs text-white/70 mb-3 line-clamp-2">
                     {locale === 'da' 
-                      ? 'Storskala comedy og magic optrædener til teatre'
+                      ? 'Masser af humor og magi på den store scene'
                       : 'Large-scale performances for theaters and audiences'}
                   </p>
                   <Link href={`/${locale}/services/standup`} className="inline-flex items-center gap-1 text-xs font-medium text-primary hover:text-accent transition-colors">
@@ -366,7 +366,7 @@ export default function Home() {
                   </h3>
                   <p className="text-xs text-white/70 mb-3 line-clamp-2">
                     {locale === 'da' 
-                      ? 'Interaktiv underholdning til konferencer og fester'
+                      ? 'Interaktivt show tilpasset konferencer, firmafester og receptioner'
                       : 'Entertainment for conferences and company parties'}
                   </p>
                   <Link href={`/${locale}/firmaarrangementer`} className="inline-flex items-center gap-1 text-xs font-medium text-primary hover:text-accent transition-colors">
@@ -390,7 +390,7 @@ export default function Home() {
                   </h3>
                   <p className="text-xs text-white/70 mb-3 line-clamp-2">
                     {locale === 'da' 
-                      ? 'Sjov og engagerende optrædener for familier'
+                      ? 'Sjove og engagerende shows for hele familien'
                       : 'Fun performances for families and outdoor events'}
                   </p>
                   <Link href={`/${locale}/services/childrens`} className="inline-flex items-center gap-1 text-xs font-medium text-primary hover:text-accent transition-colors">
