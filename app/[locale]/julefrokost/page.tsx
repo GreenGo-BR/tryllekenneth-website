@@ -125,7 +125,7 @@ export default function ChristmasPartyPage() {
         <section className="py-20 px-4 sm:px-6 lg:px-8 max-w-4xl mx-auto">
           <div className="grid md:grid-cols-2 gap-12">
             <div>
-              <h2 className="text-3xl font-bold mb-6 bg-gradient-to-r from-red-600 to-amber-600 bg-clip-text text-transparent">
+              <h2 className="text-3xl font-bold mb-6 text-foreground">
                 {locale === 'da' ? 'Julens Magiske Underholdning' : 'Christmas Magic Entertainment'}
               </h2>
               <p className="text-slate-700 mb-4 leading-relaxed font-medium">
