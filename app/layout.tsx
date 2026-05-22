@@ -21,14 +21,14 @@ export const viewport: Viewport = {
 }
 
 export const metadata: Metadata = {
-  title: 'TrylleKenneth - Professionel Tryllekunstner i København | Magisk Underholdning til Events',
-  description: 'Tryllekunstner i København med magisk underholdning til firmaarrangementer, børnefødselsdage og events i hele Danmark. Over 15 års erfaring med professionel underholdning til alle arrangementer.',
+  title: 'TrylleKenneth - Professional Magician in Copenhagen | Magical Entertainment for Events',
+  description: 'Magician in Copenhagen offering magical entertainment for corporate events, children\'s birthday parties and events throughout Denmark. Over 15 years of professional entertainment experience.',
   generator: 'v0.app',
   applicationName: 'TrylleKenneth',
   referrer: 'strict-origin-when-cross-origin',
-  keywords: ['tryllekunstner', 'magiker', 'København', 'underholdning', 'event', 'firmaevent', 'bryllup', 'nærmagi', 'magisk underholdning', 'børnetrylleri'],
+  keywords: ['magician', 'magic', 'Copenhagen', 'entertainment', 'event', 'corporate event', 'wedding', 'close-up magic', 'magical entertainment', 'children magic'],
   authors: [{ name: 'Kenneth', url: 'https://tryllekenneth.dk' }],
-  creator: 'Kenneth - Tryllekunstner',
+  creator: 'Kenneth - Magician',
   icons: {
     icon: [
       {
@@ -52,11 +52,11 @@ export const metadata: Metadata = {
   },
   metadataBase: new URL('https://tryllekenneth.dk'),
   openGraph: {
-    title: 'TrylleKenneth - Tryllekunstner i København | Magisk Underholdning til Events',
-    description: 'Professionel underholdning til firmaarrangementer, børnefødselsdage og corporate events i København og Danmark',
+    title: 'TrylleKenneth - Professional Magician in Copenhagen | Magical Entertainment',
+    description: 'Professional magical entertainment for corporate events, children\'s birthday parties and celebrations in Copenhagen and throughout Denmark',
     type: 'website',
-    locale: 'da_DK',
-    alternateLocale: ['en_US'],
+    locale: 'en_US',
+    alternateLocale: ['da_DK'],
     siteName: 'TrylleKenneth',
     url: 'https://tryllekenneth.dk',
     images: [
@@ -64,22 +64,22 @@ export const metadata: Metadata = {
         url: 'https://tryllekenneth.dk/og-image-1200x630.png',
         width: 1200,
         height: 630,
-        alt: 'TrylleKenneth - Professionel tryllekunstner og magiker i København',
+        alt: 'TrylleKenneth - Professional magician and entertainer in Copenhagen',
         type: 'image/png',
       },
       {
         url: 'https://tryllekenneth.dk/og-image-800x420.png',
         width: 800,
         height: 420,
-        alt: 'TrylleKenneth - Magisk underholdning til events',
+        alt: 'TrylleKenneth - Magical entertainment for events',
         type: 'image/png',
       },
     ],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'TrylleKenneth - Professionel Tryllekunstner i København',
-    description: 'Magisk underholdning til firmaarrangementer, bryllup og events',
+    title: 'TrylleKenneth - Professional Magician in Copenhagen',
+    description: 'Magical entertainment for corporate events, weddings and celebrations',
     images: ['https://tryllekenneth.dk/og-image-1200x630.png'],
     creator: '@tryllekenneth',
     site: '@tryllekenneth',
@@ -197,7 +197,7 @@ export default function RootLayout({
   children: React.ReactNode
 }>) {
   return (
-    <html lang="da" className="bg-background">
+    <html lang="en" className="bg-background">
       <head>
         {/* Structured Data for AI Search Optimization */}
         <script

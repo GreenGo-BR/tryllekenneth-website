@@ -119,7 +119,7 @@ export function Footer() {
 
         {/* Bottom bar - Premium footer credit */}
         <div className="flex flex-col sm:flex-row justify-between items-center gap-4 pt-2">
-          <p className="text-xs text-slate-500 font-light">© 2026 TrylleKenneth. {t('rights')}</p>
+          <p className="text-xs text-slate-500 font-light">© 2026 TrylleKenneth. All rights reserved.</p>
           <a
             href="https://www.eslmarketing.com/"
             target="_blank"
