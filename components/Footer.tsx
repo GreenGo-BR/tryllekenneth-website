@@ -3,7 +3,7 @@
 import { useTranslations, useLocale } from 'next-intl';
 import Link from 'next/link';
 import Image from 'next/image';
-import { Mail, Phone } from 'lucide-react';
+import { Mail, Phone, MapPin } from 'lucide-react';
 
 export function Footer() {
   const t = useTranslations('footer');
@@ -12,90 +12,121 @@ export function Footer() {
   const locale = useLocale();
 
   return (
-    <footer className="mt-20 border-t border-border/50 bg-card">
-      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-12">
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
-          {/* Branding */}
-          <div className="flex flex-col gap-3 overflow-hidden">
-            <Link href={`/${locale}`} className="shrink-0 w-fit -my-3">
+    <footer className="relative mt-24 bg-gradient-to-b from-slate-950 via-slate-900 to-black overflow-hidden">
+      {/* Subtle cinematic texture overlay */}
+      <div className="absolute inset-0 opacity-30 bg-gradient-to-br from-red-900/10 via-transparent to-amber-900/10 pointer-events-none" />
+      
+      {/* Accent line */}
+      <div className="absolute top-0 inset-x-0 h-px bg-gradient-to-r from-transparent via-amber-500/40 to-transparent" />
+
+      <div className="relative z-10 mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-16">
+        {/* Main footer content - 3 columns */}
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-12 mb-12">
+          {/* LEFT COLUMN - Branding */}
+          <div className="flex flex-col gap-6">
+            <Link href={`/${locale}`} className="w-fit group">
               <Image
                 src="/tryllekenneth-logo.png"
-                alt="TrylleKenneth - Magisk Underholdning til Dig"
+                alt="TrylleKenneth - Professional Magical Entertainment"
                 width={576}
                 height={173}
-                className="h-48 w-auto"
+                className="h-24 w-auto transition-opacity duration-300 group-hover:opacity-80"
               />
             </Link>
-            <p className="text-sm text-muted-foreground">{t('copyright')}</p>
+            <p className="text-sm text-gray-300 leading-relaxed font-light">
+              {locale === 'da' 
+                ? 'Professionel magisk underholdning til uforglemmelige begivenheder på tværs af Danmark.'
+                : 'Professional magical entertainment for unforgettable events across Denmark.'}
+            </p>
+            {/* Social hints (optional - minimal placement) */}
+            <div className="flex gap-4 pt-2">
+              <a href="tel:+4540852728" className="text-gray-400 hover:text-amber-400 transition-colors duration-300" title="Call">
+                <Phone size={18} />
+              </a>
+              <a href="mailto:kenneth@tryllekenneth.dk" className="text-gray-400 hover:text-amber-400 transition-colors duration-300" title="Email">
+                <Mail size={18} />
+              </a>
+            </div>
           </div>
 
-          {/* Services */}
-          <div className="flex flex-col gap-2">
-            <h4 className="font-semibold text-foreground mb-2">{t('services')}</h4>
-            <Link href={`/${locale}/services/childrens`} className="text-muted-foreground hover:text-foreground transition-colors text-sm">
-              {tServices('childrensMagic.title')}
-            </Link>
-            <Link href={`/${locale}/services/standup`} className="text-muted-foreground hover:text-foreground transition-colors text-sm">
-              {tServices('standUpMagic.title')}
-            </Link>
-            <Link href={`/${locale}/services/closeup`} className="text-muted-foreground hover:text-foreground transition-colors text-sm">
-              {tServices('closeUpMagic.title')}
-            </Link>
-            <Link href={`/${locale}/services/santa`} className="text-muted-foreground hover:text-foreground transition-colors text-sm">
-              {tServices('santa.title')}
-            </Link>
+          {/* CENTER COLUMN - Quick Links */}
+          <div className="flex flex-col gap-6">
+            <h4 className="text-sm font-semibold text-white uppercase tracking-wider">{t('information')}</h4>
+            <nav className="flex flex-col gap-3">
+              <Link href={`/${locale}`} className="group flex items-start gap-2">
+                <span className="text-amber-400/0 group-hover:text-amber-400/100 transition-colors duration-300">→</span>
+                <span className="text-gray-300 group-hover:text-white transition-colors duration-300 font-light text-sm">{tNav('home')}</span>
+              </Link>
+              <Link href={`/${locale}/services/childrens`} className="group flex items-start gap-2">
+                <span className="text-amber-400/0 group-hover:text-amber-400/100 transition-colors duration-300">→</span>
+                <span className="text-gray-300 group-hover:text-white transition-colors duration-300 font-light text-sm">{tNav('performances')}</span>
+              </Link>
+              <Link href={`/${locale}/gallery`} className="group flex items-start gap-2">
+                <span className="text-amber-400/0 group-hover:text-amber-400/100 transition-colors duration-300">→</span>
+                <span className="text-gray-300 group-hover:text-white transition-colors duration-300 font-light text-sm">{tNav('gallery')}</span>
+              </Link>
+              <Link href={`/${locale}/faq`} className="group flex items-start gap-2">
+                <span className="text-amber-400/0 group-hover:text-amber-400/100 transition-colors duration-300">→</span>
+                <span className="text-gray-300 group-hover:text-white transition-colors duration-300 font-light text-sm">{tNav('faq')}</span>
+              </Link>
+              <Link href={`/${locale}/contact`} className="group flex items-start gap-2">
+                <span className="text-amber-400/0 group-hover:text-amber-400/100 transition-colors duration-300">→</span>
+                <span className="text-gray-300 group-hover:text-white transition-colors duration-300 font-light text-sm">{t('contact')}</span>
+              </Link>
+            </nav>
           </div>
 
-          {/* Info */}
-          <div className="flex flex-col gap-2">
-            <h4 className="font-semibold text-foreground mb-2">{t('information')}</h4>
-            <Link href={`/${locale}/gallery`} className="text-muted-foreground hover:text-foreground transition-colors text-sm">
-              {tNav('gallery')}
-            </Link>
-            <Link href={`/${locale}/faq`} className="text-muted-foreground hover:text-foreground transition-colors text-sm">
-              {tNav('faq')}
-            </Link>
-            <Link href={`/${locale}/contact`} className="text-muted-foreground hover:text-foreground transition-colors text-sm">
-              {t('contact')}
-            </Link>
-          </div>
-
-          {/* Contact */}
-          <div className="flex flex-col gap-2">
-            <h4 className="font-semibold text-foreground mb-2">{t('contact')}</h4>
-            <a
-              href="tel:+4540852728"
-              className="flex items-center gap-2 text-muted-foreground hover:text-foreground transition-colors"
-            >
-              <Phone size={16} />
-              <span className="text-sm">{t('phone')}</span>
-            </a>
-            <a
-              href="mailto:kenneth@tryllekenneth.dk"
-              className="flex items-center gap-2 text-muted-foreground hover:text-foreground transition-colors"
-            >
-              <Mail size={16} />
-              <span className="text-sm">{t('email')}</span>
-            </a>
+          {/* RIGHT COLUMN - Contact Info */}
+          <div className="flex flex-col gap-6">
+            <h4 className="text-sm font-semibold text-white uppercase tracking-wider">{t('contact')}</h4>
+            <div className="flex flex-col gap-4">
+              <a
+                href="tel:+4540852728"
+                className="group flex items-start gap-3 hover:pl-1 transition-all duration-300"
+              >
+                <Phone size={18} className="text-amber-400 mt-0.5 flex-shrink-0" />
+                <div className="flex flex-col gap-1">
+                  <span className="text-xs text-gray-400 font-light">{locale === 'da' ? 'Telefon' : 'Phone'}</span>
+                  <span className="text-gray-200 font-light group-hover:text-white transition-colors duration-300">40 85 27 28</span>
+                </div>
+              </a>
+              <a
+                href="mailto:kenneth@tryllekenneth.dk"
+                className="group flex items-start gap-3 hover:pl-1 transition-all duration-300"
+              >
+                <Mail size={18} className="text-amber-400 mt-0.5 flex-shrink-0" />
+                <div className="flex flex-col gap-1">
+                  <span className="text-xs text-gray-400 font-light">{locale === 'da' ? 'Email' : 'Email'}</span>
+                  <span className="text-gray-200 font-light group-hover:text-white transition-colors duration-300">kenneth@tryllekenneth.dk</span>
+                </div>
+              </a>
+              <div className="group flex items-start gap-3 pt-2">
+                <MapPin size={18} className="text-amber-400 mt-0.5 flex-shrink-0" />
+                <div className="flex flex-col gap-1">
+                  <span className="text-xs text-gray-400 font-light">{locale === 'da' ? 'Område' : 'Service Area'}</span>
+                  <span className="text-gray-200 font-light">Denmark</span>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
 
-        <div className="mt-8 pt-8 border-t border-border/50 flex flex-col md:flex-row justify-between items-center gap-4">
-          <p className="text-xs text-muted-foreground">{t('rights')}</p>
+        {/* Divider */}
+        <div className="h-px bg-gradient-to-r from-transparent via-gray-700/30 to-transparent my-12" />
+
+        {/* Bottom bar - Premium footer credit */}
+        <div className="flex flex-col sm:flex-row justify-between items-center gap-4 pt-4">
+          <p className="text-xs text-gray-400 font-light">© 2026 TrylleKenneth. {t('rights')}</p>
           <a
             href="https://www.eslmarketing.com/"
             target="_blank"
             rel="noopener noreferrer"
-            className="hover:opacity-80 transition-opacity"
+            className="group hover:opacity-70 transition-opacity duration-300"
             title="ESL Marketing"
           >
-            <Image
-              src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-tXWPj1rRuWWkzxoo1EZAkGSXReNYqD.png"
-              alt="ESL Marketing"
-              width={120}
-              height={40}
-              className="h-8 w-auto"
-            />
+            <span className="text-xs text-gray-500 font-light group-hover:text-gray-300 transition-colors duration-300">
+              {locale === 'da' ? 'Designet af ' : 'Designed by '}<span className="text-amber-400">ESL Marketing</span>
+            </span>
           </a>
         </div>
       </div>
