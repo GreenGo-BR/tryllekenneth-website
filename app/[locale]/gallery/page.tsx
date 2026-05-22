@@ -221,14 +221,15 @@ export default function Gallery() {
                     loop={false}
                     playsInline={true}
                     preload="metadata"
-                    lazy={true}
+                    lazy={false}
                     aspectRatio="16/9"
-                    className="w-full h-full"
+                    containerClassName="bg-slate-900"
+                    className="w-full h-full object-contain"
                   />
                 </div>
                 <div className="p-3 bg-background border-t border-slate-200/10">
                   <h3 className="text-sm font-medium text-foreground">
-                    {locale === 'da' ? 'Nærmagi' : 'Close-up Magic'}
+                    {locale === 'da' ? 'Close-up magi' : 'Close-up Magic'}
                   </h3>
                   <p className="text-xs text-muted-foreground mt-0.5">
                     {locale === 'da' ? 'Intim trylleri' : 'Intimate magic'}
@@ -248,9 +249,10 @@ export default function Gallery() {
                     loop={false}
                     playsInline={true}
                     preload="metadata"
-                    lazy={true}
+                    lazy={false}
                     aspectRatio="16/9"
-                    className="w-full h-full"
+                    containerClassName="bg-slate-900"
+                    className="w-full h-full object-contain"
                   />
                 </div>
                 <div className="p-3 bg-background border-t border-slate-200/10">
@@ -275,9 +277,10 @@ export default function Gallery() {
                     loop={false}
                     playsInline={true}
                     preload="metadata"
-                    lazy={true}
+                    lazy={false}
                     aspectRatio="16/9"
-                    className="w-full h-full"
+                    containerClassName="bg-slate-900"
+                    className="w-full h-full object-contain"
                   />
                 </div>
                 <div className="p-3 bg-background border-t border-slate-200/10">
@@ -302,14 +305,15 @@ export default function Gallery() {
                     loop={false}
                     playsInline={true}
                     preload="metadata"
-                    lazy={true}
+                    lazy={false}
                     aspectRatio="16/9"
-                    className="w-full h-full"
+                    containerClassName="bg-slate-900"
+                    className="w-full h-full object-contain"
                   />
                 </div>
                 <div className="p-3 bg-background border-t border-slate-200/10">
                   <h3 className="text-sm font-medium text-foreground">
-                    {locale === 'da' ? 'Stand-up Trylleri' : 'Stand-up Magic'}
+                    {locale === 'da' ? 'Stand-up trylleri' : 'Stand-up Magic'}
                   </h3>
                   <p className="text-xs text-muted-foreground mt-0.5">
                     {locale === 'da' ? 'Professionel underholdning' : 'Professional entertainment'}
