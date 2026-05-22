@@ -44,7 +44,7 @@ export default function FAQ() {
         {/* Hero Section */}
         <section className="relative py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-primary/10 via-secondary/10 to-accent/10">
           <div className="max-w-4xl mx-auto text-center">
-            <h1 className="text-5xl sm:text-6xl font-bold mb-4 bg-gradient-to-r from-primary via-secondary to-accent bg-clip-text text-transparent">
+            <h1 className="text-5xl sm:text-6xl font-bold mb-4 text-foreground">
               {t('faqPage.title')}
             </h1>
             <p className="text-xl text-muted-foreground">
@@ -95,12 +95,12 @@ export default function FAQ() {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link href={`/${locale}/contact`}>
-                <Button size="lg" className="bg-gradient-to-r from-primary to-secondary hover:opacity-90 text-white font-semibold">
+                <Button size="lg" className="btn-primary btn-lg">
                   {locale === 'da' ? 'Kontakt mig' : 'Contact Me'}
                 </Button>
               </Link>
               <a href="tel:+4540852728">
-                <Button size="lg" variant="outline" className="border-2">
+                <Button size="lg" className="btn-secondary btn-lg">
                   {locale === 'da' ? 'Ring: 40 85 27 28' : 'Call: 40 85 27 28'}
                 </Button>
               </a>

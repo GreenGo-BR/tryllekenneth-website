@@ -43,7 +43,7 @@ export default function Contact() {
         {/* Hero Section */}
         <section className="relative py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-accent/10 via-primary/10 to-secondary/10">
           <div className="max-w-4xl mx-auto text-center">
-            <h1 className="text-5xl sm:text-6xl font-bold mb-4 bg-gradient-to-r from-accent via-primary to-secondary bg-clip-text text-transparent">
+            <h1 className="text-5xl sm:text-6xl font-bold mb-4 text-foreground">
               {t('contactPage.title')}
             </h1>
             <p className="text-xl text-muted-foreground">
@@ -190,7 +190,7 @@ export default function Contact() {
                     />
                   </div>
 
-                  <Button type="submit" size="lg" className="w-full bg-gradient-to-r from-primary to-secondary hover:opacity-90 text-white font-semibold magic-button">
+                  <Button type="submit" size="lg" className="btn-primary w-full">
                     {t('contactPage.sendButton')}
                   </Button>
                 </form>
@@ -235,8 +235,8 @@ export default function Contact() {
                       {t('contactPage.needQuickResponseText')}
                     </p>
                     <a href="tel:+4540852728">
-                      <Button className="w-full bg-primary hover:bg-primary/90 text-white font-semibold">
-                        {locale === 'da' ? 'Ring: 40 85 27 28' : 'Call: 40 85 27 28'}
+                      <Button className="btn-primary w-full">
+                        {t('contactPage.sendButton')}
                       </Button>
                     </a>
                   </Card>

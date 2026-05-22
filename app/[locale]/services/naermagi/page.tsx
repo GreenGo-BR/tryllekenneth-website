@@ -29,14 +29,14 @@ export default function CloseupMagic() {
           </div>
 
           <div className="max-w-4xl mx-auto relative z-10">
-            <h1 className="text-5xl sm:text-6xl font-bold mb-4 bg-gradient-to-r from-indigo-600 via-purple-600 to-blue-600 bg-clip-text text-transparent">
+            <h1 className="text-5xl sm:text-6xl font-bold mb-4 text-foreground">
               {t('closeUpMagicPage.title')}
             </h1>
             <p className="text-xl text-slate-600 mb-8 max-w-2xl">
               {t('closeUpMagicPage.subtitle')}
             </p>
             <Link href={`/${locale}/contact`}>
-              <Button size="lg" className="bg-gradient-to-r from-indigo-600 to-purple-600 hover:opacity-90 text-white text-base font-semibold h-14 px-8">
+              <Button size="lg" className="btn-primary btn-lg">
                 {t('closeUpMagicPage.bookButton')}
               </Button>
             </Link>
@@ -145,7 +145,7 @@ export default function CloseupMagic() {
         {/* CTA Section - Consistent with other pages */}
         <section className="py-16 px-4 sm:px-6 lg:px-8 text-center max-w-4xl mx-auto">
           <div className="rounded-3xl bg-gradient-to-br from-indigo-50/60 via-white to-purple-50/40 border border-indigo-200/30 p-12">
-            <h2 className="text-3xl sm:text-4xl font-bold mb-3 bg-gradient-to-r from-indigo-600 via-purple-600 to-blue-600 bg-clip-text text-transparent">
+            <h2 className="text-3xl sm:text-4xl font-bold mb-3 text-foreground">
               {t('cta.title')}
             </h2>
             <p className="text-base text-foreground/70 mb-6 max-w-2xl mx-auto">
@@ -153,12 +153,12 @@ export default function CloseupMagic() {
             </p>
             <div className="flex flex-col sm:flex-row gap-3 justify-center">
               <Link href={`/${locale}/contact`}>
-                <Button size="lg" className="bg-gradient-to-r from-indigo-600 to-purple-600 hover:opacity-90 text-white font-semibold h-12 px-6 shadow-lg transition">
+                <Button size="lg" className="btn-primary btn-lg">
                   {t('closeUpMagicPage.bookButton')}
                 </Button>
               </Link>
               <a href="tel:+4540852728">
-                <Button size="lg" className="border-2 border-indigo-600 text-indigo-600 hover:bg-indigo-50 font-semibold h-12 px-6 transition">
+                <Button size="lg" className="btn-primary btn-lg">
                   {t('cta.callKenneth')}
                 </Button>
               </a>

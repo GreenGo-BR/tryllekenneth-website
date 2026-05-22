@@ -36,7 +36,7 @@ export default function CloseupMagic() {
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center">
               {/* Left: Text Content */}
               <div>
-                <h1 className="text-5xl sm:text-6xl font-bold mb-6 bg-gradient-to-r from-indigo-600 via-purple-600 to-blue-600 bg-clip-text text-transparent">
+                <h1 className="text-5xl sm:text-6xl font-bold mb-6 text-foreground">
                   {locale === 'da' ? 'Nærmagi' : 'Close-up Magic'}
                 </h1>
                 <p className="text-xl text-slate-700 mb-4 leading-relaxed font-semibold">
@@ -53,12 +53,12 @@ export default function CloseupMagic() {
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4">
                   <Link href={`/${locale}/contact`}>
-                    <Button size="lg" className="bg-gradient-to-r from-indigo-600 to-purple-600 hover:from-indigo-700 hover:to-purple-700 text-white text-base font-semibold h-14 px-8 shadow-lg hover:shadow-xl transition-all">
+                    <Button size="lg" className="btn-primary btn-lg">
                       {locale === 'da' ? 'Book Nærmagi' : 'Book Close-up Magic'}
                     </Button>
                   </Link>
                   <a href="tel:+4540852728">
-                    <Button size="lg" className="border-2 border-indigo-500 text-indigo-600 hover:bg-indigo-50 text-base font-semibold h-14 px-8 transition-all">
+                    <Button size="lg" className="btn-primary btn-lg">
                       {locale === 'da' ? 'Ring: 40 85 27 28' : 'Call: 40 85 27 28'}
                     </Button>
                   </a>
@@ -124,7 +124,7 @@ export default function CloseupMagic() {
         <section className="py-20 px-4 sm:px-6 lg:px-8 max-w-4xl mx-auto">
           <div className="grid md:grid-cols-2 gap-12">
             <div>
-              <h2 className="text-3xl font-bold mb-6 bg-gradient-to-r from-indigo-600 to-purple-600 bg-clip-text text-transparent">
+              <h2 className="text-3xl font-bold mb-6 text-foreground">
                 {t('closeUpMagicPage.about')}
               </h2>
               <p className="text-slate-700 mb-4 leading-relaxed font-medium">
@@ -172,7 +172,7 @@ export default function CloseupMagic() {
         </section>
 
         {/* CTA Section - Premium */}
-        <section className="py-20 px-4 sm:px-6 lg:px-8 text-center bg-gradient-to-r from-indigo-600/95 via-purple-500/95 to-blue-600/95 relative overflow-hidden">
+        <section className="py-20 px-4 sm:px-6 lg:px-8 text-center bg-gradient-to-r from-indigo-600 via-purple-500 to-blue-600 relative overflow-hidden">
           {/* Festive background shimmer */}
           <div className="absolute inset-0 opacity-10">
             <div className="absolute top-0 right-0 w-96 h-96 bg-white rounded-full blur-3xl"></div>
@@ -180,7 +180,7 @@ export default function CloseupMagic() {
           </div>
 
           <div className="max-w-2xl mx-auto relative z-10">
-            <h2 className="text-4xl font-bold mb-4 text-white">
+            <h2 className="text-4xl font-bold mb-4 text-gray-900">
               {locale === 'da' ? 'Nærmagi der Imponerer' : 'Close-up Magic That Impresses'}
             </h2>
             <p className="text-lg text-indigo-100 mb-8 leading-relaxed">
@@ -191,12 +191,12 @@ export default function CloseupMagic() {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link href={`/${locale}/contact`}>
-                <Button size="lg" className="bg-white text-indigo-600 hover:bg-indigo-50 text-base font-semibold h-14 px-8 shadow-lg hover:shadow-xl transition-all duration-300">
+                <Button size="lg" className="btn-primary btn-lg">
                   {locale === 'da' ? 'Book Nærmagi' : 'Book Close-up Magic'}
                 </Button>
               </Link>
               <a href="tel:+4540852728">
-                <Button size="lg" className="border-2 border-white text-white hover:bg-white/10 text-base font-semibold h-14 px-8 transition-all duration-300">
+                <Button size="lg" className="btn-secondary">
                   {locale === 'da' ? 'Ring: 40 85 27 28' : 'Call: 40 85 27 28'}
                 </Button>
               </a>

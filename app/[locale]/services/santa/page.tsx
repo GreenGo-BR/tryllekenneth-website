@@ -31,7 +31,7 @@ export default function SantaMagic() {
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center">
               {/* Left: Text Content */}
               <div>
-                <h1 className="text-5xl sm:text-6xl font-bold mb-6 bg-gradient-to-r from-red-600 via-red-500 to-amber-500 bg-clip-text text-transparent">
+                <h1 className="text-5xl sm:text-6xl font-bold mb-6 text-foreground">
                   {t('santaPage.title')}
                 </h1>
                 <p className="text-xl text-slate-700 mb-4 leading-relaxed font-semibold">
@@ -48,12 +48,12 @@ export default function SantaMagic() {
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4">
                   <Link href={`/${locale}/contact`}>
-                    <Button size="lg" className="bg-gradient-to-r from-red-600 to-red-500 hover:from-red-700 hover:to-red-600 text-white text-base font-semibold h-14 px-8 shadow-lg hover:shadow-xl transition-all">
+                    <Button size="lg" className="btn-primary btn-lg">
                       {locale === 'da' ? 'Book Julemanden' : 'Book Santa'}
                     </Button>
                   </Link>
                   <a href="tel:+4540852728">
-                    <Button size="lg" className="border-2 border-red-500 text-red-600 hover:bg-red-50 text-base font-semibold h-14 px-8 transition-all">
+                    <Button size="lg" className="btn-primary btn-lg">
                       {locale === 'da' ? 'Ring: 40 85 27 28' : 'Call: 40 85 27 28'}
                     </Button>
                   </a>
@@ -119,7 +119,7 @@ export default function SantaMagic() {
         <section className="py-20 px-4 sm:px-6 lg:px-8 max-w-4xl mx-auto">
           <div className="grid md:grid-cols-2 gap-12">
             <div>
-              <h2 className="text-3xl font-bold mb-6 bg-gradient-to-r from-red-600 to-amber-600 bg-clip-text text-transparent">
+              <h2 className="text-3xl font-bold mb-6 text-foreground">
                 {t('santaPage.about')}
               </h2>
               <p className="text-slate-700 mb-4 leading-relaxed font-medium">
@@ -169,7 +169,7 @@ export default function SantaMagic() {
         {/* Premium Christmas Services */}
         <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-red-50/30 via-white to-orange-50/20">
           <div className="max-w-4xl mx-auto">
-            <h2 className="text-3xl font-bold mb-12 text-center bg-gradient-to-r from-red-600 to-amber-600 bg-clip-text text-transparent">
+            <h2 className="text-3xl font-bold mb-12 text-center text-foreground">
               {locale === 'da' ? 'Julemandsoplevelser' : 'Santa Experiences'}
             </h2>
             <div className="grid md:grid-cols-3 gap-8">
@@ -247,7 +247,7 @@ export default function SantaMagic() {
         </section>
 
         {/* Premium CTA Section - Christmas Magic */}
-        <section className="py-20 px-4 sm:px-6 lg:px-8 text-center bg-gradient-to-r from-red-600/95 via-red-500/95 to-orange-600/95 relative overflow-hidden">
+        <section className="py-20 px-4 sm:px-6 lg:px-8 text-center bg-gradient-to-r from-red-600 via-red-500 to-orange-600 relative overflow-hidden">
           {/* Festive background shimmer */}
           <div className="absolute inset-0 opacity-10">
             <div className="absolute top-0 right-0 w-96 h-96 bg-white rounded-full blur-3xl"></div>
@@ -255,7 +255,7 @@ export default function SantaMagic() {
           </div>
 
           <div className="max-w-2xl mx-auto relative z-10">
-            <h2 className="text-4xl font-bold mb-4 text-white">
+            <h2 className="text-4xl font-bold mb-4 text-gray-900">
               {locale === 'da' ? 'Gør Din Jul Magisk' : 'Make Your Christmas Magical'}
             </h2>
             <p className="text-lg text-red-100 mb-8 leading-relaxed">
@@ -266,12 +266,12 @@ export default function SantaMagic() {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link href={`/${locale}/contact`}>
-                <Button size="lg" className="bg-white text-red-600 hover:bg-amber-50 text-base font-semibold h-14 px-8 shadow-lg hover:shadow-xl transition-all duration-300">
+                <Button size="lg" className="btn-primary btn-lg">
                   {locale === 'da' ? 'Book Julemanden' : 'Book Santa'}
                 </Button>
               </Link>
               <a href="tel:+4540852728">
-                <Button size="lg" className="border-2 border-white text-white hover:bg-white/10 text-base font-semibold h-14 px-8 transition-all duration-300">
+                <Button size="lg" className="btn-secondary">
                   {locale === 'da' ? 'Ring: 40 85 27 28' : 'Call: 40 85 27 28'}
                 </Button>
               </a>

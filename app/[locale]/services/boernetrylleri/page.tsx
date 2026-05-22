@@ -21,14 +21,14 @@ export default function ChildrensMagic() {
         <section className="relative py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-primary/10 via-accent/10 to-secondary/10 overflow-hidden">
           <MagicalBackground />
           <div className="max-w-4xl mx-auto relative z-10">
-            <h1 className="text-5xl sm:text-6xl font-bold mb-4 bg-gradient-to-r from-primary via-accent to-secondary bg-clip-text text-transparent">
+            <h1 className="text-5xl sm:text-6xl font-bold mb-4 text-foreground">
               {t('childrensMagicPage.title')}
             </h1>
             <p className="text-xl text-muted-foreground mb-8">
               {t('childrensMagicPage.subtitle')}
             </p>
             <Link href={`/${locale}/contact`}>
-              <Button size="lg" className="bg-gradient-to-r from-primary to-accent hover:opacity-90 text-white text-base font-semibold h-14 px-8">
+              <Button size="lg" className="btn-primary btn-lg">
                 {t('childrensMagicPage.bookButton')}
               </Button>
             </Link>
@@ -110,12 +110,12 @@ export default function ChildrensMagic() {
             <p className="text-lg mb-8 text-white/90">{t('cta.subtitle')}</p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link href={`/${locale}/contact`}>
-                <Button size="lg" className="bg-white text-primary hover:bg-gray-100 font-semibold h-12 px-8">
-                  {t('cta.bookShow')}
+                <Button size="lg" className="btn-secondary">
+                  {locale === 'da' ? 'Ring: 40 85 27 28' : 'Call: 40 85 27 28'}
                 </Button>
               </Link>
               <Link href={`tel:${t('footer.phone')}`}>
-                <Button size="lg" variant="outline" className="border-white text-white hover:bg-white/10 font-semibold h-12 px-8">
+                <Button size="lg" className="btn-secondary">
                   {t('cta.callKenneth')}
                 </Button>
               </Link>
