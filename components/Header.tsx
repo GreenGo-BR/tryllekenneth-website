@@ -17,14 +17,14 @@ export function Header() {
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         {/* Premium header with increased vertical spacing */}
         <div className="flex h-20 items-center justify-between">
-          {/* Logo - Large with overflow managed by negative margin */}
-          <Link href={`/${locale}`} className="shrink-0 flex items-center -my-2 hover:opacity-90 transition-opacity duration-300">
+          {/* Logo - Extra Large with overflow managed by negative margin */}
+          <Link href={`/${locale}`} className="shrink-0 flex items-center -my-4 hover:opacity-90 transition-opacity duration-300">
             <Image
               src="/tryllekenneth-logo.png"
               alt="TrylleKenneth - Magisk Underholdning til Dig"
               width={720}
               height={216}
-              className="h-20 w-auto"
+              className="h-28 w-auto"
               priority
             />
           </Link>
