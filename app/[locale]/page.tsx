@@ -342,7 +342,7 @@ export default function Home() {
                   </h3>
                   <p className="text-xs text-white/70 mb-3 line-clamp-2">
                     {locale === 'da' 
-                      ? 'Masser af humor og magi på den store scene'
+                      ? 'Masser af humor og magi, der fungerer perfekt på den store scene'
                       : 'Large-scale performances for theaters and audiences'}
                   </p>
                   <Link href={`/${locale}/services/standup`} className="inline-flex items-center gap-1 text-xs font-medium text-primary hover:text-accent transition-colors">
