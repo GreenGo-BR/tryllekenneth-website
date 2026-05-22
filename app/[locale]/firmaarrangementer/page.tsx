@@ -37,7 +37,7 @@ export default function CorporateEventsPage() {
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center">
               {/* Left: Text Content */}
               <div>
-                <h1 className="text-5xl sm:text-6xl font-bold mb-6 bg-gradient-to-r from-blue-600 via-teal-600 to-cyan-600 bg-clip-text text-transparent">
+                <h1 className="text-5xl sm:text-6xl font-bold mb-6 text-foreground">
                   {locale === 'da' ? 'Firmaarrangementer' : 'Corporate Events'}
                 </h1>
                 <p className="text-xl text-slate-700 mb-4 leading-relaxed font-semibold">

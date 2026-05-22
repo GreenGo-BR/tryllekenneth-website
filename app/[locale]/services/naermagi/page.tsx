@@ -29,7 +29,7 @@ export default function CloseupMagic() {
           </div>
 
           <div className="max-w-4xl mx-auto relative z-10">
-            <h1 className="text-5xl sm:text-6xl font-bold mb-4 bg-gradient-to-r from-indigo-600 via-purple-600 to-blue-600 bg-clip-text text-transparent">
+            <h1 className="text-5xl sm:text-6xl font-bold mb-4 text-foreground">
               {t('closeUpMagicPage.title')}
             </h1>
             <p className="text-xl text-slate-600 mb-8 max-w-2xl">
@@ -145,7 +145,7 @@ export default function CloseupMagic() {
         {/* CTA Section - Consistent with other pages */}
         <section className="py-16 px-4 sm:px-6 lg:px-8 text-center max-w-4xl mx-auto">
           <div className="rounded-3xl bg-gradient-to-br from-indigo-50/60 via-white to-purple-50/40 border border-indigo-200/30 p-12">
-            <h2 className="text-3xl sm:text-4xl font-bold mb-3 bg-gradient-to-r from-indigo-600 via-purple-600 to-blue-600 bg-clip-text text-transparent">
+            <h2 className="text-3xl sm:text-4xl font-bold mb-3 text-foreground">
               {t('cta.title')}
             </h2>
             <p className="text-base text-foreground/70 mb-6 max-w-2xl mx-auto">

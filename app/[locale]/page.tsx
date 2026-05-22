@@ -139,7 +139,7 @@ export default function Home() {
               <div className="mb-6 inline-block w-fit animate-float-slow">
                 <span className="hero-badge-premium inline-flex items-center gap-2 px-4 py-2 rounded-full bg-gradient-to-r from-purple-500/20 to-pink-500/20 backdrop-blur-md border border-purple-400/50 text-white font-semibold text-xs sm:text-sm hover:border-pink-400/70 transition-all">
                   <Wand2 size={16} className="text-yellow-300 animate-spin" style={{ animationDuration: '3s' }} />
-                  <span className="bg-gradient-to-r from-yellow-300 via-pink-300 to-purple-300 bg-clip-text text-transparent font-bold">
+                  <span className="text-foreground font-bold">
                     ✨ {locale === 'da' ? 'TrylleKenneth' : 'TrylleKenneth'}
                   </span>
                 </span>

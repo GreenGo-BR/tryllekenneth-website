@@ -36,7 +36,7 @@ export default function CloseupMagic() {
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center">
               {/* Left: Text Content */}
               <div>
-                <h1 className="text-5xl sm:text-6xl font-bold mb-6 bg-gradient-to-r from-indigo-600 via-purple-600 to-blue-600 bg-clip-text text-transparent">
+                <h1 className="text-5xl sm:text-6xl font-bold mb-6 text-foreground">
                   {locale === 'da' ? 'Nærmagi' : 'Close-up Magic'}
                 </h1>
                 <p className="text-xl text-slate-700 mb-4 leading-relaxed font-semibold">
