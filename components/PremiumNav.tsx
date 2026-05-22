@@ -66,7 +66,7 @@ export function PremiumNav({ isMobile = false }: PremiumNavProps) {
   };
 
   // Translation mapping for dropdown labels
-  const performancesLabel = locale === 'da' ? 'Optrædener' : 'Performances';
+  const performancesLabel = locale === 'da' ? 'Shows' : 'Performances';
   const seasonalLabel = t('seasonal');
 
   // Close dropdown on outside click
