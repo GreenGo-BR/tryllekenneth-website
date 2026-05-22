@@ -141,11 +141,11 @@ export default function Home() {
             <div className="absolute inset-0 bg-gradient-to-r from-black/20 via-transparent to-transparent rounded-3xl pointer-events-none"></div>
             
             <div className="flex flex-col justify-center relative z-20">
-              {/* Badge - Premium Glow */}
+              {/* Badge - Premium Frosted Glass */}
               <div className="mb-6 inline-block w-fit animate-float-slow">
-                <span className="hero-badge-premium inline-flex items-center gap-2 px-4 py-2 rounded-full bg-gradient-to-r from-purple-500/20 to-pink-500/20 backdrop-blur-md border border-purple-400/50 text-white font-semibold text-xs sm:text-sm hover:border-pink-400/70 transition-all">
-                  <Wand2 size={16} className="text-yellow-300 animate-spin" style={{ animationDuration: '3s' }} />
-                  <span className="text-white font-bold">
+                <span className="hero-badge-premium inline-flex items-center gap-2 px-4 py-2 rounded-full font-semibold text-xs sm:text-sm transition-all" style={{ backgroundColor: 'rgba(255,255,255,0.72)', border: '1px solid rgba(15,23,42,0.12)', boxShadow: '0 8px 24px rgba(15,23,42,0.12)', color: '#0f172a', backdropFilter: 'blur(12px)' }}>
+                  <Wand2 size={16} className="text-yellow-400 animate-spin" style={{ animationDuration: '3s' }} />
+                  <span className="font-bold">
                     ✨ {locale === 'da' ? 'TrylleKenneth' : 'TrylleKenneth'}
                   </span>
                 </span>
@@ -342,7 +342,7 @@ export default function Home() {
                   </h3>
                   <p className="text-xs text-white/70 mb-3 line-clamp-2">
                     {locale === 'da' 
-                      ? 'Masser af humor og magi på den store scene'
+                      ? 'Masser af humor og magi, der fungerer perfekt på den store scene'
                       : 'Large-scale performances for theaters and audiences'}
                   </p>
                   <Link href={`/${locale}/services/standup`} className="inline-flex items-center gap-1 text-xs font-medium text-primary hover:text-accent transition-colors">
