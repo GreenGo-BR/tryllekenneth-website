@@ -147,7 +147,7 @@ export default function Home() {
 
               {/* Main Title - Premium Vibrant Gradient */}
               <div className="mb-6">
-                <h1 className="hero-title-premium text-4xl sm:text-5xl lg:text-6xl font-black leading-tight text-balance bg-gradient-to-br from-yellow-300 via-pink-300 to-purple-400 bg-clip-text text-transparent">
+                <h1 className="text-4xl sm:text-5xl lg:text-6xl font-black leading-tight text-balance text-foreground">
                   {t('hero.title')}
                 </h1>
               </div>
@@ -191,7 +191,7 @@ export default function Home() {
         <section className="py-12 px-4 sm:px-6 lg:px-8 max-w-6xl mx-auto">
           {/* Section Header - More minimal */}
           <div className="text-center mb-8 relative z-10">
-            <h2 className="text-3xl sm:text-4xl font-bold mb-2 bg-gradient-to-r from-primary via-accent to-secondary bg-clip-text text-transparent">
+            <h2 className="text-3xl sm:text-4xl font-bold mb-2 text-foreground">
               {t('video.title')}
             </h2>
             <p className="text-base text-muted-foreground max-w-2xl mx-auto">
@@ -433,9 +433,9 @@ export default function Home() {
               </div>
 
               {/* Main Title - Simpler, stronger */}
-              <h2 className="text-4xl sm:text-5xl font-bold mb-6 text-foreground text-balance bg-gradient-to-r from-primary via-accent to-secondary bg-clip-text text-transparent">
-                {t('about.title')}
-              </h2>
+            <h2 className="text-3xl sm:text-4xl font-bold mb-3 text-foreground">
+              {locale === 'da' ? 'Optræder & Underholdning' : 'Performances & Entertainment'}
+            </h2>
 
               {/* Core Statement - One powerful paragraph */}
               <p className="text-lg text-foreground/75 mb-8 leading-relaxed text-pretty">
@@ -455,7 +455,7 @@ export default function Home() {
         {/* CTA Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-primary/10 via-accent/10 to-secondary/10 section-magic-entrance">
           <div className="max-w-4xl mx-auto text-center">
-            <h2 className="text-4xl font-bold mb-4 bg-gradient-to-r from-primary via-accent to-secondary bg-clip-text text-transparent stagger-item">
+            <h2 className="text-4xl font-bold mb-4 text-foreground stagger-item">
               {t('cta.title')}
             </h2>
             <p className="text-lg text-muted-foreground mb-8 stagger-item">
