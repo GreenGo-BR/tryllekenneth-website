@@ -24,8 +24,20 @@ export default function FAQ() {
       answer: t('faqPage.bookingA2'),
     },
     {
+      question: t('faqPage.bookingQ3'),
+      answer: t('faqPage.bookingA3'),
+    },
+    {
+      question: t('faqPage.bookingQ4'),
+      answer: t('faqPage.bookingA4'),
+    },
+    {
       question: t('faqPage.pricingQ1'),
       answer: t('faqPage.pricingA1'),
+    },
+    {
+      question: t('faqPage.pricingQ2'),
+      answer: t('faqPage.pricingA2'),
     },
     {
       question: t('faqPage.performanceQ1'),
@@ -35,12 +47,39 @@ export default function FAQ() {
       question: t('faqPage.performanceQ2'),
       answer: t('faqPage.performanceA2'),
     },
+    {
+      question: t('faqPage.performanceQ3'),
+      answer: t('faqPage.performanceA3'),
+    },
+    {
+      question: t('faqPage.performanceQ4'),
+      answer: t('faqPage.performanceA4'),
+    },
   ];
 
   return (
     <>
       <Header />
       <main className="min-h-screen">
+        {/* FAQ Schema for AI Search Optimization */}
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              '@context': 'https://schema.org',
+              '@type': 'FAQPage',
+              'mainEntity': faqs.map(faq => ({
+                '@type': 'Question',
+                'name': faq.question,
+                'acceptedAnswer': {
+                  '@type': 'Answer',
+                  'text': faq.answer
+                }
+              }))
+            })
+          }}
+        />
+        
         {/* Hero Section */}
         <section className="relative py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-primary/10 via-secondary/10 to-accent/10">
           <div className="max-w-4xl mx-auto text-center">

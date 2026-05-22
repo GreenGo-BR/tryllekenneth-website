@@ -114,6 +114,7 @@ export default function Home() {
           {/* Cinematic Lighting Layers */}
           <div className="hero-spotlight-left"></div>
           <div className="hero-atmospheric-glow"></div>
+          <div className="hero-atmospheric-depth"></div>
           <div className="hero-cinematic-overlay"></div>
           <div className="hero-bottom-fade"></div>
 
@@ -134,8 +135,8 @@ export default function Home() {
 
           {/* Left Side Content - Text and CTAs (No overlap with image) */}
           <div className="relative z-10 max-w-xl px-4 sm:px-6 lg:px-8 py-12 h-full flex flex-col justify-center">
-            {/* Subtle dark overlay behind text for better readability */}
-            <div className="absolute inset-0 bg-gradient-to-r from-black/35 via-black/20 to-transparent rounded-3xl pointer-events-none"></div>
+            {/* Selective shading behind text for readability - soft dark gradient on left */}
+            <div className="absolute inset-0 bg-gradient-to-r from-black/45 via-black/25 to-transparent rounded-3xl pointer-events-none"></div>
             
             <div className="flex flex-col justify-center relative z-20">
               {/* Badge - Premium Glow */}
@@ -148,15 +149,15 @@ export default function Home() {
                 </span>
               </div>
 
-              {/* Main Title - Warm Champagne/Off-white, Elegant and Readable */}
+              {/* Main Title - Elegant and readable typography */}
               <div className="mb-6">
-                <h1 className="text-3xl sm:text-5xl lg:text-6xl font-black leading-tight text-balance text-amber-50 drop-shadow-lg max-w-md sm:max-w-xl">
+                <h1 className="text-3xl sm:text-4xl lg:text-5xl font-black leading-snug text-balance text-amber-50 drop-shadow-lg max-w-md sm:max-w-2xl">
                   {t('hero.title')}
                 </h1>
               </div>
 
-              {/* Subtitle - Soft White with Better Opacity */}
-              <p className="hero-subtitle-premium text-base sm:text-lg lg:text-xl text-white/95 mb-8 text-pretty leading-relaxed max-w-xl font-medium drop-shadow-md">
+              {/* Subtitle - Enhanced readability with better contrast */}
+              <p className="hero-subtitle-premium text-base sm:text-lg text-white mb-8 text-pretty leading-relaxed max-w-2xl font-normal drop-shadow-md">
                 {t('hero.subtitle')}
               </p>
 
@@ -174,9 +175,9 @@ export default function Home() {
                 </a>
               </div>
 
-              {/* Trust Indicators */}
-              <div className="trust-indicator-premium pt-6 border-t border-purple-400/30">
-                <p className="text-sm sm:text-base text-white/85 font-semibold">
+              {/* Trust Indicators - Enhanced legibility */}
+              <div className="trust-indicator-premium pt-6 border-t border-amber-500/30">
+                <p className="text-sm sm:text-base text-white font-semibold">
                   {t('trust.message')}
                 </p>
               </div>
@@ -186,12 +187,12 @@ export default function Home() {
 
         {/* Premium Featured Video Section - "Watch the Magic Live" */}
         <section className="py-10 px-4 sm:px-6 lg:px-8 max-w-6xl mx-auto">
-          {/* Section Header - More minimal */}
+          {/* Section Header - Refined typography */}
           <div className="text-center mb-8 relative z-10">
-            <h2 className="text-3xl sm:text-4xl font-bold mb-2 text-foreground">
+            <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold mb-3 text-foreground">
               {t('video.title')}
             </h2>
-            <p className="text-base text-muted-foreground max-w-2xl mx-auto">
+            <p className="text-sm sm:text-base text-muted-foreground max-w-2xl mx-auto font-normal">
               {t('video.subtitle')}
             </p>
           </div>
@@ -240,13 +241,13 @@ export default function Home() {
           <div className="max-w-5xl mx-auto">
             {/* Section Header */}
             <div className="mb-9">
-              <h2 className="text-3xl sm:text-4xl font-bold mb-3 text-foreground">
-                {locale === 'da' ? 'Optræder & Underholdning' : 'Performances & Entertainment'}
+              <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold mb-3 text-foreground">
+                {locale === 'da' ? 'Magisk Underholdning til Arrangementer' : 'Performances & Entertainment'}
               </h2>
-              <p className="text-base text-muted-foreground max-w-2xl">
+              <p className="text-sm sm:text-base text-muted-foreground max-w-2xl font-normal">
                 {locale === 'da' 
-                  ? 'Udforsk vores førsteklasses magiske underholdning til enhver lejlighed' 
-                  : 'Explore our premium magical entertainment for every occasion'}
+                  ? 'Professionelt trylleri og underholdning til enhver lejlighed – fra fødselsdage til firmaarrangementer' 
+                  : 'Professional performances for every occasion – from birthday parties to corporate events'}
               </p>
             </div>
 
@@ -403,7 +404,7 @@ export default function Home() {
         <section className="py-16 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-14 items-center">
             {/* Left Side - Cinematic Image Only (less decoration) */}
-            <div className="relative h-96 sm:h-[450px] flex items-center justify-center order-2 lg:order-1">
+            <div className="relative h-80 sm:h-96 md:h-[450px] flex items-center justify-center order-2 lg:order-1">
               <div className="relative w-full h-full rounded-3xl overflow-hidden shadow-2xl">
                 {/* Subtle top cinematic gradient */}
                 <div className="absolute inset-0 bg-gradient-to-b from-black/20 via-transparent to-transparent z-10 pointer-events-none"></div>
@@ -429,13 +430,13 @@ export default function Home() {
                 <span className="text-xs font-bold text-primary uppercase tracking-widest">{t('about.label')}</span>
               </div>
 
-              {/* Main Title - Simpler, stronger */}
-            <h2 className="text-3xl sm:text-4xl font-bold mb-3 text-foreground">
-              {locale === 'da' ? 'Optræder & Underholdning' : 'Performances & Entertainment'}
+              {/* Main Title - Refined and elegant */}
+            <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold mb-4 text-foreground">
+              {t('about.title')}
             </h2>
 
               {/* Core Statement - One powerful paragraph */}
-              <p className="text-lg text-foreground/75 mb-8 leading-relaxed text-pretty">
+              <p className="text-base sm:text-lg text-foreground/85 mb-8 leading-relaxed text-pretty font-normal">
                 {t('about.description')}
               </p>
 
@@ -452,10 +453,10 @@ export default function Home() {
         {/* CTA Section with Premium Signature */}
         <section className="py-16 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-primary/10 via-accent/10 to-secondary/10 section-magic-entrance premium-signature-accent">
           <div className="max-w-4xl mx-auto text-center">
-            <h2 className="text-4xl font-bold mb-4 text-foreground stagger-item">
+            <h2 className="text-3xl sm:text-4xl font-bold mb-4 text-foreground stagger-item">
               {t('cta.title')}
             </h2>
-            <p className="text-lg text-muted-foreground mb-8 stagger-item">
+            <p className="text-base sm:text-lg text-muted-foreground mb-8 stagger-item font-normal">
               {t('cta.subtitle')}
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
