@@ -22,7 +22,7 @@ export default function WeddingPage() {
       <VideoSchema videoUrl={videoUrl} thumbnailUrl={videoThumbnail} videoId="wedding-video-schema" />
       <main className="min-h-screen">
         {/* Premium Hero Section - Weddings */}
-        <section className="relative min-h-screen flex items-center justify-center overflow-hidden py-20 px-4 sm:px-6 lg:px-8">
+        <section className="relative min-h-screen flex items-center justify-center overflow-hidden py-16 px-4 sm:px-6 lg:px-8">
           {/* Romantic rose/gold gradient background */}
           <div className="absolute inset-0 bg-gradient-to-br from-rose-900/5 via-pink-900/5 to-amber-950/5 z-0"></div>
           
@@ -122,7 +122,7 @@ export default function WeddingPage() {
         </section>
 
         {/* Premium About Section */}
-        <section className="py-20 px-4 sm:px-6 lg:px-8 max-w-4xl mx-auto">
+        <section className="py-16 px-4 sm:px-6 lg:px-8 max-w-4xl mx-auto">
           <div className="grid md:grid-cols-2 gap-12">
             <div>
               <h2 className="text-3xl font-bold mb-6 text-foreground">
@@ -179,7 +179,7 @@ export default function WeddingPage() {
         </section>
 
         {/* CTA Section - Premium */}
-        <section className="py-20 px-4 sm:px-6 lg:px-8 text-center bg-gradient-to-r from-rose-600 via-pink-500 to-amber-600 relative overflow-hidden">
+        <section className="py-16 px-4 sm:px-6 lg:px-8 text-center bg-gradient-to-r from-rose-600 via-pink-500 to-amber-600 relative overflow-hidden">
           {/* Romantic background shimmer */}
           <div className="absolute inset-0 opacity-10">
             <div className="absolute top-0 right-0 w-96 h-96 bg-white rounded-full blur-3xl"></div>

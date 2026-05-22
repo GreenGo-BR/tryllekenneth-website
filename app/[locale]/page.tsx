@@ -185,7 +185,7 @@ export default function Home() {
         </section>
 
         {/* Premium Featured Video Section - "Watch the Magic Live" */}
-        <section className="py-12 px-4 sm:px-6 lg:px-8 max-w-6xl mx-auto">
+        <section className="py-10 px-4 sm:px-6 lg:px-8 max-w-6xl mx-auto">
           {/* Section Header - More minimal */}
           <div className="text-center mb-8 relative z-10">
             <h2 className="text-3xl sm:text-4xl font-bold mb-2 text-foreground">
@@ -236,10 +236,10 @@ export default function Home() {
         </section>
 
         {/* Performances & Entertainment Showcase - Compact Premium Grid */}
-        <section className="py-12 sm:py-16 px-4 sm:px-6 lg:px-8">
+        <section className="py-10 sm:py-12 px-4 sm:px-6 lg:px-8">
           <div className="max-w-5xl mx-auto">
             {/* Section Header */}
-            <div className="mb-12">
+            <div className="mb-9">
               <h2 className="text-3xl sm:text-4xl font-bold mb-3 text-foreground">
                 {locale === 'da' ? 'Optræder & Underholdning' : 'Performances & Entertainment'}
               </h2>
@@ -400,8 +400,8 @@ export default function Home() {
         </section>
 
         {/* About Kenneth Section - Cinematic Documentary Style */}
-        <section className="py-20 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+        <section className="py-16 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-14 items-center">
             {/* Left Side - Cinematic Image Only (less decoration) */}
             <div className="relative h-96 sm:h-[450px] flex items-center justify-center order-2 lg:order-1">
               <div className="relative w-full h-full rounded-3xl overflow-hidden shadow-2xl">
@@ -450,7 +450,7 @@ export default function Home() {
         </section>
 
         {/* CTA Section */}
-        <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-primary/10 via-accent/10 to-secondary/10 section-magic-entrance">
+        <section className="py-16 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-primary/10 via-accent/10 to-secondary/10 section-magic-entrance">
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="text-4xl font-bold mb-4 text-foreground stagger-item">
               {t('cta.title')}
