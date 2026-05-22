@@ -41,7 +41,7 @@ export default function Contact() {
       <Header />
       <main className="min-h-screen">
         {/* Hero Section */}
-        <section className="relative py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-accent/10 via-primary/10 to-secondary/10">
+        <section className="relative py-14 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-accent/10 via-primary/10 to-secondary/10">
           <div className="max-w-4xl mx-auto text-center">
             <h1 className="text-5xl sm:text-6xl font-bold mb-4 text-foreground">
               {t('contactPage.title')}
@@ -53,7 +53,7 @@ export default function Contact() {
         </section>
 
         {/* Contact Info Cards */}
-        <section className="py-20 px-4 sm:px-6 lg:px-8 max-w-6xl mx-auto">
+        <section className="py-16 px-4 sm:px-6 lg:px-8 max-w-6xl mx-auto">
           <div className="grid md:grid-cols-3 gap-8 mb-16">
             <Card className="p-8 rounded-2xl border-2 border-primary/20 text-center hover:border-primary/50 transition-all magic-card-hover">
               <div className="flex justify-center mb-4">
@@ -88,7 +88,7 @@ export default function Contact() {
         </section>
 
         {/* Contact Form & Info */}
-        <section className="py-20 px-4 sm:px-6 lg:px-8 bg-card">
+        <section className="py-16 px-4 sm:px-6 lg:px-8 bg-card">
           <div className="max-w-4xl mx-auto">
             <div className="grid md:grid-cols-2 gap-12">
               {/* Form */}
@@ -247,7 +247,7 @@ export default function Contact() {
         </section>
 
         {/* CTA Section */}
-        <section className="py-20 px-4 sm:px-6 lg:px-8 text-center">
+        <section className="py-14 px-4 sm:px-6 lg:px-8 text-center">
           <div className="max-w-2xl mx-auto">
             <h2 className="text-3xl font-bold mb-4">{t('contactPage.ctaTitle')}</h2>
             <p className="text-lg text-muted-foreground mb-8">

@@ -150,7 +150,7 @@ export default function Home() {
 
               {/* Main Title - Warm Champagne/Off-white, Elegant and Readable */}
               <div className="mb-6">
-                <h1 className="text-4xl sm:text-5xl lg:text-6xl font-black leading-tight text-balance text-amber-50 drop-shadow-lg">
+                <h1 className="text-3xl sm:text-5xl lg:text-6xl font-black leading-tight text-balance text-amber-50 drop-shadow-lg max-w-md sm:max-w-xl">
                   {t('hero.title')}
                 </h1>
               </div>
@@ -185,7 +185,7 @@ export default function Home() {
         </section>
 
         {/* Premium Featured Video Section - "Watch the Magic Live" */}
-        <section className="py-12 px-4 sm:px-6 lg:px-8 max-w-6xl mx-auto">
+        <section className="py-10 px-4 sm:px-6 lg:px-8 max-w-6xl mx-auto">
           {/* Section Header - More minimal */}
           <div className="text-center mb-8 relative z-10">
             <h2 className="text-3xl sm:text-4xl font-bold mb-2 text-foreground">
@@ -236,10 +236,10 @@ export default function Home() {
         </section>
 
         {/* Performances & Entertainment Showcase - Compact Premium Grid */}
-        <section className="py-12 sm:py-16 px-4 sm:px-6 lg:px-8">
+        <section className="py-10 sm:py-12 px-4 sm:px-6 lg:px-8">
           <div className="max-w-5xl mx-auto">
             {/* Section Header */}
-            <div className="mb-12">
+            <div className="mb-9">
               <h2 className="text-3xl sm:text-4xl font-bold mb-3 text-foreground">
                 {locale === 'da' ? 'Optræder & Underholdning' : 'Performances & Entertainment'}
               </h2>
@@ -254,7 +254,7 @@ export default function Home() {
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
               {/* Card 1: Wedding Magic */}
               <div className="group relative rounded-lg overflow-hidden shadow-md hover:shadow-lg transition-all duration-300 bg-slate-900">
-                <div className="relative h-48 overflow-hidden bg-slate-800">
+                <div className="relative h-40 sm:h-48 overflow-hidden bg-slate-800">
                   <img 
                     src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/1.%20Wedding%20Magic%20%20Luxury%20Wedding-fR2FfEgsmq8KZQKDU2kZtPew51PolW.png"
                     alt="Kenneth performing close-up magic at luxury wedding reception"
@@ -278,7 +278,7 @@ export default function Home() {
 
               {/* Card 2: Close-up Magic */}
               <div className="group relative rounded-lg overflow-hidden shadow-md hover:shadow-lg transition-all duration-300 bg-slate-900">
-                <div className="relative h-48 overflow-hidden bg-slate-800">
+                <div className="relative h-40 sm:h-48 overflow-hidden bg-slate-800">
                   <img 
                     src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Close-up%20Magic-NOF8ZeYflPoQ3vTvYbjS7Z1PTyYBHm.png"
                     alt="Kenneth performing close-up card magic"
@@ -302,7 +302,7 @@ export default function Home() {
 
               {/* Card 3: Christmas Shows */}
               <div className="group relative rounded-lg overflow-hidden shadow-md hover:shadow-lg transition-all duration-300 bg-slate-900">
-                <div className="relative h-48 overflow-hidden bg-slate-800">
+                <div className="relative h-40 sm:h-48 overflow-hidden bg-slate-800">
                   <img 
                     src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Christmas%20Shows-T96GGsu8S3PilLsx3MxwQAV4QkeiM3.png"
                     alt="Kenneth performing Christmas magic with festive decorations"
@@ -326,7 +326,7 @@ export default function Home() {
 
               {/* Card 4: Stage & Stand-up Magic */}
               <div className="group relative rounded-lg overflow-hidden shadow-md hover:shadow-lg transition-all duration-300 bg-slate-900">
-                <div className="relative h-48 overflow-hidden bg-slate-800">
+                <div className="relative h-40 sm:h-48 overflow-hidden bg-slate-800">
                   <img 
                     src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Stand-up%20Magic%20%282%29-T3funrlf5Wlx2emFiaC8cpbT2Ja60M.png"
                     alt="Kenneth performing stand-up magic on stage"
@@ -400,8 +400,8 @@ export default function Home() {
         </section>
 
         {/* About Kenneth Section - Cinematic Documentary Style */}
-        <section className="py-20 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+        <section className="py-16 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-14 items-center">
             {/* Left Side - Cinematic Image Only (less decoration) */}
             <div className="relative h-96 sm:h-[450px] flex items-center justify-center order-2 lg:order-1">
               <div className="relative w-full h-full rounded-3xl overflow-hidden shadow-2xl">
@@ -449,8 +449,8 @@ export default function Home() {
           </div>
         </section>
 
-        {/* CTA Section */}
-        <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-primary/10 via-accent/10 to-secondary/10 section-magic-entrance">
+        {/* CTA Section with Premium Signature */}
+        <section className="py-16 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-primary/10 via-accent/10 to-secondary/10 section-magic-entrance premium-signature-accent">
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="text-4xl font-bold mb-4 text-foreground stagger-item">
               {t('cta.title')}
