@@ -172,7 +172,7 @@ export default function CloseupMagic() {
         </section>
 
         {/* CTA Section - Premium */}
-        <section className="py-20 px-4 sm:px-6 lg:px-8 text-center bg-gradient-to-r from-indigo-600/95 via-purple-500/95 to-blue-600/95 relative overflow-hidden">
+        <section className="py-20 px-4 sm:px-6 lg:px-8 text-center bg-gradient-to-r from-indigo-600 via-purple-500 to-blue-600 relative overflow-hidden">
           {/* Festive background shimmer */}
           <div className="absolute inset-0 opacity-10">
             <div className="absolute top-0 right-0 w-96 h-96 bg-white rounded-full blur-3xl"></div>
@@ -180,7 +180,7 @@ export default function CloseupMagic() {
           </div>
 
           <div className="max-w-2xl mx-auto relative z-10">
-            <h2 className="text-4xl font-bold mb-4 text-white">
+            <h2 className="text-4xl font-bold mb-4 text-gray-900">
               {locale === 'da' ? 'Nærmagi der Imponerer' : 'Close-up Magic That Impresses'}
             </h2>
             <p className="text-lg text-indigo-100 mb-8 leading-relaxed">

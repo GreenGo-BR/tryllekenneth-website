@@ -174,7 +174,7 @@ export default function ChildrensMagic() {
         </section>
 
         {/* CTA Section - Premium */}
-        <section className="py-20 px-4 sm:px-6 lg:px-8 text-center bg-gradient-to-r from-pink-600/95 via-purple-500/95 to-sky-600/95 relative overflow-hidden">
+        <section className="py-20 px-4 sm:px-6 lg:px-8 text-center bg-gradient-to-r from-pink-600 via-purple-500 to-sky-600 relative overflow-hidden">
           {/* Playful background shimmer */}
           <div className="absolute inset-0 opacity-10">
             <div className="absolute top-0 right-0 w-96 h-96 bg-white rounded-full blur-3xl"></div>
@@ -182,10 +182,10 @@ export default function ChildrensMagic() {
           </div>
 
           <div className="max-w-2xl mx-auto relative z-10">
-            <h2 className="text-4xl font-bold mb-4 text-white">
+            <h2 className="text-4xl font-bold mb-4 text-gray-900">
               {locale === 'da' ? 'Magiske Børneminder' : 'Magical Childhood Memories'}
             </h2>
-            <p className="text-lg text-pink-100 mb-8 leading-relaxed">
+            <p className="text-lg text-gray-800 mb-8 leading-relaxed">
               {locale === 'da'
                 ? 'Book TrylleKenneth til børnetrylleri og skab uforglemmelige øjeblikke for børnene'
                 : 'Book TrylleKenneth for children\'s magic and create unforgettable moments for the kids'

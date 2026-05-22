@@ -179,7 +179,7 @@ export default function WeddingPage() {
         </section>
 
         {/* CTA Section - Premium */}
-        <section className="py-20 px-4 sm:px-6 lg:px-8 text-center bg-gradient-to-r from-rose-600/95 via-pink-500/95 to-amber-600/95 relative overflow-hidden">
+        <section className="py-20 px-4 sm:px-6 lg:px-8 text-center bg-gradient-to-r from-rose-600 via-pink-500 to-amber-600 relative overflow-hidden">
           {/* Romantic background shimmer */}
           <div className="absolute inset-0 opacity-10">
             <div className="absolute top-0 right-0 w-96 h-96 bg-white rounded-full blur-3xl"></div>
@@ -187,7 +187,7 @@ export default function WeddingPage() {
           </div>
 
           <div className="max-w-2xl mx-auto relative z-10">
-            <h2 className="text-4xl font-bold mb-4 text-white">
+            <h2 className="text-4xl font-bold mb-4 text-gray-900">
               {locale === 'da' ? 'Magisk Bryllupsbilling' : 'Magical Wedding Day'}
             </h2>
             <p className="text-lg text-rose-100 mb-8 leading-relaxed">

@@ -179,7 +179,7 @@ export default function BirthdayPartiesPage() {
         </section>
 
         {/* CTA Section - Premium */}
-        <section className="py-20 px-4 sm:px-6 lg:px-8 text-center bg-gradient-to-r from-pink-500/95 via-purple-500/95 to-sky-500/95 relative overflow-hidden">
+        <section className="py-20 px-4 sm:px-6 lg:px-8 text-center bg-gradient-to-r from-pink-500 via-purple-500 to-sky-500 relative overflow-hidden">
           {/* Playful background shimmer */}
           <div className="absolute inset-0 opacity-10">
             <div className="absolute top-0 right-0 w-96 h-96 bg-white rounded-full blur-3xl"></div>
@@ -187,10 +187,10 @@ export default function BirthdayPartiesPage() {
           </div>
 
           <div className="max-w-2xl mx-auto relative z-10">
-            <h2 className="text-4xl font-bold mb-4 text-white">
+            <h2 className="text-4xl font-bold mb-4 text-gray-900">
               {locale === 'da' ? 'Gør Fødselsdagen Magisk' : 'Make the Birthday Magical'}
             </h2>
-            <p className="text-lg text-pink-100 mb-8 leading-relaxed">
+            <p className="text-lg text-gray-800 mb-8 leading-relaxed">
               {locale === 'da'
                 ? 'Book TrylleKenneth til børnefødselsdagen og skab mindeværdige øjeblikke der varer længere end kagen'
                 : 'Book TrylleKenneth for your child\'s birthday and create memorable moments that last longer than the cake'

@@ -232,7 +232,7 @@ export default function SantaMagic() {
         </section>
 
         {/* Premium CTA Section - Christmas Magic */}
-        <section className="py-20 px-4 sm:px-6 lg:px-8 text-center bg-gradient-to-r from-red-600/95 via-red-500/95 to-orange-600/95 relative overflow-hidden">
+        <section className="py-20 px-4 sm:px-6 lg:px-8 text-center bg-gradient-to-r from-red-600 via-red-500 to-orange-600 relative overflow-hidden">
           {/* Festive background shimmer */}
           <div className="absolute inset-0 opacity-10">
             <div className="absolute top-0 right-0 w-96 h-96 bg-white rounded-full blur-3xl"></div>
@@ -240,7 +240,7 @@ export default function SantaMagic() {
           </div>
 
           <div className="max-w-2xl mx-auto relative z-10">
-            <h2 className="text-4xl font-bold mb-4 text-white">
+            <h2 className="text-4xl font-bold mb-4 text-gray-900">
               Gør Din Jul Magisk
             </h2>
             <p className="text-lg text-red-100 mb-8 leading-relaxed">
