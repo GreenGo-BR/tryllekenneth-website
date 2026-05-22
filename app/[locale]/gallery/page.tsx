@@ -191,11 +191,11 @@ export default function Gallery() {
         </section>
 
         {/* Video Highlights Section */}
-        <section className="py-16 px-4 sm:px-6 lg:px-8 bg-background">
-          <div className="max-w-6xl mx-auto">
+        <section className="py-20 px-4 sm:px-6 lg:px-8 bg-background">
+          <div className="max-w-7xl mx-auto">
             {/* Section Header */}
-            <div className="mb-10 text-center">
-              <h2 className="text-2xl sm:text-3xl font-bold mb-3 text-foreground">
+            <div className="mb-14 text-center">
+              <h2 className="text-3xl sm:text-4xl font-bold mb-4 text-foreground">
                 {locale === 'da' ? 'Video Highlights' : 'Video Highlights'}
               </h2>
               <p className="text-base text-muted-foreground max-w-2xl mx-auto">
@@ -206,10 +206,10 @@ export default function Gallery() {
               </p>
             </div>
 
-            {/* Video Grid - Premium 4-card layout with autoplay */}
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-              <div className="flex flex-col">
-                <div className="aspect-video bg-black rounded-xl overflow-hidden mb-4">
+            {/* Video Grid - Premium 2x2 cinematic layout with autoplay */}
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8">
+              <div className="flex flex-col group">
+                <div className="aspect-video bg-black rounded-2xl overflow-hidden mb-5 shadow-lg">
                   <video
                     autoPlay
                     loop
@@ -221,11 +221,11 @@ export default function Gallery() {
                     <source src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/TrylleKenneth%20Close-up-ez33buOtJRlVxiQiFHsYjvLENfi1Ew.mp4" type="video/mp4" />
                   </video>
                 </div>
-                <h3 className="text-sm font-medium text-foreground mb-1">{locale === 'da' ? 'Close-up magi' : 'Close-up Magic'}</h3>
-                <p className="text-xs text-muted-foreground">{locale === 'da' ? 'Intim trylleri' : 'Intimate magic'}</p>
+                <h3 className="text-base font-semibold text-foreground mb-2">{locale === 'da' ? 'Close-up magi' : 'Close-up Magic'}</h3>
+                <p className="text-sm text-muted-foreground">{locale === 'da' ? 'Intim trylleri' : 'Intimate magic'}</p>
               </div>
-              <div className="flex flex-col">
-                <div className="aspect-video bg-black rounded-xl overflow-hidden mb-4">
+              <div className="flex flex-col group">
+                <div className="aspect-video bg-black rounded-2xl overflow-hidden mb-5 shadow-lg">
                   <video
                     autoPlay
                     loop
@@ -237,11 +237,11 @@ export default function Gallery() {
                     <source src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/TrylleKenneth-vTCkNBPzwSUxpVR1eMyoH2T1mdtrwJ.mp4" type="video/mp4" />
                   </video>
                 </div>
-                <h3 className="text-sm font-medium text-foreground mb-1">{locale === 'da' ? 'Virksomhedsarrangementer' : 'Corporate Events'}</h3>
-                <p className="text-xs text-muted-foreground">{locale === 'da' ? 'Professionel underholdning' : 'Professional entertainment'}</p>
+                <h3 className="text-base font-semibold text-foreground mb-2">{locale === 'da' ? 'Virksomhedsarrangementer' : 'Corporate Events'}</h3>
+                <p className="text-sm text-muted-foreground">{locale === 'da' ? 'Professionel underholdning' : 'Professional entertainment'}</p>
               </div>
-              <div className="flex flex-col">
-                <div className="aspect-video bg-black rounded-xl overflow-hidden mb-4">
+              <div className="flex flex-col group">
+                <div className="aspect-video bg-black rounded-2xl overflow-hidden mb-5 shadow-lg">
                   <video
                     autoPlay
                     loop
@@ -253,11 +253,11 @@ export default function Gallery() {
                     <source src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/WhatsApp%20Video%202026-05-21%20at%2010.53.52%20%283%29-uQkO9DdvisgyQbzaDiMipFeGBXzQ19.mp4" type="video/mp4" />
                   </video>
                 </div>
-                <h3 className="text-sm font-medium text-foreground mb-1">{locale === 'da' ? 'Live Performance' : 'Live Performance'}</h3>
-                <p className="text-xs text-muted-foreground">{locale === 'da' ? 'Scenetrylleri' : 'Stage magic'}</p>
+                <h3 className="text-base font-semibold text-foreground mb-2">{locale === 'da' ? 'Live Performance' : 'Live Performance'}</h3>
+                <p className="text-sm text-muted-foreground">{locale === 'da' ? 'Scenetrylleri' : 'Stage magic'}</p>
               </div>
-              <div className="flex flex-col">
-                <div className="aspect-video bg-black rounded-xl overflow-hidden mb-4">
+              <div className="flex flex-col group">
+                <div className="aspect-video bg-black rounded-2xl overflow-hidden mb-5 shadow-lg">
                   <video
                     autoPlay
                     loop
@@ -269,8 +269,8 @@ export default function Gallery() {
                     <source src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/videoplayback%20%281%29-Wj53DsHCbTIsdsTyKEsOyjV5a68rmZ.mp4" type="video/mp4" />
                   </video>
                 </div>
-                <h3 className="text-sm font-medium text-foreground mb-1">{locale === 'da' ? 'Stand-up trylleri' : 'Stand-up Magic'}</h3>
-                <p className="text-xs text-muted-foreground">{locale === 'da' ? 'Professionel underholdning' : 'Professional entertainment'}</p>
+                <h3 className="text-base font-semibold text-foreground mb-2">{locale === 'da' ? 'Stand-up trylleri' : 'Stand-up Magic'}</h3>
+                <p className="text-sm text-muted-foreground">{locale === 'da' ? 'Professionel underholdning' : 'Professional entertainment'}</p>
               </div>
             </div>
           </div>
