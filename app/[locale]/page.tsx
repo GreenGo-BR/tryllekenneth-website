@@ -411,9 +411,13 @@ export default function Home() {
                 {/* Subtle top cinematic gradient */}
                 <div className="absolute inset-0 bg-gradient-to-b from-black/20 via-transparent to-transparent z-10 pointer-events-none"></div>
                 
+                {/* Watermark masks - hides right vertical watermark and bottom text */}
+                <div className="absolute right-0 top-0 bottom-0 w-20 bg-gradient-to-l from-black via-black/90 to-transparent z-20 pointer-events-none"></div>
+                <div className="absolute bottom-0 left-0 right-0 h-16 bg-gradient-to-t from-black/95 via-black/40 to-transparent z-20 pointer-events-none"></div>
+                
                 <img 
-                  src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/WhatsApp%20Image%202026-05-19%20at%2009.29.40%20%285%29-bYEX8wJKhjS21S5AWDXpk60sUxgHWC.jpeg"
-                  alt="Kenneth the magician - professional performer"
+                  src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/WhatsApp%20Image%202026-05-21%20at%2011.23.56-WgxTUDSKbgr9vxKHHxY53yTFrQTSWP.jpeg"
+                  alt="Kenneth the magician - professional black and white portrait with artistic composition"
                   loading="lazy"
                   className="w-full h-full object-cover hover:scale-105 transition-transform duration-700"
                 />
