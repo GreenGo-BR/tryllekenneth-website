@@ -16,8 +16,8 @@
     "language": "Dansk"
   },
   "hero": {
-    "title": "Magisk underholdning i København og Danmark",
-    "subtitle": "TrylleKenneth er en professionel tryllekunstner i København, der skaber sjov, humor og magi til børnefødselsdage, familiefester, firmaarrangementer og sæsonfester i hele Danmark.",
+    "title": "Magisk underholdning til København og hele Danmark",
+    "subtitle": "TrylleKenneth skaber sjov, latter og uforglemmelige magiske øjeblikke til børnefødselsdage, firmaarrangementer, bryllupper og private begivenheder i hele Danmark.",
     "cta1": "Book opvisning",
     "cta2": "Ring til Kenneth",
     "cta3": "Se optrædener"
@@ -34,26 +34,26 @@
   },
   "about": {
     "label": "Om Kenneth",
-    "title": "Professionel tryllekunstner i København - Magisk underholdning til alle arrangementer",
-    "description": "Jeg er Kenneth, en erfaren tryllekunstner baseret i København, der specialiserer sig i magisk underholdning for både børn og voksne. Fra private børnefødselsdage til større firmaarrangementer og begivenheder i hele Danmark – jeg udfører magisk underholdning, der skaber uforglemmelige øjeblikke. Mit formål er at bringe glæde, latter og fuldstændig forundring til alle aldersgrupper gennem professionelt trylleri.",
+    "title": "Professionel tryllekunstner – Magisk underholdning til København og Danmark",
+    "description": "Jeg er Kenneth, tryllekunstner i København med over 15 års erfaring inden for magisk underholdning. Jeg skaber uforglemmelige øjeblikke til børnefødselsdage, firmaarrangementer, bryllupper og private begivenheder i hele Danmark – med professionelt trylleri der bringer glæde, latter og fuldstændig forundring til alle aldersgrupper.",
     "features": [
       {
-        "title": "Erfaren tryllekunstner i Danmark",
-        "description": "Over 15 års erfaring inden for trylleri, underholdning til arrangementer og live performance"
+        "title": "15+ års professionel erfaring",
+        "description": "Over 15 år inden for magisk underholdning, live performance og begivenheder i Danmark"
       },
       {
-        "title": "Magisk underholdning til alle",
-        "description": "Tilpasset underholdning til børnefødselsdage, firmaarrangementer, familiearrangementer og sæsonfester"
+        "title": "Trylleri til ethvert arrangement",
+        "description": "Børnefødselsdage, firmaarrangementer, bryllupper, familiefester og sæsonbegivenheder"
       },
       {
-        "title": "Mere end bare en opvisning",
-        "description": "Interaktive tryllekunst-oplevelser der skaber minder hele livet"
+        "title": "Uforglemmelige magiske oplevelser",
+        "description": "Interaktivt trylleri der skaber minder hele livet gennem levende performance"
       }
     ],
     "stats": {
-      "label1": "Børnefødselsdage",
+      "label1": "Fødselsdage",
       "label2": "Firmaarrangementer",
-      "label3": "Familiefester",
+      "label3": "Magiske oplevelser",
       "label4": "Glade gæster"
     }
   },
