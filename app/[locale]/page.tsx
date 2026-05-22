@@ -115,6 +115,7 @@ export default function Home() {
           <div className="hero-spotlight-left"></div>
           <div className="hero-atmospheric-glow"></div>
           <div className="hero-atmospheric-depth"></div>
+          <div className="hero-milky-white-glow"></div>
           <div className="hero-cinematic-overlay"></div>
           <div className="hero-bottom-fade"></div>
 
