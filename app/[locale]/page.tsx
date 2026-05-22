@@ -134,7 +134,10 @@ export default function Home() {
 
           {/* Left Side Content - Text and CTAs (No overlap with image) */}
           <div className="relative z-10 max-w-xl px-4 sm:px-6 lg:px-8 py-12 h-full flex flex-col justify-center">
-            <div className="flex flex-col justify-center">
+            {/* Subtle dark overlay behind text for better readability */}
+            <div className="absolute inset-0 bg-gradient-to-r from-black/60 via-black/40 to-transparent rounded-3xl pointer-events-none"></div>
+            
+            <div className="flex flex-col justify-center relative z-20">
               {/* Badge - Premium Glow */}
               <div className="mb-6 inline-block w-fit animate-float-slow">
                 <span className="hero-badge-premium inline-flex items-center gap-2 px-4 py-2 rounded-full bg-gradient-to-r from-purple-500/20 to-pink-500/20 backdrop-blur-md border border-purple-400/50 text-white font-semibold text-xs sm:text-sm hover:border-pink-400/70 transition-all">
@@ -145,24 +148,24 @@ export default function Home() {
                 </span>
               </div>
 
-              {/* Main Title - Premium Vibrant Gradient */}
+              {/* Main Title - Warm Champagne/Off-white, Elegant and Readable */}
               <div className="mb-6">
-                <h1 className="text-4xl sm:text-5xl lg:text-6xl font-black leading-tight text-balance text-foreground">
+                <h1 className="text-4xl sm:text-5xl lg:text-6xl font-black leading-tight text-balance text-amber-50 drop-shadow-lg">
                   {t('hero.title')}
                 </h1>
               </div>
 
-              {/* Subtitle - Vibrant Glow */}
-              <p className="hero-subtitle-premium text-base sm:text-lg lg:text-xl text-white/90 mb-8 text-pretty leading-relaxed max-w-xl font-medium">
+              {/* Subtitle - Soft White with Better Opacity */}
+              <p className="hero-subtitle-premium text-base sm:text-lg lg:text-xl text-white/95 mb-8 text-pretty leading-relaxed max-w-xl font-medium drop-shadow-md">
                 {t('hero.subtitle')}
               </p>
 
-              {/* CTA Buttons - Vibrant Premium Effects */}
+              {/* CTA Buttons - Elegant Premium Effects */}
               <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 mb-8 w-fit">
                 <Link href={`/${locale}/contact`}>
                   <Button
                     size="lg"
-                    className="cta-button-premium bg-gradient-to-r from-yellow-400 via-pink-400 to-purple-400 text-gray-900 hover:from-yellow-300 hover:via-pink-300 hover:to-purple-300 text-base font-bold h-12 sm:h-13 px-8 sm:px-10 rounded-xl shadow-2xl shadow-pink-500/50 hover:shadow-pink-500/70 transition-all duration-300"
+                    className="cta-button-hero bg-gradient-to-r from-amber-400 via-amber-300 to-yellow-300 text-slate-900 hover:from-amber-300 hover:via-yellow-200 hover:to-yellow-200 text-base font-bold h-12 sm:h-13 px-8 sm:px-10 rounded-xl shadow-2xl shadow-amber-400/40 hover:shadow-amber-300/60 transition-all duration-300"
                   >
                     {t('hero.cta1')}
                   </Button>
@@ -170,7 +173,7 @@ export default function Home() {
                 <a href="tel:+4540852728" className="inline-block">
                   <Button
                     size="lg"
-                    className="secondary-cta-premium text-base font-bold h-12 sm:h-13 px-8 sm:px-10 border-2 border-purple-400/60 bg-purple-500/10 text-white hover:bg-purple-500/20 rounded-xl backdrop-blur-sm transition-all duration-300"
+                    className="secondary-cta-hero text-base font-bold h-12 sm:h-13 px-8 sm:px-10 border-2 border-white/40 bg-white/5 text-white hover:bg-white/10 hover:border-white/70 rounded-xl backdrop-blur-sm transition-all duration-300"
                   >
                     {t('hero.cta2')}
                   </Button>

@@ -1292,13 +1292,13 @@ video::-moz-media-controls {
   animation: badge-pulse-glow 2.5s ease-in-out infinite;
 }
 
-/* Hero Subtitle - Elegant Glow Text */
+/* Hero Subtitle - Elegant Soft Glow Text */
 @keyframes subtitle-soft-glow {
   0%, 100% {
-    text-shadow: 0 0 5px rgba(255, 192, 203, 0.3), 0 0 10px rgba(255, 255, 255, 0.1);
+    text-shadow: 0 0 5px rgba(255, 255, 255, 0.2), 0 0 10px rgba(251, 191, 36, 0.1);
   }
   50% {
-    text-shadow: 0 0 10px rgba(255, 192, 203, 0.6), 0 0 20px rgba(255, 215, 0, 0.2), 0 0 30px rgba(255, 105, 180, 0.1);
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.35), 0 0 20px rgba(251, 191, 36, 0.15);
   }
 }
 
@@ -1306,82 +1306,55 @@ video::-moz-media-controls {
   animation: subtitle-soft-glow 3.5s ease-in-out infinite;
 }
 
-/* CTA Button Premium - Golden Glow */
-@keyframes cta-button-premium-glow {
+/* CTA Button Hero - Warm Gold/Champagne Glow */
+@keyframes cta-button-hero-glow {
   0%, 100% {
-    box-shadow: 0 0 10px rgba(255, 192, 203, 0.3), 0 0 20px rgba(255, 215, 0, 0.2), inset 0 0 10px rgba(255, 255, 255, 0.1);
+    box-shadow: 0 0 15px rgba(251, 191, 36, 0.4), 0 0 30px rgba(217, 119, 6, 0.2), inset 0 0 10px rgba(255, 255, 255, 0.1);
   }
   50% {
-    box-shadow: 0 0 20px rgba(255, 215, 0, 0.5), 0 0 40px rgba(255, 192, 203, 0.4), inset 0 0 15px rgba(255, 255, 255, 0.2);
+    box-shadow: 0 0 25px rgba(251, 191, 36, 0.6), 0 0 50px rgba(217, 119, 6, 0.35), inset 0 0 15px rgba(255, 255, 255, 0.2);
   }
 }
 
-/* CTA Button Premium - Golden Glow */
-@keyframes cta-button-premium-glow {
-  0%, 100% {
-    box-shadow: 0 0 10px rgba(255, 192, 203, 0.3), 0 0 20px rgba(255, 215, 0, 0.2), inset 0 0 10px rgba(255, 255, 255, 0.1);
-  }
-  50% {
-    box-shadow: 0 0 20px rgba(255, 215, 0, 0.5), 0 0 40px rgba(255, 192, 203, 0.4), inset 0 0 15px rgba(255, 255, 255, 0.2);
-  }
-}
-
-.cta-button-premium {
-  animation: cta-button-premium-glow 2s ease-in-out infinite;
+.cta-button-hero {
+  animation: cta-button-hero-glow 2s ease-in-out infinite;
   transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
   backdrop-filter: blur(8px);
-  background: linear-gradient(135deg, rgba(250, 204, 21, 0.9) 0%, rgba(236, 72, 153, 0.8) 50%, rgba(168, 85, 247, 0.7) 100%);
-  border: 1px solid rgba(255, 255, 255, 0.3);
-  box-shadow: 0 8px 32px rgba(255, 215, 0, 0.2), inset 0 1px 0 rgba(255, 255, 255, 0.3);
 }
 
-.cta-button-premium:hover {
+.cta-button-hero:hover {
   transform: translateY(-4px) scale(1.03);
-  animation: cta-button-premium-glow 1.2s ease-in-out infinite;
-  box-shadow: 0 16px 48px rgba(255, 215, 0, 0.35), inset 0 1px 0 rgba(255, 255, 255, 0.4);
-  border-color: rgba(255, 255, 255, 0.5);
+  animation: cta-button-hero-glow 1.2s ease-in-out infinite;
+  box-shadow: 0 16px 48px rgba(251, 191, 36, 0.5), inset 0 1px 0 rgba(255, 255, 255, 0.4);
 }
 
-/* Secondary CTA - White Border Glow */
-@keyframes secondary-cta-glow {
+/* Secondary CTA Hero - Elegant White Border */
+@keyframes secondary-cta-hero-glow {
   0%, 100% {
-    box-shadow: 0 0 10px rgba(255, 255, 255, 0.3), inset 0 0 0px rgba(255, 255, 255, 0);
-    border-color: rgba(255, 255, 255, 0.5);
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.25), inset 0 0 0px rgba(255, 255, 255, 0);
+    border-color: rgba(255, 255, 255, 0.4);
   }
   50% {
-    box-shadow: 0 0 20px rgba(255, 255, 255, 0.6), inset 0 0 10px rgba(255, 255, 255, 0.1);
-    border-color: rgba(255, 255, 255, 0.8);
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.45), inset 0 0 10px rgba(255, 255, 255, 0.1);
+    border-color: rgba(255, 255, 255, 0.7);
   }
 }
 
-/* Secondary CTA - White Border Glow */
-@keyframes secondary-cta-glow {
-  0%, 100% {
-    box-shadow: 0 0 10px rgba(255, 255, 255, 0.3), inset 0 0 0px rgba(255, 255, 255, 0);
-    border-color: rgba(255, 255, 255, 0.5);
-  }
-  50% {
-    box-shadow: 0 0 20px rgba(255, 255, 255, 0.6), inset 0 0 10px rgba(255, 255, 255, 0.1);
-    border-color: rgba(255, 255, 255, 0.8);
-  }
-}
-
-.secondary-cta-premium {
-  animation: secondary-cta-glow 2.5s ease-in-out infinite;
+.secondary-cta-hero {
+  animation: secondary-cta-hero-glow 2.5s ease-in-out infinite;
   transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
   backdrop-filter: blur(10px);
-  background: linear-gradient(135deg, rgba(168, 85, 247, 0.15) 0%, rgba(168, 85, 247, 0.1) 100%);
-  border: 2px solid rgba(255, 255, 255, 0.3);
-  box-shadow: 0 8px 32px rgba(168, 85, 247, 0.1), inset 0 1px 0 rgba(255, 255, 255, 0.25);
 }
 
-.secondary-cta-premium:hover {
+.secondary-cta-hero:hover {
   transform: translateY(-4px) scale(1.03);
-  animation: secondary-cta-glow 1.5s ease-in-out infinite;
-  box-shadow: 0 16px 48px rgba(168, 85, 247, 0.2), inset 0 1px 0 rgba(255, 255, 255, 0.35);
-  border-color: rgba(255, 255, 255, 0.7);
-  background: linear-gradient(135deg, rgba(168, 85, 247, 0.25) 0%, rgba(168, 85, 247, 0.15) 100%);
+  animation: secondary-cta-hero-glow 1.5s ease-in-out infinite;
+  box-shadow: 0 16px 48px rgba(255, 255, 255, 0.25), inset 0 1px 0 rgba(255, 255, 255, 0.35);
+  border-color: rgba(255, 255, 255, 0.8);
+  background: rgba(255, 255, 255, 0.15);
 }
+
+
 
 /* Trust Indicator Text - Subtle Shimmer */
 @keyframes trust-shimmer {
