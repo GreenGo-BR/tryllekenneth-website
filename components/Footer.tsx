@@ -12,12 +12,15 @@ export function Footer() {
   const locale = useLocale();
 
   return (
-    <footer className="relative mt-16 bg-gradient-to-b from-slate-950 via-slate-900 to-black overflow-hidden">
-      {/* Subtle cinematic texture overlay */}
+    <footer className="relative mt-16 bg-gradient-to-b from-slate-950 via-slate-900 to-black overflow-hidden luxury-footer-glow">
+      {/* Subtle cinematic texture overlay with enhanced depth */}
       <div className="absolute inset-0 opacity-30 bg-gradient-to-br from-red-900/10 via-transparent to-amber-900/10 pointer-events-none" />
       
-      {/* Accent line */}
+      {/* Premium top accent line with signature glow */}
       <div className="absolute top-0 inset-x-0 h-px bg-gradient-to-r from-transparent via-amber-500/40 to-transparent" />
+      
+      {/* Subtle glow layer for premium depth */}
+      <div className="absolute top-0 inset-x-0 h-24 bg-gradient-to-b from-amber-600/5 via-transparent to-transparent pointer-events-none" />
 
       <div className="relative z-10 mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-12">
         {/* Main footer content - 3 columns */}
@@ -111,8 +114,8 @@ export function Footer() {
           </div>
         </div>
 
-        {/* Divider */}
-        <div className="h-px bg-gradient-to-r from-transparent via-gray-700/30 to-transparent my-8" />
+        {/* Premium Divider - Luxury signature accent */}
+        <div className="premium-divider-accent my-8" />
 
         {/* Bottom bar - Premium footer credit */}
         <div className="flex flex-col sm:flex-row justify-between items-center gap-4 pt-2">
