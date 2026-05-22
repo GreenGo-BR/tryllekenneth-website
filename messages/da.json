@@ -93,7 +93,7 @@
       "description": "Julemand med trylleri og magisk underholdning til jul, Halloween, fastelavn og sæsonbegivenheder i København og Danmark."
     },
     "weddingMagic": {
-      "title": "Bryllupstrylleri og trylleri til bryllupper",
+      "title": "Magisk Underholdning til Bryllupper",
       "description": "Elegant magisk underholdning til bryllupper og bryllupsfester der skaber uforglemmelige magiske øjeblikke for bruden og gommen."
     },
     "corporateEvents": {
@@ -121,8 +121,8 @@
     "description": "Nærmagi, publikumsinteraktion og professionel underholdning til voksne firmaarrangementer, private begivenheder og professionelle funktioner i København og Danmark."
   },
   "livePerformances": {
-    "title": "Underholdning til arrangementer - Professionelle optrædener",
-    "subtitle": "Kenneth optræder med underholdning til arrangementer ved festivaler, firmaarrangementer og sæsonbegivenheder i København, Danmark og udlandet. Med over 30 års erfaring inden for trylleri og underholdning leverer han professionel live-underholdning til alle typer arrangementer."
+    "title": "Underholdning til Arrangementer - Professionelle Optrædener",
+    "subtitle": "Kenneth optræder med underholdning til arrangementer ved festivaler, firmaarrangementer og sæsonbegivenheder i København, Danmark og udlandet. Med over 15 års erfaring inden for trylleri og underholdning leverer han professionel live-underholdning til alle typer arrangementer."
   },
   "childrensMagicPage": {
     "title": "Børnetrylleri i København - Magisk underholdning til børnefødselsdage",
@@ -328,7 +328,7 @@
     "testimonial3Text": "Den perfekte løsning til vores konference-pausefyldstoffer. Kenneth holder energien høj og gæsterne smiler. Søgt og raffineret underholdning.",
     "faqTitle": "Spørgsmål om Firmaarrangementer",
     "faqQ1": "Hvor længe varer en opvisning til firmaarrangement?",
-    "faqA1": "Det afhænger af dine ønsker. Typiske opvisninger varer 30-45 minutter, men kan tilpasses dine behov - fra 15-minutters pausefyldstoffer til længere performances.",
+    "faqA1": "Det afhænger af dine ønsker. Typiske opvisninger varer 30-45 minutter, men kan tilpasses dine behov - fra 15-minutters pauser til længere performances.",
     "faqQ2": "Kan magisk underholdning tilpasses vores tema?",
     "faqA2": "Helt sikkert! Kenneth arbejder tæt med dig for at tilpasse underholdningen til dit arrangementprogram, tema, og ønsker. Du definerer konteksten, Kenneth skaber magien.",
     "faqQ3": "Hvad hvis gæsterne ikke har set trylleri før?",
@@ -489,12 +489,12 @@
   "birthdayPartiesPage": {
     "heroTitle": "Børnefødselsdage med Magisk Underholdning",
     "heroSubtitle": "Gør børnefødselsdagen uforglemmelig med professionelt børnetrylleri - magisk underholdning der får alle børn til at smile og jubler",
-    "bookButton": "Book Tryllekunde",
+    "bookButton": "Book Børnetrylleri",
     "callButton": "Ring: 40 85 27 28",
     "introTitle": "Magisk Magi til Børnefødselsdage",
     "introText": "En børnefødselsdag skal være fuld af latter, eventyr og magiske øjeblikke. Kenneth specialiserer sig i børnetrylleri, der fascinerer børn i alle aldersgrupper og skaber minder som både børn og voksne taler om i årevis.",
     "introFeature1": "Børnene er helt med i magien",
-    "introFeature2": "Masser af latter og påfugl",
+    "introFeature2": "Masser af latter og sjov",
     "introFeature3": "Tilpasset til børnenes alder",
     "videoTitle": "Se Magien i Aktion til en Børnefødselsdag",
     "videoAlt": "Børnetrylleri til børnefødselsdag",
@@ -548,10 +548,10 @@
     "familyTitle": "Familievenlig Underholdning",
     "familyIntro": "Børnetrylleri til fødselsdage er perfekt for hele familien - børnene tager det, de voksne nyder det",
     "family1": "Børnene Elsker Det",
-    "family1Desc": "Børnene bliver helt fantastiske i det - deres glæde og latter er det hele værd",
+    "family1Desc": "Børnene bliver helt fortryllede - deres glæde og latter er det hele værd",
     "family2": "De Voksne Dukker Op",
     "family2Desc": "Selv voksne bliver fascinerede af magien og sidder og nyder underholdningen",
-    "family3": "Mindet for Livet",
+    "family3": "Uforglemmelige Minder",
     "family3Desc": "En fødselsdag som hele familien taler om i årevis - det blev DEN bedste fødselsdag",
     "ctaTitle": "Gør Børnefødselsdagen Uforglemmelig",
     "ctaSubtitle": "Kontakt Kenneth i dag og book professionelt børnetrylleri til din næste børnefødselsdag.",

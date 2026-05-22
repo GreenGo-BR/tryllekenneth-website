@@ -1487,12 +1487,15 @@ video::-moz-media-controls {
   border: 1px solid rgba(217, 119, 6, 0.25);
   font-weight: 600;
   font-size: 1rem;
-  padding: 0.75rem 2rem;
+  line-height: 1.4;
+  padding: 0.625rem 2rem;
   border-radius: 0.75rem;
+  height: 2.75rem;
   transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
   animation: btn-primary-glow 3s ease-in-out infinite;
-  display: inline-block;
-  text-align: center;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
   cursor: pointer;
   box-shadow: 0 4px 16px rgba(220, 38, 38, 0.12), inset 0 1px 0 rgba(255, 255, 255, 0.1);
 }
@@ -1525,12 +1528,15 @@ video::-moz-media-controls {
   border: 1px solid rgba(217, 119, 6, 0.25);
   font-weight: 600;
   font-size: 1rem;
-  padding: 0.75rem 2rem;
+  line-height: 1.4;
+  padding: 0.625rem 2rem;
   border-radius: 0.75rem;
+  height: 2.75rem;
   transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
   animation: btn-secondary-glow 3.5s ease-in-out infinite;
-  display: inline-block;
-  text-align: center;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
   cursor: pointer;
   box-shadow: 0 4px 12px rgba(17, 24, 39, 0.15), inset 0 1px 0 rgba(255, 255, 255, 0.05);
 }
@@ -1554,11 +1560,14 @@ video::-moz-media-controls {
   border: 1px solid rgba(255, 255, 255, 0.2);
   font-weight: 600;
   font-size: 1rem;
-  padding: 0.75rem 2rem;
+  line-height: 1.4;
+  padding: 0.625rem 2rem;
   border-radius: 0.75rem;
+  height: 2.75rem;
   transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-  display: inline-block;
-  text-align: center;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
   cursor: pointer;
   backdrop-filter: blur(8px);
   box-shadow: 0 4px 12px rgba(255, 255, 255, 0.08), inset 0 1px 0 rgba(255, 255, 255, 0.15);
@@ -1610,8 +1619,9 @@ video::-moz-media-controls {
 .btn-primary.btn-lg,
 .btn-secondary.btn-lg,
 .btn-secondary-light.btn-lg {
-  padding: 1rem 2.5rem;
+  padding: 0.875rem 2.5rem;
   font-size: 1.125rem;
+  height: 3.25rem;
   font-weight: 600;
 }
 
@@ -1620,6 +1630,7 @@ video::-moz-media-controls {
 .btn-secondary-light.btn-sm {
   padding: 0.5rem 1.25rem;
   font-size: 0.875rem;
+  height: 2.25rem;
 }
 
 /* DISABLED STATE */
