@@ -4,6 +4,7 @@ import { useLocale, useTranslations } from 'next-intl';
 import { useState } from 'react';
 import { Header } from '@/components/Header';
 import { Footer } from '@/components/Footer';
+import { VideoPlayer } from '@/components/VideoPlayer';
 import Link from 'next/link';
 
 export default function Gallery() {
@@ -206,91 +207,32 @@ export default function Gallery() {
               </p>
             </div>
 
-            {/* Video Grid - Clean 4, 2, 1 columns */}
+            {/* Video Grid - 4, 2, 1 columns */}
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5">
-              {/* Video 1 - TrylleKenneth Close-up */}
-              <div className="group relative overflow-hidden rounded-lg shadow-sm hover:shadow-md transition-shadow duration-300">
-                <video
-                  src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/TrylleKenneth%20Close-up-ez33buOtJRlVxiQiFHsYjvLENfi1Ew.mp4"
-                  controls
-                  playsInline
-                  preload="metadata"
-                  className="w-full aspect-video object-cover rounded-t-lg bg-black"
-                >
-                  Your browser does not support the video tag.
-                </video>
-                <div className="p-3 bg-background border-t border-slate-200/10">
-                  <h3 className="text-sm font-medium text-foreground">
-                    {locale === 'da' ? 'Close-up magi' : 'Close-up Magic'}
-                  </h3>
-                  <p className="text-xs text-muted-foreground mt-0.5">
-                    {locale === 'da' ? 'Intim trylleri' : 'Intimate magic'}
-                  </p>
-                </div>
-              </div>
-
-              {/* Video 2 - TrylleKenneth */}
-              <div className="group relative overflow-hidden rounded-lg shadow-sm hover:shadow-md transition-shadow duration-300">
-                <video
-                  src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/TrylleKenneth-vTCkNBPzwSUxpVR1eMyoH2T1mdtrwJ.mp4"
-                  controls
-                  playsInline
-                  preload="metadata"
-                  className="w-full aspect-video object-cover rounded-t-lg bg-black"
-                >
-                  Your browser does not support the video tag.
-                </video>
-                <div className="p-3 bg-background border-t border-slate-200/10">
-                  <h3 className="text-sm font-medium text-foreground">
-                    {locale === 'da' ? 'Børneshows' : 'Children\'s Shows'}
-                  </h3>
-                  <p className="text-xs text-muted-foreground mt-0.5">
-                    {locale === 'da' ? 'Farverigt og sjovt' : 'Colorful & fun'}
-                  </p>
-                </div>
-              </div>
-
-              {/* Video 3 - WhatsApp Video */}
-              <div className="group relative overflow-hidden rounded-lg shadow-sm hover:shadow-md transition-shadow duration-300">
-                <video
-                  src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/WhatsApp%20Video%202026-05-21%20at%2010.53.52%20%283%29-uQkO9DdvisgyQbzaDiMipFeGBXzQ19.mp4"
-                  controls
-                  playsInline
-                  preload="metadata"
-                  className="w-full aspect-video object-cover rounded-t-lg bg-black"
-                >
-                  Your browser does not support the video tag.
-                </video>
-                <div className="p-3 bg-background border-t border-slate-200/10">
-                  <h3 className="text-sm font-medium text-foreground">
-                    {locale === 'da' ? 'Live Performance' : 'Live Performance'}
-                  </h3>
-                  <p className="text-xs text-muted-foreground mt-0.5">
-                    {locale === 'da' ? 'Scenetrylleri' : 'Stage magic'}
-                  </p>
-                </div>
-              </div>
-
-              {/* Video 4 - Videoplayback */}
-              <div className="group relative overflow-hidden rounded-lg shadow-sm hover:shadow-md transition-shadow duration-300">
-                <video
-                  src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/videoplayback%20%281%29-Wj53DsHCbTIsdsTyKEsOyjV5a68rmZ.mp4"
-                  controls
-                  playsInline
-                  preload="metadata"
-                  className="w-full aspect-video object-cover rounded-t-lg bg-black"
-                >
-                  Your browser does not support the video tag.
-                </video>
-                <div className="p-3 bg-background border-t border-slate-200/10">
-                  <h3 className="text-sm font-medium text-foreground">
-                    {locale === 'da' ? 'Stand-up trylleri' : 'Stand-up Magic'}
-                  </h3>
-                  <p className="text-xs text-muted-foreground mt-0.5">
-                    {locale === 'da' ? 'Professionel underholdning' : 'Professional entertainment'}
-                  </p>
-                </div>
-              </div>
+              <VideoPlayer
+                src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/TrylleKenneth%20Close-up-ez33buOtJRlVxiQiFHsYjvLENfi1Ew.mp4"
+                title={locale === 'da' ? 'Close-up magi' : 'Close-up Magic'}
+                description={locale === 'da' ? 'Intim trylleri' : 'Intimate magic'}
+                locale={locale}
+              />
+              <VideoPlayer
+                src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/TrylleKenneth-vTCkNBPzwSUxpVR1eMyoH2T1mdtrwJ.mp4"
+                title={locale === 'da' ? 'Børneshows' : 'Children\'s Shows'}
+                description={locale === 'da' ? 'Farverigt og sjovt' : 'Colorful & fun'}
+                locale={locale}
+              />
+              <VideoPlayer
+                src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/WhatsApp%20Video%202026-05-21%20at%2010.53.52%20%283%29-uQkO9DdvisgyQbzaDiMipFeGBXzQ19.mp4"
+                title={locale === 'da' ? 'Live Performance' : 'Live Performance'}
+                description={locale === 'da' ? 'Scenetrylleri' : 'Stage magic'}
+                locale={locale}
+              />
+              <VideoPlayer
+                src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/videoplayback%20%281%29-Wj53DsHCbTIsdsTyKEsOyjV5a68rmZ.mp4"
+                title={locale === 'da' ? 'Stand-up trylleri' : 'Stand-up Magic'}
+                description={locale === 'da' ? 'Professionel underholdning' : 'Professional entertainment'}
+                locale={locale}
+              />
             </div>
           </div>
         </section>
