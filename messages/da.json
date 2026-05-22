@@ -1,26 +1,26 @@
 {
   "navigation": {
     "home": "Forside",
-    "childrensMagic": "Børnetrylleri",
+    "childrensMagic": "Børneshows",
     "birthdayParties": "Børnefødselsdage",
-    "standUpMagic": "Stand-up Trylleri",
-    "closeUpMagic": "Nærmagi",
+    "standUpMagic": "Stand-up trylleri",
+    "closeUpMagic": "Close-up magi",
     "santa": "Julemand",
     "christmasParty": "Julefrokost",
     "weddings": "Bryllupper",
     "corporateEvents": "Firmaarrangementer",
-    "seasonal": "Julesæson",
+    "seasonal": "Juleshows",
     "gallery": "Galleri",
     "faq": "FAQ",
     "contact": "Kontakt",
     "language": "Dansk"
   },
   "hero": {
-    "title": "Magisk underholdning til København og hele Danmark",
-    "subtitle": "TrylleKenneth skaber sjov, latter og uforglemmelige magiske øjeblikke til børnefødselsdage, firmaarrangementer, bryllupper og private begivenheder i hele Danmark.",
-    "cta1": "Book opvisning",
+    "title": "Magisk underholdning i København og resten af Danmark",
+    "subtitle": "TrylleKenneth skaber sjov, grin og uforglemmelige magiske øjeblikke til børnefødselsdage, firmaarrangementer, bryllupper og private begivenheder i hele Danmark.",
+    "cta1": "Book et show",
     "cta2": "Ring til Kenneth",
-    "cta3": "Se optrædener"
+    "cta3": "Se showet"
   },
   "footer": {
     "copyright": "Tryllekunstner TrylleKenneth © 2026",
@@ -34,8 +34,8 @@
   },
   "about": {
     "label": "Om Kenneth",
-    "title": "Professionel tryllekunstner – Magisk underholdning til København og Danmark",
-    "description": "Jeg er Kenneth, tryllekunstner i København med over 15 års erfaring inden for magisk underholdning. Jeg skaber uforglemmelige øjeblikke til børnefødselsdage, firmaarrangementer, bryllupper og private begivenheder i hele Danmark – med professionelt trylleri der bringer glæde, latter og fuldstændig forundring til alle aldersgrupper.",
+    "title": "Professionel tryllekunstner – Magisk underholdning i København og omegn",
+    "description": "Jeg er Kenneth, tryllekunstner i København med over 15 års erfaring inden for magisk underholdning. Jeg skaber uforglemmelige øjeblikke til børnefødselsdage, firmaarrangementer, bryllupper og private begivenheder i hele Danmark – med professionelt trylleri, der bringer glæde, grin og ren magi til alle aldersgrupper.",
     "features": [
       {
         "title": "15+ års professionel erfaring",
@@ -75,25 +75,25 @@
   },
   "services": {
     "title": "Magisk underholdning til ethvert arrangement",
-    "subtitle": "Fra børnetrylleri til firmaarrangementer - professionel underholdning i København og Danmark",
+    "subtitle": "Fra børneshows til firmaarrangementer - professionel underholdning i København og Danmark",
     "childrensMagic": {
-      "title": "Børnetrylleri til fødselsdage og arrangementer",
+      "title": "Børneshows til fødselsdage og arrangementer",
       "description": "Farverigt, sjovt og uforglemmeligt børnetrylleri til fødselsdage, familiefester, skoler og børnehaver i København og hele Danmark."
     },
     "standUpMagic": {
-      "title": "Stand-up Trylleri til firmaarrangementer og begivenheder",
+      "title": "Stand-up trylleri til firmaarrangementer og begivenheder",
       "description": "Professionel underholdning til firmafester med humor, charme og respekt for publikum. Perfekt til firmaarrangementer og professionelle begivenheder."
     },
     "closeUpMagic": {
-      "title": "Nærmagi til arrangementer",
-      "description": "Intime nærmagi med kort, mønter og genstande – perfekt underholdning til større arrangementer og firmaarrangementer."
+      "title": "Close-up magi til arrangementer",
+      "description": "Afsindig magi helt tæt på gæsterne med kort, mønter og genstande – perfekt underholdning til større arrangementer og firmaarrangementer."
     },
     "santa": {
       "title": "Julemand og sæsonunderholdning",
       "description": "Julemand med trylleri og magisk underholdning til jul, Halloween, fastelavn og sæsonbegivenheder i København og Danmark."
     },
     "weddingMagic": {
-      "title": "Magisk Underholdning til Bryllupper",
+      "title": "Trylleri til bryllup",
       "description": "Elegant magisk underholdning til bryllupper og bryllupsfester der skaber uforglemmelige magiske øjeblikke for bruden og gommen."
     },
     "corporateEvents": {
@@ -105,16 +105,16 @@
   "cta": {
     "title": "Klar til at opleve trylleri?",
     "subtitle": "Kontakt Kenneth i dag og book en magisk oplevelse til dit arrangement.",
-    "bookShow": "Book nu",
+    "bookShow": "Book et show",
     "callKenneth": "Ring: 40 85 27 28"
   },
   "video": {
-    "title": "Se magien live",
-    "subtitle": "Ægte øjeblikke fra børneopvisninger, familiefester og optrædener",
+    "title": "Se magien i virkeligheden",
+    "subtitle": "Ægte øjeblikke fra børneshows, familiefester og optrædener",
     "autoplay": "Automatisk afspilning • HD Kvalitet"
   },
   "trust": {
-    "message": "✓ Betroet af familier og virksomheder i hele Danmark"
+    "message": "✓ Anbefalet af familier og virksomheder i hele Danmark"
   },
   "adultServices": {
     "title": "Trylleri til voksne arrangementer og firmafester",
@@ -125,9 +125,9 @@
     "subtitle": "Kenneth optræder med underholdning til arrangementer ved festivaler, firmaarrangementer og sæsonbegivenheder i København, Danmark og udlandet. Med over 15 års erfaring inden for trylleri og underholdning leverer han professionel live-underholdning til alle typer arrangementer."
   },
   "childrensMagicPage": {
-    "title": "Børnetrylleri i København - Magisk underholdning til børnefødselsdage",
+    "title": "Børneshows i København - Magisk underholdning til børnefødselsdage",
     "subtitle": "Professionelt børnetrylleri til fødselsdage og familiearrangementer i København og Danmark",
-    "bookButton": "Book opvisning",
+    "bookButton": "Book et show",
     "about": "Om Børnetrylleri",
     "aboutText1": "TrylleKenneth specialiserer sig i farverigt og sjovt børnetrylleri til fødselsdage, familiefester, skoler og børnehaver i hele Danmark. Med over 20 års erfaring inden for børneunderholdning skaber Kenneth magiske og interaktive oplevelser for børn i alle aldre.",
     "aboutText2": "Hver børnetrylleri-opvisning er tilpasset aldersgruppen og arrangementet, med interaktivt børnetrylleri der gør børnene til del af den magiske oplevelse.",
@@ -144,9 +144,9 @@
     "backToHome": "Tilbage til forside"
   },
   "standUpMagicPage": {
-    "title": "Stand-up Trylleri til Firmaarrangementer og Begivenheder i Danmark",
+    "title": "Stand-up trylleri til Firmaarrangementer og Begivenheder i Danmark",
     "subtitle": "Professionel underholdning til firmafester, firmaarrangementer og voksne arrangementer",
-    "bookButton": "Book opvisning",
+    "bookButton": "Book et show",
     "about": "Om Stand-up Trylleri til Arrangementer",
     "aboutText1": "Kenneths stand-up trylleri er perfekt underholdning til firmaarrangementer, professionelle begivenheder, teambuilding og voksne underholdningsaftener. Med over 20 års erfaring inden for arrangementunderholdning kombinerer Kenneth teknisk kunnen med naturlig karisma og humor.",
     "aboutText2": "Opvisningerne er engagerende, sjove og altid professionelle. Publikum bliver forundret over Kenneths tekniske dygtighed, humor og evne til at skabe uforglemmelige minder ved arrangementer.",
@@ -167,11 +167,11 @@
     "backToHome": "Tilbage til forside"
   },
   "closeUpMagicPage": {
-    "title": "Nærmagi til Arrangementer - Professionel Underholdning ved Firmaarrangementer",
-    "subtitle": "Intime nærmagi til større arrangementer og firmaarrangementer i København og Danmark",
-    "bookButton": "Book opvisning",
-    "about": "Om Nærmagi til Arrangementer",
-    "aboutText1": "Nærmagi er den perfekte underholdning til at skabe intime magiske øjeblikke på større firmaarrangementer og begivenheder. Kenneth arbejder med kort, mønter, sedler og hverdagsgenstande for at skabe personlige og magiske oplevelser helt foran publikum.",
+    "title": "Close-up magi til Arrangementer - Professionel Underholdning ved Firmaarrangementer",
+    "subtitle": "Afsindig magi helt tæt på gæsterne - større arrangementer og firmaarrangementer i København og Danmark",
+    "bookButton": "Book et show",
+    "about": "Om Close-up magi til Arrangementer",
+    "aboutText1": "Close-up magi er den perfekte underholdning til at skabe intime magiske øjeblikke på større firmaarrangementer og begivenheder. Kenneth arbejder med kort, mønter, sedler og hverdagsgenstande for at skabe personlige og magiske oplevelser helt foran publikum.",
     "aboutText2": "Den tætte kontakt og interaktion skaber en særlig forbindelse mellem Kenneth og hver gæst, hvilket gør hvert magisk øjeblik ved arrangementer uforglemmeligt.",
     "premiumTitle": "Premium nærmagi til arrangementer",
     "premiumDesc": "Eksklusiv nærmagi fanget i flotte detaljer til alle arrangementtyper",
@@ -211,9 +211,9 @@
     "reviewsTitle": "Kundeanmeldelser",
     "reviewsSubtitle": "Hvad folk siger om magisk underholdning fra professionel tryllekunstner Kenneth",
     "filterAll": "Alle",
-    "filterChildrensMagic": "Børnetrylleri",
-    "filterCloseUpMagic": "Nærmagi",
-    "filterStandUpMagic": "Stand-up Trylleri",
+    "filterChildrensMagic": "Børneshows",
+    "filterCloseUpMagic": "Close-up magi",
+    "filterStandUpMagic": "Stand-up trylleri",
     "filterSantaChristmas": "Julemand & Jul",
     "filterEvents": "Arrangementer",
     "backToHome": "Tilbage til forside"
@@ -269,7 +269,7 @@
     "corporateEvent": "Firmaarrangement",
     "weddingEvent": "Bryllup",
     "otherEvent": "Andet",
-    "closeUpOption": "Nærmagi",
+    "closeUpOption": "Close-up magi",
     "phoneCardLabel": "Telefon",
     "emailCardLabel": "E-mail",
     "availabilityLabel": "Tilgængelighed",
