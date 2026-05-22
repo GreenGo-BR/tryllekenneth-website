@@ -26,7 +26,7 @@ export const metadata: Metadata = {
   generator: 'v0.app',
   applicationName: 'TrylleKenneth',
   referrer: 'strict-origin-when-cross-origin',
-  keywords: ['tryllekunstner', 'magiker', 'København', 'underholdning', 'event', 'firmaevent', 'bryllup', 'nærmagi'],
+  keywords: ['tryllekunstner', 'magiker', 'København', 'underholdning', 'event', 'firmaevent', 'bryllup', 'nærmagi', 'magisk underholdning', 'børnetrylleri'],
   authors: [{ name: 'Kenneth', url: 'https://tryllekenneth.dk' }],
   creator: 'Kenneth - Tryllekunstner',
   icons: {
@@ -93,6 +93,104 @@ export const metadata: Metadata = {
   },
 }
 
+// Structured Data for AI Search Optimization
+const structuredData = {
+  '@context': 'https://schema.org',
+  '@graph': [
+    {
+      '@type': 'Person',
+      '@id': 'https://tryllekenneth.dk/#person',
+      'name': 'Kenneth Sørensen',
+      'givenName': 'Kenneth',
+      'familyName': 'Sørensen',
+      'url': 'https://tryllekenneth.dk',
+      'email': 'kenneth@tryllekenneth.dk',
+      'telephone': '+4540852728',
+      'image': 'https://tryllekenneth.dk/kenneth.jpg',
+      'jobTitle': 'Professionel Tryllekunstner',
+      'description': 'Professionel tryllekunstner og magiker i København med over 15 års erfaring inden for magisk underholdning og entertainment',
+      'areaServed': 'DK',
+      'knowsAbout': ['Magisk underholdning', 'Nærmagi', 'Børnetrylleri', 'Standup Magic', 'Event Entertainment'],
+      'worksFor': {
+        '@type': 'Organization',
+        '@id': 'https://tryllekenneth.dk/#organization'
+      }
+    },
+    {
+      '@type': 'LocalBusiness',
+      '@id': 'https://tryllekenneth.dk/#business',
+      'name': 'TrylleKenneth',
+      'alternateName': ['TrylleKenneth', 'Kenneth Magiker', 'Kenneth Tryllekunstner'],
+      'image': 'https://tryllekenneth.dk/tryllekenneth-logo.png',
+      'description': 'Professionel magisk underholdning til firmaarrangementer, bryllup, børnefødselsdage og events i København og hele Danmark',
+      'url': 'https://tryllekenneth.dk',
+      'email': 'kenneth@tryllekenneth.dk',
+      'telephone': '+4540852728',
+      'address': {
+        '@type': 'PostalAddress',
+        'addressCountry': 'DK',
+        'addressLocality': 'København'
+      },
+      'areaServed': ['DK'],
+      'priceRange': '$$',
+      'serviceType': ['Magisk Underholdning', 'Nærmagi', 'Børnetrylleri', 'Bryllupsunderholdning', 'Firmaarrangement'],
+      'foundingDate': '2008',
+      'sameAs': [
+        'https://www.facebook.com/tryllekenneth',
+        'https://www.instagram.com/tryllekenneth'
+      ]
+    },
+    {
+      '@type': 'EntertainmentBusiness',
+      '@id': 'https://tryllekenneth.dk/#entertainment',
+      'name': 'TrylleKenneth - Magisk Underholdning',
+      'businessType': 'Entertainment Service',
+      'url': 'https://tryllekenneth.dk',
+      'description': 'Magisk underholdning og event entertainment i Danmark',
+      'offers': [
+        {
+          '@type': 'Offer',
+          'name': 'Børnetrylleri',
+          'description': 'Interaktiv magisk underholdning til børnefødselsdage og familiebegivenheder'
+        },
+        {
+          '@type': 'Offer',
+          'name': 'Bryllupsunderholdning',
+          'description': 'Elegant magisk underholdning til bryllup og receptioner'
+        },
+        {
+          '@type': 'Offer',
+          'name': 'Firmaarrangement',
+          'description': 'Professionel magisk underholdning til corporate events og teambuilding'
+        },
+        {
+          '@type': 'Offer',
+          'name': 'Nærmagi',
+          'description': 'Intimt og fascinerende trylleri på tæt hold'
+        }
+      ]
+    },
+    {
+      '@type': 'Organization',
+      '@id': 'https://tryllekenneth.dk/#organization',
+      'name': 'TrylleKenneth',
+      'url': 'https://tryllekenneth.dk',
+      'email': 'kenneth@tryllekenneth.dk',
+      'telephone': '+4540852728',
+      'foundingDate': '2008',
+      'founder': {
+        '@type': 'Person',
+        'name': 'Kenneth Sørensen'
+      },
+      'areaServed': 'DK',
+      'sameAs': [
+        'https://www.facebook.com/tryllekenneth',
+        'https://www.instagram.com/tryllekenneth'
+      ]
+    }
+  ]
+}
+
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -100,6 +198,13 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="da" className="bg-background">
+      <head>
+        {/* Structured Data for AI Search Optimization */}
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
+        />
+      </head>
       <body className="font-sans antialiased">
         {children}
         {process.env.NODE_ENV === 'production' && <Analytics />}
