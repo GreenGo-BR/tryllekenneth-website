@@ -135,14 +135,14 @@ export default function Home() {
           {/* Left Side Content - Text and CTAs (No overlap with image) */}
           <div className="relative z-10 max-w-xl px-4 sm:px-6 lg:px-8 py-12 h-full flex flex-col justify-center">
             {/* Subtle dark overlay behind text for better readability */}
-            <div className="absolute inset-0 bg-gradient-to-r from-black/60 via-black/40 to-transparent rounded-3xl pointer-events-none"></div>
+            <div className="absolute inset-0 bg-gradient-to-r from-black/35 via-black/20 to-transparent rounded-3xl pointer-events-none"></div>
             
             <div className="flex flex-col justify-center relative z-20">
               {/* Badge - Premium Glow */}
               <div className="mb-6 inline-block w-fit animate-float-slow">
                 <span className="hero-badge-premium inline-flex items-center gap-2 px-4 py-2 rounded-full bg-gradient-to-r from-purple-500/20 to-pink-500/20 backdrop-blur-md border border-purple-400/50 text-white font-semibold text-xs sm:text-sm hover:border-pink-400/70 transition-all">
                   <Wand2 size={16} className="text-yellow-300 animate-spin" style={{ animationDuration: '3s' }} />
-                  <span className="text-foreground font-bold">
+                  <span className="text-white font-bold">
                     ✨ {locale === 'da' ? 'TrylleKenneth' : 'TrylleKenneth'}
                   </span>
                 </span>
@@ -165,7 +165,7 @@ export default function Home() {
                 <Link href={`/${locale}/contact`}>
                   <Button
                     size="lg"
-                    className="cta-button-hero bg-gradient-to-r from-amber-400 via-amber-300 to-yellow-300 text-slate-900 hover:from-amber-300 hover:via-yellow-200 hover:to-yellow-200 text-base font-bold h-12 sm:h-13 px-8 sm:px-10 rounded-xl shadow-2xl shadow-amber-400/40 hover:shadow-amber-300/60 transition-all duration-300"
+                    className="cta-button-hero bg-gradient-to-r from-amber-400 via-amber-300 to-yellow-300 text-white hover:from-amber-300 hover:via-yellow-200 hover:to-yellow-200 text-base font-bold h-12 sm:h-13 px-8 sm:px-10 rounded-xl shadow-2xl shadow-amber-400/40 hover:shadow-amber-300/60 transition-all duration-300"
                   >
                     {t('hero.cta1')}
                   </Button>
@@ -173,7 +173,7 @@ export default function Home() {
                 <a href="tel:+4540852728" className="inline-block">
                   <Button
                     size="lg"
-                    className="secondary-cta-hero text-base font-bold h-12 sm:h-13 px-8 sm:px-10 border-2 border-white/40 bg-white/5 text-white hover:bg-white/10 hover:border-white/70 rounded-xl backdrop-blur-sm transition-all duration-300"
+                    className="secondary-cta-hero text-base font-bold h-12 sm:h-13 px-8 sm:px-10 border-2 border-white bg-white/10 text-white hover:bg-white/20 hover:border-white rounded-xl backdrop-blur-sm transition-all duration-300"
                   >
                     {t('hero.cta2')}
                   </Button>
