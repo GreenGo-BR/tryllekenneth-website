@@ -16,8 +16,8 @@
     "language": "English"
   },
   "hero": {
-    "title": "Magical entertainment for children, adults and unforgettable events",
-    "subtitle": "TrylleKenneth brings fun, humor and magic to birthdays, family parties, company events and seasonal celebrations.",
+    "title": "Magical entertainment for every moment",
+    "subtitle": "TrylleKenneth brings wonder, warmth and unforgettable magic to birthdays, family gatherings, corporate events and celebrations.",
     "cta1": "Book a show",
     "cta2": "Call Kenneth",
     "cta3": "See shows"
@@ -46,108 +46,108 @@
   },
   "about": {
     "label": "About Kenneth",
-    "title": "Magician with Heart",
-    "description": "Kenneth is a professional magician dedicated to creating unforgettable magical moments for every occasion. With over 15 years of experience, he crafts genuine wonder and joy for children and adults alike."
+    "title": "Magician with heart",
+    "description": "With over 15 years of experience, Kenneth is dedicated to creating genuine wonder and unforgettable moments. Known for warmth, creativity and a natural gift for connecting with audiences of all ages."
   },
   "performances": {
-    "title": "International Performances",
-    "subtitle": "From intimate shows to grand theater performances – Kenneth performs worldwide",
-    "outdoor": "Outdoor Events & Festivals",
-    "outdoorDesc": "Magical entertainment for families",
-    "church": "Churches & Sacred Spaces",
-    "churchDesc": "Magical entertainment in special and ceremonial settings",
-    "theater": "Theater Performances",
-    "theaterDesc": "Professional shows for large audiences",
-    "closeup": "Close-up Magic",
-    "closeupDesc": "Intimate personal magic at every table"
+    "title": "Professional entertainment",
+    "subtitle": "From intimate moments to grand celebrations – Kenneth brings magic to events across Denmark",
+    "outdoor": "Outdoor events & festivals",
+    "outdoorDesc": "Magical entertainment for family gatherings and public celebrations",
+    "church": "Churches & ceremonial spaces",
+    "churchDesc": "Respectful magic in sacred and special settings",
+    "theater": "Theater performances",
+    "theaterDesc": "Professional shows for larger audiences",
+    "closeup": "Close-up magic",
+    "closeupDesc": "Intimate magic moments right before your eyes"
   },
   "moments": {
     "title": "More Live Moments",
     "subtitle": "Explore additional performances and magical experiences"
   },
   "services": {
-    "title": "Our services",
-    "subtitle": "Magical entertainment for every occasion",
+    "title": "Entertainment for every occasion",
+    "subtitle": "Professional magic tailored to your event",
     "childrensMagic": {
-      "title": "Children's Magic",
-      "description": "Colorful, fun and unforgettable magic for birthdays, family events, schools and kindergartens."
+      "title": "Children's magic",
+      "description": "Colorful, joyful and unforgettable magic for birthdays, family events, schools and kindergartens across Denmark."
     },
     "standUpMagic": {
-      "title": "Stand-up Magic",
-      "description": "Professional magic for adults with humor, charm and respect for the audience. No one gets humiliated."
+      "title": "Stand-up magic",
+      "description": "Professional entertainment for adult audiences with humor, charm and respect. Magic that amazes without humiliating."
     },
     "closeUpMagic": {
-      "title": "Close-up Magic",
-      "description": "Close-up magic with cards, coins, banknotes and objects near the audience."
+      "title": "Close-up magic",
+      "description": "Intimate magic with cards, coins and everyday objects – personal moments right before your eyes."
     },
     "santa": {
-      "title": "Santa Claus & Seasonal Shows",
-      "description": "Santa and magical entertainment for Christmas, Halloween, Fastelavn and special events."
+      "title": "Santa & seasonal shows",
+      "description": "Santa with magic for Christmas, Halloween, Fastelavn and seasonal celebrations."
     },
     "weddingMagic": {
-      "title": "Wedding Magic",
-      "description": "Elegant magic entertainment that creates unforgettable moments for your wedding reception and celebration."
+      "title": "Wedding magic",
+      "description": "Elegant magic that creates unforgettable moments for you and your guests."
     },
     "corporateEvents": {
-      "title": "Corporate Events",
-      "description": "Professional entertainment for company events, team building, conferences and corporate celebrations."
+      "title": "Corporate events",
+      "description": "Professional entertainment for company celebrations, team building and conferences."
     },
     "readMore": "Read more"
   },
   "cta": {
-    "title": "Ready to experience magic?",
-    "subtitle": "Contact Kenneth today and book a magical experience for your event.",
-    "bookShow": "Book now",
+    "title": "Ready for magic?",
+    "subtitle": "Contact Kenneth and book an unforgettable experience for your event.",
+    "bookShow": "Book a show",
     "callKenneth": "Call: 40 85 27 28"
   },
   "video": {
-    "title": "Watch the Magic Live",
-    "subtitle": "Real moments from children's shows, family parties and magical events",
+    "title": "Watch the magic unfold",
+    "subtitle": "Real moments from events, celebrations and performances",
     "autoplay": "Autoplay • HD Quality"
   },
   "trust": {
-    "message": "✓ Trusted by families and companies across Denmark"
+    "message": "✓ Trusted by families and businesses across Denmark"
   },
   "childrensMagicPage": {
-    "title": "Children's Magic",
-    "subtitle": "Magical entertainment that makes children dream and adults smile",
-    "bookButton": "Book performance",
-    "about": "About Children's Magic",
-    "aboutText1": "TrylleKenneth specializes in colorful and fun magic for children's birthdays, family events, schools and kindergartens. With over 20 years of experience, Kenneth creates magical moments for children of all ages.",
-    "aboutText2": "Each performance is tailored to the age group and event, with interactive magic that makes children part of the magic.",
-    "interactiveTitle": "Interactive Magic",
-    "interactiveText": "The children are part of the magic and become part of the performance",
-    "laughsTitle": "Lots of laughs",
-    "laughsText": "Fun, humor and joy guaranteed for the whole audience",
-    "memoryTitle": "Unforgettable memories",
-    "memoryText": "Magic that children and adults will talk about for years",
-    "detailsTitle": "Perfect for all ages",
-    "detailsText": "From toddlers to teenagers - there is magic for everyone",
-    "focusTitle": "We maintain focus",
-    "focusText": "Kenneth knows how to keep children engaged and excited",
+    "title": "Children's magic",
+    "subtitle": "Colorful, joyful entertainment for birthdays and family celebrations",
+    "bookButton": "Book a show",
+    "about": "About children's magic",
+    "aboutText1": "TrylleKenneth specializes in vibrant magic for birthdays, family gatherings, schools and kindergartens. With over 20 years of experience, Kenneth creates magical moments for children of all ages.",
+    "aboutText2": "Each performance is tailored to the age group. Children become part of the magic.",
+    "interactiveTitle": "Children are part of the magic",
+    "interactiveText": "Kids become active participants in every performance",
+    "laughsTitle": "Laughter and joy",
+    "laughsText": "Fun and delight guaranteed for the whole audience",
+    "memoryTitle": "Memories that last",
+    "memoryText": "Magic that children and parents talk about for years",
+    "detailsTitle": "Magic for all ages",
+    "detailsText": "From toddlers to teenagers – magic for everyone",
+    "focusTitle": "Safe and engaging",
+    "focusText": "Kenneth knows how to keep children excited and fully engaged",
     "backToHome": "Back to home"
   },
   "standUpMagicPage": {
-    "title": "Stand-up Magic",
-    "subtitle": "Professional magic with humor, charm and respect for the audience",
-    "bookButton": "Book performance",
-    "about": "About Stand-up Magic",
-    "aboutText1": "TrylleKenneth's stand-up magic is perfect for corporate events, parties, team building and entertainment evenings. With over 20 years of experience, Kenneth combines technical skill with natural charisma.",
-    "aboutText2": "The performances are engaging, funny and never humiliating. The audience is amazed by Kenneth's technical skills and wit.",
-    "professionalTitle": "Professional experience",
-    "professionalText": "Over 20 years of experience with corporate and private events",
-    "humorTitle": "Humor and charm",
-    "humorText": "Funny magic that entertains both individuals and large audiences",
-    "respectTitle": "Respectful entertainment",
-    "respectText": "No one gets humiliated - only amazed and entertained",
-    "adaptTitle": "Adaptable format",
-    "adaptText": "Perfect for restaurants, hotels, company events and private parties",
+    "title": "Stand-up magic for corporate events",
+    "subtitle": "Professional and engaging magic for adult audiences",
+    "bookButton": "Book a show",
+    "about": "About stand-up magic",
+    "aboutText1": "Kenneth's stand-up magic is ideal for corporate events, celebrations and evening entertainment. With over 20 years of experience, he combines technical skill with natural charisma.",
+    "aboutText2": "Performances are engaging and fun – always respectful. Audiences are amazed by both the technique and the charm.",
+    "professionalTitle": "Experienced entertainment",
+    "professionalText": "Over 20 years performing at corporate events and celebrations",
+    "humorTitle": "Humor & charisma",
+    "humorText": "Engaging magic that entertains and amazes audiences",
+    "respectTitle": "Always respectful",
+    "respectText": "Wonder and delight – never at anyone's expense",
+    "adaptTitle": "Flexible format",
+    "adaptText": "Perfect for restaurants, hotels, corporate events and private celebrations",
     "cardsTitle": "Card magic",
-    "cardsText": "Amazing card tricks that create astonishment and wonder",
+    "cardsText": "Amazing card tricks that create genuine amazement",
     "coinsTitle": "Coin magic",
-    "coinsText": "Coins appear, disappear and transform right in your hand",
+    "coinsText": "Coins appear, vanish and transform right before your eyes",
     "objectsTitle": "Object manipulation",
-    "objectsText": "Magic with everyday objects that amazes the audience",
+    "objectsText": "Magic with everyday objects that astounds audiences",
     "backToHome": "Back to home"
   },
   "closeUpMagicPage": {
