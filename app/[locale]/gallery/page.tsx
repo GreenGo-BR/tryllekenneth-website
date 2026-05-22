@@ -4,6 +4,7 @@ import { useLocale, useTranslations } from 'next-intl';
 import { useState } from 'react';
 import { Header } from '@/components/Header';
 import { Footer } from '@/components/Footer';
+import { ProductionVideo } from '@/components/ProductionVideo';
 import Link from 'next/link';
 
 export default function Gallery() {
@@ -186,6 +187,139 @@ export default function Gallery() {
                   <div className="absolute inset-0 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none shadow-[inset_0_0_15px_rgba(139,92,246,0.2)]"></div>
                 </div>
               ))}
+            </div>
+          </div>
+        </section>
+
+        {/* Video Highlights Section */}
+        <section className="py-16 px-4 sm:px-6 lg:px-8 bg-background">
+          <div className="max-w-6xl mx-auto">
+            {/* Section Header */}
+            <div className="mb-10 text-center">
+              <h2 className="text-2xl sm:text-3xl font-bold mb-3 text-foreground">
+                {locale === 'da' ? 'Video Highlights' : 'Video Highlights'}
+              </h2>
+              <p className="text-base text-muted-foreground max-w-2xl mx-auto">
+                {locale === 'da'
+                  ? 'Se TrylleKenneth i aktion - fra live-optrædener til intim nærmagi'
+                  : 'Watch TrylleKenneth in action - from live performances to intimate close-up magic'
+                }
+              </p>
+            </div>
+
+            {/* Video Grid - Clean 4, 2, 1 columns */}
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5">
+              {/* Video 1 - TrylleKenneth Close-up */}
+              <div className="group relative overflow-hidden rounded-lg shadow-sm hover:shadow-md transition-shadow duration-300">
+                <div className="relative w-full overflow-hidden rounded-lg">
+                  <ProductionVideo
+                    src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/TrylleKenneth%20Close-up-ez33buOtJRlVxiQiFHsYjvLENfi1Ew.mp4"
+                    poster="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/ChatGPT%20Image%20May%2019%2C%202026%2C%2011_23_07%20AM-gWtRtuxpmElUZTtT93c23mlTcM76sD.png"
+                    videoId="gallery-closeup-video"
+                    autoPlay={false}
+                    muted={true}
+                    loop={false}
+                    playsInline={true}
+                    preload="metadata"
+                    lazy={false}
+                    aspectRatio="16/9"
+                    containerClassName="bg-slate-900"
+                    className="w-full h-full object-contain"
+                  />
+                </div>
+                <div className="p-3 bg-background border-t border-slate-200/10">
+                  <h3 className="text-sm font-medium text-foreground">
+                    {locale === 'da' ? 'Close-up magi' : 'Close-up Magic'}
+                  </h3>
+                  <p className="text-xs text-muted-foreground mt-0.5">
+                    {locale === 'da' ? 'Intim trylleri' : 'Intimate magic'}
+                  </p>
+                </div>
+              </div>
+
+              {/* Video 2 - TrylleKenneth */}
+              <div className="group relative overflow-hidden rounded-lg shadow-sm hover:shadow-md transition-shadow duration-300">
+                <div className="relative w-full overflow-hidden rounded-lg">
+                  <ProductionVideo
+                    src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/TrylleKenneth-vTCkNBPzwSUxpVR1eMyoH2T1mdtrwJ.mp4"
+                    poster="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/ChatGPT%20Image%20May%2019%2C%202026%2C%2011_23_07%20AM-gWtRtuxpmElUZTtT93c23mlTcM76sD.png"
+                    videoId="gallery-children-video"
+                    autoPlay={false}
+                    muted={true}
+                    loop={false}
+                    playsInline={true}
+                    preload="metadata"
+                    lazy={false}
+                    aspectRatio="16/9"
+                    containerClassName="bg-slate-900"
+                    className="w-full h-full object-contain"
+                  />
+                </div>
+                <div className="p-3 bg-background border-t border-slate-200/10">
+                  <h3 className="text-sm font-medium text-foreground">
+                    {locale === 'da' ? 'Børneshows' : 'Children\'s Shows'}
+                  </h3>
+                  <p className="text-xs text-muted-foreground mt-0.5">
+                    {locale === 'da' ? 'Farverigt og sjovt' : 'Colorful & fun'}
+                  </p>
+                </div>
+              </div>
+
+              {/* Video 3 - WhatsApp Video */}
+              <div className="group relative overflow-hidden rounded-lg shadow-sm hover:shadow-md transition-shadow duration-300">
+                <div className="relative w-full overflow-hidden rounded-lg">
+                  <ProductionVideo
+                    src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/WhatsApp%20Video%202026-05-21%20at%2010.53.52%20%283%29-uQkO9DdvisgyQbzaDiMipFeGBXzQ19.mp4"
+                    poster="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/ChatGPT%20Image%20May%2019%2C%202026%2C%2011_23_07%20AM-gWtRtuxpmElUZTtT93c23mlTcM76sD.png"
+                    videoId="gallery-live-video"
+                    autoPlay={false}
+                    muted={true}
+                    loop={false}
+                    playsInline={true}
+                    preload="metadata"
+                    lazy={false}
+                    aspectRatio="16/9"
+                    containerClassName="bg-slate-900"
+                    className="w-full h-full object-contain"
+                  />
+                </div>
+                <div className="p-3 bg-background border-t border-slate-200/10">
+                  <h3 className="text-sm font-medium text-foreground">
+                    {locale === 'da' ? 'Live Performance' : 'Live Performance'}
+                  </h3>
+                  <p className="text-xs text-muted-foreground mt-0.5">
+                    {locale === 'da' ? 'Scenetrylleri' : 'Stage magic'}
+                  </p>
+                </div>
+              </div>
+
+              {/* Video 4 - Videoplayback */}
+              <div className="group relative overflow-hidden rounded-lg shadow-sm hover:shadow-md transition-shadow duration-300">
+                <div className="relative w-full overflow-hidden rounded-lg">
+                  <ProductionVideo
+                    src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/videoplayback%20%281%29-Wj53DsHCbTIsdsTyKEsOyjV5a68rmZ.mp4"
+                    poster="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/ChatGPT%20Image%20May%2019%2C%202026%2C%2011_23_07%20AM-gWtRtuxpmElUZTtT93c23mlTcM76sD.png"
+                    videoId="gallery-standup-video"
+                    autoPlay={false}
+                    muted={true}
+                    loop={false}
+                    playsInline={true}
+                    preload="metadata"
+                    lazy={false}
+                    aspectRatio="16/9"
+                    containerClassName="bg-slate-900"
+                    className="w-full h-full object-contain"
+                  />
+                </div>
+                <div className="p-3 bg-background border-t border-slate-200/10">
+                  <h3 className="text-sm font-medium text-foreground">
+                    {locale === 'da' ? 'Stand-up trylleri' : 'Stand-up Magic'}
+                  </h3>
+                  <p className="text-xs text-muted-foreground mt-0.5">
+                    {locale === 'da' ? 'Professionel underholdning' : 'Professional entertainment'}
+                  </p>
+                </div>
+              </div>
             </div>
           </div>
         </section>
