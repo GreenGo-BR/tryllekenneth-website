@@ -190,6 +190,123 @@ export default function Gallery() {
           </div>
         </section>
 
+        {/* Video Highlights Section */}
+        <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-background to-secondary/5">
+          <div className="max-w-7xl mx-auto">
+            {/* Section Header */}
+            <div className="mb-12 text-center">
+              <h2 className="text-3xl sm:text-4xl font-bold mb-4 text-foreground">
+                {locale === 'da' ? 'Video Highlights' : 'Video Highlights'}
+              </h2>
+              <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+                {locale === 'da'
+                  ? 'Se TrylleKenneth i aktion - fra live-optrædener til intim nærmagi'
+                  : 'Watch TrylleKenneth in action - from live performances to intimate close-up magic'
+                }
+              </p>
+            </div>
+
+            {/* Video Grid - Responsive 4, 2, 1 columns */}
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+              {/* Video 1 - TrylleKenneth Close-up */}
+              <div className="group relative overflow-hidden rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 bg-background">
+                <div className="relative w-full bg-background overflow-hidden rounded-2xl aspect-video">
+                  <video
+                    src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/TrylleKenneth%20Close-up-ez33buOtJRlVxiQiFHsYjvLENfi1Ew.mp4"
+                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                    muted
+                    loop
+                    playsInline
+                    controls
+                    loading="lazy"
+                  />
+                </div>
+                <div className="p-4 bg-gradient-to-b from-background to-background/80">
+                  <h3 className="text-base font-semibold text-foreground line-clamp-1">
+                    {locale === 'da' ? 'Nærmagi' : 'Close-up Magic'}
+                  </h3>
+                  <p className="text-sm text-muted-foreground line-clamp-1">
+                    {locale === 'da' ? 'Intimt trylleri tæt på publikum' : 'Intimate magic performance'}
+                  </p>
+                </div>
+                <div className="absolute inset-0 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none shadow-[inset_0_0_15px_rgba(139,92,246,0.2)]"></div>
+              </div>
+
+              {/* Video 2 - TrylleKenneth */}
+              <div className="group relative overflow-hidden rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 bg-background">
+                <div className="relative w-full bg-background overflow-hidden rounded-2xl aspect-video">
+                  <video
+                    src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/TrylleKenneth-vTCkNBPzwSUxpVR1eMyoH2T1mdtrwJ.mp4"
+                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                    muted
+                    loop
+                    playsInline
+                    controls
+                    loading="lazy"
+                  />
+                </div>
+                <div className="p-4 bg-gradient-to-b from-background to-background/80">
+                  <h3 className="text-base font-semibold text-foreground line-clamp-1">
+                    {locale === 'da' ? 'Børneshows' : 'Children\'s Shows'}
+                  </h3>
+                  <p className="text-sm text-muted-foreground line-clamp-1">
+                    {locale === 'da' ? 'Farverig og sjov børneunderholdning' : 'Colorful & fun magic for kids'}
+                  </p>
+                </div>
+                <div className="absolute inset-0 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none shadow-[inset_0_0_15px_rgba(139,92,246,0.2)]"></div>
+              </div>
+
+              {/* Video 3 - WhatsApp Video */}
+              <div className="group relative overflow-hidden rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 bg-background">
+                <div className="relative w-full bg-background overflow-hidden rounded-2xl aspect-video">
+                  <video
+                    src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/WhatsApp%20Video%202026-05-21%20at%2010.53.52%20%283%29-uQkO9DdvisgyQbzaDiMipFeGBXzQ19.mp4"
+                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                    muted
+                    loop
+                    playsInline
+                    controls
+                    loading="lazy"
+                  />
+                </div>
+                <div className="p-4 bg-gradient-to-b from-background to-background/80">
+                  <h3 className="text-base font-semibold text-foreground line-clamp-1">
+                    {locale === 'da' ? 'Live Performance' : 'Live Performance'}
+                  </h3>
+                  <p className="text-sm text-muted-foreground line-clamp-1">
+                    {locale === 'da' ? 'Scenetrylleri fra live event' : 'Stage magic from live event'}
+                  </p>
+                </div>
+                <div className="absolute inset-0 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none shadow-[inset_0_0_15px_rgba(139,92,246,0.2)]"></div>
+              </div>
+
+              {/* Video 4 - Videoplayback */}
+              <div className="group relative overflow-hidden rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 bg-background">
+                <div className="relative w-full bg-background overflow-hidden rounded-2xl aspect-video">
+                  <video
+                    src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/videoplayback%20%281%29-Wj53DsHCbTIsdsTyKEsOyjV5a68rmZ.mp4"
+                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                    muted
+                    loop
+                    playsInline
+                    controls
+                    loading="lazy"
+                  />
+                </div>
+                <div className="p-4 bg-gradient-to-b from-background to-background/80">
+                  <h3 className="text-base font-semibold text-foreground line-clamp-1">
+                    {locale === 'da' ? 'Stand-up Trylleri' : 'Stand-up Magic'}
+                  </h3>
+                  <p className="text-sm text-muted-foreground line-clamp-1">
+                    {locale === 'da' ? 'Professionel sceneunderholdning' : 'Professional stage entertainment'}
+                  </p>
+                </div>
+                <div className="absolute inset-0 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none shadow-[inset_0_0_15px_rgba(139,92,246,0.2)]"></div>
+              </div>
+            </div>
+          </div>
+        </section>
+
         {/* CTA Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8 text-center bg-gradient-to-r from-primary/10 via-background to-secondary/10">
           <div className="max-w-2xl mx-auto">
