@@ -190,7 +190,7 @@ export default function Contact() {
                     />
                   </div>
 
-                  <Button type="submit" size="lg" className="w-full bg-gradient-to-r from-primary to-secondary hover:opacity-90 text-white font-semibold magic-button">
+                  <Button type="submit" size="lg" className="btn-primary w-full">
                     {t('contactPage.sendButton')}
                   </Button>
                 </form>
@@ -235,7 +235,7 @@ export default function Contact() {
                       {t('contactPage.needQuickResponseText')}
                     </p>
                     <a href="tel:+4540852728">
-                      <Button className="w-full cta-submit h-12">
+                      <Button className="btn-primary w-full">
                         {t('contactPage.sendButton')}
                       </Button>
                     </a>

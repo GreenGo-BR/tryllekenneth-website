@@ -36,7 +36,7 @@ export default function CloseupMagic() {
               {t('closeUpMagicPage.subtitle')}
             </p>
             <Link href={`/${locale}/contact`}>
-              <Button size="lg" className="bg-gradient-to-r from-indigo-600 to-purple-600 hover:opacity-90 text-white text-base font-semibold h-14 px-8">
+              <Button size="lg" className="btn-primary btn-lg">
                 {t('closeUpMagicPage.bookButton')}
               </Button>
             </Link>
@@ -153,12 +153,12 @@ export default function CloseupMagic() {
             </p>
             <div className="flex flex-col sm:flex-row gap-3 justify-center">
               <Link href={`/${locale}/contact`}>
-                <Button size="lg" className="bg-gradient-to-r from-indigo-600 to-purple-600 hover:opacity-90 text-white font-semibold h-12 px-6 shadow-lg transition">
+                <Button size="lg" className="btn-primary btn-lg">
                   {t('closeUpMagicPage.bookButton')}
                 </Button>
               </Link>
               <a href="tel:+4540852728">
-                <Button size="lg" className="border-2 border-indigo-600 text-indigo-600 hover:bg-indigo-50 font-semibold h-12 px-6 transition">
+                <Button size="lg" className="btn-primary btn-lg">
                   {t('cta.callKenneth')}
                 </Button>
               </a>

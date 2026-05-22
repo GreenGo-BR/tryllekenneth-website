@@ -54,12 +54,12 @@ export default function CorporateEventsPage() {
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4">
                   <Link href={`/${locale}/contact`}>
-                    <Button size="lg" className="bg-gradient-to-r from-blue-600 to-teal-600 hover:from-blue-700 hover:to-teal-700 text-white text-base font-semibold h-14 px-8 shadow-lg hover:shadow-xl transition-all">
+                    <Button size="lg" className="btn-primary btn-lg">
                       {locale === 'da' ? 'Book Underholdning' : 'Book Entertainment'}
                     </Button>
                   </Link>
                   <a href="tel:+4540852728">
-                    <Button size="lg" className="border-2 border-blue-500 text-blue-600 hover:bg-blue-50 text-base font-semibold h-14 px-8 transition-all">
+                    <Button size="lg" className="btn-primary btn-lg">
                       {locale === 'da' ? 'Ring: 40 85 27 28' : 'Call: 40 85 27 28'}
                     </Button>
                   </a>
@@ -198,12 +198,12 @@ export default function CorporateEventsPage() {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link href={`/${locale}/contact`}>
-                <Button size="lg" className="bg-white text-blue-600 hover:bg-blue-50 text-base font-semibold h-14 px-8 shadow-lg hover:shadow-xl transition-all duration-300">
+                <Button size="lg" className="btn-primary btn-lg">
                   {locale === 'da' ? 'Book Underholdning' : 'Book Entertainment'}
                 </Button>
               </Link>
               <a href="tel:+4540852728">
-                <Button size="lg" className="cta-secondary text-base h-14 px-8">
+                <Button size="lg" className="btn-secondary">
                   {locale === 'da' ? 'Ring: 40 85 27 28' : 'Call: 40 85 27 28'}
                 </Button>
               </a>

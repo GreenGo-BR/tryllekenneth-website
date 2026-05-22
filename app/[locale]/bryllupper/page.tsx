@@ -54,12 +54,12 @@ export default function WeddingPage() {
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4">
                   <Link href={`/${locale}/contact`}>
-                    <Button size="lg" className="bg-gradient-to-r from-rose-600 to-pink-600 hover:from-rose-700 hover:to-pink-700 text-white text-base font-semibold h-14 px-8 shadow-lg hover:shadow-xl transition-all">
+                    <Button size="lg" className="btn-primary btn-lg">
                       {locale === 'da' ? 'Book Bryllupstrylleri' : 'Book Wedding Magic'}
                     </Button>
                   </Link>
                   <a href="tel:+4540852728">
-                    <Button size="lg" className="border-2 border-rose-500 text-rose-600 hover:bg-rose-50 text-base font-semibold h-14 px-8 transition-all">
+                    <Button size="lg" className="btn-primary btn-lg">
                       {locale === 'da' ? 'Ring: 40 85 27 28' : 'Call: 40 85 27 28'}
                     </Button>
                   </a>
@@ -198,12 +198,12 @@ export default function WeddingPage() {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link href={`/${locale}/contact`}>
-                <Button size="lg" className="bg-white text-rose-600 hover:bg-rose-50 text-base font-semibold h-14 px-8 shadow-lg hover:shadow-xl transition-all duration-300">
+                <Button size="lg" className="btn-primary btn-lg">
                   {locale === 'da' ? 'Book Bryllupstrylleri' : 'Book Wedding Magic'}
                 </Button>
               </Link>
               <a href="tel:+4540852728">
-                <Button size="lg" className="cta-secondary text-base h-14 px-8">
+                <Button size="lg" className="btn-secondary">
                   {locale === 'da' ? 'Ring: 40 85 27 28' : 'Call: 40 85 27 28'}
                 </Button>
               </a>

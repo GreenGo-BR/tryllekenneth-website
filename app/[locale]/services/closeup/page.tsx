@@ -53,12 +53,12 @@ export default function CloseupMagic() {
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4">
                   <Link href={`/${locale}/contact`}>
-                    <Button size="lg" className="bg-gradient-to-r from-indigo-600 to-purple-600 hover:from-indigo-700 hover:to-purple-700 text-white text-base font-semibold h-14 px-8 shadow-lg hover:shadow-xl transition-all">
+                    <Button size="lg" className="btn-primary btn-lg">
                       {locale === 'da' ? 'Book Nærmagi' : 'Book Close-up Magic'}
                     </Button>
                   </Link>
                   <a href="tel:+4540852728">
-                    <Button size="lg" className="border-2 border-indigo-500 text-indigo-600 hover:bg-indigo-50 text-base font-semibold h-14 px-8 transition-all">
+                    <Button size="lg" className="btn-primary btn-lg">
                       {locale === 'da' ? 'Ring: 40 85 27 28' : 'Call: 40 85 27 28'}
                     </Button>
                   </a>
@@ -191,12 +191,12 @@ export default function CloseupMagic() {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link href={`/${locale}/contact`}>
-                <Button size="lg" className="bg-white text-indigo-600 hover:bg-indigo-50 text-base font-semibold h-14 px-8 shadow-lg hover:shadow-xl transition-all duration-300">
+                <Button size="lg" className="btn-primary btn-lg">
                   {locale === 'da' ? 'Book Nærmagi' : 'Book Close-up Magic'}
                 </Button>
               </Link>
               <a href="tel:+4540852728">
-                <Button size="lg" className="cta-secondary text-base h-14 px-8">
+                <Button size="lg" className="btn-secondary">
                   {locale === 'da' ? 'Ring: 40 85 27 28' : 'Call: 40 85 27 28'}
                 </Button>
               </a>

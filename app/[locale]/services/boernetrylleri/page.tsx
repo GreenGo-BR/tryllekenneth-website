@@ -28,7 +28,7 @@ export default function ChildrensMagic() {
               {t('childrensMagicPage.subtitle')}
             </p>
             <Link href={`/${locale}/contact`}>
-              <Button size="lg" className="bg-gradient-to-r from-primary to-accent hover:opacity-90 text-white text-base font-semibold h-14 px-8">
+              <Button size="lg" className="btn-primary btn-lg">
                 {t('childrensMagicPage.bookButton')}
               </Button>
             </Link>
@@ -110,12 +110,12 @@ export default function ChildrensMagic() {
             <p className="text-lg mb-8 text-white/90">{t('cta.subtitle')}</p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link href={`/${locale}/contact`}>
-                <Button size="lg" className="bg-white text-slate-900 hover:bg-gray-100 font-semibold h-12 px-8 shadow-md border border-gray-200">
+                <Button size="lg" className="btn-secondary">
                   {locale === 'da' ? 'Ring: 40 85 27 28' : 'Call: 40 85 27 28'}
                 </Button>
               </Link>
               <Link href={`tel:${t('footer.phone')}`}>
-                <Button size="lg" className="cta-secondary h-12 px-8">
+                <Button size="lg" className="btn-secondary">
                   {t('cta.callKenneth')}
                 </Button>
               </Link>

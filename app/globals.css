@@ -1466,6 +1466,177 @@ video::-moz-media-controls {
 }
 
 
+/* ===== GLOBAL CTA DESIGN SYSTEM ===== */
+/* Premium Magician Brand - Unified Button System */
+/* Red/Gold/Charcoal Palette - Warm & Readable */
+
+/* PRIMARY CTA - Main booking actions */
+/* "Book a show", "Book Children's Magic", "Book Entertainment", etc. */
+@keyframes btn-primary-glow {
+  0%, 100% {
+    box-shadow: 0 0 20px rgba(220, 38, 38, 0.3), 0 0 40px rgba(251, 191, 36, 0.15);
+  }
+  50% {
+    box-shadow: 0 0 30px rgba(220, 38, 38, 0.5), 0 0 60px rgba(251, 191, 36, 0.25);
+  }
+}
+
+.btn-primary {
+  background: linear-gradient(135deg, #7f1d1d 0%, #dc2626 100%);
+  color: #fff7ed;
+  border: 2px solid rgba(251, 191, 36, 0.45);
+  font-weight: 700;
+  font-size: 1rem;
+  padding: 0.75rem 2rem;
+  border-radius: 0.75rem;
+  transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  animation: btn-primary-glow 2s ease-in-out infinite;
+  display: inline-block;
+  text-align: center;
+  cursor: pointer;
+  box-shadow: 0 8px 32px rgba(220, 38, 38, 0.2), inset 0 1px 0 rgba(255, 255, 255, 0.1);
+}
+
+.btn-primary:hover {
+  transform: translateY(-3px) scale(1.02);
+  background: linear-gradient(135deg, #991b1b 0%, #ef4444 100%);
+  border-color: rgba(251, 191, 36, 0.7);
+  box-shadow: 0 16px 48px rgba(220, 38, 38, 0.4), inset 0 1px 0 rgba(255, 255, 255, 0.15);
+  animation: btn-primary-glow 1.2s ease-in-out infinite;
+}
+
+.btn-primary:active {
+  transform: translateY(-1px) scale(1);
+}
+
+/* SECONDARY CTA - Phone/Call actions */
+/* "Call Kenneth", phone number buttons */
+@keyframes btn-secondary-glow {
+  0%, 100% {
+    box-shadow: 0 0 15px rgba(251, 191, 36, 0.25), 0 0 30px rgba(17, 24, 39, 0.1);
+  }
+  50% {
+    box-shadow: 0 0 25px rgba(251, 191, 36, 0.4), 0 0 50px rgba(17, 24, 39, 0.15);
+  }
+}
+
+.btn-secondary {
+  background: #111827;
+  color: #fff7ed;
+  border: 2px solid rgba(251, 191, 36, 0.5);
+  font-weight: 700;
+  font-size: 1rem;
+  padding: 0.75rem 2rem;
+  border-radius: 0.75rem;
+  transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  animation: btn-secondary-glow 2.5s ease-in-out infinite;
+  display: inline-block;
+  text-align: center;
+  cursor: pointer;
+  box-shadow: 0 8px 32px rgba(17, 24, 39, 0.3), inset 0 1px 0 rgba(255, 255, 255, 0.05);
+}
+
+.btn-secondary:hover {
+  transform: translateY(-3px) scale(1.02);
+  background: #1f2937;
+  border-color: rgba(251, 191, 36, 0.8);
+  color: #fbbf24;
+  box-shadow: 0 16px 48px rgba(251, 191, 36, 0.3), inset 0 1px 0 rgba(255, 255, 255, 0.1);
+  animation: btn-secondary-glow 1.5s ease-in-out infinite;
+}
+
+.btn-secondary:active {
+  transform: translateY(-1px) scale(1);
+}
+
+/* TERTIARY CTA - Light/glass buttons for light backgrounds */
+/* Alternative style for secondary CTA on light backgrounds */
+.btn-secondary-light {
+  background: rgba(255, 255, 255, 0.1);
+  color: #fff7ed;
+  border: 2px solid rgba(255, 255, 255, 0.5);
+  font-weight: 700;
+  font-size: 1rem;
+  padding: 0.75rem 2rem;
+  border-radius: 0.75rem;
+  transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  display: inline-block;
+  text-align: center;
+  cursor: pointer;
+  backdrop-filter: blur(8px);
+  box-shadow: 0 8px 32px rgba(255, 255, 255, 0.1), inset 0 1px 0 rgba(255, 255, 255, 0.2);
+}
+
+.btn-secondary-light:hover {
+  transform: translateY(-3px) scale(1.02);
+  background: rgba(255, 255, 255, 0.2);
+  border-color: rgba(255, 255, 255, 0.8);
+  box-shadow: 0 16px 48px rgba(255, 255, 255, 0.25), inset 0 1px 0 rgba(255, 255, 255, 0.3);
+}
+
+/* TEXT/LINK CTA - Small links and read more */
+/* "Read more", secondary navigation CTAs */
+.btn-link {
+  background: transparent;
+  color: #7f1d1d;
+  border: none;
+  font-weight: 700;
+  font-size: 1rem;
+  padding: 0.5rem 1rem;
+  transition: all 0.3s ease;
+  display: inline-block;
+  cursor: pointer;
+  text-decoration: none;
+  position: relative;
+}
+
+.btn-link::after {
+  content: '';
+  position: absolute;
+  bottom: 0.25rem;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: linear-gradient(90deg, #dc2626, #fbbf24);
+  transition: width 0.3s ease;
+}
+
+.btn-link:hover {
+  color: #991b1b;
+}
+
+.btn-link:hover::after {
+  width: 100%;
+}
+
+/* SIZE VARIANTS */
+.btn-primary.btn-lg,
+.btn-secondary.btn-lg,
+.btn-secondary-light.btn-lg {
+  padding: 1rem 2.5rem;
+  font-size: 1.125rem;
+  font-weight: 700;
+}
+
+.btn-primary.btn-sm,
+.btn-secondary.btn-sm,
+.btn-secondary-light.btn-sm {
+  padding: 0.5rem 1.25rem;
+  font-size: 0.875rem;
+}
+
+/* DISABLED STATE */
+.btn-primary:disabled,
+.btn-secondary:disabled,
+.btn-secondary-light:disabled,
+.btn-link:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+  transform: none;
+  animation: none;
+}
+
+
 @keyframes trust-shimmer {
   0%, 100% {
     color: rgba(255, 255, 255, 0.7);
