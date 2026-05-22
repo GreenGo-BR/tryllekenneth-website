@@ -114,6 +114,7 @@ export default function Home() {
           {/* Cinematic Lighting Layers */}
           <div className="hero-spotlight-left"></div>
           <div className="hero-atmospheric-glow"></div>
+          <div className="hero-atmospheric-depth"></div>
           <div className="hero-cinematic-overlay"></div>
           <div className="hero-bottom-fade"></div>
 
@@ -134,8 +135,8 @@ export default function Home() {
 
           {/* Left Side Content - Text and CTAs (No overlap with image) */}
           <div className="relative z-10 max-w-xl px-4 sm:px-6 lg:px-8 py-12 h-full flex flex-col justify-center">
-            {/* Subtle dark overlay behind text for better readability */}
-            <div className="absolute inset-0 bg-gradient-to-r from-black/35 via-black/20 to-transparent rounded-3xl pointer-events-none"></div>
+            {/* Selective shading behind text for readability - soft dark gradient on left */}
+            <div className="absolute inset-0 bg-gradient-to-r from-black/45 via-black/25 to-transparent rounded-3xl pointer-events-none"></div>
             
             <div className="flex flex-col justify-center relative z-20">
               {/* Badge - Premium Glow */}
