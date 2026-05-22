@@ -1662,24 +1662,26 @@ video::-moz-media-controls {
 
 /* ===== CINEMATIC HERO LIGHTING ===== */
 
-/* Premium Milky White Glow - Left side frosted light effect */
+/* Premium Milky White Glow - Luxurious Scandinavian studio light on left side */
 @keyframes milky-white-glow {
   0%, 100% {
     background: linear-gradient(
-      135deg,
-      rgba(255, 250, 240, 0.18) 0%,
-      rgba(255, 248, 245, 0.12) 25%,
-      rgba(255, 245, 240, 0.06) 50%,
-      rgba(255, 255, 255, 0) 100%
+      to right,
+      rgba(255, 255, 250, 0.35) 0%,
+      rgba(255, 253, 245, 0.28) 15%,
+      rgba(255, 250, 240, 0.18) 35%,
+      rgba(255, 248, 242, 0.08) 60%,
+      rgba(255, 255, 255, 0) 85%
     );
   }
   50% {
     background: linear-gradient(
-      135deg,
-      rgba(255, 250, 240, 0.22) 0%,
-      rgba(255, 248, 245, 0.15) 25%,
-      rgba(255, 245, 240, 0.08) 50%,
-      rgba(255, 255, 255, 0) 100%
+      to right,
+      rgba(255, 255, 250, 0.42) 0%,
+      rgba(255, 253, 245, 0.34) 15%,
+      rgba(255, 250, 240, 0.22) 35%,
+      rgba(255, 248, 242, 0.10) 60%,
+      rgba(255, 255, 255, 0) 85%
     );
   }
 }
@@ -1688,17 +1690,35 @@ video::-moz-media-controls {
   position: absolute;
   inset: 0;
   z-index: 5;
-  animation: milky-white-glow 5s ease-in-out infinite;
+  animation: milky-white-glow 6s ease-in-out infinite;
   pointer-events: none;
 }
 
-/* Elegant Dark Overlay - Light cinematic atmosphere */
-@keyframes cinematic-overlay-glow {
+/* White bloom haze - Subtle light diffusion around lights */
+@keyframes white-bloom-haze {
   0%, 100% {
-    background: radial-gradient(ellipse 800px 600px at 20% 50%, rgba(0, 0, 0, 0.06) 0%, rgba(0, 0, 0, 0.10) 50%, rgba(0, 0, 0, 0.15) 100%);
+    background: radial-gradient(ellipse 1000px 800px at 15% 40%, rgba(255, 255, 255, 0.08) 0%, rgba(255, 255, 255, 0.04) 30%, rgba(255, 255, 255, 0) 70%);
   }
   50% {
-    background: radial-gradient(ellipse 800px 600px at 20% 50%, rgba(0, 0, 0, 0.04) 0%, rgba(0, 0, 0, 0.08) 50%, rgba(0, 0, 0, 0.12) 100%);
+    background: radial-gradient(ellipse 1000px 800px at 15% 40%, rgba(255, 255, 255, 0.12) 0%, rgba(255, 255, 255, 0.06) 30%, rgba(255, 255, 255, 0) 70%);
+  }
+}
+
+.hero-white-bloom-haze {
+  position: absolute;
+  inset: 0;
+  z-index: 5.05;
+  animation: white-bloom-haze 7s ease-in-out infinite;
+  pointer-events: none;
+}
+
+/* Elegant Dark Overlay - Very light cinematic atmosphere */
+@keyframes cinematic-overlay-glow {
+  0%, 100% {
+    background: radial-gradient(ellipse 900px 600px at 25% 50%, rgba(0, 0, 0, 0.02) 0%, rgba(0, 0, 0, 0.05) 50%, rgba(0, 0, 0, 0.08) 100%);
+  }
+  50% {
+    background: radial-gradient(ellipse 900px 600px at 25% 50%, rgba(0, 0, 0, 0.01) 0%, rgba(0, 0, 0, 0.03) 50%, rgba(0, 0, 0, 0.06) 100%);
   }
 }
 
@@ -1707,7 +1727,7 @@ video::-moz-media-controls {
   inset: 0;
   z-index: 5.2;
   animation: cinematic-overlay-glow 4s ease-in-out infinite;
-  backdrop-filter: blur(0.3px);
+  backdrop-filter: blur(0.2px);
 }
 
 /* Soft spotlight effect - Left side warm studio lighting */
@@ -1758,19 +1778,19 @@ video::-moz-media-controls {
   pointer-events: none;
 }
 
-/* Bottom gradient fade - Scenic depth with subtle separation */
+/* Bottom gradient fade - Minimal scenic depth, preserve brightness */
 .hero-bottom-fade {
   position: absolute;
   bottom: 0;
   left: 0;
   right: 0;
-  height: 280px;
+  height: 200px;
   background: linear-gradient(
     to bottom, 
     rgba(0, 0, 0, 0) 0%, 
-    rgba(0, 0, 0, 0.08) 30%,
-    rgba(0, 0, 0, 0.15) 60%,
-    rgba(0, 0, 0, 0.25) 100%
+    rgba(0, 0, 0, 0.03) 30%,
+    rgba(0, 0, 0, 0.08) 60%,
+    rgba(0, 0, 0, 0.15) 100%
   );
   z-index: 6;
   pointer-events: none;
@@ -1804,23 +1824,23 @@ video::-moz-media-controls {
   pointer-events: none;
 }
 
-/* Vignette effect for Kenneth's image - Subtle elegant edge definition only */
+/* Vignette effect for Kenneth's image - Minimal edge definition, preserve brightness */
 @keyframes vignette-pulse {
   0%, 100% {
     box-shadow: 
-      inset 0 0 100px rgba(0, 0, 0, 0.04),
-      inset 0 0 50px rgba(0, 0, 0, 0.02);
+      inset 0 0 80px rgba(0, 0, 0, 0.02),
+      inset 0 0 40px rgba(0, 0, 0, 0.01);
   }
   50% {
     box-shadow: 
-      inset 0 0 100px rgba(0, 0, 0, 0.03),
-      inset 0 0 50px rgba(0, 0, 0, 0.01);
+      inset 0 0 80px rgba(0, 0, 0, 0.01),
+      inset 0 0 40px rgba(0, 0, 0, 0.005);
   }
 }
 
 .kenneth-vignette {
   animation: vignette-pulse 4s ease-in-out infinite;
-  filter: brightness(1.12) contrast(1.05);
+  filter: brightness(1.22) contrast(1.08);
 }
 
 /* Soft edge glow for Kenneth - Premium cinema look */
@@ -1833,10 +1853,10 @@ video::-moz-media-controls {
   }
 }
 
-/* Kenneth Premium Image Enhancement - Brightened for better visibility */
+/* Kenneth Premium Image Enhancement - Bright, clean and premium */
 img[src*="kenneth"],
 img[src*="Kenneth"] {
-  filter: contrast(1.12) brightness(1.35) saturate(1.12);
+  filter: brightness(1.50) contrast(1.15) saturate(0.95) hue-rotate(-5deg);
   transition: filter 0.4s ease;
 }
 
