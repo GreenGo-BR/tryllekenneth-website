@@ -235,8 +235,8 @@ export default function Contact() {
                       {t('contactPage.needQuickResponseText')}
                     </p>
                     <a href="tel:+4540852728">
-                      <Button className="w-full bg-primary hover:bg-primary/90 text-white font-semibold">
-                        {locale === 'da' ? 'Ring: 40 85 27 28' : 'Call: 40 85 27 28'}
+                      <Button className="w-full cta-submit h-12">
+                        {t('contactPage.sendButton')}
                       </Button>
                     </a>
                   </Card>

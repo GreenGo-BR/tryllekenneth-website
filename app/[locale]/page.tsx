@@ -476,8 +476,7 @@ export default function Home() {
               <a href="tel:+4540852728">
                 <Button
                   size="lg"
-                  variant="outline"
-                  className="magic-button text-base font-semibold h-14 px-8 border-2 border-secondary text-secondary-foreground hover:bg-secondary hover:text-secondary-foreground stagger-item"
+                  className="magic-button text-base h-14 px-8 stagger-item"
                 >
                   {t('cta.callKenneth')}
                 </Button>
