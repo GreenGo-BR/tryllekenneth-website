@@ -115,6 +115,8 @@ export default function Home() {
           <div className="hero-spotlight-left"></div>
           <div className="hero-atmospheric-glow"></div>
           <div className="hero-atmospheric-depth"></div>
+          <div className="hero-milky-white-glow"></div>
+          <div className="hero-white-bloom-haze"></div>
           <div className="hero-cinematic-overlay"></div>
           <div className="hero-bottom-fade"></div>
 
@@ -135,8 +137,8 @@ export default function Home() {
 
           {/* Left Side Content - Text and CTAs (No overlap with image) */}
           <div className="relative z-10 max-w-xl px-4 sm:px-6 lg:px-8 py-12 h-full flex flex-col justify-center">
-            {/* Selective shading behind text for readability - soft dark gradient on left */}
-            <div className="absolute inset-0 bg-gradient-to-r from-black/45 via-black/25 to-transparent rounded-3xl pointer-events-none"></div>
+            {/* Minimal background behind text - allows bright left side to dominate */}
+            <div className="absolute inset-0 bg-gradient-to-r from-black/20 via-transparent to-transparent rounded-3xl pointer-events-none"></div>
             
             <div className="flex flex-col justify-center relative z-20">
               {/* Badge - Premium Glow */}
@@ -149,15 +151,15 @@ export default function Home() {
                 </span>
               </div>
 
-              {/* Main Title - Elegant and readable typography */}
+              {/* Main Title - Dark navy luxury typography */}
               <div className="mb-6">
-                <h1 className="text-3xl sm:text-4xl lg:text-5xl font-black leading-snug text-balance text-amber-50 drop-shadow-lg max-w-md sm:max-w-2xl">
+                <h1 className="text-3xl sm:text-4xl lg:text-5xl font-black leading-snug text-balance text-slate-950 drop-shadow-lg max-w-md sm:max-w-2xl">
                   {t('hero.title')}
                 </h1>
               </div>
 
-              {/* Subtitle - Enhanced readability with better contrast */}
-              <p className="hero-subtitle-premium text-base sm:text-lg text-white mb-8 text-pretty leading-relaxed max-w-2xl font-normal drop-shadow-md">
+              {/* Subtitle - Dark navy with enhanced readability */}
+              <p className="hero-subtitle-premium text-base sm:text-lg text-slate-900 mb-8 text-pretty leading-relaxed max-w-2xl font-normal drop-shadow-md">
                 {t('hero.subtitle')}
               </p>
 
@@ -175,9 +177,9 @@ export default function Home() {
                 </a>
               </div>
 
-              {/* Trust Indicators - Enhanced legibility */}
+              {/* Trust Indicators - Dark navy for luxury feel */}
               <div className="trust-indicator-premium pt-6 border-t border-amber-500/30">
-                <p className="text-sm sm:text-base text-white font-semibold">
+                <p className="text-sm sm:text-base text-slate-950 font-semibold">
                   {t('trust.message')}
                 </p>
               </div>
