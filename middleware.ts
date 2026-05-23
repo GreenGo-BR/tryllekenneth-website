@@ -26,8 +26,13 @@ export function middleware(request: NextRequest) {
       return NextResponse.redirect(new URL(`/${languagePreference}`, request.url));
     }
     
-    // Get country from Vercel geo headers
-    const country = request.geo?.country || 'US';
+    // Get country from Vercel geo headers - try multiple sources
+    let country = request.geo?.country;
+    
+    // Fallback to x-vercel-ip-country header if geo is not available (dev mode)
+    if (!country) {
+      country = request.headers.get('x-vercel-ip-country') || 'US';
+    }
     
     // If visitor is from Denmark, redirect to /da
     if (country === 'DK') {
