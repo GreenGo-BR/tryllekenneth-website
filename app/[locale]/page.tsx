@@ -153,7 +153,7 @@ export default function Home() {
 
               {/* Main Title - Dark navy luxury typography */}
               <div className="mb-6">
-                <h1 className="text-3xl sm:text-4xl lg:text-5xl font-black leading-snug text-balance text-slate-950 drop-shadow-lg max-w-md sm:max-w-2xl">
+                <h1 className="text-3xl sm:text-4xl lg:text-5xl font-black leading-snug text-balance text-slate-950 drop-shadow-lg max-w-md sm:max-w-2xl magical-heading magical-text">
                   {t('hero.title')}
                 </h1>
               </div>
@@ -198,7 +198,7 @@ export default function Home() {
         <section className="py-10 px-4 sm:px-6 lg:px-8 max-w-6xl mx-auto">
           {/* Section Header - Refined typography */}
           <div className="text-center mb-8 relative z-10">
-            <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold mb-3 text-foreground">
+            <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold mb-3 text-foreground magical-heading magical-text">
               {t('video.title')}
             </h2>
             <p className="text-sm sm:text-base text-muted-foreground max-w-2xl mx-auto font-normal">
@@ -250,7 +250,7 @@ export default function Home() {
           <div className="max-w-5xl mx-auto">
             {/* Section Header */}
             <div className="mb-9">
-              <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold mb-3 text-foreground">
+              <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold mb-3 text-foreground magical-heading magical-text">
                 {locale === 'da' ? 'Magisk Underholdning til Arrangementer' : 'Performances & Entertainment'}
               </h2>
               <p className="text-sm sm:text-base text-muted-foreground max-w-2xl font-normal">
@@ -462,7 +462,7 @@ export default function Home() {
         {/* CTA Section with Premium Signature */}
         <section className="py-16 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-primary/10 via-accent/10 to-secondary/10 section-magic-entrance premium-signature-accent">
           <div className="max-w-4xl mx-auto text-center">
-            <h2 className="text-3xl sm:text-4xl font-bold mb-4 text-foreground stagger-item">
+            <h2 className="text-3xl sm:text-4xl font-bold mb-4 text-foreground stagger-item magical-heading magical-text">
               {t('cta.title')}
             </h2>
             <p className="text-base sm:text-lg text-muted-foreground mb-8 stagger-item font-normal">

@@ -37,7 +37,7 @@ export default function CorporateEventsPage() {
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center">
               {/* Left: Text Content */}
               <div>
-                <h1 className="text-5xl sm:text-6xl font-bold mb-6 text-foreground">
+                <h1 className="text-5xl sm:text-6xl font-bold magical-heading magical-text mb-6 text-foreground">
                   {locale === 'da' ? 'Firmaarrangementer' : 'Corporate Events'}
                 </h1>
                 <p className="text-xl text-slate-700 mb-4 leading-relaxed font-semibold">
@@ -125,7 +125,7 @@ export default function CorporateEventsPage() {
         <section className="py-20 px-4 sm:px-6 lg:px-8 max-w-4xl mx-auto">
           <div className="grid md:grid-cols-2 gap-12">
             <div>
-              <h2 className="text-3xl font-bold mb-6 text-foreground">
+              <h2 className="text-3xl font-bold mb-6 text-foreground magical-heading magical-text">
                 {locale === 'da' ? 'Professionel Underholdning' : 'Professional Entertainment'}
               </h2>
               <p className="text-slate-700 mb-4 leading-relaxed font-medium">

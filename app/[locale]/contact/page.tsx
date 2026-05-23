@@ -43,7 +43,7 @@ export default function Contact() {
         {/* Hero Section */}
         <section className="relative py-14 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-accent/10 via-primary/10 to-secondary/10">
           <div className="max-w-4xl mx-auto text-center">
-            <h1 className="text-5xl sm:text-6xl font-bold mb-4 text-foreground">
+            <h1 className="text-5xl sm:text-6xl font-bold magical-heading magical-text mb-4 text-foreground">
               {t('contactPage.title')}
             </h1>
             <p className="text-xl text-muted-foreground">
