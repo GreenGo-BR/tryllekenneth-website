@@ -87,13 +87,13 @@ export default function Contact() {
             </Card>
           </div>
           
-          {/* Subtle Trust Section */}
-          <div className="mt-12 pt-12 border-t border-border">
-            <div className="max-w-2xl mx-auto text-center">
-              <p className="text-sm text-muted-foreground mb-4">
-                {t('reviews.trustHeading') || 'Trusted by Hundreds of Happy Clients'}
+          {/* Subtle Trust Strip */}
+          <div className="border-t border-slate-200/50 mt-12 pt-6">
+            <div className="text-center">
+              <p className="text-xs uppercase tracking-widest text-slate-500 mb-3">
+                {t('reviews.verified') || 'Verified'}
               </p>
-              <ReviewHighlight variant="inline" className="justify-center" />
+              <ReviewHighlight className="justify-center" />
             </div>
           </div>
         </section>

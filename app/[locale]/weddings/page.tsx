@@ -392,17 +392,18 @@ export default function WeddingPage() {
           </Accordion>
         </section>
 
-        {/* Subtle Reviews Trust Section */}
-        <section className="py-8 px-4 sm:px-6 lg:px-8 max-w-2xl mx-auto">
-          <div className="text-center">
-            <p className="text-sm text-slate-600 mb-3">
-              {locale === 'da' 
-                ? 'Betroet af bryllupsgæster hele Danmark over'
-                : 'Trusted by wedding guests across Denmark'}
-            </p>
-            <ReviewHighlight variant="inline" className="justify-center" />
-          </div>
-        </section>
+        {/* Subtle Trust Strip */}
+        <div className="border-t border-b border-slate-200/50 bg-slate-50/30 backdrop-blur-sm">
+          <section className="py-3 px-4 sm:px-6 lg:px-8 max-w-4xl mx-auto">
+            <div className="flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-6">
+              <p className="text-xs uppercase tracking-widest text-slate-500">
+                {t('reviews.verified') || 'Verified'}
+              </p>
+              <div className="hidden sm:block w-px h-6 bg-slate-200/50"></div>
+              <ReviewHighlight />
+            </div>
+          </section>
+        </div>
 
         {/* Final CTA */}
         <section className="py-12 px-4 sm:px-6 lg:px-8 text-center max-w-3xl mx-auto">
