@@ -6,6 +6,7 @@ import dynamic from 'next/dynamic';
 import { Header } from '@/components/Header';
 import { ProductionVideo } from '@/components/ProductionVideo';
 import { VideoSchema } from '@/components/video-schema';
+import { EventzonenTrustBadge } from '@/components/EventzonenTrustBadge';
 import { Button } from '@/components/ui/button';
 import { Card } from '@/components/ui/card';
 import { Sparkles, Star, Wand2, Music, CheckCircle, Zap, Heart, Smile } from 'lucide-react';
@@ -179,9 +180,10 @@ export default function Home() {
 
               {/* Trust Indicators - Dark navy for luxury feel */}
               <div className="trust-indicator-premium pt-6 border-t border-amber-500/30">
-                <p className="text-sm sm:text-base text-slate-950 font-semibold">
+                <p className="text-sm sm:text-base text-slate-950 font-semibold mb-3">
                   {t('trust.message')}
                 </p>
+                <EventzonenTrustBadge variant="minimal" />
               </div>
             </div>
           </div>

@@ -4,6 +4,7 @@ import { useTranslations, useLocale } from 'next-intl';
 import Link from 'next/link';
 import Image from 'next/image';
 import { Mail, Phone, MapPin } from 'lucide-react';
+import { EventzonenTrustBadge } from './EventzonenTrustBadge';
 
 export function Footer() {
   const t = useTranslations('footer');
@@ -45,6 +46,11 @@ export function Footer() {
                 ? 'Professionel magisk underholdning til uforglemmelige begivenheder på tværs af Danmark.'
                 : 'Professional magical entertainment for unforgettable events across Denmark.'}
             </p>
+            
+            {/* Eventzonen Trust Badge - Premium placement */}
+            <div className="pt-2">
+              <EventzonenTrustBadge variant="minimal" />
+            </div>
             {/* Social hints (optional - minimal placement) */}
             <div className="flex gap-4 pt-2">
               <a href="tel:+4540852728" className="text-slate-400 hover:text-amber-500 transition-colors duration-300" title="Call">

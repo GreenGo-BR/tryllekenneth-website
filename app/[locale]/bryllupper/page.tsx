@@ -6,6 +6,7 @@ import { Footer } from '@/components/Footer';
 import { Button } from '@/components/ui/button';
 import { Card } from '@/components/ui/card';
 import { VideoSchema } from '@/components/video-schema';
+import { EventzonenTrustBadge } from '@/components/EventzonenTrustBadge';
 import { Heart, Sparkles, Users } from 'lucide-react';
 import Link from 'next/link';
 
@@ -207,6 +208,11 @@ export default function WeddingPage() {
                   {locale === 'da' ? 'Ring: 40 85 27 28' : 'Call: 40 85 27 28'}
                 </Button>
               </a>
+            </div>
+            
+            {/* Eventzonen Trust Badge */}
+            <div className="mt-6 flex justify-center">
+              <EventzonenTrustBadge variant="compact" />
             </div>
           </div>
         </section>
