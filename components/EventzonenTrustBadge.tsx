@@ -33,9 +33,9 @@ export function EventzonenTrustBadge({
 
   return (
     <a
-      href="https://www.eventzonen.dk/kenneth-tryllekenneth"
+      href="https://eventzonen.dk/tryllekenneth"
       target="_blank"
-      rel="nofollow sponsored external"
+      rel="nofollow external noopener noreferrer"
       className={`inline-flex items-center gap-2 px-3 py-1.5 rounded-md bg-slate-100 hover:bg-slate-200 transition-colors duration-300 group ${className}`}
       title={locale === 'da' ? 'Besøg profilen på Eventzonen' : 'Visit profile on Eventzonen'}
       aria-label={locale === 'da' ? `${text} - åbnes i nyt vindue` : `${text} - opens in new window`}
