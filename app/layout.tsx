@@ -22,7 +22,7 @@ export const viewport: Viewport = {
 
 export const metadata: Metadata = {
   title: 'TrylleKenneth - Professional Magician in Copenhagen | Magical Entertainment for Events',
-  description: 'Magician in Copenhagen offering magical entertainment for corporate events, children\'s birthday parties and events throughout Denmark. Over 15 years of professional entertainment experience.',
+  description: 'Magician in Copenhagen offering premium magical entertainment for corporate events, children\'s birthday parties and celebrations in Denmark and worldwide. Over 15 years of professional entertainment experience.',
   generator: 'v0.app',
   applicationName: 'TrylleKenneth',
   referrer: 'strict-origin-when-cross-origin',

@@ -94,7 +94,7 @@ export default function TermsAndConditions() {
                   <p className="text-slate-700 leading-relaxed mb-4">
                     For spørgsmål vedrørende disse vilkår og betingelser, kontakt venligst:<br />
                     Email: kenneth@tryllekenneth.dk<br />
-                    Telefon: 40 85 27 28
+                    Telefon: +45 40 85 27 28
                   </p>
                 </section>
 
@@ -182,7 +182,7 @@ export default function TermsAndConditions() {
                   <p className="text-slate-700 leading-relaxed mb-4">
                     For questions regarding these terms and conditions, please contact:<br />
                     Email: kenneth@tryllekenneth.dk<br />
-                    Phone: 40 85 27 28
+                    Phone: +45 40 85 27 28
                   </p>
                 </section>
 

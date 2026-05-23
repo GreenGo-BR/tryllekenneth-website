@@ -1881,13 +1881,13 @@ video::-moz-media-controls {
 
 /* Vignette effect - STATIC, no animation */
 .kenneth-vignette {
-  filter: brightness(1.25) contrast(1.10);
+  filter: brightness(1.05) contrast(1.18);
 }
 
-/* Kenneth Premium Image Enhancement - Bright, clean luxury look */
+/* Kenneth Premium Image Enhancement - Cinematic with natural warm skin tones */
 img[src*="kenneth"],
 img[src*="Kenneth"] {
-  filter: brightness(1.50) contrast(1.15) saturate(0.85) hue-rotate(-8deg);
+  filter: brightness(1.04) contrast(1.22) saturate(0.92) hue-rotate(-5deg);
   transition: filter 0.4s ease;
 }
 

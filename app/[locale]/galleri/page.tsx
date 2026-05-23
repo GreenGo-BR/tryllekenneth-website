@@ -210,7 +210,7 @@ export default function Gallery() {
               </Link>
               <a href="tel:+4540852728">
                 <button className="px-8 py-3 border-2 border-secondary text-secondary-foreground font-semibold rounded-xl hover:bg-secondary/10 transition-all">
-                  {locale === 'da' ? 'Ring: 40 85 27 28' : 'Call: 40 85 27 28'}
+                  {locale === 'da' ? 'Ring: +45 40 85 27 28' : 'Call: +45 40 85 27 28'}
                 </button>
               </a>
             </div>

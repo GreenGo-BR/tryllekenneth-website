@@ -54,7 +54,7 @@ export default function SantaMagic() {
                   </Link>
                   <a href="tel:+4540852728">
                     <Button size="lg" className="btn-secondary w-[276px] h-[52px] sm:w-full sm:max-w-[320px] flex items-center justify-center text-base font-semibold rounded-lg">
-                      {locale === 'da' ? 'Ring: 40 85 27 28' : 'Call: 40 85 27 28'}
+                      {locale === 'da' ? 'Ring: +45 40 85 27 28' : 'Call: +45 40 85 27 28'}
                     </Button>
                   </a>
                 </div>
@@ -272,7 +272,7 @@ export default function SantaMagic() {
               </Link>
               <a href="tel:+4540852728">
                 <Button size="lg" className="btn-secondary w-[276px] h-[52px] sm:w-full sm:max-w-[320px] flex items-center justify-center text-base font-semibold rounded-lg">
-                  {locale === 'da' ? 'Ring: 40 85 27 28' : 'Call: 40 85 27 28'}
+                  {locale === 'da' ? 'Ring: +45 40 85 27 28' : 'Call: +45 40 85 27 28'}
                 </Button>
               </a>
             </div>
