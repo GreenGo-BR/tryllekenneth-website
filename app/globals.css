@@ -1260,25 +1260,41 @@ video::-moz-media-controls {
   }
 }
 
-/* ===== PREMIUM MAGICAL TEXT EFFECTS (SCANDINAVIAN MINIMAL - REFINED) ===== */
+/* ===== PREMIUM MAGICAL TEXT EFFECTS (SCANDINAVIAN MINIMAL - ENHANCED) ===== */
 
-/* Ultra subtle text-shadow breath - the core magical effect */
+/* Enhanced text-shadow breath - visible gold shimmer with soft glow */
 @keyframes text-breath-luxury {
   0%, 100% {
-    text-shadow: 0 0 1px rgba(217, 119, 6, 0.12), 0 0 2px rgba(251, 191, 36, 0.05);
+    text-shadow: 
+      0 0 3px rgba(217, 119, 6, 0.25),
+      0 0 8px rgba(251, 191, 36, 0.15),
+      0 0 12px rgba(217, 119, 6, 0.1);
   }
   50% {
-    text-shadow: 0 0 3px rgba(217, 119, 6, 0.18), 0 0 6px rgba(251, 191, 36, 0.1);
+    text-shadow: 
+      0 0 8px rgba(217, 119, 6, 0.4),
+      0 0 16px rgba(251, 191, 36, 0.3),
+      0 0 20px rgba(217, 119, 6, 0.2);
   }
 }
 
-/* Tiny sweeping light inside text only - felt not seen */
+/* Enhanced light sweep with visible shimmer across text */
 @keyframes text-light-sweep {
   0%, 100% {
     filter: brightness(1) drop-shadow(0 0 0px rgba(251, 191, 36, 0));
   }
   50% {
-    filter: brightness(1.02) drop-shadow(0 0 1px rgba(251, 191, 36, 0.08));
+    filter: brightness(1.04) drop-shadow(0 0 3px rgba(251, 191, 36, 0.25));
+  }
+}
+
+/* Enhanced shimmer sweep for extra magical feel */
+@keyframes text-shimmer-sweep {
+  0% {
+    background-position: -1000px 0;
+  }
+  100% {
+    background-position: 1000px 0;
   }
 }
 
@@ -1288,70 +1304,78 @@ video::-moz-media-controls {
     opacity: 0;
   }
   50% {
-    opacity: 0.3;
+    opacity: 0.5;
   }
 }
 
-/* Main magical heading - NO BACKGROUND, text effect only */
+/* Main magical heading - NO BACKGROUND, enhanced text effect */
 .magical-heading {
   position: relative;
-  animation: text-breath-luxury 7s ease-in-out infinite;
+  animation: text-breath-luxury 6s ease-in-out infinite;
 }
 
-/* Text-specific magical effect - breathing glow inside typography */
+/* Text-specific magical effect - enhanced breathing glow inside typography */
 .magical-text {
   position: relative;
   animation: text-breath-luxury 6.5s ease-in-out infinite;
   letter-spacing: inherit;
 }
 
-/* Optional light sweep for some headings - very subtle brightness change */
+/* Optional light sweep for some headings - visible brightness and shimmer change */
 .magical-light-sweep {
-  animation: text-light-sweep 8s ease-in-out infinite;
+  animation: text-light-sweep 7s ease-in-out infinite;
 }
 
-/* Hero-specific micro particles - minimal and rare */
+/* Hero-specific micro particles - visible sparkle effect */
 .magical-particles::before {
   content: '';
   position: absolute;
-  width: 2%;
-  height: 2%;
-  background: radial-gradient(circle, rgba(251, 191, 36, 0.4) 0%, transparent 70%);
+  width: 3%;
+  height: 3%;
+  background: radial-gradient(circle, rgba(251, 191, 36, 0.6) 0%, transparent 70%);
   animation: hero-micro-particle 6s ease-in-out infinite;
   pointer-events: none;
   z-index: -1;
   top: 10%;
   right: 15%;
-  filter: blur(1px);
+  filter: blur(1.5px);
 }
 
-/* Soft champagne glow - ultra minimal */
+/* Soft champagne glow - more visible */
 .magical-glow {
   position: relative;
-  text-shadow: 0 0 1px rgba(217, 119, 6, 0.08);
+  text-shadow: 0 0 4px rgba(217, 119, 6, 0.2);
 }
 
-/* Legacy hero animations - kept for smooth transition */
+/* Legacy hero animations - enhanced for visibility */
 @keyframes hero-title-glow {
   0%, 100% {
-    text-shadow: 0 0 2px rgba(217, 119, 6, 0.15), 0 0 4px rgba(251, 191, 36, 0.08);
+    text-shadow: 
+      0 0 4px rgba(217, 119, 6, 0.25),
+      0 0 8px rgba(251, 191, 36, 0.15);
   }
   50% {
-    text-shadow: 0 0 6px rgba(217, 119, 6, 0.25), 0 0 12px rgba(251, 191, 36, 0.15);
+    text-shadow: 
+      0 0 12px rgba(217, 119, 6, 0.4),
+      0 0 20px rgba(251, 191, 36, 0.25);
   }
 }
 
 .hero-title-premium {
-  animation: text-breath-luxury 7s ease-in-out infinite;
+  animation: text-breath-luxury 6s ease-in-out infinite;
 }
 
-/* Subtle subtitle glow */
+/* Visible subtitle glow */
 @keyframes subtitle-soft-glow {
   0%, 100% {
-    text-shadow: 0 0 1px rgba(217, 119, 6, 0.08), 0 0 2px rgba(251, 191, 36, 0.04);
+    text-shadow: 
+      0 0 2px rgba(217, 119, 6, 0.15),
+      0 0 4px rgba(251, 191, 36, 0.1);
   }
   50% {
-    text-shadow: 0 0 2px rgba(217, 119, 6, 0.12), 0 0 4px rgba(251, 191, 36, 0.08);
+    text-shadow: 
+      0 0 6px rgba(217, 119, 6, 0.25),
+      0 0 10px rgba(251, 191, 36, 0.18);
   }
 }
 
@@ -1359,13 +1383,13 @@ video::-moz-media-controls {
   animation: subtitle-soft-glow 6.5s ease-in-out infinite;
 }
 
-/* CTA Button - subtle glow only */
+/* CTA Button - enhanced visible glow */
 @keyframes cta-button-hero-glow {
   0%, 100% {
-    box-shadow: 0 0 4px rgba(217, 119, 6, 0.1), 0 0 8px rgba(251, 191, 36, 0.05), inset 0 0 5px rgba(255, 255, 255, 0.03);
+    box-shadow: 0 0 8px rgba(217, 119, 6, 0.2), 0 0 16px rgba(251, 191, 36, 0.12), inset 0 0 8px rgba(255, 255, 255, 0.08);
   }
   50% {
-    box-shadow: 0 0 6px rgba(217, 119, 6, 0.15), 0 0 12px rgba(251, 191, 36, 0.1), inset 0 0 8px rgba(255, 255, 255, 0.05);
+    box-shadow: 0 0 12px rgba(217, 119, 6, 0.3), 0 0 24px rgba(251, 191, 36, 0.2), inset 0 0 12px rgba(255, 255, 255, 0.12);
   }
 }
 
