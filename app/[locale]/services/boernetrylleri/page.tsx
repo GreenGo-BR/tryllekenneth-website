@@ -18,7 +18,7 @@ export default function ChildrensMagic() {
       <Header />
       <main className="min-h-screen">
         {/* Hero Section */}
-        <section className="relative py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-primary/10 via-accent/10 to-secondary/10 overflow-hidden">
+        <section className="relative py-20 px-4 sm:px-6 lg:px-8 overflow-hidden">
           <MagicalBackground />
           <div className="max-w-4xl mx-auto relative z-10">
             <h1 className="text-5xl sm:text-6xl font-bold magical-heading magical-text mb-4 text-foreground">

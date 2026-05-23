@@ -122,7 +122,7 @@ export default function Gallery() {
       <Header />
       <main className="min-h-screen">
         {/* Hero Section */}
-        <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-primary/10 via-background to-secondary/10">
+        <section className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto">
             <h1 className="text-4xl sm:text-5xl font-bold mb-4 text-foreground">
               {locale === 'da' ? 'Galleri' : 'Gallery'}
@@ -191,7 +191,7 @@ export default function Gallery() {
         </section>
 
         {/* CTA Section */}
-        <section className="py-20 px-4 sm:px-6 lg:px-8 text-center bg-gradient-to-r from-primary/10 via-background to-secondary/10">
+        <section className="py-20 px-4 sm:px-6 lg:px-8 text-center">
           <div className="max-w-2xl mx-auto">
             <h2 className="text-3xl font-bold mb-4">
               {locale === 'da' ? 'Klar til magi?' : 'Ready for Magic?'}

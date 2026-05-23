@@ -81,7 +81,7 @@ export default function FAQ() {
         />
         
         {/* Hero Section */}
-        <section className="relative py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-primary/10 via-secondary/10 to-accent/10">
+        <section className="relative py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto text-center">
             <h1 className="text-5xl sm:text-6xl font-bold mb-4 text-foreground">
               {t('faqPage.title')}
