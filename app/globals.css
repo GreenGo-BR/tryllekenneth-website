@@ -1260,148 +1260,78 @@ video::-moz-media-controls {
   }
 }
 
-/* ===== PREMIUM MAGICAL TEXT EFFECTS (SCANDINAVIAN MINIMAL) ===== */
+/* ===== PREMIUM MAGICAL TEXT EFFECTS (SCANDINAVIAN MINIMAL - REFINED) ===== */
 
-/* Magical shimmer effect - subtle light sweep across text */
-@keyframes magical-shimmer {
+/* Ultra subtle text-shadow breath - the core magical effect */
+@keyframes text-breath-luxury {
   0%, 100% {
-    background-position: 200% center;
+    text-shadow: 0 0 1px rgba(217, 119, 6, 0.12), 0 0 2px rgba(251, 191, 36, 0.05);
   }
   50% {
-    background-position: -200% center;
+    text-shadow: 0 0 3px rgba(217, 119, 6, 0.18), 0 0 6px rgba(251, 191, 36, 0.1);
   }
 }
 
-/* Subtle breathing glow - very soft champagne/gold highlight */
-@keyframes magical-breath {
+/* Tiny sweeping light inside text only - felt not seen */
+@keyframes text-light-sweep {
   0%, 100% {
-    text-shadow: 0 0 2px rgba(217, 119, 6, 0.15), 0 0 4px rgba(251, 191, 36, 0.08);
+    filter: brightness(1) drop-shadow(0 0 0px rgba(251, 191, 36, 0));
   }
   50% {
-    text-shadow: 0 0 6px rgba(217, 119, 6, 0.25), 0 0 12px rgba(251, 191, 36, 0.15);
+    filter: brightness(1.02) drop-shadow(0 0 1px rgba(251, 191, 36, 0.08));
   }
 }
 
-/* Tiny particle shimmer - rare subtle sparkle effect */
-@keyframes particle-shimmer {
+/* Ultra micro particle effect - rare and minimal (hero sections only) */
+@keyframes hero-micro-particle {
   0%, 100% {
     opacity: 0;
   }
   50% {
-    opacity: 0.6;
+    opacity: 0.3;
   }
 }
 
-/* Main magical heading effect - combines shimmer and breath for premium feel */
+/* Main magical heading - NO BACKGROUND, text effect only */
 .magical-heading {
   position: relative;
-  background: linear-gradient(
-    90deg,
-    transparent 0%,
-    rgba(217, 119, 6, 0.05) 25%,
-    rgba(251, 191, 36, 0.08) 50%,
-    rgba(217, 119, 6, 0.05) 75%,
-    transparent 100%
-  );
-  background-size: 200% 100%;
-  animation: magical-shimmer 6s ease-in-out infinite;
+  animation: text-breath-luxury 7s ease-in-out infinite;
 }
 
-.magical-heading::before {
-  content: '';
-  position: absolute;
-  inset: -2px;
-  opacity: 0;
-  animation: magical-breath 5s ease-in-out infinite;
-  pointer-events: none;
-}
-
-.magical-heading::after {
-  content: '';
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(
-    90deg,
-    transparent 0%,
-    rgba(251, 191, 36, 0.1) 50%,
-    transparent 100%
-  );
-  animation: magical-shimmer 7s ease-in-out infinite 0.5s;
-  pointer-events: none;
-  mix-blend-mode: screen;
-}
-
-/* Magical text specifically - direct text effect for maximum readability */
+/* Text-specific magical effect - breathing glow inside typography */
 .magical-text {
   position: relative;
-  animation: magical-breath 5.5s ease-in-out infinite;
+  animation: text-breath-luxury 6.5s ease-in-out infinite;
+  letter-spacing: inherit;
 }
 
-/* Light sweep effect - very subtle horizontal light movement */
+/* Optional light sweep for some headings - very subtle brightness change */
 .magical-light-sweep {
-  position: relative;
-  overflow: hidden;
+  animation: text-light-sweep 8s ease-in-out infinite;
 }
 
-.magical-light-sweep::before {
-  content: '';
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(
-    90deg,
-    transparent 0%,
-    rgba(255, 255, 255, 0.08) 25%,
-    rgba(251, 191, 36, 0.06) 50%,
-    rgba(255, 255, 255, 0.08) 75%,
-    transparent 100%
-  );
-  animation: magical-shimmer 6.5s ease-in-out infinite;
-  pointer-events: none;
-}
-
-/* Champagne glow - subtle warm highlight around headings */
-.magical-glow {
-  position: relative;
-  text-shadow: 0 0 2px rgba(217, 119, 6, 0.15);
-}
-
-.magical-glow::after {
-  content: '';
-  position: absolute;
-  inset: -4px -8px;
-  background: radial-gradient(
-    ellipse 80% 100% at 50% 0%,
-    rgba(251, 191, 36, 0.08) 0%,
-    transparent 100%
-  );
-  pointer-events: none;
-  animation: magical-breath 6s ease-in-out infinite 0.3s;
-  z-index: -1;
-}
-
-/* Optional particle effect around titles - very subtle */
+/* Hero-specific micro particles - minimal and rare */
 .magical-particles::before {
   content: '';
   position: absolute;
-  width: 100%;
-  height: 100%;
-  background-image:
-    radial-gradient(circle, rgba(217, 119, 6, 0.3) 1px, transparent 1px),
-    radial-gradient(circle, rgba(251, 191, 36, 0.2) 1.5px, transparent 1.5px),
-    radial-gradient(circle, rgba(217, 119, 6, 0.2) 1px, transparent 1px);
-  background-size: 150px 150px, 200px 200px, 175px 175px;
-  background-position: 0 0, 50px 50px, 25px 75px;
-  animation: magical-breath 8s ease-in-out infinite;
+  width: 2%;
+  height: 2%;
+  background: radial-gradient(circle, rgba(251, 191, 36, 0.4) 0%, transparent 70%);
+  animation: hero-micro-particle 6s ease-in-out infinite;
   pointer-events: none;
-  opacity: 0.3;
+  z-index: -1;
+  top: 10%;
+  right: 15%;
+  filter: blur(1px);
 }
 
-/* Breathing effect - slow gentle brightness variation */
-.magical-breathing {
-  animation: magical-breath 6s ease-in-out infinite;
+/* Soft champagne glow - ultra minimal */
+.magical-glow {
+  position: relative;
+  text-shadow: 0 0 1px rgba(217, 119, 6, 0.08);
 }
 
-/* Hero Title - Luxe effect with subtle magical feel */
+/* Legacy hero animations - kept for smooth transition */
 @keyframes hero-title-glow {
   0%, 100% {
     text-shadow: 0 0 2px rgba(217, 119, 6, 0.15), 0 0 4px rgba(251, 191, 36, 0.08);
@@ -1412,26 +1342,16 @@ video::-moz-media-controls {
 }
 
 .hero-title-premium {
-  animation: hero-title-glow 6s ease-in-out infinite;
-  position: relative;
+  animation: text-breath-luxury 7s ease-in-out infinite;
 }
 
-.hero-title-premium::after {
-  content: '';
-  position: absolute;
-  inset: -2px -4px;
-  background: linear-gradient(90deg, transparent 0%, rgba(251, 191, 36, 0.05) 50%, transparent 100%);
-  animation: magical-shimmer 7s ease-in-out infinite;
-  pointer-events: none;
-}
-
-/* Hero Subtitle - Elegant Soft Glow Text */
+/* Subtle subtitle glow */
 @keyframes subtitle-soft-glow {
   0%, 100% {
-    text-shadow: 0 0 2px rgba(217, 119, 6, 0.1), 0 0 4px rgba(251, 191, 36, 0.05);
+    text-shadow: 0 0 1px rgba(217, 119, 6, 0.08), 0 0 2px rgba(251, 191, 36, 0.04);
   }
   50% {
-    text-shadow: 0 0 4px rgba(217, 119, 6, 0.15), 0 0 8px rgba(251, 191, 36, 0.1);
+    text-shadow: 0 0 2px rgba(217, 119, 6, 0.12), 0 0 4px rgba(251, 191, 36, 0.08);
   }
 }
 
@@ -1439,13 +1359,13 @@ video::-moz-media-controls {
   animation: subtitle-soft-glow 6.5s ease-in-out infinite;
 }
 
-/* CTA Button Hero - Warm Gold/Champagne Glow (very subtle) */
+/* CTA Button - subtle glow only */
 @keyframes cta-button-hero-glow {
   0%, 100% {
-    box-shadow: 0 0 8px rgba(217, 119, 6, 0.15), 0 0 16px rgba(251, 191, 36, 0.08), inset 0 0 10px rgba(255, 255, 255, 0.05);
+    box-shadow: 0 0 4px rgba(217, 119, 6, 0.1), 0 0 8px rgba(251, 191, 36, 0.05), inset 0 0 5px rgba(255, 255, 255, 0.03);
   }
   50% {
-    box-shadow: 0 0 12px rgba(217, 119, 6, 0.25), 0 0 24px rgba(251, 191, 36, 0.15), inset 0 0 15px rgba(255, 255, 255, 0.08);
+    box-shadow: 0 0 6px rgba(217, 119, 6, 0.15), 0 0 12px rgba(251, 191, 36, 0.1), inset 0 0 8px rgba(255, 255, 255, 0.05);
   }
 }
 
