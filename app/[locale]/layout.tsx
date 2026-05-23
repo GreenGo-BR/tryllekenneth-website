@@ -11,6 +11,8 @@ import {
   WebsiteSchema,
   FAQSchema,
 } from '@/lib/structured-data';
+import { generateLocaleMetadata } from '@/lib/metadata';
+import type { Metadata } from 'next';
 
 const locales = ['en', 'da'];
 
@@ -21,6 +23,16 @@ type LocaleLayoutProps = {
 
 export function generateStaticParams() {
   return locales.map((locale) => ({ locale }));
+}
+
+export async function generateMetadata({ params }: LocaleLayoutProps): Promise<Metadata> {
+  const { locale } = await params;
+  
+  if (!locales.includes(locale)) {
+    return {};
+  }
+
+  return generateLocaleMetadata(locale as 'en' | 'da');
 }
 
 export default async function LocaleLayout({

@@ -37,14 +37,19 @@ export function LanguageSwitcher() {
   const daPath = `/da${currentRoute === '/' ? '' : getEquivalentRoute(currentRoute, locale, 'da')}`;
   const enPath = `/en${currentRoute === '/' ? '' : getEquivalentRoute(currentRoute, locale, 'en')}`;
 
-  const handleLanguageSwitch = (path: string) => {
+  const handleLanguageSwitch = (path: string, targetLocale: 'en' | 'da') => {
+    // Save language preference to cookie (1 year expiry)
+    const expiryDate = new Date();
+    expiryDate.setFullYear(expiryDate.getFullYear() + 1);
+    document.cookie = `NEXT_INTL_LOCALE=${targetLocale}; path=/; expires=${expiryDate.toUTCString()}; SameSite=Lax`;
+    
     router.push(path);
   };
 
   return (
     <div className="flex items-center bg-muted rounded-lg p-1 pointer-events-auto">
       <button
-        onClick={() => handleLanguageSwitch(daPath)}
+        onClick={() => handleLanguageSwitch(daPath, 'da')}
         className={`px-3 py-1 rounded-md text-sm font-medium transition-colors cursor-pointer pointer-events-auto ${
           locale === 'da'
             ? 'bg-primary text-primary-foreground'
@@ -55,7 +60,7 @@ export function LanguageSwitcher() {
         DA
       </button>
       <button
-        onClick={() => handleLanguageSwitch(enPath)}
+        onClick={() => handleLanguageSwitch(enPath, 'en')}
         className={`px-3 py-1 rounded-md text-sm font-medium transition-colors cursor-pointer pointer-events-auto ${
           locale === 'en'
             ? 'bg-primary text-primary-foreground'
