@@ -15,6 +15,8 @@ const englishRedirectMap: Record<string, string> = {
   '/en/julefrokost': '/en/christmas-party',
   '/en/services/naermagi': '/en/services/close-up-magic',
   '/en/services/boernetrylleri': '/en/services/childrens-magic',
+  '/en/services/closeup': '/en/services/close-up-magic',
+  '/en/services/childrens': '/en/services/childrens-magic',
 };
 
 export function middleware(request: NextRequest) {

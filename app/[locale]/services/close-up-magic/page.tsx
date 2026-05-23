@@ -5,169 +5,184 @@ import { Header } from '@/components/Header';
 import { Footer } from '@/components/Footer';
 import { Button } from '@/components/ui/button';
 import { Card } from '@/components/ui/card';
-import { ProductionVideo } from '@/components/ProductionVideo';
-import { VideoSchema } from '@/components/video-schema';
 import { Coins, Wand2, Hand } from 'lucide-react';
 import Link from 'next/link';
 
-export default function CloseupMagic() {
+export default function CloseUpMagicPage() {
   const locale = useLocale();
   const t = useTranslations();
-  const videoUrl = 'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/videoplayback%20%281%29-Q1D2bD05QCGGjQE987CDIoehLKbY9v.mp4';
-  const videoThumbnail = '/kenneth-hero-original.png';
+
   return (
     <>
       <Header />
-      <VideoSchema videoUrl={videoUrl} thumbnailUrl={videoThumbnail} videoId="naermagi-video-schema" />
       <main className="min-h-screen bg-gradient-to-br from-slate-50 via-white to-slate-50">
-        {/* Premium Hero Section - Sophisticated Close-up Magic */}
-        <section className="relative py-16 px-4 sm:px-6 lg:px-8 overflow-hidden">
-          {/* Elegant background particles - subtle, mysterious */}
+        {/* Hero Section */}
+        <section className="relative py-20 px-4 sm:px-6 lg:px-8 overflow-hidden">
           <div className="absolute inset-0 overflow-hidden pointer-events-none">
             <div className="absolute -top-40 -left-40 w-80 h-80 bg-gradient-to-br from-indigo-200/30 to-transparent rounded-full blur-3xl animate-float"></div>
             <div className="absolute -bottom-20 -right-20 w-60 h-60 bg-gradient-to-tl from-purple-200/20 to-transparent rounded-full blur-3xl animate-float" style={{ animationDelay: '2s' }}></div>
           </div>
 
           <div className="max-w-4xl mx-auto relative z-10">
-            <h1 className="text-5xl sm:text-6xl font-bold magical-heading magical-text mb-4 text-foreground">
-              {t('closeUpMagicPage.title')}
+            <h1 className="text-5xl sm:text-6xl font-bold mb-6 text-slate-900">
+              {locale === 'da' ? 'Nærmagi - Elegance i Nærheden' : 'Close-up Magic - Elegance Up Close'}
             </h1>
-            <p className="text-xl text-slate-600 mb-8 max-w-2xl">
-              {t('closeUpMagicPage.subtitle')}
+            <p className="text-xl text-slate-600 mb-12">
+              {locale === 'da'
+                ? 'Professionel kort- og mønttrylleri der fascinerer og underholder. Perfekt til events, middage og private lejligheder.'
+                : 'Professional card and coin magic that fascinates and entertains. Perfect for events, dinners and private occasions.'}
             </p>
-            <Link href={`/${locale}/contact`}>
-              <Button size="lg" className="btn-primary btn-lg">
-                {t('closeUpMagicPage.bookButton')}
-              </Button>
-            </Link>
-          </div>
-        </section>
-
-        {/* Premium Featured Video Section - Cinematic Experience */}
-        <section className="py-16 px-4 sm:px-6 lg:px-8 max-w-6xl mx-auto relative">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold text-slate-900 mb-2">{t('closeUpMagicPage.about')}</h2>
-            <p className="text-slate-600">{t('closeUpMagicPage.aboutText1')}</p>
-          </div>
-
-          {/* Premium Video Container */}
-          <div className="group relative">
-            {/* Outer glow effect - purple/blue theme */}
-            <div className="absolute -inset-1 bg-gradient-to-r from-indigo-400 via-purple-400 to-blue-400 rounded-3xl opacity-0 group-hover:opacity-100 transition-all duration-700 blur-xl group-hover:blur-2xl -z-20"></div>
-            
-            {/* Video card with elegant styling */}
-            <div className="relative overflow-hidden rounded-3xl border border-indigo-200/40 group-hover:border-indigo-300/60 transition-all duration-500 shadow-2xl group-hover:shadow-3xl bg-gradient-to-br from-slate-900 via-slate-950 to-black">
-              
-              {/* Cinematic top overlay */}
-              <div className="absolute top-0 left-0 right-0 h-24 bg-gradient-to-b from-black/50 via-black/20 to-transparent z-20 pointer-events-none"></div>
-              
-              {/* Cinematic bottom overlay */}
-              <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-black/60 via-black/30 to-transparent z-20 pointer-events-none"></div>
-              
-              {/* Floating sparkles - reduced for elegance, only 2 */}
-              <div className="absolute -top-2 right-20 text-3xl animate-twinkle z-30 pointer-events-none opacity-90">✨</div>
-              <div className="absolute -bottom-1 left-16 text-2xl animate-twinkle z-30 pointer-events-none opacity-80" style={{ animationDelay: '1s' }}>✨</div>
-
-              {/* Video Element - Production Grade */}
-              <ProductionVideo
-                src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/TrylleKenneth%20Close-up-G9bBfYukuP3t82YylZW3gZILIbCkJo.mp4"
-                poster="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/WhatsApp%20Image%202026-05-19%20at%2010.48.13%20%281%29-A5bNILaPPqzkKWoS1Is5CAZBKHfmRZ.jpeg"
-                autoPlay={false}
-                muted={true}
-                loop={true}
-                playsInline={true}
-                preload="metadata"
-                lazy={true}
-                aspectRatio="16/9"
-                containerClassName="rounded-3xl overflow-hidden"
-              />
-
-              {/* Mysterious glow effect on hover */}
-              <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none rounded-3xl" style={{
-                boxShadow: 'inset 0 0 50px rgba(99, 102, 241, 0.15), inset 0 0 100px rgba(129, 140, 248, 0.08)'
-              }}></div>
-            </div>
-
-            {/* Video Info Badge */}
-            <div className="mt-6 flex items-center justify-center gap-3 text-slate-600">
-              <div className="w-2 h-2 bg-gradient-to-r from-indigo-500 to-purple-500 rounded-full animate-pulse"></div>
-              <p className="text-sm font-medium">{t('closeUpMagicPage.about')} • HD Kvalitet • Live Nærmagi</p>
-              <div className="w-2 h-2 bg-gradient-to-r from-purple-500 to-blue-500 rounded-full animate-pulse" style={{ animationDelay: '0.5s' }}></div>
-            </div>
-          </div>
-        </section>
-
-        {/* Service Description - Refined */}
-        <section className="py-20 px-4 sm:px-6 lg:px-8 max-w-4xl mx-auto">
-          <div className="grid md:grid-cols-2 gap-12">
-            <div>
-              <h2 className="text-3xl font-bold mb-6 text-slate-900">{t('closeUpMagicPage.about')}</h2>
-              <p className="text-slate-600 mb-4 leading-relaxed">
-                {t('closeUpMagicPage.aboutText1')}
-              </p>
-              <p className="text-slate-600 leading-relaxed">
-                {t('closeUpMagicPage.aboutText2')}
-              </p>
-            </div>
-            <div className="space-y-4">
-              {/* Premium Feature Cards - Elegant floating effect */}
-              <Card className="p-6 border border-indigo-200/40 hover:border-indigo-300/60 transition-all duration-500 magic-card-hover bg-gradient-to-br from-indigo-50/50 to-white shadow-lg hover:shadow-xl hover:shadow-indigo-200/50">
-                <div className="flex items-start gap-3">
-                  <Coins className="text-indigo-600 mt-1 flex-shrink-0" size={24} />
-                  <div>
-                    <h3 className="font-bold mb-1 text-slate-900">{t('closeUpMagicPage.cardsTitle')}</h3>
-                    <p className="text-sm text-slate-600">{t('closeUpMagicPage.cardsText')}</p>
-                  </div>
-                </div>
-              </Card>
-              <Card className="p-6 border border-purple-200/40 hover:border-purple-300/60 transition-all duration-500 magic-card-hover bg-gradient-to-br from-purple-50/50 to-white shadow-lg hover:shadow-xl hover:shadow-purple-200/50">
-                <div className="flex items-start gap-3">
-                  <Wand2 className="text-purple-600 mt-1 flex-shrink-0" size={24} />
-                  <div>
-                    <h3 className="font-bold mb-1 text-slate-900">{t('closeUpMagicPage.coinsTitle')}</h3>
-                    <p className="text-sm text-slate-600">{t('closeUpMagicPage.coinsText')}</p>
-                  </div>
-                </div>
-              </Card>
-              <Card className="p-6 border border-blue-200/40 hover:border-blue-300/60 transition-all duration-500 magic-card-hover bg-gradient-to-br from-blue-50/50 to-white shadow-lg hover:shadow-xl hover:shadow-blue-200/50">
-                <div className="flex items-start gap-3">
-                  <Hand className="text-blue-600 mt-1 flex-shrink-0" size={24} />
-                  <div>
-                    <h3 className="font-bold mb-1 text-slate-900">{t('closeUpMagicPage.objectsTitle')}</h3>
-                    <p className="text-sm text-slate-600">{t('closeUpMagicPage.objectsText')}</p>
-                  </div>
-                </div>
-              </Card>
-            </div>
-          </div>
-        </section>
-
-        {/* CTA Section - Consistent with other pages */}
-        <section className="py-16 px-4 sm:px-6 lg:px-8 text-center max-w-4xl mx-auto">
-          <div className="rounded-3xl bg-gradient-to-br from-indigo-50/60 via-white to-purple-50/40 border border-indigo-200/30 p-12">
-            <h2 className="text-3xl sm:text-4xl font-bold mb-3 text-foreground magical-heading magical-text">
-              {t('cta.title')}
-            </h2>
-            <p className="text-base text-foreground/70 mb-6 max-w-2xl mx-auto">
-              {t('cta.subtitle')}
-            </p>
-            <div className="flex flex-col sm:flex-row gap-3 justify-center">
+            <div className="flex flex-col sm:flex-row gap-4">
               <Link href={`/${locale}/contact`}>
-                <Button size="lg" className="btn-primary w-[276px] h-[52px] sm:w-full sm:max-w-[320px] flex items-center justify-center text-base font-semibold rounded-lg">
-                  {t('closeUpMagicPage.bookButton')}
+                <Button size="lg">
+                  {locale === 'da' ? 'Book Nærmagi' : 'Book Close-up Magic'}
                 </Button>
               </Link>
               <a href="tel:+4540852728">
-                <Button size="lg" className="btn-secondary w-[276px] h-[52px] sm:w-full sm:max-w-[320px] flex items-center justify-center text-base font-semibold rounded-lg">
-                  {t('cta.callKenneth')}
+                <Button size="lg" variant="outline">
+                  {locale === 'da' ? 'Ring: +45 40 85 27 28' : 'Call: +45 40 85 27 28'}
                 </Button>
               </a>
             </div>
           </div>
         </section>
 
-        {/* Subtle transition gradient before footer */}
-        <div className="h-16 bg-gradient-to-b from-indigo-50/50 via-slate-50/30 to-slate-50 pointer-events-none"></div>
+        {/* About Section */}
+        <section className="py-16 md:py-24 px-4 sm:px-6 lg:px-8 max-w-4xl mx-auto">
+          <h2 className="text-4xl font-bold mb-12 text-slate-900">
+            {locale === 'da' ? 'Hvad er Nærmagi?' : 'What is Close-up Magic?'}
+          </h2>
+          
+          <div className="space-y-6 text-lg text-slate-700 leading-relaxed">
+            <p>
+              {locale === 'da'
+                ? 'Nærmagi er kunstformen hvor magi udføres på kort afstand, ofte med almindelige genstande som kort, mønter eller andre objekter. Kenneth specialiserer sig i denne intim kunstform der skaber personlige, mindeværdige oplevelser.'
+                : 'Close-up magic is the art form where magic is performed at close range, often with everyday objects like cards, coins or other items. Kenneth specializes in this intimate art form that creates personal, memorable experiences.'}
+            </p>
+            <p>
+              {locale === 'da'
+                ? 'Med over 15 års erfaring har Kenneth perfektioneret sin teknik til at skabe rent forbløffelse. Der er ingen skjulte skærme, ingen trylleformler - bare dygtighed, timing og kunstnerisk præsentation.'
+                : 'With over 15 years of experience, Kenneth has perfected his technique to create pure amazement. There are no hidden screens, no magic words - just skill, timing and artistic presentation.'}
+            </p>
+          </div>
+        </section>
+
+        {/* Magic Types */}
+        <section className="py-16 md:py-24 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-indigo-50/30 to-transparent">
+          <div className="max-w-4xl mx-auto">
+            <h2 className="text-4xl font-bold mb-12 text-slate-900 text-center">
+              {locale === 'da' ? 'Typer af Nærmagi' : 'Types of Close-up Magic'}
+            </h2>
+            
+            <div className="grid md:grid-cols-3 gap-8">
+              <Card className="p-6 border-indigo-200/50 bg-indigo-50/30">
+                <Coins className="w-8 h-8 text-indigo-600 mb-3" />
+                <h3 className="text-lg font-semibold mb-3 text-slate-900">
+                  {locale === 'da' ? 'Mønttrylleri' : 'Coin Magic'}
+                </h3>
+                <p className="text-slate-600">
+                  {locale === 'da'
+                    ? 'Mønter forsvinder, dukker op og ændrer sig på magisk vis. En klassisk kunstform der aldrig bliver gammel.'
+                    : 'Coins vanish, appear and change magically. A classic art form that never gets old.'}
+                </p>
+              </Card>
+
+              <Card className="p-6 border-purple-200/50 bg-purple-50/30">
+                <Wand2 className="w-8 h-8 text-purple-600 mb-3" />
+                <h3 className="text-lg font-semibold mb-3 text-slate-900">
+                  {locale === 'da' ? 'Korttrylleri' : 'Card Magic'}
+                </h3>
+                <p className="text-slate-600">
+                  {locale === 'da'
+                    ? 'Kenneth udfører imponerende korttrylleri hvor kortet du vælger altid er der - på magisk vis.'
+                    : 'Kenneth performs impressive card magic where your selected card always appears - magically.'}
+                </p>
+              </Card>
+
+              <Card className="p-6 border-violet-200/50 bg-violet-50/30">
+                <Hand className="w-8 h-8 text-violet-600 mb-3" />
+                <h3 className="text-lg font-semibold mb-3 text-slate-900">
+                  {locale === 'da' ? 'Objektmanipulation' : 'Object Manipulation'}
+                </h3>
+                <p className="text-slate-600">
+                  {locale === 'da'
+                    ? 'Genstande forsvinder og dukker op. Ringe, tørklæder og hverdagsting bliver til magiske objekter.'
+                    : 'Objects vanish and appear. Rings, scarves and everyday items become magical objects.'}
+                </p>
+              </Card>
+            </div>
+          </div>
+        </section>
+
+        {/* Benefits */}
+        <section className="py-16 md:py-24 px-4 sm:px-6 lg:px-8 max-w-4xl mx-auto">
+          <h2 className="text-4xl font-bold mb-12 text-slate-900 text-center">
+            {locale === 'da' ? 'Hvorfor Nærmagi?' : 'Why Close-up Magic?'}
+          </h2>
+          
+          <div className="grid md:grid-cols-2 gap-8">
+            <div>
+              <h3 className="text-xl font-semibold mb-3 text-slate-900">
+                {locale === 'da' ? 'Personlig Forbindelse' : 'Personal Connection'}
+              </h3>
+              <p className="text-slate-600">
+                {locale === 'da'
+                  ? 'Nærmagi skabes med dine gæster tæt på. Det skaber intime øjeblikke og personlig interaktion.'
+                  : 'Close-up magic happens with your guests up close. It creates intimate moments and personal interaction.'}
+              </p>
+            </div>
+
+            <div>
+              <h3 className="text-xl font-semibold mb-3 text-slate-900">
+                {locale === 'da' ? 'Elegant og Klassisk' : 'Elegant and Timeless'}
+              </h3>
+              <p className="text-slate-600">
+                {locale === 'da'
+                  ? 'Kunstformen er klassisk og elegant. Det passer til ethvert event fra formelle aftenslibéer til casual middage.'
+                  : 'The art form is classic and elegant. It fits any event from formal galas to casual dinners.'}
+              </p>
+            </div>
+
+            <div>
+              <h3 className="text-xl font-semibold mb-3 text-slate-900">
+                {locale === 'da' ? 'Fascinerende for Alle' : 'Fascinating for Everyone'}
+              </h3>
+              <p className="text-slate-600">
+                {locale === 'da'
+                  ? 'Uanset alder eller erfaring fascinerer nærmagi alle mennesker. Der er noget magisk ved at se det umulige blive muligt.'
+                  : 'Regardless of age or experience, close-up magic fascinates everyone. There\'s something magical about seeing the impossible become possible.'}
+              </p>
+            </div>
+
+            <div>
+              <h3 className="text-xl font-semibold mb-3 text-slate-900">
+                {locale === 'da' ? 'Mindeværdige Øjeblikke' : 'Memorable Moments'}
+              </h3>
+              <p className="text-slate-600">
+                {locale === 'da'
+                  ? 'Gæsterne vil huske disse øjeblikke i årevis. Det bliver de historier de deler med deres venner.'
+                  : 'Your guests will remember these moments for years. They become the stories they share with friends.'}
+              </p>
+            </div>
+          </div>
+        </section>
+
+        {/* CTA */}
+        <section className="py-12 md:py-16 px-4 sm:px-6 lg:px-8 max-w-3xl mx-auto text-center">
+          <h2 className="text-3xl font-bold mb-6 text-slate-900">
+            {locale === 'da' ? 'Klar til Nærmagi?' : 'Ready for Close-up Magic?'}
+          </h2>
+          <p className="text-lg text-slate-600 mb-8">
+            {locale === 'da'
+              ? 'Kontakt Kenneth for at diskutere hvordan nærmagi kan gøre dit event uforglemmelig.'
+              : 'Contact Kenneth to discuss how close-up magic can make your event unforgettable.'}
+          </p>
+          <Link href={`/${locale}/contact`}>
+            <Button size="lg">
+              {locale === 'da' ? 'Book Nærmagi' : 'Book Close-up Magic'}
+            </Button>
+          </Link>
+        </section>
 
         <Footer />
       </main>
