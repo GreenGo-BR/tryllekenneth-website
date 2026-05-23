@@ -4,87 +4,56 @@ export default function sitemap(): MetadataRoute.Sitemap {
   const baseUrl = 'https://tryllekenneth.dk'
   const locales = ['da', 'en']
   
-  // Core pages that exist in both locales
+  // Core pages that exist in both locales with their path mappings
   const corePages = [
-    '',
-    '/services/naermagi',
-    '/services/boernetrylleri',
-    '/services/standup',
-    '/services/santa',
-    '/services/boernefoedselsdag',
-    '/bryllupper',
-    '/firmaarrangementer',
-    '/julefrokost',
-    '/galleri',
-    '/faq',
-    '/kontakt',
-    '/privacy',
-    '/terms',
+    { da: '', en: '', priority: 1.0, changeFreq: 'weekly' as const, name: 'Homepage' },
+    { da: '/services/naermagi', en: '/services/closeup', priority: 0.9, changeFreq: 'yearly' as const, name: 'Close-up Magic' },
+    { da: '/services/boernetrylleri', en: '/services/childrens', priority: 0.9, changeFreq: 'yearly' as const, name: 'Children Magic' },
+    { da: '/bryllupper', en: '/weddings', priority: 0.85, changeFreq: 'monthly' as const, name: 'Wedding Magic' },
+    { da: '/firmaarrangementer', en: '/corporate-events', priority: 0.85, changeFreq: 'monthly' as const, name: 'Corporate Events' },
+    { da: '/julefrokost', en: '/christmas-events', priority: 0.85, changeFreq: 'monthly' as const, name: 'Christmas Events' },
+    { da: '/galleri', en: '/gallery', priority: 0.7, changeFreq: 'monthly' as const, name: 'Gallery' },
+    { da: '/kontakt', en: '/contact', priority: 0.8, changeFreq: 'monthly' as const, name: 'Contact' },
+    { da: '/faq', en: '/faq', priority: 0.75, changeFreq: 'monthly' as const, name: 'FAQ' },
   ]
 
-  // English-specific pages (alternative URLs for English locale)
-  const englishPages = [
-    '/services/childrens',
-    '/services/closeup',
-    '/services/birthday-parties',
-  ]
-
-  // Generate sitemap entries for all locale + page combinations
+  // Generate sitemap entries with proper locale alternates
   const sitemapEntries: MetadataRoute.Sitemap = []
 
-  // Add root URL (da-DK as default)
-  sitemapEntries.push({
-    url: baseUrl,
-    lastModified: new Date(),
-    changeFrequency: 'monthly',
-    priority: 1.0,
-  })
-
-  // Add all locale-specific pages
-  locales.forEach((locale) => {
-    // Add core pages for both locales
-    corePages.forEach((page) => {
-      const url = page === '' 
-        ? `${baseUrl}/${locale}`
-        : `${baseUrl}/${locale}${page}`
-
-      // Set priority based on page importance
-      let priority = 0.7
-      if (page === '') priority = 1.0
-      if (page.includes('services')) priority = 0.9
-      if (page.includes('bryllup') || page.includes('firma') || page.includes('jule')) priority = 0.85
-      if (page === '/faq' || page === '/kontakt') priority = 0.6
-
-      // Set change frequency based on page type
-      let changeFrequency: 'daily' | 'weekly' | 'monthly' | 'yearly' | 'never' | 'always' = 'monthly'
-      if (page === '') changeFrequency = 'weekly'
-      if (page === '/faq' || page === '/kontakt') changeFrequency = 'monthly'
-      if (page.includes('services')) changeFrequency = 'yearly'
-
-      sitemapEntries.push({
-        url,
-        lastModified: new Date(),
-        changeFrequency,
-        priority,
-      })
+  corePages.forEach((page) => {
+    // Add entry for Danish version
+    sitemapEntries.push({
+      url: page.da === '' ? `${baseUrl}/da` : `${baseUrl}/da${page.da}`,
+      lastModified: new Date(),
+      changeFrequency: page.changeFreq,
+      priority: page.priority,
+      alternates: {
+        languages: {
+          'da': page.da === '' ? `${baseUrl}/da` : `${baseUrl}/da${page.da}`,
+          'en': page.en === '' ? `${baseUrl}/en` : `${baseUrl}/en${page.en}`,
+          'x-default': page.en === '' ? `${baseUrl}/en` : `${baseUrl}/en${page.en}`,
+        },
+      },
     })
 
-    // Add English-specific pages only for English locale
-    if (locale === 'en') {
-      englishPages.forEach((page) => {
-        const url = `${baseUrl}/${locale}${page}`
-        const priority = page.includes('services') ? 0.9 : 0.7
-        const changeFrequency: 'daily' | 'weekly' | 'monthly' | 'yearly' | 'never' | 'always' = 'yearly'
-
-        sitemapEntries.push({
-          url,
-          lastModified: new Date(),
-          changeFrequency,
-          priority,
-        })
+    // Add entry for English version (avoid duplicates if paths are identical)
+    if (page.da !== page.en || page.en !== '') {
+      sitemapEntries.push({
+        url: page.en === '' ? `${baseUrl}/en` : `${baseUrl}/en${page.en}`,
+        lastModified: new Date(),
+        changeFrequency: page.changeFreq,
+        priority: page.priority,
+        alternates: {
+          languages: {
+            'da': page.da === '' ? `${baseUrl}/da` : `${baseUrl}/da${page.da}`,
+            'en': page.en === '' ? `${baseUrl}/en` : `${baseUrl}/en${page.en}`,
+            'x-default': page.en === '' ? `${baseUrl}/en` : `${baseUrl}/en${page.en}`,
+          },
+        },
       })
     }
   })
 
   return sitemapEntries
 }
+
