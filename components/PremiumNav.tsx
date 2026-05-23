@@ -35,10 +35,10 @@ export function PremiumNav({ isMobile = false }: PremiumNavProps) {
       key: 'performances',
       href: '#',
       children: [
-        { key: 'childrensMagic', href: locale === 'da' ? `/${locale}/services/boernetrylleri` : `/${locale}/services/childrens-magic` },
-        { key: 'birthdayParties', href: locale === 'da' ? `/${locale}/services/boernefoedselsdag` : `/${locale}/services/childrens-magic` },
+        { key: 'childrensMagic', href: locale === 'da' ? `/${locale}/services/boernetrylleri` : `/${locale}/services/childrens` },
+        { key: 'birthdayParties', href: locale === 'da' ? `/${locale}/services/boernefoedselsdag` : `/${locale}/services/childrens` },
         { key: 'standUpMagic', href: `/${locale}/services/standup` },
-        { key: 'closeUpMagic', href: locale === 'da' ? `/${locale}/services/naermagi` : `/${locale}/services/close-up-magic` },
+        { key: 'closeUpMagic', href: locale === 'da' ? `/${locale}/services/naermagi` : `/${locale}/services/closeup` },
         { key: 'corporateEvents', href: locale === 'da' ? `/${locale}/firmaarrangementer` : `/${locale}/corporate-events` },
         { key: 'weddings', href: locale === 'da' ? `/${locale}/bryllupper` : `/${locale}/weddings` },
       ],

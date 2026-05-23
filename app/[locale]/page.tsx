@@ -305,7 +305,7 @@ export default function Home() {
                       ? 'Magiske øjeblikke direkte foran dine gæster'
                       : 'Magic performed directly in front of your guests'}
                   </p>
-                  <Link href={`/${locale}/services/${locale === 'da' ? 'naermagi' : 'close-up-magic'}`} className="inline-flex items-center gap-1 text-xs font-medium text-primary hover:text-accent transition-colors">
+                  <Link href={`/${locale}/services/${locale === 'da' ? 'naermagi' : 'closeup'}`} className="inline-flex items-center gap-1 text-xs font-medium text-primary hover:text-accent transition-colors">
                     {t('services.readMore')} →
                   </Link>
                 </div>

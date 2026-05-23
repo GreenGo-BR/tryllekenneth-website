@@ -15,8 +15,8 @@ const routeMappings: RouteMapping[] = [
   { en: '/', da: '/' },
   
   // Services
-  { en: '/services/close-up-magic', da: '/services/naermagi' },
-  { en: '/services/childrens-magic', da: '/services/boernetrylleri' },
+  { en: '/services/closeup', da: '/services/naermagi' },
+  { en: '/services/childrens', da: '/services/boernetrylleri' },
   { en: '/services/standup', da: '/services/standup' },
   { en: '/services/santa', da: '/services/julemand' },
   
