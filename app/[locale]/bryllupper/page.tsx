@@ -190,7 +190,7 @@ export default function WeddingPage() {
             <h2 className="text-4xl font-bold mb-4 text-gray-900">
               {locale === 'da' ? 'Magisk Bryllupsbilling' : 'Magical Wedding Day'}
             </h2>
-            <p className="text-lg text-rose-100 mb-8 leading-relaxed">
+            <p className="text-lg text-slate-900 mb-8 leading-relaxed">
               {locale === 'da'
                 ? 'Book TrylleKenneth til din bryllupsfest og skab magiske øjeblikke der varer hele livet'
                 : 'Book TrylleKenneth for your wedding reception and create magical moments that last a lifetime'
@@ -198,12 +198,12 @@ export default function WeddingPage() {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link href={`/${locale}/contact`}>
-                <Button size="lg" className="btn-primary btn-lg">
+                <Button size="lg" className="btn-primary btn-lg w-56">
                   {locale === 'da' ? 'Book Bryllupstrylleri' : 'Book Wedding Magic'}
                 </Button>
               </Link>
               <a href="tel:+4540852728">
-                <Button size="lg" className="btn-secondary">
+                <Button size="lg" className="btn-secondary w-56">
                   {locale === 'da' ? 'Ring: 40 85 27 28' : 'Call: 40 85 27 28'}
                 </Button>
               </a>

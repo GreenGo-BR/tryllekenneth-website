@@ -183,7 +183,7 @@ export default function StandUpMagic() {
             <h2 className="text-4xl font-bold mb-4 text-gray-900">
               {locale === 'da' ? 'Standup Trylleri Som Imponerer' : 'Stand-up Magic That Impresses'}
             </h2>
-            <p className="text-lg text-orange-100 mb-8 leading-relaxed">
+            <p className="text-lg text-slate-900 mb-8 leading-relaxed">
               {locale === 'da'
                 ? 'Book TrylleKenneth til standup trylleri og skab spektakulære øjeblikke for dit publikum'
                 : 'Book TrylleKenneth for stand-up magic and create spectacular moments for your audience'
@@ -191,12 +191,12 @@ export default function StandUpMagic() {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link href={`/${locale}/contact`}>
-                <Button size="lg" className="btn-primary btn-lg">
+                <Button size="lg" className="btn-primary btn-lg w-56">
                   {locale === 'da' ? 'Book Standup Trylleri' : 'Book Stand-up Magic'}
                 </Button>
               </Link>
               <a href="tel:+4540852728">
-                <Button size="lg" className="btn-secondary">
+                <Button size="lg" className="btn-secondary w-56">
                   {locale === 'da' ? 'Ring: 40 85 27 28' : 'Call: 40 85 27 28'}
                 </Button>
               </a>

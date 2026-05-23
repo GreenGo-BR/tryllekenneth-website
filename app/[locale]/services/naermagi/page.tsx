@@ -153,12 +153,12 @@ export default function CloseupMagic() {
             </p>
             <div className="flex flex-col sm:flex-row gap-3 justify-center">
               <Link href={`/${locale}/contact`}>
-                <Button size="lg" className="btn-primary btn-lg">
+                <Button size="lg" className="btn-primary btn-lg w-56">
                   {t('closeUpMagicPage.bookButton')}
                 </Button>
               </Link>
               <a href="tel:+4540852728">
-                <Button size="lg" className="btn-primary btn-lg">
+                <Button size="lg" className="btn-secondary w-56">
                   {t('cta.callKenneth')}
                 </Button>
               </a>
