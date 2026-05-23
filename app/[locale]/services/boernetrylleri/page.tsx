@@ -107,7 +107,7 @@ export default function ChildrensMagic() {
         <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-primary via-accent to-secondary">
           <div className="max-w-2xl mx-auto text-center text-white">
             <h2 className="text-4xl font-bold mb-6">{t('cta.title')}</h2>
-            <p className="text-lg mb-8 text-white/90">{t('cta.subtitle')}</p>
+            <p className="text-lg mb-8 text-slate-900">{t('cta.subtitle')}</p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link href={`/${locale}/contact`}>
                 <Button size="lg" className="btn-secondary">

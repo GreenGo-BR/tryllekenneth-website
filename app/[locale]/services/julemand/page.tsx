@@ -243,7 +243,7 @@ export default function SantaMagic() {
             <h2 className="text-4xl font-bold mb-4 text-gray-900">
               Gør Din Jul Magisk
             </h2>
-            <p className="text-lg text-red-100 mb-8 leading-relaxed">
+            <p className="text-lg text-slate-900 mb-8 leading-relaxed">
               Book TrylleKenneth som julemand og skab uforglemmelige juleoplevelser for børn og familie
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">

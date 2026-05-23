@@ -258,7 +258,7 @@ export default function SantaMagic() {
             <h2 className="text-4xl font-bold mb-4 text-gray-900">
               {locale === 'da' ? 'Gør Din Jul Magisk' : 'Make Your Christmas Magical'}
             </h2>
-            <p className="text-lg text-red-100 mb-8 leading-relaxed">
+            <p className="text-lg text-slate-900 mb-8 leading-relaxed">
               {locale === 'da'
                 ? 'Book TrylleKenneth som julemand og skab uforglemmelige juleoplevelser for børn og familie'
                 : 'Book TrylleKenneth as Santa and create unforgettable Christmas experiences for children and families'
