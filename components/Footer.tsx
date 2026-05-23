@@ -133,7 +133,7 @@ export function Footer() {
                 <MapPin size={18} className="text-amber-500 mt-0.5 flex-shrink-0" />
                 <div className="flex flex-col gap-0">
                   <span className="text-slate-700 font-light">
-                    <span className="text-xs text-slate-500">{locale === 'da' ? 'Lokation: ' : 'Service Area: '}</span><span>{locale === 'da' ? 'Hele Danmark' : 'Denmark'}</span>
+                    <span className="text-xs text-slate-500">{locale === 'da' ? 'Tilgængelighed: ' : 'Service: '}</span><span>{t('basedIn')} • {t('availableWorldwide')}</span>
                   </span>
                 </div>
               </div>
