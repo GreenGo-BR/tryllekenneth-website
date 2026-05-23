@@ -110,12 +110,12 @@ export default function ChildrensMagic() {
             <p className="text-lg mb-8 text-slate-900">{t('cta.subtitle')}</p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link href={`/${locale}/contact`}>
-                <Button size="lg" className="btn-secondary">
-                  {locale === 'da' ? 'Ring: 40 85 27 28' : 'Call: 40 85 27 28'}
+                <Button size="lg" className="btn-primary btn-lg w-56">
+                  {t('cta.bookButton')}
                 </Button>
               </Link>
               <Link href={`tel:${t('footer.phone')}`}>
-                <Button size="lg" className="btn-secondary">
+                <Button size="lg" className="btn-secondary w-56">
                   {t('cta.callKenneth')}
                 </Button>
               </Link>

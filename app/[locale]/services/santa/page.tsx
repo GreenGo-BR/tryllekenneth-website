@@ -266,12 +266,12 @@ export default function SantaMagic() {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link href={`/${locale}/contact`}>
-                <Button size="lg" className="btn-primary btn-lg">
+                <Button size="lg" className="btn-primary btn-lg w-56">
                   {locale === 'da' ? 'Book Julemanden' : 'Book Santa'}
                 </Button>
               </Link>
               <a href="tel:+4540852728">
-                <Button size="lg" className="btn-secondary">
+                <Button size="lg" className="btn-secondary w-56">
                   {locale === 'da' ? 'Ring: 40 85 27 28' : 'Call: 40 85 27 28'}
                 </Button>
               </a>
