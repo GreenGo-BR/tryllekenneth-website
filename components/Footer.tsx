@@ -88,9 +88,10 @@ export function Footer() {
                 className="group flex items-start gap-3 hover:pl-1 transition-all duration-300"
               >
                 <Phone size={18} className="text-amber-500 mt-0.5 flex-shrink-0" />
-                <div className="flex flex-col gap-1">
-                  <span className="text-xs text-slate-500 font-light">{locale === 'da' ? 'Telefon:' : 'Phone:'}</span>
-                  <span className="text-slate-700 font-light group-hover:text-slate-900 transition-colors duration-300">40 85 27 28</span>
+                <div className="flex flex-col gap-0">
+                  <span className="text-slate-700 font-light group-hover:text-slate-900 transition-colors duration-300">
+                    <span className="text-xs text-slate-500">{locale === 'da' ? 'Telefon: ' : 'Phone: '}</span><span>40 85 27 28</span>
+                  </span>
                 </div>
               </a>
               <a
@@ -98,16 +99,18 @@ export function Footer() {
                 className="group flex items-start gap-3 hover:pl-1 transition-all duration-300"
               >
                 <Mail size={18} className="text-amber-500 mt-0.5 flex-shrink-0" />
-                <div className="flex flex-col gap-1">
-                  <span className="text-xs text-slate-500 font-light">{locale === 'da' ? 'E-mail:' : 'Email:'}</span>
-                  <span className="text-slate-700 font-light group-hover:text-slate-900 transition-colors duration-300">kenneth@tryllekenneth.dk</span>
+                <div className="flex flex-col gap-0">
+                  <span className="text-slate-700 font-light group-hover:text-slate-900 transition-colors duration-300">
+                    <span className="text-xs text-slate-500">{locale === 'da' ? 'E-mail: ' : 'Email: '}</span><span>kenneth@tryllekenneth.dk</span>
+                  </span>
                 </div>
               </a>
               <div className="group flex items-start gap-3 pt-2">
                 <MapPin size={18} className="text-amber-500 mt-0.5 flex-shrink-0" />
-                <div className="flex flex-col gap-1">
-                  <span className="text-xs text-slate-500 font-light">{locale === 'da' ? 'Lokation:' : 'Service Area:'}</span>
-                  <span className="text-slate-700 font-light">{locale === 'da' ? 'Hele Danmark' : 'Denmark'}</span>
+                <div className="flex flex-col gap-0">
+                  <span className="text-slate-700 font-light">
+                    <span className="text-xs text-slate-500">{locale === 'da' ? 'Lokation: ' : 'Service Area: '}</span><span>{locale === 'da' ? 'Hele Danmark' : 'Denmark'}</span>
+                  </span>
                 </div>
               </div>
             </div>
