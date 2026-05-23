@@ -8,8 +8,24 @@ const intlMiddleware = createMiddleware({
   localePrefix: 'always',
 });
 
+// Old Danish slugs used in English locale - map to new English URLs
+const englishRedirectMap: Record<string, string> = {
+  '/en/firmaarrangementer': '/en/corporate-events',
+  '/en/bryllupper': '/en/weddings',
+  '/en/julefrokost': '/en/christmas-party',
+  '/en/services/naermagi': '/en/services/close-up-magic',
+  '/en/services/boernetrylleri': '/en/services/childrens-magic',
+};
+
 export function middleware(request: NextRequest) {
   const pathname = request.nextUrl.pathname;
+  
+  // Check for old English route redirects (301 permanent redirect for SEO)
+  if (englishRedirectMap[pathname]) {
+    return NextResponse.redirect(new URL(englishRedirectMap[pathname], request.url), {
+      status: 301,
+    });
+  }
   
   // If user is already on /da or /en, use the standard intl middleware
   if (pathname.startsWith('/da') || pathname.startsWith('/en')) {
@@ -51,3 +67,4 @@ export function middleware(request: NextRequest) {
 export const config = {
   matcher: ['/((?!api|_next|_vercel|.*\\..*).*)'],
 };
+

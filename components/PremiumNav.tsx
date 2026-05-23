@@ -35,12 +35,12 @@ export function PremiumNav({ isMobile = false }: PremiumNavProps) {
       key: 'performances',
       href: '#',
       children: [
-        { key: 'childrensMagic', href: `/${locale}/services/childrens` },
-        { key: 'birthdayParties', href: locale === 'da' ? `/${locale}/services/boernefoedselsdag` : `/${locale}/services/birthday-parties` },
+        { key: 'childrensMagic', href: locale === 'da' ? `/${locale}/services/boernetrylleri` : `/${locale}/services/childrens-magic` },
+        { key: 'birthdayParties', href: locale === 'da' ? `/${locale}/services/boernefoedselsdag` : `/${locale}/services/childrens-magic` },
         { key: 'standUpMagic', href: `/${locale}/services/standup` },
-        { key: 'closeUpMagic', href: `/${locale}/services/closeup` },
-        { key: 'corporateEvents', href: `/${locale}/firmaarrangementer` },
-        { key: 'weddings', href: `/${locale}/bryllupper` },
+        { key: 'closeUpMagic', href: locale === 'da' ? `/${locale}/services/naermagi` : `/${locale}/services/close-up-magic` },
+        { key: 'corporateEvents', href: locale === 'da' ? `/${locale}/firmaarrangementer` : `/${locale}/corporate-events` },
+        { key: 'weddings', href: locale === 'da' ? `/${locale}/bryllupper` : `/${locale}/weddings` },
       ],
     },
     seasonal: {
@@ -48,7 +48,7 @@ export function PremiumNav({ isMobile = false }: PremiumNavProps) {
       href: '#',
       children: [
         { key: 'santa', href: `/${locale}/services/santa` },
-        { key: 'christmasParty', href: `/${locale}/julefrokost` },
+        { key: 'christmasParty', href: locale === 'da' ? `/${locale}/julefrokost` : `/${locale}/christmas-party` },
       ],
     },
     gallery: {

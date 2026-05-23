@@ -280,7 +280,7 @@ export default function Home() {
                       ? 'Elegant magisk underholdning til uforglemmelige bryllupper'
                       : 'Elegant magic for unforgettable weddings'}
                   </p>
-                  <Link href={`/${locale}/bryllupper`} className="inline-flex items-center gap-1 text-xs font-medium text-primary hover:text-accent transition-colors">
+                  <Link href={`/${locale}/${locale === 'da' ? 'bryllupper' : 'weddings'}`} className="inline-flex items-center gap-1 text-xs font-medium text-primary hover:text-accent transition-colors">
                     {t('services.readMore')} →
                   </Link>
                 </div>
@@ -304,7 +304,7 @@ export default function Home() {
                       ? 'Magiske øjeblikke direkte foran dine gæster'
                       : 'Magic performed directly in front of your guests'}
                   </p>
-                  <Link href={`/${locale}/services/closeup`} className="inline-flex items-center gap-1 text-xs font-medium text-primary hover:text-accent transition-colors">
+                  <Link href={`/${locale}/services/${locale === 'da' ? 'naermagi' : 'close-up-magic'}`} className="inline-flex items-center gap-1 text-xs font-medium text-primary hover:text-accent transition-colors">
                     {t('services.readMore')} →
                   </Link>
                 </div>
@@ -328,7 +328,7 @@ export default function Home() {
                       ? 'Festlig magisk underholdning til julearrangementer'
                       : 'Festive performances for holiday celebrations'}
                   </p>
-                  <Link href={`/${locale}/julefrokost`} className="inline-flex items-center gap-1 text-xs font-medium text-primary hover:text-accent transition-colors">
+                  <Link href={`/${locale}/${locale === 'da' ? 'julefrokost' : 'christmas-party'}`} className="inline-flex items-center gap-1 text-xs font-medium text-primary hover:text-accent transition-colors">
                     {t('services.readMore')} →
                   </Link>
                 </div>

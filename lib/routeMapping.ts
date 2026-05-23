@@ -15,10 +15,15 @@ const routeMappings: RouteMapping[] = [
   { en: '/', da: '/' },
   
   // Services
-  { en: '/services/childrens', da: '/services/boernetrylleri' },
+  { en: '/services/close-up-magic', da: '/services/naermagi' },
+  { en: '/services/childrens-magic', da: '/services/boernetrylleri' },
   { en: '/services/standup', da: '/services/standup' },
-  { en: '/services/closeup', da: '/services/naermagi' },
   { en: '/services/santa', da: '/services/julemand' },
+  
+  // Events
+  { en: '/weddings', da: '/bryllupper' },
+  { en: '/corporate-events', da: '/firmaarrangementer' },
+  { en: '/christmas-party', da: '/julefrokost' },
   
   // Other pages
   { en: '/gallery', da: '/galleri' },
@@ -83,3 +88,4 @@ export function isValidRoute(route: string, locale: 'en' | 'da'): boolean {
     (r) => (r === '/' ? '/' : r.replace(/\/$/, '')) === normalizedRoute
   );
 }
+
