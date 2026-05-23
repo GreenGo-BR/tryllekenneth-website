@@ -31,7 +31,9 @@
     "services": "Ydelser",
     "information": "Information",
     "contact": "Kontakt",
-    "rights": "Alle rettigheder forbeholdes."
+    "rights": "Alle rettigheder forbeholdes.",
+    "termsAndConditions": "Vilkår og betingelser",
+    "privacyPolicy": "Privatlivspolitik"
   },
   "about": {
     "label": "Om Kenneth",
