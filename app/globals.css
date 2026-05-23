@@ -1260,59 +1260,136 @@ video::-moz-media-controls {
   }
 }
 
-/* ===== PREMIUM HERO TYPOGRAPHY EFFECTS ===== */
+/* ===== PREMIUM MAGICAL TEXT EFFECTS (SCANDINAVIAN MINIMAL - ENHANCED) ===== */
 
-/* Hero Title - Luxe Gradient with Glow */
-@keyframes hero-title-glow {
+/* Enhanced text-shadow breath - visible gold shimmer with soft glow */
+@keyframes text-breath-luxury {
   0%, 100% {
-    text-shadow: 0 0 10px rgba(255, 192, 203, 0.4), 0 0 20px rgba(255, 215, 0, 0.2), 0 0 30px rgba(255, 105, 180, 0.15), 0 4px 8px rgba(0, 0, 0, 0.3);
+    text-shadow: 
+      0 0 3px rgba(217, 119, 6, 0.25),
+      0 0 8px rgba(251, 191, 36, 0.15),
+      0 0 12px rgba(217, 119, 6, 0.1);
   }
   50% {
-    text-shadow: 0 0 20px rgba(255, 192, 203, 0.8), 0 0 40px rgba(255, 215, 0, 0.4), 0 0 60px rgba(255, 105, 180, 0.3), 0 4px 8px rgba(0, 0, 0, 0.3);
+    text-shadow: 
+      0 0 8px rgba(217, 119, 6, 0.4),
+      0 0 16px rgba(251, 191, 36, 0.3),
+      0 0 20px rgba(217, 119, 6, 0.2);
+  }
+}
+
+/* Enhanced light sweep with visible shimmer across text */
+@keyframes text-light-sweep {
+  0%, 100% {
+    filter: brightness(1) drop-shadow(0 0 0px rgba(251, 191, 36, 0));
+  }
+  50% {
+    filter: brightness(1.04) drop-shadow(0 0 3px rgba(251, 191, 36, 0.25));
+  }
+}
+
+/* Enhanced shimmer sweep for extra magical feel */
+@keyframes text-shimmer-sweep {
+  0% {
+    background-position: -1000px 0;
+  }
+  100% {
+    background-position: 1000px 0;
+  }
+}
+
+/* Ultra micro particle effect - rare and minimal (hero sections only) */
+@keyframes hero-micro-particle {
+  0%, 100% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0.5;
+  }
+}
+
+/* Main magical heading - NO BACKGROUND, enhanced text effect */
+.magical-heading {
+  position: relative;
+  animation: text-breath-luxury 6s ease-in-out infinite;
+}
+
+/* Text-specific magical effect - enhanced breathing glow inside typography */
+.magical-text {
+  position: relative;
+  animation: text-breath-luxury 6.5s ease-in-out infinite;
+  letter-spacing: inherit;
+}
+
+/* Optional light sweep for some headings - visible brightness and shimmer change */
+.magical-light-sweep {
+  animation: text-light-sweep 7s ease-in-out infinite;
+}
+
+/* Hero-specific micro particles - visible sparkle effect */
+.magical-particles::before {
+  content: '';
+  position: absolute;
+  width: 3%;
+  height: 3%;
+  background: radial-gradient(circle, rgba(251, 191, 36, 0.6) 0%, transparent 70%);
+  animation: hero-micro-particle 6s ease-in-out infinite;
+  pointer-events: none;
+  z-index: -1;
+  top: 10%;
+  right: 15%;
+  filter: blur(1.5px);
+}
+
+/* Soft champagne glow - more visible */
+.magical-glow {
+  position: relative;
+  text-shadow: 0 0 4px rgba(217, 119, 6, 0.2);
+}
+
+/* Legacy hero animations - enhanced for visibility */
+@keyframes hero-title-glow {
+  0%, 100% {
+    text-shadow: 
+      0 0 4px rgba(217, 119, 6, 0.25),
+      0 0 8px rgba(251, 191, 36, 0.15);
+  }
+  50% {
+    text-shadow: 
+      0 0 12px rgba(217, 119, 6, 0.4),
+      0 0 20px rgba(251, 191, 36, 0.25);
   }
 }
 
 .hero-title-premium {
-  animation: hero-title-glow 3s ease-in-out infinite;
+  animation: text-breath-luxury 6s ease-in-out infinite;
 }
 
-/* Hero Badge - Elegant Glow */
-@keyframes badge-pulse-glow {
-  0%, 100% {
-    box-shadow: 0 0 0px rgba(255, 192, 203, 0.3), inset 0 0 10px rgba(255, 255, 255, 0.1);
-    border-color: rgba(255, 192, 203, 0.4);
-  }
-  50% {
-    box-shadow: 0 0 20px rgba(255, 215, 0, 0.5), 0 0 40px rgba(255, 192, 203, 0.3), inset 0 0 15px rgba(255, 255, 255, 0.2);
-    border-color: rgba(255, 215, 0, 0.6);
-  }
-}
-
-.hero-badge-premium {
-  animation: badge-pulse-glow 2.5s ease-in-out infinite;
-}
-
-/* Hero Subtitle - Elegant Soft Glow Text */
+/* Visible subtitle glow */
 @keyframes subtitle-soft-glow {
   0%, 100% {
-    text-shadow: 0 0 5px rgba(255, 255, 255, 0.2), 0 0 10px rgba(251, 191, 36, 0.1);
+    text-shadow: 
+      0 0 2px rgba(217, 119, 6, 0.15),
+      0 0 4px rgba(251, 191, 36, 0.1);
   }
   50% {
-    text-shadow: 0 0 10px rgba(255, 255, 255, 0.35), 0 0 20px rgba(251, 191, 36, 0.15);
+    text-shadow: 
+      0 0 6px rgba(217, 119, 6, 0.25),
+      0 0 10px rgba(251, 191, 36, 0.18);
   }
 }
 
 .hero-subtitle-premium {
-  animation: subtitle-soft-glow 3.5s ease-in-out infinite;
+  animation: subtitle-soft-glow 6.5s ease-in-out infinite;
 }
 
-/* CTA Button Hero - Warm Gold/Champagne Glow */
+/* CTA Button - enhanced visible glow */
 @keyframes cta-button-hero-glow {
   0%, 100% {
-    box-shadow: 0 0 15px rgba(251, 191, 36, 0.4), 0 0 30px rgba(217, 119, 6, 0.2), inset 0 0 10px rgba(255, 255, 255, 0.1);
+    box-shadow: 0 0 8px rgba(217, 119, 6, 0.2), 0 0 16px rgba(251, 191, 36, 0.12), inset 0 0 8px rgba(255, 255, 255, 0.08);
   }
   50% {
-    box-shadow: 0 0 25px rgba(251, 191, 36, 0.6), 0 0 50px rgba(217, 119, 6, 0.35), inset 0 0 15px rgba(255, 255, 255, 0.2);
+    box-shadow: 0 0 12px rgba(217, 119, 6, 0.3), 0 0 24px rgba(251, 191, 36, 0.2), inset 0 0 12px rgba(255, 255, 255, 0.12);
   }
 }
 
@@ -1552,12 +1629,12 @@ video::-moz-media-controls {
   transform: translateY(0px);
 }
 
-/* TERTIARY CTA - Light/glass buttons for light backgrounds */
-/* Alternative style for secondary CTA on light backgrounds */
+/* TERTIARY CTA - Premium Dark Button for secondary actions */
+/* "Call Kenneth" button - elegant dark style with warm accent */
 .btn-secondary-light {
-  background: rgba(255, 255, 255, 0.08);
+  background: rgba(15, 23, 42, 0.8);
   color: #fff7ed;
-  border: 1px solid rgba(255, 255, 255, 0.2);
+  border: 1.5px solid rgba(217, 119, 6, 0.4);
   font-weight: 600;
   font-size: 1rem;
   line-height: 1.4;
@@ -1569,15 +1646,34 @@ video::-moz-media-controls {
   align-items: center;
   justify-content: center;
   cursor: pointer;
-  backdrop-filter: blur(8px);
-  box-shadow: 0 4px 12px rgba(255, 255, 255, 0.08), inset 0 1px 0 rgba(255, 255, 255, 0.15);
+  box-shadow: 0 4px 16px rgba(217, 119, 6, 0.12), inset 0 1px 0 rgba(255, 255, 255, 0.08);
+  position: relative;
+  overflow: hidden;
+}
+
+.btn-secondary-light::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at 50% 50%, rgba(217, 119, 6, 0.1) 0%, transparent 70%);
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.3s ease;
 }
 
 .btn-secondary-light:hover {
   transform: translateY(-2px);
-  background: rgba(255, 255, 255, 0.12);
-  border-color: rgba(255, 255, 255, 0.35);
-  box-shadow: 0 8px 20px rgba(255, 255, 255, 0.15), inset 0 1px 0 rgba(255, 255, 255, 0.2);
+  background: rgba(30, 41, 59, 0.9);
+  border-color: rgba(217, 119, 6, 0.6);
+  box-shadow: 0 8px 24px rgba(217, 119, 6, 0.18), inset 0 1px 0 rgba(255, 255, 255, 0.12);
+}
+
+.btn-secondary-light:hover::before {
+  opacity: 1;
+}
+
+.btn-secondary-light:active {
+  transform: translateY(0px);
 }
 
 /* TEXT/LINK CTA - Small links and read more */
@@ -1613,6 +1709,32 @@ video::-moz-media-controls {
 
 .btn-link:hover::after {
   width: 100%;
+}
+
+/* Trust Section with Stars - Premium badge styling */
+.trust-indicator-premium {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+
+.trust-stars {
+  display: flex;
+  gap: 0.375rem;
+  justify-content: center;
+  align-items: center;
+}
+
+.trust-star {
+  font-size: 1.25rem;
+  color: rgba(217, 119, 6, 0.85);
+  text-shadow: 0 2px 4px rgba(217, 119, 6, 0.15);
+  letter-spacing: 0.125rem;
+}
+
+.trust-indicator-premium p {
+  margin: 0 !important;
 }
 
 /* SIZE VARIANTS */
