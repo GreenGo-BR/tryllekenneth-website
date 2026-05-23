@@ -190,7 +190,7 @@ export default function CorporateEventsPage() {
             <h2 className="text-4xl font-bold mb-4 text-gray-900">
               {locale === 'da' ? 'Underholdning der Inspirerer' : 'Entertainment That Inspires'}
             </h2>
-            <p className="text-lg text-blue-100 mb-8 leading-relaxed">
+            <p className="text-lg text-slate-900 mb-8 leading-relaxed">
               {locale === 'da'
                 ? 'Book TrylleKenneth til dit firmaarrangement og skab uforglemmelig underholdning for dine medarbejdere'
                 : 'Book TrylleKenneth for your corporate event and create unforgettable entertainment for your employees'
@@ -198,12 +198,12 @@ export default function CorporateEventsPage() {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link href={`/${locale}/contact`}>
-                <Button size="lg" className="btn-primary btn-lg">
+                <Button size="lg" className="btn-primary btn-lg w-56">
                   {locale === 'da' ? 'Book Underholdning' : 'Book Entertainment'}
                 </Button>
               </Link>
               <a href="tel:+4540852728">
-                <Button size="lg" className="btn-secondary">
+                <Button size="lg" className="btn-secondary w-56">
                   {locale === 'da' ? 'Ring: 40 85 27 28' : 'Call: 40 85 27 28'}
                 </Button>
               </a>
