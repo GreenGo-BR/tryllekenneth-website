@@ -179,6 +179,13 @@ export default function Home() {
 
               {/* Trust Indicators - Dark navy for luxury feel */}
               <div className="trust-indicator-premium pt-6 border-t border-amber-500/30">
+                <div className="trust-stars">
+                  <span className="trust-star">★</span>
+                  <span className="trust-star">★</span>
+                  <span className="trust-star">★</span>
+                  <span className="trust-star">★</span>
+                  <span className="trust-star">★</span>
+                </div>
                 <p className="text-sm sm:text-base text-slate-950 font-semibold">
                   {t('trust.message')}
                 </p>
