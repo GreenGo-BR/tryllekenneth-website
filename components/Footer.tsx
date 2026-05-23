@@ -44,8 +44,8 @@ export function Footer() {
             </Link>
             <p className="text-xs text-slate-600 leading-relaxed font-light">
               {locale === 'da' 
-                ? 'Professionel magisk underholdning til uforglemmelige begivenheder på tværs af Danmark.'
-                : 'Professional magical entertainment for unforgettable events across Denmark.'}
+                ? 'Professionel magisk underholdning til uforglemmelige begivenheder i Danmark og verden over.'
+                : 'Premium magical entertainment for unforgettable events in Denmark and worldwide.'}
             </p>
             
             {/* Trust Badges */}
