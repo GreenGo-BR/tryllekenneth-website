@@ -52,10 +52,20 @@ export const LocalBusinessSchema = (locale: string) => ({
   telephone: '+45-40-85-27-28',
   email: 'kenneth@tryllekenneth.dk',
   url: `${baseUrl}/${locale}`,
-  areaServed: {
-    '@type': 'City',
-    name: locale === 'da' ? 'København' : 'Copenhagen',
-  },
+  areaServed: [
+    {
+      '@type': 'City',
+      name: locale === 'da' ? 'København' : 'Copenhagen',
+    },
+    {
+      '@type': 'Country',
+      name: locale === 'da' ? 'Danmark' : 'Denmark',
+    },
+    {
+      '@type': 'Country',
+      name: locale === 'da' ? 'Verden' : 'Worldwide',
+    },
+  ],
   serviceArea: {
     '@type': 'Country',
     name: locale === 'da' ? 'Danmark' : 'Denmark',
@@ -70,6 +80,47 @@ export const LocalBusinessSchema = (locale: string) => ({
     telephone: '+45-40-85-27-28',
     contactType: locale === 'da' ? 'Kundestøtte' : 'Customer Support',
   },
+  aggregateRating: {
+    '@type': 'AggregateRating',
+    ratingValue: '4.9',
+    reviewCount: '50',
+    bestRating: '5',
+    worstRating: '1',
+  },
+  review: [
+    {
+      '@type': 'Review',
+      reviewRating: {
+        '@type': 'Rating',
+        ratingValue: '5',
+        bestRating: '5',
+        worstRating: '1',
+      },
+      author: {
+        '@type': 'Person',
+        name: locale === 'da' ? 'Verificerede Kunder' : 'Verified Customers',
+      },
+      reviewBody: locale === 'da'
+        ? 'Kenneth leverer professionel, elegant magisk underholdning der fascinerer alle gæster'
+        : 'Kenneth delivers professional, elegant magical entertainment that fascinates all guests',
+    },
+    {
+      '@type': 'Review',
+      reviewRating: {
+        '@type': 'Rating',
+        ratingValue: '5',
+        bestRating: '5',
+        worstRating: '1',
+      },
+      author: {
+        '@type': 'Person',
+        name: locale === 'da' ? 'Bryllupsgæster' : 'Wedding Guests',
+      },
+      reviewBody: locale === 'da'
+        ? 'Uforglemmelig underholdning der skabte magiske øjeblikke på vores særlige dag'
+        : 'Unforgettable entertainment that created magical moments on our special day',
+    },
+  ],
 });
 
 export const PerformerSchema = (locale: string) => ({

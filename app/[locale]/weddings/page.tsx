@@ -5,6 +5,7 @@ import { Header } from '@/components/Header';
 import { Footer } from '@/components/Footer';
 import { Button } from '@/components/ui/button';
 import { Card } from '@/components/ui/card';
+import { ReviewHighlight } from '@/components/ReviewHighlight';
 import { Accordion, AccordionItem, AccordionTrigger, AccordionContent } from '@/components/ui/accordion';
 import { VideoSchema } from '@/components/video-schema';
 import { Heart, Sparkles, Users } from 'lucide-react';
@@ -389,6 +390,18 @@ export default function WeddingPage() {
               </AccordionContent>
             </AccordionItem>
           </Accordion>
+        </section>
+
+        {/* Subtle Reviews Trust Section */}
+        <section className="py-8 px-4 sm:px-6 lg:px-8 max-w-2xl mx-auto">
+          <div className="text-center">
+            <p className="text-sm text-slate-600 mb-3">
+              {locale === 'da' 
+                ? 'Betroet af bryllupsgæster hele Danmark over'
+                : 'Trusted by wedding guests across Denmark'}
+            </p>
+            <ReviewHighlight variant="inline" className="justify-center" />
+          </div>
         </section>
 
         {/* Final CTA */}

@@ -4,6 +4,7 @@ import { Header } from '@/components/Header';
 import { Footer } from '@/components/Footer';
 import { Button } from '@/components/ui/button';
 import { Card } from '@/components/ui/card';
+import { ReviewHighlight } from '@/components/ReviewHighlight';
 import { Mail, Phone, MapPin, Clock } from 'lucide-react';
 import Link from 'next/link';
 import { useState } from 'react';
@@ -86,7 +87,15 @@ export default function Contact() {
             </Card>
           </div>
           
-          {/* Removed trust badges - kept only in footer */}
+          {/* Subtle Trust Section */}
+          <div className="mt-12 pt-12 border-t border-border">
+            <div className="max-w-2xl mx-auto text-center">
+              <p className="text-sm text-muted-foreground mb-4">
+                {t('reviews.trustHeading') || 'Trusted by Hundreds of Happy Clients'}
+              </p>
+              <ReviewHighlight variant="inline" className="justify-center" />
+            </div>
+          </div>
         </section>
 
         {/* Contact Form & Info */}

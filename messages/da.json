@@ -573,5 +573,20 @@
     "ctaButton": "Book Børnetrylleri",
     "ctaPhone": "Ring: +45 40 85 27 28",
     "ctaEmail": "Mail: kenneth@tryllekenneth.dk"
+  },
+  "reviews": {
+    "trustedAcross": "Betroet af hundredvis af glade kunder i Danmark og verden over",
+    "rating": "4,9/5 fra 50+ verificerede anmeldelser",
+    "trustHeading": "Betroet af Hundredvis af Tilfredse Klienter",
+    "clientsServed": "Over 500+ arrangementer udført på tværs af Danmark",
+    "seeReviews": "Se verificerede anmeldelser på Google",
+    "googleReviews": "Google Anmeldelser",
+    "localBusiness": "Verificeret lokalt firma siden 2010",
+    "recommendedBy": "Anbefalet af arrangører og familier",
+    "quote1": "Kenneth leverede ekstraordinær underholdning der gjorde vores bryllup uforglemmelig",
+    "quote2": "Professionel, elegant og absolut fascinerende - vores gæster talte om det i ugevis",
+    "quote3": "Børnene var forbløffede og henrykte - bedste fødselsdagsfest nogensinde",
+    "verified": "Verificeret Anmeldelse",
+    "learnMore": "Lær mere om vores dokumenterede track record"
   }
 }

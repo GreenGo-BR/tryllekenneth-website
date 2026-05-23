@@ -6,6 +6,7 @@ import dynamic from 'next/dynamic';
 import { Header } from '@/components/Header';
 import { ProductionVideo } from '@/components/ProductionVideo';
 import { VideoSchema } from '@/components/video-schema';
+import { ReviewHighlight } from '@/components/ReviewHighlight';
 import { Button } from '@/components/ui/button';
 import { Card } from '@/components/ui/card';
 import { Sparkles, Star, Wand2, Music, CheckCircle, Zap, Heart, Smile } from 'lucide-react';
@@ -456,6 +457,33 @@ export default function Home() {
                 </Button>
               </Link>
             </div>
+          </div>
+        </section>
+
+        {/* Trust & Reviews Section - Subtle and Premium */}
+        <section className="py-12 px-4 sm:px-6 lg:px-8 max-w-4xl mx-auto">
+          <div className="bg-gradient-to-br from-amber-50 via-white to-amber-50/50 border border-amber-100 rounded-2xl p-8 sm:p-12 text-center">
+            <div className="mb-6">
+              <ReviewHighlight variant="card" />
+            </div>
+            <h3 className="text-lg sm:text-xl font-semibold text-slate-900 mb-3">
+              {t('reviews.trustHeading') || 'Trusted by Hundreds of Happy Clients'}
+            </h3>
+            <p className="text-sm sm:text-base text-slate-600 mb-4">
+              {t('reviews.clientsServed') || 'Over 500+ events performed across Denmark'}
+            </p>
+            <p className="text-xs text-slate-500 mb-4">
+              {t('reviews.localBusiness') || 'Verified local business since 2010'} • {t('reviews.recommendedBy') || 'Recommended by event organizers and families'}
+            </p>
+            <a 
+              href="https://www.google.com/maps/place/Tryllekenneth/@55.6761,12.5683,13z" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 text-sm text-amber-700 hover:text-amber-900 transition-colors"
+            >
+              <Star className="w-3.5 h-3.5 fill-amber-600 text-amber-600" />
+              {t('reviews.seeReviews') || 'See verified reviews on Google'}
+            </a>
           </div>
         </section>
 

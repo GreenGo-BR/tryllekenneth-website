@@ -5,6 +5,7 @@ import { Header } from '@/components/Header';
 import { Footer } from '@/components/Footer';
 import { Button } from '@/components/ui/button';
 import { Card } from '@/components/ui/card';
+import { ReviewHighlight } from '@/components/ReviewHighlight';
 import { VideoSchema } from '@/components/video-schema';
 import { Users, Sparkles, Zap } from 'lucide-react';
 import Link from 'next/link';

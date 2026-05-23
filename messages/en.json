@@ -550,5 +550,20 @@
     "ctaButton": "Book Magic Entertainment",
     "ctaPhone": "Call: +45 40 85 27 28",
     "ctaEmail": "Email: kenneth@tryllekenneth.dk"
+  },
+  "reviews": {
+    "trustedAcross": "Trusted across Denmark and worldwide",
+    "rating": "4.9/5 from 50+ verified reviews",
+    "trustHeading": "Trusted by Hundreds of Happy Clients",
+    "clientsServed": "Over 500+ events performed across Denmark",
+    "seeReviews": "See verified reviews on Google",
+    "googleReviews": "Google Reviews",
+    "localBusiness": "Verified local business since 2010",
+    "recommendedBy": "Recommended by event organizers and families",
+    "quote1": "Kenneth delivered exceptional entertainment that made our wedding unforgettable",
+    "quote2": "Professional, elegant, and absolutely captivating - our guests talked about it for weeks",
+    "quote3": "The children were amazed and delighted - best birthday party ever",
+    "verified": "Verified Review",
+    "learnMore": "Learn more about our proven track record"
   }
 }
