@@ -7,6 +7,7 @@ import { Button } from '@/components/ui/button';
 import { Card } from '@/components/ui/card';
 import { VideoSchema } from '@/components/video-schema';
 import { EventzonenTrustBadge } from '@/components/EventzonenTrustBadge';
+import { GoogleReviewsTrustBadge } from '@/components/GoogleReviewsTrustBadge';
 import { Coins, Wand2, Hand } from 'lucide-react';
 import Link from 'next/link';
 
@@ -204,8 +205,9 @@ export default function CloseupMagic() {
             </div>
             
             {/* Eventzonen Trust Badge */}
-            <div className="mt-6 flex justify-center">
+            <div className="mt-6 flex justify-center gap-3">
               <EventzonenTrustBadge variant="compact" />
+              <GoogleReviewsTrustBadge variant="compact" showRating={true} />
             </div>
           </div>
         </section>

@@ -7,6 +7,7 @@ import { Header } from '@/components/Header';
 import { ProductionVideo } from '@/components/ProductionVideo';
 import { VideoSchema } from '@/components/video-schema';
 import { EventzonenTrustBadge } from '@/components/EventzonenTrustBadge';
+import { GoogleReviewsTrustBadge } from '@/components/GoogleReviewsTrustBadge';
 import { Button } from '@/components/ui/button';
 import { Card } from '@/components/ui/card';
 import { Sparkles, Star, Wand2, Music, CheckCircle, Zap, Heart, Smile } from 'lucide-react';
@@ -183,7 +184,10 @@ export default function Home() {
                 <p className="text-sm sm:text-base text-slate-950 font-semibold mb-3">
                   {t('trust.message')}
                 </p>
-                <EventzonenTrustBadge variant="minimal" />
+                <div className="flex flex-col sm:flex-row gap-3">
+                  <EventzonenTrustBadge variant="minimal" />
+                  <GoogleReviewsTrustBadge variant="minimal" showRating={true} />
+                </div>
               </div>
             </div>
           </div>

@@ -138,7 +138,27 @@ const structuredData = {
       'sameAs': [
         'https://www.facebook.com/tryllekenneth',
         'https://www.instagram.com/tryllekenneth'
-      ]
+      ],
+      'review': {
+        '@type': 'Review',
+        'reviewRating': {
+          '@type': 'Rating',
+          'ratingValue': '4.9',
+          'bestRating': '5',
+          'worstRating': '1'
+        },
+        'author': {
+          '@type': 'Person',
+          'name': 'Verified Customers'
+        }
+      },
+      'aggregateRating': {
+        '@type': 'AggregateRating',
+        'ratingValue': '4.9',
+        'reviewCount': '50',
+        'bestRating': '5',
+        'worstRating': '1'
+      }
     },
     {
       '@type': 'EntertainmentBusiness',

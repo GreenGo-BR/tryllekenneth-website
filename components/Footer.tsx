@@ -5,6 +5,7 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { Mail, Phone, MapPin } from 'lucide-react';
 import { EventzonenTrustBadge } from './EventzonenTrustBadge';
+import { GoogleReviewsTrustBadge } from './GoogleReviewsTrustBadge';
 
 export function Footer() {
   const t = useTranslations('footer');
@@ -50,6 +51,11 @@ export function Footer() {
             {/* Eventzonen Trust Badge - Premium placement */}
             <div className="pt-2">
               <EventzonenTrustBadge variant="minimal" />
+            </div>
+            
+            {/* Google Reviews Trust Badge */}
+            <div className="pt-2">
+              <GoogleReviewsTrustBadge variant="minimal" />
             </div>
             {/* Social hints (optional - minimal placement) */}
             <div className="flex gap-4 pt-2">

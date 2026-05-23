@@ -9,6 +9,7 @@ import Link from 'next/link';
 import { useState } from 'react';
 import { useLocale, useTranslations } from 'next-intl';
 import { triggerCelebration } from '@/lib/animations';
+import { GoogleReviewsTrustBadge } from '@/components/GoogleReviewsTrustBadge';
 
 export default function Contact() {
   const locale = useLocale();
@@ -84,6 +85,16 @@ export default function Contact() {
                 {t('contactPage.availabilityTime')}
               </p>
             </Card>
+          </div>
+          
+          {/* Trust Indicators - Google Reviews */}
+          <div className="text-center py-6 border-t border-border">
+            <p className="text-sm font-semibold text-slate-700 mb-3">
+              {locale === 'da' ? 'Se hvad vores kunder mener' : 'See what our customers say'}
+            </p>
+            <div className="flex justify-center">
+              <GoogleReviewsTrustBadge variant="expanded" showRating={true} />
+            </div>
           </div>
         </section>
 
