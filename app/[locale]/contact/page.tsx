@@ -61,7 +61,7 @@ export default function Contact() {
               </div>
               <h3 className="text-xl font-bold mb-2">{t('contactPage.phoneCardLabel')}</h3>
               <a href="tel:+4540852728" className="text-muted-foreground hover:text-primary transition-colors">
-                40 85 27 28
+                +45 40 85 27 28
               </a>
             </Card>
 

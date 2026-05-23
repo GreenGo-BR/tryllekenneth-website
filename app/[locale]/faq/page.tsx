@@ -140,7 +140,7 @@ export default function FAQ() {
               </Link>
               <a href="tel:+4540852728">
                 <Button size="lg" className="btn-secondary btn-lg">
-                  {locale === 'da' ? 'Ring: 40 85 27 28' : 'Call: 40 85 27 28'}
+                  {locale === 'da' ? 'Ring: +45 40 85 27 28' : 'Call: +45 40 85 27 28'}
                 </Button>
               </a>
             </div>

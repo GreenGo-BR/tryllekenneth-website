@@ -34,7 +34,7 @@ export default function PrivacyPolicy() {
                     TrylleKenneth er dataansvarlig for behandling af personlige data på denne hjemmeside.
                   </p>
                   <p className="text-slate-700 leading-relaxed mb-4">
-                    Kontakt: kenneth@tryllekenneth.dk | Telefon: 40 85 27 28
+                    Kontakt: kenneth@tryllekenneth.dk | Telefon: +45 40 85 27 28
                   </p>
                 </section>
 
@@ -170,7 +170,7 @@ export default function PrivacyPolicy() {
                     TrylleKenneth is the data controller for the processing of personal data on this website.
                   </p>
                   <p className="text-slate-700 leading-relaxed mb-4">
-                    Contact: kenneth@tryllekenneth.dk | Phone: 40 85 27 28
+                    Contact: kenneth@tryllekenneth.dk | Phone: +45 40 85 27 28
                   </p>
                 </section>
 
