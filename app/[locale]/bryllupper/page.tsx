@@ -6,7 +6,6 @@ import { Footer } from '@/components/Footer';
 import { Button } from '@/components/ui/button';
 import { Card } from '@/components/ui/card';
 import { VideoSchema } from '@/components/video-schema';
-import { EventzonenTrustBadge } from '@/components/EventzonenTrustBadge';
 import { Heart, Sparkles, Users } from 'lucide-react';
 import Link from 'next/link';
 
@@ -210,10 +209,7 @@ export default function WeddingPage() {
               </a>
             </div>
             
-            {/* Eventzonen Trust Badge */}
-            <div className="mt-6 flex justify-center">
-              <EventzonenTrustBadge variant="compact" />
-            </div>
+            {/* Removed trust badges - kept only in footer */}
           </div>
         </section>
 

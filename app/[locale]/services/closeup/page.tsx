@@ -6,8 +6,6 @@ import { Footer } from '@/components/Footer';
 import { Button } from '@/components/ui/button';
 import { Card } from '@/components/ui/card';
 import { VideoSchema } from '@/components/video-schema';
-import { EventzonenTrustBadge } from '@/components/EventzonenTrustBadge';
-import { GoogleReviewsTrustBadge } from '@/components/GoogleReviewsTrustBadge';
 import { Coins, Wand2, Hand } from 'lucide-react';
 import Link from 'next/link';
 
@@ -204,11 +202,7 @@ export default function CloseupMagic() {
               </a>
             </div>
             
-            {/* Eventzonen Trust Badge */}
-            <div className="mt-6 flex justify-center gap-3">
-              <EventzonenTrustBadge variant="compact" />
-              <GoogleReviewsTrustBadge variant="compact" showRating={true} />
-            </div>
+            {/* Removed trust badges - kept only in footer */}
           </div>
         </section>
 
