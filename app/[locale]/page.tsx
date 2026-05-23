@@ -172,7 +172,7 @@ export default function Home() {
                     {t('hero.cta1')}
                   </Button>
                 </Link>
-                <a href="tel:+4540852728" className="inline-block">
+                <a href="https://wa.me/4540852728" target="_blank" rel="noopener noreferrer" className="inline-block">
                   <Button size="lg" className="btn-secondary-light btn-lg">
                     {t('hero.cta2')}
                   </Button>
@@ -476,7 +476,7 @@ export default function Home() {
                   {t('cta.bookShow')}
                 </Button>
               </Link>
-              <a href="tel:+4540852728">
+              <a href="https://wa.me/4540852728" target="_blank" rel="noopener noreferrer">
                 <Button
                   size="lg"
                   className="btn-secondary btn-lg stagger-item"

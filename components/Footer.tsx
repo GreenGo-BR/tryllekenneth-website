@@ -56,7 +56,7 @@ export function Footer() {
             
             {/* Contact Icons */}
             <div className="flex gap-3 pt-1">
-              <a href="tel:+4540852728" className="text-slate-400 hover:text-amber-500 transition-colors duration-300" title="Call">
+              <a href="https://wa.me/4540852728" target="_blank" rel="noopener noreferrer" className="text-slate-400 hover:text-amber-500 transition-colors duration-300" title="WhatsApp">
                 <Phone size={16} />
               </a>
               <a href="mailto:kenneth@tryllekenneth.dk" className="text-slate-400 hover:text-amber-500 transition-colors duration-300" title="Email">
@@ -105,13 +105,15 @@ export function Footer() {
             <h4 className="text-xs font-semibold text-slate-900 uppercase tracking-wider">{t('contact')}</h4>
             <div className="flex flex-col gap-3">
               <a
-                href="tel:+4540852728"
+                href="https://wa.me/4540852728"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="group flex items-start gap-3 hover:pl-1 transition-all duration-300"
               >
                 <Phone size={16} className="text-amber-500 mt-0.5 flex-shrink-0" />
                 <div className="flex flex-col gap-0">
                   <span className="text-slate-700 font-light group-hover:text-slate-900 transition-colors duration-300 text-xs">
-                    <span className="text-slate-500">{locale === 'da' ? 'Telefon: ' : 'Phone: '}</span><span>40 85 27 28</span>
+                    <span className="text-slate-500">{locale === 'da' ? 'WhatsApp: ' : 'WhatsApp: '}</span><span>+45 40 85 27 28</span>
                   </span>
                 </div>
               </a>
