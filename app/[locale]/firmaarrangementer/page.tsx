@@ -211,6 +211,9 @@ export default function CorporateEventsPage() {
           </div>
         </section>
 
+        {/* Subtle transition gradient before footer */}
+        <div className="h-16 bg-gradient-to-b from-blue-50/50 via-slate-50/30 to-slate-50 pointer-events-none"></div>
+
         <Footer />
       </main>
     </>

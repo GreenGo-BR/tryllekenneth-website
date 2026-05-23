@@ -12,7 +12,11 @@ export function Footer() {
   const locale = useLocale();
 
   return (
-    <footer className="relative mt-16 bg-gradient-to-b from-slate-50 via-slate-100 to-slate-200 overflow-hidden">
+    <>
+      {/* Subtle gradient transition separator */}
+      <div className="h-1 bg-gradient-to-b from-slate-200/30 via-slate-300/20 to-transparent"></div>
+      
+      <footer className="relative bg-gradient-to-b from-slate-50 via-slate-100 to-slate-150 overflow-hidden shadow-inner shadow-slate-300/10">
       {/* Subtle cinematic texture overlay with enhanced depth */}
       <div className="absolute inset-0 opacity-5 bg-gradient-to-br from-slate-400/10 via-transparent to-amber-400/10 pointer-events-none" />
       
@@ -137,5 +141,6 @@ export function Footer() {
         </div>
       </div>
     </footer>
+    </>
   );
 }
