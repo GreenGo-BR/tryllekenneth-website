@@ -460,7 +460,7 @@ export default function Home() {
         </section>
 
         {/* CTA Section with Premium Signature */}
-        <section className="py-16 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-primary/10 via-accent/10 to-secondary/10 section-magic-entrance premium-signature-accent">
+        <section className="py-16 px-4 sm:px-6 lg:px-8 section-magic-entrance premium-signature-accent">
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="text-3xl sm:text-4xl font-bold mb-4 text-foreground stagger-item magical-heading magical-text">
               {t('cta.title')}
