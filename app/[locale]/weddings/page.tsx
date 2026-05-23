@@ -5,6 +5,7 @@ import { Header } from '@/components/Header';
 import { Footer } from '@/components/Footer';
 import { Button } from '@/components/ui/button';
 import { Card } from '@/components/ui/card';
+import { Accordion, AccordionItem, AccordionTrigger, AccordionContent } from '@/components/ui/accordion';
 import { VideoSchema } from '@/components/video-schema';
 import { Heart, Sparkles, Users } from 'lucide-react';
 import Link from 'next/link';
@@ -210,6 +211,208 @@ export default function WeddingPage() {
             </div>
             
             {/* Removed trust badges - kept only in footer */}
+          </div>
+        </section>
+
+        {/* Subtle transition gradient before footer */}
+        <div className="h-16 bg-gradient-to-b from-rose-50/50 via-slate-50/30 to-slate-50 pointer-events-none"></div>
+
+        {/* Service Details Section */}
+        <section className="py-16 px-4 sm:px-6 lg:px-8 max-w-4xl mx-auto bg-slate-50 rounded-lg">
+          <h2 className="text-3xl font-bold mb-12 text-foreground">
+            {locale === 'da' ? 'Bryllupstrylleri - Ydelser' : 'Wedding Magic Services'}
+          </h2>
+          
+          <div className="space-y-6">
+            <Card className="p-8 border-l-4 border-l-rose-600 rounded-lg">
+              <h3 className="text-xl font-bold mb-3 text-slate-900">
+                {locale === 'da' ? 'Nærmagi ved Bordene' : 'Close-up Magic at Tables'}
+              </h3>
+              <p className="text-slate-700 mb-4">
+                {locale === 'da' 
+                  ? 'Kenneth optræder med elegant nærmagi ved bordene under maden. Kort, mønter og genstande forsvinder og dukker op på magisk vis. En intime oplevelse der skaber samvær og latter blandt gæsterne.'
+                  : 'Kenneth performs elegant close-up magic at your tables during the reception. Cards, coins and objects disappear and reappear magically. An intimate experience that creates connection and laughter among your guests.'
+                }
+              </p>
+              <div className="flex flex-wrap gap-4 text-sm text-slate-600">
+                <span className="flex items-center gap-2"><span className="text-rose-600">✓</span> {locale === 'da' ? 'Varighed: 1-3 timer' : 'Duration: 1-3 hours'}</span>
+                <span className="flex items-center gap-2"><span className="text-rose-600">✓</span> {locale === 'da' ? 'Fleksibel timing' : 'Flexible timing'}</span>
+                <span className="flex items-center gap-2"><span className="text-rose-600">✓</span> {locale === 'da' ? 'Alle gæster involveret' : 'All guests involved'}</span>
+              </div>
+            </Card>
+
+            <Card className="p-8 border-l-4 border-l-pink-600 rounded-lg">
+              <h3 className="text-xl font-bold mb-3 text-slate-900">
+                {locale === 'da' ? 'Scene Show' : 'Stage Performance'}
+              </h3>
+              <p className="text-slate-700 mb-4">
+                {locale === 'da'
+                  ? 'Et elegant og fascinerende sceneshow under festen eller om aftenen. Publikumsinteraktion, humor og ren magi der holder hele salen fascineret. Perfekt til at skabe en mindeværdig højdepunkt på brylluppet.'
+                  : 'An elegant and fascinating stage show during the celebration or evening. Audience interaction, humor and pure magic that fascinates the entire room. Perfect for creating a memorable highlight at your wedding.'
+                }
+              </p>
+              <div className="flex flex-wrap gap-4 text-sm text-slate-600">
+                <span className="flex items-center gap-2"><span className="text-pink-600">✓</span> {locale === 'da' ? 'Varighed: 20-30 minutter' : 'Duration: 20-30 minutes'}</span>
+                <span className="flex items-center gap-2"><span className="text-pink-600">✓</span> {locale === 'da' ? 'Publikumsdeltagelse' : 'Audience participation'}</span>
+                <span className="flex items-center gap-2"><span className="text-pink-600">✓</span> {locale === 'da' ? 'Professionelt setup' : 'Professional setup'}</span>
+              </div>
+            </Card>
+
+            <Card className="p-8 border-l-4 border-l-amber-600 rounded-lg">
+              <h3 className="text-xl font-bold mb-3 text-slate-900">
+                {locale === 'da' ? 'Kombineret Pakke' : 'Combined Package'}
+              </h3>
+              <p className="text-slate-700 mb-4">
+                {locale === 'da'
+                  ? 'Kombiner nærmagi ved bordene med et scene show senere på aftenen. Få det bedste af begge verdener - intime magiske øjeblikke blandet med et spektakulært show der binder dagen sammen.'
+                  : 'Combine close-up magic at tables with a stage show later in the evening. Get the best of both worlds - intimate magical moments mixed with a spectacular show that ties the day together.'
+                }
+              </p>
+              <div className="flex flex-wrap gap-4 text-sm text-slate-600">
+                <span className="flex items-center gap-2"><span className="text-amber-600">✓</span> {locale === 'da' ? 'Fuldt trylleprogram' : 'Complete magic program'}</span>
+                <span className="flex items-center gap-2"><span className="text-amber-600">✓</span> {locale === 'da' ? 'Maksimal effekt' : 'Maximum impact'}</span>
+                <span className="flex items-center gap-2"><span className="text-amber-600">✓</span> {locale === 'da' ? 'Prisvenlig' : 'Best value'}</span>
+              </div>
+            </Card>
+          </div>
+        </section>
+
+        {/* FAQ Section with Accordion */}
+        <section className="py-16 px-4 sm:px-6 lg:px-8 max-w-4xl mx-auto">
+          <h2 className="text-3xl font-bold mb-12 text-foreground">
+            {locale === 'da' ? 'Ofte Stillede Spørgsmål' : 'Frequently Asked Questions'}
+          </h2>
+
+          <Accordion type="single" collapsible className="space-y-3">
+            <AccordionItem value="q1">
+              <AccordionTrigger className="text-left font-semibold text-slate-900 hover:text-slate-700 py-4">
+                {locale === 'da' 
+                  ? 'Hvor længe varer bryllupstrylleri?'
+                  : 'How long does wedding magic last?'
+                }
+              </AccordionTrigger>
+              <AccordionContent className="text-slate-600 pb-4">
+                {locale === 'da'
+                  ? 'Nærmagi ved bordene kan køre 1-3 timer efter dine ønsker. Scene shows er typisk 20-30 minutter. Kenneth tilpasser timingen helt til dit program og brylluppets flow.'
+                  : 'Close-up magic at tables can run 1-3 hours based on your wishes. Stage shows are typically 20-30 minutes. Kenneth tailors the timing completely to your program and wedding flow.'
+                }
+              </AccordionContent>
+            </AccordionItem>
+
+            <AccordionItem value="q2">
+              <AccordionTrigger className="text-left font-semibold text-slate-900 hover:text-slate-700 py-4">
+                {locale === 'da'
+                  ? 'Kan trylleri planlægges til specifikke tidspunkter?'
+                  : 'Can magic be scheduled for specific times?'
+                }
+              </AccordionTrigger>
+              <AccordionContent className="text-slate-600 pb-4">
+                {locale === 'da'
+                  ? 'Ja! Kenneth koordinerer med dig om hvornår trylleri skal foregå - under maden, efter taler, under dans, eller præcis når det passer bedst i dit program. Du bestemmer helt timingen.'
+                  : 'Yes! Kenneth coordinates with you about when magic should happen - during dinner, after speeches, during dancing, or exactly when it fits best in your program. You have complete control of timing.'
+                }
+              </AccordionContent>
+            </AccordionItem>
+
+            <AccordionItem value="q3">
+              <AccordionTrigger className="text-left font-semibold text-slate-900 hover:text-slate-700 py-4">
+                {locale === 'da'
+                  ? 'Hvad hvis nogle gæster har set trylleri før?'
+                  : 'What if some guests have seen magic before?'
+                }
+              </AccordionTrigger>
+              <AccordionContent className="text-slate-600 pb-4">
+                {locale === 'da'
+                  ? 'Trylleri virker for alle uanset erfaring. Kenneth udfører klassisk trylleri der fascinerer selv magic-entusiaster. Gåden ligger i dygtigheden og presentationen, ikke overraskelses-effekten.'
+                  : 'Magic works for everyone regardless of experience. Kenneth performs classic magic that fascinates even magic enthusiasts. The wonder comes from skill and presentation, not surprise alone.'
+                }
+              </AccordionContent>
+            </AccordionItem>
+
+            <AccordionItem value="q4">
+              <AccordionTrigger className="text-left font-semibold text-slate-900 hover:text-slate-700 py-4">
+                {locale === 'da'
+                  ? 'Kan Kenneth optræde ved udendørs bryllup?'
+                  : 'Can Kenneth perform at outdoor weddings?'
+                }
+              </AccordionTrigger>
+              <AccordionContent className="text-slate-600 pb-4">
+                {locale === 'da'
+                  ? 'Ja, Kenneth optræder ved både indendørs og udendørs bryllupsfester. Nærmagi virker vidunderligt udendørs, og scene shows kan arrangeres med passende setup.'
+                  : 'Yes, Kenneth performs at both indoor and outdoor wedding receptions. Close-up magic works beautifully outdoors, and stage performances can be arranged with proper setup.'
+                }
+              </AccordionContent>
+            </AccordionItem>
+
+            <AccordionItem value="q5">
+              <AccordionTrigger className="text-left font-semibold text-slate-900 hover:text-slate-700 py-4">
+                {locale === 'da'
+                  ? 'Hvor langt i forvejen skal jeg booke?'
+                  : 'How far in advance should I book?'
+                }
+              </AccordionTrigger>
+              <AccordionContent className="text-slate-600 pb-4">
+                {locale === 'da'
+                  ? 'Vi anbefaler at booke 2-4 måneder før brylluppet for at sikre tilgængelighed. Men kontakt Kenneth gerne med kort tidsfrist - han gør sit bedste for at accommodere tidligere bookinger. Jo før, jo bedre!'
+                  : 'We recommend booking 2-4 months in advance to ensure availability. But feel free to contact Kenneth on shorter notice - he will do his best to accommodate earlier bookings. The sooner, the better!'
+                }
+              </AccordionContent>
+            </AccordionItem>
+
+            <AccordionItem value="q6">
+              <AccordionTrigger className="text-left font-semibold text-slate-900 hover:text-slate-700 py-4">
+                {locale === 'da'
+                  ? 'Hvilke tryllernumre kan Kenneth lave?'
+                  : 'What magic tricks can Kenneth perform?'
+                }
+              </AccordionTrigger>
+              <AccordionContent className="text-slate-600 pb-4">
+                {locale === 'da'
+                  ? 'Kenneth specialiserer sig i kort-trylleri, mønts-trylleri og genstands-manipulering. Alt bruger almindelige objekter eller gæsternes egne ting - der skabes ægte forbløffelse. Hver optræden tilpasses til dine ønsker og brylluppets tema.'
+                  : 'Kenneth specializes in card tricks, coin magic and object manipulation. Everything uses everyday objects or guests\' own items - creating genuine amazement. Each performance is tailored to your wishes and wedding theme.'
+                }
+              </AccordionContent>
+            </AccordionItem>
+
+            <AccordionItem value="q7">
+              <AccordionTrigger className="text-left font-semibold text-slate-900 hover:text-slate-700 py-4">
+                {locale === 'da'
+                  ? 'Er der ekstra udgifter for rejse eller setup?'
+                  : 'Are there extra costs for travel or setup?'
+                }
+              </AccordionTrigger>
+              <AccordionContent className="text-slate-600 pb-4">
+                {locale === 'da'
+                  ? 'Kenneth rejser til hele Danmark. Rejseomkostninger kan variere afhængig af lokation. Setup er normalt inkluderet i tilbuddet. Alt diskuteres og aftales når du kontakter Kenneth.'
+                  : 'Kenneth travels throughout Denmark. Travel costs may vary depending on location. Setup is normally included in the quote. Everything is discussed and arranged when you contact Kenneth.'
+                }
+              </AccordionContent>
+            </AccordionItem>
+          </Accordion>
+        </section>
+
+        {/* Final CTA */}
+        <section className="py-12 px-4 sm:px-6 lg:px-8 text-center max-w-3xl mx-auto">
+          <h2 className="text-3xl font-bold mb-4 text-slate-900">
+            {locale === 'da' ? 'Klar til trylleri?' : 'Ready for magic?'}
+          </h2>
+          <p className="text-lg text-slate-600 mb-8">
+            {locale === 'da'
+              ? 'Kontakt Kenneth i dag for at diskutere hvordan trylleri kan gøre din bryllupsbilling endnu mere magisk og uforglemmelig.'
+              : 'Contact Kenneth today to discuss how magic can make your wedding day even more magical and unforgettable.'
+            }
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <Link href={`/${locale}/contact`}>
+              <Button size="lg" className="btn-primary w-full sm:w-auto">
+                {locale === 'da' ? 'Book Bryllupstrylleri' : 'Book Wedding Magic'}
+              </Button>
+            </Link>
+            <a href="tel:+4540852728">
+              <Button size="lg" variant="outline" className="w-full sm:w-auto">
+                {locale === 'da' ? 'Ring: +45 40 85 27 28' : 'Call: +45 40 85 27 28'}
+              </Button>
+            </a>
           </div>
         </section>
 
