@@ -145,17 +145,20 @@ export function Footer() {
         <div className="premium-divider-accent my-8" />
 
         {/* Bottom bar - Premium footer credit */}
-        <div className="flex flex-col sm:flex-row justify-between items-center gap-4 pt-2">
+        <div className="flex flex-col sm:flex-row justify-between items-center gap-6 pt-4">
           <p className="text-xs text-slate-500 font-light">© 2026 TrylleKenneth. All rights reserved.</p>
           <a
             href="https://www.eslmarketing.com/"
             target="_blank"
             rel="noopener noreferrer"
-            className="group hover:opacity-70 transition-opacity duration-300"
-            title="ESL Marketing"
+            className="group flex items-center gap-1 transition-all duration-300"
+            title="ESL Marketing - Premium Digital Solutions"
           >
-            <span className="text-xs text-slate-500 font-light group-hover:text-slate-700 transition-colors duration-300">
-              {locale === 'da' ? 'Designet af ' : 'Designed by '}<span className="text-amber-500">ESL Marketing</span>
+            <span className="text-xs text-slate-600 font-light group-hover:text-slate-800 transition-colors duration-300">
+              {locale === 'da' ? 'Designet af' : 'Designed by'}
+            </span>
+            <span className="text-xs font-semibold text-amber-600 group-hover:text-amber-700 transition-colors duration-300 group-hover:underline underline-offset-2 decoration-amber-300/50 group-hover:decoration-amber-400">
+              ESL Marketing
             </span>
           </a>
         </div>
