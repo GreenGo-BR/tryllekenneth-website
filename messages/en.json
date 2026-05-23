@@ -31,7 +31,11 @@
     "services": "Services",
     "information": "Information",
     "contact": "Contact",
-    "rights": "© 2026 TrylleKenneth. All rights reserved."
+    "rights": "© 2026 TrylleKenneth. All rights reserved.",
+    "termsAndConditions": "Terms & Conditions",
+    "privacyPolicy": "Privacy Policy",
+    "basedIn": "Based in Denmark",
+    "availableWorldwide": "Available Worldwide"
   },
   "about": {
     "title": "About Kenneth",

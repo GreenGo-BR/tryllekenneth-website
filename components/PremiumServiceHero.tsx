@@ -75,7 +75,7 @@ export function PremiumServiceHero({
                   {buttonText}
                 </Button>
               </Link>
-              <a href={`tel:${phoneNumber}`}>
+              <a href={`https://wa.me/${phoneNumber.replace(/\D/g, '')}`} target="_blank" rel="noopener noreferrer">
                 <Button 
                   size="lg" 
                   className={`border-2 border-${accentColors.text} text-${accentColors.text} hover:bg-${accentColors.light} text-base font-semibold h-14 px-8 transition-all`}

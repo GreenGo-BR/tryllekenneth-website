@@ -85,6 +85,8 @@ export default function Contact() {
               </p>
             </Card>
           </div>
+          
+          {/* Removed trust badges - kept only in footer */}
         </section>
 
         {/* Contact Form & Info */}

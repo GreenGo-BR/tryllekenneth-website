@@ -110,12 +110,12 @@ export default function ChildrensMagic() {
             <p className="text-lg mb-8 text-slate-900">{t('cta.subtitle')}</p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link href={`/${locale}/contact`}>
-                <Button size="lg" className="btn-primary btn-lg w-56">
+                <Button size="lg" className="btn-primary w-[276px] h-[52px] sm:w-full sm:max-w-[320px] flex items-center justify-center text-base font-semibold rounded-lg">
                   {t('cta.bookButton')}
                 </Button>
               </Link>
               <Link href={`tel:${t('footer.phone')}`}>
-                <Button size="lg" className="btn-secondary w-56">
+                <Button size="lg" className="btn-secondary w-[276px] h-[52px] sm:w-full sm:max-w-[320px] flex items-center justify-center text-base font-semibold rounded-lg">
                   {t('cta.callKenneth')}
                 </Button>
               </Link>
@@ -123,6 +123,10 @@ export default function ChildrensMagic() {
           </div>
         </section>
       </main>
+      
+      {/* Subtle transition gradient before footer */}
+      <div className="h-16 bg-gradient-to-b from-purple-50/50 via-slate-50/30 to-slate-50 pointer-events-none"></div>
+
       <Footer />
     </>
   );

@@ -48,12 +48,12 @@ export default function SantaMagic() {
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4">
                   <Link href={`/${locale}/contact`}>
-                    <Button size="lg" className="btn-primary btn-lg">
+                    <Button size="lg" className="btn-primary w-[276px] h-[52px] sm:w-full sm:max-w-[320px] flex items-center justify-center text-base font-semibold rounded-lg">
                       {locale === 'da' ? 'Book Julemanden' : 'Book Santa'}
                     </Button>
                   </Link>
                   <a href="tel:+4540852728">
-                    <Button size="lg" className="btn-primary btn-lg">
+                    <Button size="lg" className="btn-secondary w-[276px] h-[52px] sm:w-full sm:max-w-[320px] flex items-center justify-center text-base font-semibold rounded-lg">
                       {locale === 'da' ? 'Ring: 40 85 27 28' : 'Call: 40 85 27 28'}
                     </Button>
                   </a>
@@ -266,18 +266,21 @@ export default function SantaMagic() {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link href={`/${locale}/contact`}>
-                <Button size="lg" className="btn-primary btn-lg w-56">
+                <Button size="lg" className="btn-primary w-[276px] h-[52px] sm:w-full sm:max-w-[320px] flex items-center justify-center text-base font-semibold rounded-lg">
                   {locale === 'da' ? 'Book Julemanden' : 'Book Santa'}
                 </Button>
               </Link>
               <a href="tel:+4540852728">
-                <Button size="lg" className="btn-secondary w-56">
+                <Button size="lg" className="btn-secondary w-[276px] h-[52px] sm:w-full sm:max-w-[320px] flex items-center justify-center text-base font-semibold rounded-lg">
                   {locale === 'da' ? 'Ring: 40 85 27 28' : 'Call: 40 85 27 28'}
                 </Button>
               </a>
             </div>
           </div>
         </section>
+
+        {/* Subtle transition gradient before footer */}
+        <div className="h-16 bg-gradient-to-b from-red-50/50 via-slate-50/30 to-slate-50 pointer-events-none"></div>
 
         <Footer />
       </main>
