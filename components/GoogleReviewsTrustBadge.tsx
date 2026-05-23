@@ -41,9 +41,9 @@ export function GoogleReviewsTrustBadge({
 
   return (
     <a
-      href="https://share.google/Je81zkInz5VtNrAzQ"
+      href="https://share.google/SEEaf7Xt4rjzsQV97"
       target="_blank"
-      rel="nofollow external"
+      rel="nofollow external noopener noreferrer"
       className={`inline-flex items-center gap-2 px-3 py-1.5 rounded-md bg-slate-100 hover:bg-slate-200 transition-colors duration-300 group ${className}`}
       title={locale === 'da' ? 'Se anmeldelser på Google' : 'See Reviews on Google'}
       aria-label={locale === 'da' ? `${text} - åbnes i nyt vindue` : `${text} - opens in new window`}
