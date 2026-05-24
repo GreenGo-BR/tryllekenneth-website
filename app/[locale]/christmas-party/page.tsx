@@ -1,40 +1,18 @@
-'use client';
+import { redirect } from 'next/navigation';
 
-import { useLocale, useTranslations } from 'next-intl';
-import { Header } from '@/components/Header';
-import { Footer } from '@/components/Footer';
-import { Button } from '@/components/ui/button';
-import { useEffect } from 'react';
-import Link from 'next/link';
+export const metadata = {
+  title: 'Christmas Party | Tryllekenneth',
+  description: 'Premium Christmas party entertainment and magic shows',
+};
 
-export default function ChristmasPartyPage() {
-  const locale = useLocale();
-  const t = useTranslations();
-
-  useEffect(() => {
-    // Redirect to julefrokost page as it contains the Christmas party content
-    window.location.href = `/${locale}/julefrokost`;
-  }, [locale]);
-
-  return (
-    <>
-      <Header />
-      <main className="min-h-screen flex items-center justify-center px-4">
-        <div className="text-center">
-          <h1 className="text-3xl font-bold mb-4">{locale === 'da' ? 'Omdirigerer...' : 'Redirecting...'}</h1>
-          <p className="text-slate-600 mb-8">
-            {locale === 'da' 
-              ? 'Du bliver omdirigeret til julefrkosten siden...' 
-              : 'You are being redirected to the Christmas party page...'}
-          </p>
-          <Link href={`/${locale}/julefrokost`}>
-            <Button className="btn-primary">
-              {locale === 'da' ? 'Klik her hvis du ikke bliver omdirigeret' : 'Click here if you are not redirected'}
-            </Button>
-          </Link>
-        </div>
-      </main>
-      <Footer />
-    </>
-  );
+export default async function ChristmasPartyPage({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}) {
+  // Await params as per Next.js 15+ patterns
+  const { locale } = await params;
+  
+  // Server-side redirect - instant, no flash, no "Redirecting..." message
+  redirect(`/${locale}/julefrokost`);
 }

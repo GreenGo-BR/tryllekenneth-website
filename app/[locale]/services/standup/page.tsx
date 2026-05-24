@@ -32,10 +32,10 @@ export default function StandUpMagic() {
             <div className="absolute top-1/3 right-1/3 w-72 h-72 bg-rose-200/5 rounded-full blur-3xl animate-drift-right" style={{ animationDelay: '1s' }}></div>
           </div>
 
-          <div className="max-w-5xl mx-auto relative z-10 w-full">
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center">
+          <div className="max-w-6xl mx-auto relative z-10 w-full">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16 items-center">
               {/* Left: Text Content */}
-              <div>
+              <div className="relative z-20">
                 <h1 className="text-5xl sm:text-6xl font-bold magical-heading magical-text mb-6 text-foreground">
                   {locale === 'da' ? 'Standup Trylleri' : 'Stand-up Magic'}
                 </h1>
