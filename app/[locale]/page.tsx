@@ -6,6 +6,7 @@ import dynamic from 'next/dynamic';
 import { Header } from '@/components/Header';
 import { ProductionVideo } from '@/components/ProductionVideo';
 import { VideoSchema } from '@/components/video-schema';
+import { ReviewHighlight } from '@/components/ReviewHighlight';
 import { Button } from '@/components/ui/button';
 import { Card } from '@/components/ui/card';
 import { Sparkles, Star, Wand2, Music, CheckCircle, Zap, Heart, Smile } from 'lucide-react';
@@ -280,7 +281,7 @@ export default function Home() {
                       ? 'Elegant magisk underholdning til uforglemmelige bryllupper'
                       : 'Elegant magic for unforgettable weddings'}
                   </p>
-                  <Link href={`/${locale}/bryllupper`} className="inline-flex items-center gap-1 text-xs font-medium text-primary hover:text-accent transition-colors">
+                  <Link href={`/${locale}/${locale === 'da' ? 'bryllupper' : 'weddings'}`} className="inline-flex items-center gap-1 text-xs font-medium text-primary hover:text-accent transition-colors">
                     {t('services.readMore')} →
                   </Link>
                 </div>
@@ -304,7 +305,7 @@ export default function Home() {
                       ? 'Magiske øjeblikke direkte foran dine gæster'
                       : 'Magic performed directly in front of your guests'}
                   </p>
-                  <Link href={`/${locale}/services/closeup`} className="inline-flex items-center gap-1 text-xs font-medium text-primary hover:text-accent transition-colors">
+                  <Link href={`/${locale}/services/${locale === 'da' ? 'naermagi' : 'closeup'}`} className="inline-flex items-center gap-1 text-xs font-medium text-primary hover:text-accent transition-colors">
                     {t('services.readMore')} →
                   </Link>
                 </div>
@@ -328,7 +329,7 @@ export default function Home() {
                       ? 'Festlig magisk underholdning til julearrangementer'
                       : 'Festive performances for holiday celebrations'}
                   </p>
-                  <Link href={`/${locale}/julefrokost`} className="inline-flex items-center gap-1 text-xs font-medium text-primary hover:text-accent transition-colors">
+                  <Link href={`/${locale}/${locale === 'da' ? 'julefrokost' : 'christmas-party'}`} className="inline-flex items-center gap-1 text-xs font-medium text-primary hover:text-accent transition-colors">
                     {t('services.readMore')} →
                   </Link>
                 </div>
@@ -458,6 +459,24 @@ export default function Home() {
             </div>
           </div>
         </section>
+
+        {/* Trust Strip - Minimal Luxury */}
+        <div className="border-t border-b border-slate-200/50 bg-slate-50/30 backdrop-blur-sm">
+          <section className="py-4 px-4 sm:px-6 lg:px-8 max-w-4xl mx-auto">
+            <div className="flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-6">
+              <div className="text-center sm:text-left">
+                <p className="text-xs uppercase tracking-widest text-slate-500 mb-1">
+                  {t('reviews.verified') || 'Verified'}
+                </p>
+                <p className="text-sm font-light text-slate-700">
+                  {t('reviews.trustedAcross') || 'Trusted across Denmark and worldwide'}
+                </p>
+              </div>
+              <div className="hidden sm:block w-px h-8 bg-slate-200/50"></div>
+              <ReviewHighlight />
+            </div>
+          </section>
+        </div>
 
         {/* CTA Section with Premium Signature */}
         <section className="py-16 px-4 sm:px-6 lg:px-8 section-magic-entrance premium-signature-accent">

@@ -10,8 +10,6 @@ const intlMiddleware = createMiddleware({
 
 export function middleware(request: NextRequest) {
   const pathname = request.nextUrl.pathname;
-  
-  // If user is already on /da or /en, use the standard intl middleware
   if (pathname.startsWith('/da') || pathname.startsWith('/en')) {
     return intlMiddleware(request);
   }
@@ -51,3 +49,4 @@ export function middleware(request: NextRequest) {
 export const config = {
   matcher: ['/((?!api|_next|_vercel|.*\\..*).*)'],
 };
+

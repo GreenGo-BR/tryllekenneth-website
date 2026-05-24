@@ -73,7 +73,7 @@ export function Footer() {
                 <span className="text-amber-400/0 group-hover:text-amber-500/100 transition-colors duration-300">→</span>
                 <span className="text-slate-600 group-hover:text-slate-900 transition-colors duration-300 font-light text-xs">{tNav('home')}</span>
               </Link>
-              <Link href={`/${locale}/services/childrens`} className="group flex items-start gap-2">
+              <Link href={`/${locale}/services/${locale === 'da' ? 'boernetrylleri' : 'childrens'}`} className="group flex items-start gap-2">
                 <span className="text-amber-400/0 group-hover:text-amber-500/100 transition-colors duration-300">→</span>
                 <span className="text-slate-600 group-hover:text-slate-900 transition-colors duration-300 font-light text-xs">{tNav('performances')}</span>
               </Link>
