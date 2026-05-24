@@ -374,7 +374,7 @@ export default function Home() {
                   </h3>
                   <p className="text-xs text-white/70 mb-3 line-clamp-2">
                     {locale === 'da' 
-                      ? 'Interaktivt show tilpasset konferencer, firmafester og receptioner'
+                      ? 'Interaktivt show, der er tilpasset konferencer, firmafester og receptioner'
                       : 'Entertainment for conferences and company parties'}
                   </p>
                   <Link href={`/${locale}/firmaarrangementer`} className="inline-flex items-center gap-1 text-xs font-medium text-primary hover:text-accent transition-colors">
