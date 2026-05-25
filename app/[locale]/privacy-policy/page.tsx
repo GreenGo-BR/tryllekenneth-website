@@ -147,7 +147,7 @@ export default function PrivacyPolicy() {
                 </section>
 
                 <p className="text-slate-500 text-sm mt-12 pt-8 border-t border-slate-200">
-                  Sidst opdateret: Januar 2026
+                  Sidst opdateret: januar 2026
                 </p>
               </>
             ) : (
