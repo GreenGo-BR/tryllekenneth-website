@@ -377,7 +377,7 @@ export default function Home() {
                       ? 'Interaktivt show, der er tilpasset konferencer, firmafester og receptioner'
                       : 'Entertainment for conferences and company parties'}
                   </p>
-                  <Link href={`/${locale}/firmaarrangementer`} className="inline-flex items-center gap-1 text-xs font-medium text-primary hover:text-accent transition-colors">
+                  <Link href={`/${locale}/${locale === 'da' ? 'firmaarrangementer' : 'corporate-events'}`} className="inline-flex items-center gap-1 text-xs font-medium text-primary hover:text-accent transition-colors">
                     {t('services.readMore')} →
                   </Link>
                 </div>
