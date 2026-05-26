@@ -1,7 +1,7 @@
 'use client';
 
 import { useLocale } from 'next-intl';
-import { ExternalLink } from 'lucide-react';
+import { ExternalLink, Globe } from 'lucide-react';
 
 interface EventzonenTrustBadgeProps {
   variant?: 'minimal' | 'compact' | 'expanded';
@@ -36,16 +36,20 @@ export function EventzonenTrustBadge({
       href="https://eventzonen.dk/tryllekenneth"
       target="_blank"
       rel="nofollow external noopener noreferrer"
-      className={`inline-flex items-center gap-2 px-3 py-1.5 rounded-md bg-slate-100 hover:bg-slate-200 transition-colors duration-300 group ${className}`}
+      className={`group inline-flex items-center gap-2.5 px-3 py-2 rounded-lg bg-slate-50/80 hover:bg-slate-100 border border-slate-200/60 hover:border-slate-300/80 transition-all duration-300 hover:shadow-sm ${className}`}
       title={locale === 'da' ? 'Besøg profilen på Eventzonen' : 'Visit profile on Eventzonen'}
       aria-label={locale === 'da' ? `${text} - åbnes i nyt vindue` : `${text} - opens in new window`}
     >
-      <span className="text-xs sm:text-sm text-slate-700 font-light group-hover:text-slate-900 transition-colors">
+      {/* Eventzonen branded icon - premium blue/event style */}
+      <div className="flex items-center justify-center w-5 h-5 rounded bg-gradient-to-br from-sky-500 to-blue-600 shadow-sm">
+        <Globe size={12} className="text-white" strokeWidth={2.5} />
+      </div>
+      <span className="text-xs text-slate-600 font-medium group-hover:text-slate-800 transition-colors duration-300">
         {text}
       </span>
       <ExternalLink 
-        size={14} 
-        className="text-slate-500 group-hover:text-amber-500 transition-colors flex-shrink-0"
+        size={11} 
+        className="text-slate-400 group-hover:text-sky-500 transition-colors duration-300 flex-shrink-0"
       />
     </a>
   );

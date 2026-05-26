@@ -3,7 +3,7 @@
 import { useTranslations, useLocale } from 'next-intl';
 import Link from 'next/link';
 import Image from 'next/image';
-import { Mail, Phone, MapPin, ExternalLink, Handshake } from 'lucide-react';
+import { Mail, Phone, MapPin, ExternalLink, Sparkles } from 'lucide-react';
 import { EventzonenTrustBadge } from './EventzonenTrustBadge';
 import { GoogleReviewsTrustBadge } from './GoogleReviewsTrustBadge';
 
@@ -39,7 +39,7 @@ export function Footer() {
                 alt="TrylleKenneth - Professional Magical Entertainment"
                 width={576}
                 height={173}
-                className="h-20 w-auto transition-opacity duration-300 group-hover:opacity-80"
+                className="h-24 w-auto transition-opacity duration-300 group-hover:opacity-80"
               />
             </Link>
             <p className="text-xs text-slate-600 leading-relaxed font-light">
@@ -55,7 +55,7 @@ export function Footer() {
             </div>
             
             {/* Partner Section */}
-            <div className="flex flex-col gap-1.5 pt-3">
+            <div className="flex flex-col gap-1.5 pt-2">
               <span className="text-[10px] text-slate-400 font-light uppercase tracking-wide">
                 {locale === 'da' ? 'Besøg også vores partner' : 'Also visit our partner'}
               </span>
@@ -63,13 +63,16 @@ export function Footer() {
                 href="https://trylle.dk/"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="group flex items-center gap-2 px-3 py-1.5 bg-slate-100/80 hover:bg-slate-200/80 rounded-md border border-slate-200/60 hover:border-slate-300/80 transition-all duration-300 w-fit"
+                className="group inline-flex items-center gap-2.5 px-3 py-2 rounded-lg bg-slate-50/80 hover:bg-slate-100 border border-slate-200/60 hover:border-slate-300/80 transition-all duration-300 hover:shadow-sm w-fit"
               >
-                <Handshake size={14} className="text-slate-400 group-hover:text-amber-500 transition-colors duration-300" />
-                <span className="text-xs text-slate-600 group-hover:text-slate-800 font-medium transition-colors duration-300">
+                {/* Magic/Partner branded icon */}
+                <div className="flex items-center justify-center w-5 h-5 rounded bg-gradient-to-br from-amber-400 to-amber-500 shadow-sm">
+                  <Sparkles size={12} className="text-white" strokeWidth={2.5} />
+                </div>
+                <span className="text-xs text-slate-600 font-medium group-hover:text-slate-800 transition-colors duration-300">
                   Hokus Pokus
                 </span>
-                <ExternalLink size={10} className="text-slate-400 group-hover:text-amber-500 transition-colors duration-300" />
+                <ExternalLink size={11} className="text-slate-400 group-hover:text-amber-500 transition-colors duration-300 flex-shrink-0" />
               </a>
             </div>
             
