@@ -28,14 +28,14 @@ export function Footer() {
             
             {/* LEFT COLUMN - Branding & External Links (spans 5 cols) */}
             <div className="md:col-span-5 flex flex-col">
-              {/* Logo - significantly larger and prominent */}
-              <Link href={`/${locale}`} className="w-fit group mb-4">
+              {/* Logo - significantly larger and aligned with column titles */}
+              <Link href={`/${locale}`} className="w-fit group mb-5">
                 <Image
                   src="/tryllekenneth-logo.png"
                   alt="TrylleKenneth - Professional Magical Entertainment"
                   width={576}
                   height={173}
-                  className="h-16 sm:h-20 lg:h-24 w-auto transition-all duration-300 group-hover:opacity-90"
+                  className="h-20 sm:h-24 lg:h-28 w-auto transition-all duration-300 group-hover:opacity-90"
                   priority
                 />
               </Link>
@@ -106,26 +106,6 @@ export function Footer() {
                     <ExternalLink size={11} className="text-slate-400 group-hover:text-amber-500 transition-colors duration-300 flex-shrink-0" />
                   </a>
                 </div>
-              </div>
-              
-              {/* Small contact icons row */}
-              <div className="flex items-center gap-4 pt-5 mt-auto">
-                <a 
-                  href="tel:+4540852728" 
-                  className="flex items-center gap-1.5 text-slate-500 hover:text-amber-600 transition-colors duration-300"
-                  title="+45 40 85 27 28"
-                >
-                  <Phone size={14} className="text-amber-500" />
-                  <span className="text-xs font-light">+45 40 85 27 28</span>
-                </a>
-                <a 
-                  href="mailto:kenneth@tryllekenneth.dk" 
-                  className="flex items-center gap-1.5 text-slate-500 hover:text-amber-600 transition-colors duration-300"
-                  title="kenneth@tryllekenneth.dk"
-                >
-                  <Mail size={14} className="text-amber-500" />
-                  <span className="text-xs font-light hidden sm:inline">kenneth@tryllekenneth.dk</span>
-                </a>
               </div>
             </div>
 
