@@ -3,7 +3,7 @@
 import { useTranslations, useLocale } from 'next-intl';
 import Link from 'next/link';
 import Image from 'next/image';
-import { Mail, Phone, MapPin } from 'lucide-react';
+import { Mail, Phone, MapPin, ExternalLink, Handshake } from 'lucide-react';
 import { EventzonenTrustBadge } from './EventzonenTrustBadge';
 import { GoogleReviewsTrustBadge } from './GoogleReviewsTrustBadge';
 
@@ -52,6 +52,25 @@ export function Footer() {
             <div className="flex flex-col gap-2 pt-1">
               <EventzonenTrustBadge variant="minimal" />
               <GoogleReviewsTrustBadge variant="minimal" />
+            </div>
+            
+            {/* Partner Section */}
+            <div className="flex flex-col gap-1.5 pt-3">
+              <span className="text-[10px] text-slate-400 font-light uppercase tracking-wide">
+                {locale === 'da' ? 'Besøg også vores partner' : 'Also visit our partner'}
+              </span>
+              <a
+                href="https://trylle.dk/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="group flex items-center gap-2 px-3 py-1.5 bg-slate-100/80 hover:bg-slate-200/80 rounded-md border border-slate-200/60 hover:border-slate-300/80 transition-all duration-300 w-fit"
+              >
+                <Handshake size={14} className="text-slate-400 group-hover:text-amber-500 transition-colors duration-300" />
+                <span className="text-xs text-slate-600 group-hover:text-slate-800 font-medium transition-colors duration-300">
+                  Hokus Pokus
+                </span>
+                <ExternalLink size={10} className="text-slate-400 group-hover:text-amber-500 transition-colors duration-300" />
+              </a>
             </div>
             
             {/* Contact Icons */}
@@ -159,18 +178,6 @@ export function Footer() {
             <span className="text-xs font-semibold text-amber-600 group-hover:text-amber-700 transition-colors duration-300 group-hover:underline underline-offset-2 decoration-amber-300/50 group-hover:decoration-amber-400">
               ESL Marketing
             </span>
-          </a>
-        </div>
-        
-        {/* Partner recommendation - subtle and secondary */}
-        <div className="flex justify-center pt-4 mt-2 border-t border-slate-200/50">
-          <a
-            href="https://trylle.dk/"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-[10px] text-slate-400 font-light hover:text-slate-500 transition-colors duration-300"
-          >
-            {locale === 'da' ? 'Besøg også vores partner: Hokus Pokus' : 'Also visit our partner: Hokus Pokus'}
           </a>
         </div>
       </div>
