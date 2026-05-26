@@ -27,15 +27,15 @@ export function Footer() {
           <div className="grid grid-cols-1 md:grid-cols-12 gap-10 lg:gap-12 items-start">
             
             {/* LEFT COLUMN - Branding & External Links (spans 5 cols) */}
-            <div className="md:col-span-5 flex flex-col">
-              {/* Logo - first element, no extra wrapper spacing */}
-              <Link href={`/${locale}`} className="group mb-5 block">
+            <div className="md:col-span-5 flex flex-col items-start">
+              {/* Logo - acts as the column heading, aligned with other column headers */}
+              <Link href={`/${locale}`} className="group mb-5">
                 <Image
                   src="/tryllekenneth-logo.png"
                   alt="TrylleKenneth - Professional Magical Entertainment"
                   width={576}
                   height={173}
-                  className="w-[180px] sm:w-[220px] lg:w-[260px] h-auto transition-all duration-300 group-hover:opacity-90"
+                  className="w-[180px] sm:w-[200px] lg:w-[220px] h-auto transition-all duration-300 group-hover:opacity-90"
                   priority
                 />
               </Link>
@@ -110,7 +110,7 @@ export function Footer() {
             </div>
 
             {/* CENTER COLUMN - Information Links (spans 3 cols) */}
-            <div className="md:col-span-3 flex flex-col">
+            <div className="md:col-span-3 flex flex-col items-start">
               <div className="flex items-center gap-2 mb-5">
                 <h4 className="text-xs font-semibold text-slate-800 uppercase tracking-wider">{t('information')}</h4>
                 <div className="flex-1 h-px bg-gradient-to-r from-amber-400/60 to-transparent max-w-12" />
@@ -138,7 +138,7 @@ export function Footer() {
             </div>
 
             {/* RIGHT COLUMN - Contact Details (spans 4 cols) */}
-            <div className="md:col-span-4 flex flex-col">
+            <div className="md:col-span-4 flex flex-col items-start">
               <div className="flex items-center gap-2 mb-5">
                 <h4 className="text-xs font-semibold text-slate-800 uppercase tracking-wider">{t('contact')}</h4>
                 <div className="flex-1 h-px bg-gradient-to-r from-amber-400/60 to-transparent max-w-12" />
