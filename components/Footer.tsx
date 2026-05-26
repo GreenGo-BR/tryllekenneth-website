@@ -54,7 +54,7 @@ export function Footer() {
                   href="https://eventzonen.dk/tryllekenneth"
                   target="_blank"
                   rel="nofollow external noopener noreferrer"
-                  className="group inline-flex items-center gap-2.5 px-3.5 py-2.5 rounded-lg bg-white/80 hover:bg-white border border-slate-200/80 hover:border-slate-300 transition-all duration-300 hover:shadow-sm w-fit"
+                  className="group inline-flex items-center gap-2.5 px-4 py-3 rounded-lg bg-white/80 hover:bg-white border border-slate-200/80 hover:border-slate-300 transition-all duration-300 hover:shadow-sm w-fit"
                 >
                   <div className="flex items-center justify-center w-6 h-6 rounded bg-gradient-to-br from-sky-500 to-blue-600 shadow-sm flex-shrink-0">
                     <Globe size={12} className="text-white" strokeWidth={2.5} />
