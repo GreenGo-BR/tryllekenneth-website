@@ -27,7 +27,7 @@ export function Footer() {
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-12 items-start">
             
             {/* LEFT COLUMN - Branding & External Links */}
-            <div className="flex flex-col items-start lg:-mt-6">
+            <div className="flex flex-col items-start lg:-mt-12">
               {/* Logo - first element, no wrapper */}
               <Link href={`/${locale}`} className="group mb-5">
                 <Image
