@@ -29,7 +29,7 @@ export function Footer() {
             {/* LEFT COLUMN - Branding & External Links */}
             <div className="flex flex-col items-start lg:-mt-12">
               {/* Logo - minimal spacing after */}
-              <Link href={`/${locale}`} className="group mb-1">
+              <Link href={`/${locale}`} className="group mb-2">
                 <Image
                   src="/tryllekenneth-logo.png"
                   alt="TrylleKenneth - Professional Magical Entertainment"
@@ -48,7 +48,7 @@ export function Footer() {
               </p>
               
               {/* External Links - Clean card buttons */}
-              <div className="flex flex-col gap-3">
+              <div className="flex flex-col gap-2">
                 {/* Eventzonen */}
                 <a
                   href="https://eventzonen.dk/tryllekenneth"
@@ -87,7 +87,7 @@ export function Footer() {
                 </a>
                 
                 {/* Partner Section */}
-                <div className="flex flex-col gap-2 pt-2">
+                <div className="flex flex-col gap-2 mt-3">
                   <span className="text-[10px] text-slate-400 font-medium uppercase tracking-wider">
                     {locale === 'da' ? 'Besøg også vores partner' : 'Also visit our partner'}
                   </span>
