@@ -161,6 +161,18 @@ export function Footer() {
             </span>
           </a>
         </div>
+        
+        {/* Partner recommendation - subtle and secondary */}
+        <div className="flex justify-center pt-4 mt-2 border-t border-slate-200/50">
+          <a
+            href="https://trylle.dk/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-[10px] text-slate-400 font-light hover:text-slate-500 transition-colors duration-300"
+          >
+            {locale === 'da' ? 'Besøg også vores partner: Hokus Pokus' : 'Also visit our partner: Hokus Pokus'}
+          </a>
+        </div>
       </div>
     </footer>
     </>
