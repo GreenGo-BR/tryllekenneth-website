@@ -29,26 +29,26 @@ export function Footer() {
             {/* LEFT COLUMN - Branding & External Links */}
             <div className="flex flex-col items-start lg:-mt-12">
               {/* Logo - first element, no wrapper */}
-              <Link href={`/${locale}`} className="group mb-5">
+              <Link href={`/${locale}`} className="group mb-6">
                 <Image
                   src="/tryllekenneth-logo.png"
                   alt="TrylleKenneth - Professional Magical Entertainment"
                   width={576}
                   height={173}
-                  className="w-[180px] sm:w-[200px] lg:w-[220px] h-auto transition-all duration-300 group-hover:opacity-90"
+                  className="w-[180px] sm:w-[210px] lg:w-[240px] h-auto transition-all duration-300 group-hover:opacity-90"
                   priority
                 />
               </Link>
               
               {/* Description */}
-              <p className="text-sm text-slate-600 leading-relaxed font-light max-w-xs mb-6">
+              <p className="text-base text-slate-600 leading-relaxed font-normal max-w-xs mb-7">
                 {locale === 'da' 
                   ? 'Professionel magisk underholdning til uforglemmelige begivenheder i Danmark og verden over.'
                   : 'Premium magical entertainment for unforgettable events in Denmark and worldwide.'}
               </p>
               
               {/* External Links - Clean card buttons */}
-              <div className="flex flex-col gap-2.5">
+              <div className="flex flex-col gap-3">
                 {/* Eventzonen */}
                 <a
                   href="https://eventzonen.dk/tryllekenneth"
@@ -56,8 +56,8 @@ export function Footer() {
                   rel="nofollow external noopener noreferrer"
                   className="group inline-flex items-center gap-2.5 px-3.5 py-2.5 rounded-lg bg-white/80 hover:bg-white border border-slate-200/80 hover:border-slate-300 transition-all duration-300 hover:shadow-sm w-fit"
                 >
-                  <div className="flex items-center justify-center w-5 h-5 rounded bg-gradient-to-br from-sky-500 to-blue-600 shadow-sm flex-shrink-0">
-                    <Globe size={11} className="text-white" strokeWidth={2.5} />
+                  <div className="flex items-center justify-center w-6 h-6 rounded bg-gradient-to-br from-sky-500 to-blue-600 shadow-sm flex-shrink-0">
+                    <Globe size={12} className="text-white" strokeWidth={2.5} />
                   </div>
                   <span className="text-xs text-slate-700 font-medium group-hover:text-slate-900 transition-colors duration-300">
                     {locale === 'da' ? 'Medlem af Eventzonen.dk' : 'Featured on Eventzonen.dk'}
@@ -70,10 +70,10 @@ export function Footer() {
                   href="https://share.google/SEEaf7Xt4rjzsQV97"
                   target="_blank"
                   rel="nofollow external noopener noreferrer"
-                  className="group inline-flex items-center gap-2.5 px-3.5 py-2.5 rounded-lg bg-white/80 hover:bg-white border border-slate-200/80 hover:border-slate-300 transition-all duration-300 hover:shadow-sm w-fit"
+                  className="group inline-flex items-center gap-2.5 px-4 py-3 rounded-lg bg-white/80 hover:bg-white border border-slate-200/80 hover:border-slate-300 transition-all duration-300 hover:shadow-sm w-fit"
                 >
-                  <div className="flex items-center justify-center w-5 h-5 rounded bg-white border border-slate-200 shadow-sm flex-shrink-0">
-                    <svg viewBox="0 0 24 24" className="w-3 h-3">
+                  <div className="flex items-center justify-center w-6 h-6 rounded bg-white border border-slate-200 shadow-sm flex-shrink-0">
+                    <svg viewBox="0 0 24 24" className="w-3.5 h-3.5">
                       <path fill="#4285F4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"/>
                       <path fill="#34A853" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"/>
                       <path fill="#FBBC05" d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z"/>
@@ -87,7 +87,7 @@ export function Footer() {
                 </a>
                 
                 {/* Partner Section */}
-                <div className="flex flex-col gap-1.5 pt-2">
+                <div className="flex flex-col gap-2 pt-2">
                   <span className="text-[10px] text-slate-400 font-medium uppercase tracking-wider">
                     {locale === 'da' ? 'Besøg også vores partner' : 'Also visit our partner'}
                   </span>
@@ -95,10 +95,10 @@ export function Footer() {
                     href="https://trylle.dk/"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="group inline-flex items-center gap-2.5 px-3.5 py-2.5 rounded-lg bg-white/80 hover:bg-white border border-slate-200/80 hover:border-slate-300 transition-all duration-300 hover:shadow-sm w-fit"
+                  className="group inline-flex items-center gap-2.5 px-4 py-3 rounded-lg bg-white/80 hover:bg-white border border-slate-200/80 hover:border-slate-300 transition-all duration-300 hover:shadow-sm w-fit"
                   >
-                    <div className="flex items-center justify-center w-5 h-5 rounded bg-gradient-to-br from-amber-400 to-amber-500 shadow-sm flex-shrink-0">
-                      <Sparkles size={11} className="text-white" strokeWidth={2.5} />
+                    <div className="flex items-center justify-center w-6 h-6 rounded bg-gradient-to-br from-amber-400 to-amber-500 shadow-sm flex-shrink-0">
+                      <Sparkles size={12} className="text-white" strokeWidth={2.5} />
                     </div>
                     <span className="text-xs text-slate-700 font-medium group-hover:text-slate-900 transition-colors duration-300">
                       Hokus Pokus
