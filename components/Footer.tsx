@@ -28,20 +28,20 @@ export function Footer() {
             
             {/* LEFT COLUMN - Branding & External Links */}
             <div className="flex flex-col items-start lg:-mt-12">
-              {/* Logo - first element, no wrapper */}
-              <Link href={`/${locale}`} className="group mb-6">
+              {/* Logo - minimal spacing after */}
+              <Link href={`/${locale}`} className="group mb-1">
                 <Image
                   src="/tryllekenneth-logo.png"
                   alt="TrylleKenneth - Professional Magical Entertainment"
                   width={576}
                   height={173}
-                  className="w-[180px] sm:w-[210px] lg:w-[240px] h-auto transition-all duration-300 group-hover:opacity-90"
+                  className="w-[180px] sm:w-[210px] lg:w-[240px] h-auto transition-all duration-300 group-hover:opacity-90 block"
                   priority
                 />
               </Link>
               
               {/* Description */}
-              <p className="text-base text-slate-600 leading-relaxed font-normal max-w-xs mb-7">
+              <p className="text-base text-slate-600 leading-relaxed font-normal max-w-xs mb-3">
                 {locale === 'da' 
                   ? 'Professionel magisk underholdning til uforglemmelige begivenheder i Danmark og verden over.'
                   : 'Premium magical entertainment for unforgettable events in Denmark and worldwide.'}
