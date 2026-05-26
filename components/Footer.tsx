@@ -23,22 +23,24 @@ export function Footer() {
         <div className="absolute top-0 inset-x-0 h-px bg-gradient-to-r from-transparent via-amber-400/40 to-transparent" />
 
         <div className="relative z-10 mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-12 lg:py-14">
-          {/* Main footer content - 3 columns */}
-          <div className="grid grid-cols-1 md:grid-cols-12 gap-10 lg:gap-12">
+          {/* Main footer content - 3 columns, top-aligned */}
+          <div className="grid grid-cols-1 md:grid-cols-12 gap-10 lg:gap-12 items-start">
             
             {/* LEFT COLUMN - Branding & External Links (spans 5 cols) */}
             <div className="md:col-span-5 flex flex-col">
-              {/* Logo - significantly larger and aligned with column titles */}
-              <Link href={`/${locale}`} className="w-fit group mb-5">
-                <Image
-                  src="/tryllekenneth-logo.png"
-                  alt="TrylleKenneth - Professional Magical Entertainment"
-                  width={576}
-                  height={173}
-                  className="h-20 sm:h-24 lg:h-28 w-auto transition-all duration-300 group-hover:opacity-90"
-                  priority
-                />
-              </Link>
+              {/* Logo container - aligned with column titles using flex-start */}
+              <div className="flex items-start justify-start mb-5">
+                <Link href={`/${locale}`} className="group">
+                  <Image
+                    src="/tryllekenneth-logo.png"
+                    alt="TrylleKenneth - Professional Magical Entertainment"
+                    width={576}
+                    height={173}
+                    className="w-[180px] sm:w-[200px] lg:w-[220px] h-auto transition-all duration-300 group-hover:opacity-90"
+                    priority
+                  />
+                </Link>
+              </div>
               
               {/* Description */}
               <p className="text-sm text-slate-600 leading-relaxed font-light max-w-xs mb-6">
