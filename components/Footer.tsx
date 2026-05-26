@@ -28,19 +28,17 @@ export function Footer() {
             
             {/* LEFT COLUMN - Branding & External Links (spans 5 cols) */}
             <div className="md:col-span-5 flex flex-col">
-              {/* Logo container - aligned with column titles using flex-start */}
-              <div className="flex items-start justify-start mb-5">
-                <Link href={`/${locale}`} className="group">
-                  <Image
-                    src="/tryllekenneth-logo.png"
-                    alt="TrylleKenneth - Professional Magical Entertainment"
-                    width={576}
-                    height={173}
-                    className="w-[180px] sm:w-[200px] lg:w-[220px] h-auto transition-all duration-300 group-hover:opacity-90"
-                    priority
-                  />
-                </Link>
-              </div>
+              {/* Logo - first element, no extra wrapper spacing */}
+              <Link href={`/${locale}`} className="group mb-5 block">
+                <Image
+                  src="/tryllekenneth-logo.png"
+                  alt="TrylleKenneth - Professional Magical Entertainment"
+                  width={576}
+                  height={173}
+                  className="w-[180px] sm:w-[220px] lg:w-[260px] h-auto transition-all duration-300 group-hover:opacity-90"
+                  priority
+                />
+              </Link>
               
               {/* Description */}
               <p className="text-sm text-slate-600 leading-relaxed font-light max-w-xs mb-6">
