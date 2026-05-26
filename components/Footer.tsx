@@ -29,7 +29,7 @@ export function Footer() {
             {/* LEFT COLUMN - Branding & External Links */}
             <div className="flex flex-col items-start lg:-mt-12">
               {/* Logo - minimal spacing after */}
-              <Link href={`/${locale}`} className="group mb-2">
+              <Link href={`/${locale}`} className="group mb-0">
                 <Image
                   src="/tryllekenneth-logo.png"
                   alt="TrylleKenneth - Professional Magical Entertainment"
