@@ -41,7 +41,7 @@ export function Footer() {
               </Link>
               
               {/* Description */}
-              <p className="text-base text-slate-600 leading-relaxed font-normal max-w-xs mb-3">
+              <p className="text-base text-slate-600 leading-tight font-normal max-w-xs mb-1">
                 {locale === 'da' 
                   ? 'Professionel magisk underholdning til uforglemmelige begivenheder i Danmark og verden over.'
                   : 'Premium magical entertainment for unforgettable events in Denmark and worldwide.'}
