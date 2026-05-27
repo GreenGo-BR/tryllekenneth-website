@@ -55,6 +55,58 @@ export default function FAQ() {
       question: t('faqPage.performanceQ4'),
       answer: t('faqPage.performanceA4'),
     },
+    {
+      question: t('faqPage.processQ1'),
+      answer: t('faqPage.processA1'),
+    },
+    {
+      question: t('faqPage.processQ2'),
+      answer: t('faqPage.processA2'),
+    },
+    {
+      question: t('faqPage.logisticsQ1'),
+      answer: t('faqPage.logisticsA1'),
+    },
+    {
+      question: t('faqPage.comparisonQ1'),
+      answer: t('faqPage.comparisonA1'),
+    },
+    {
+      question: t('faqPage.comparisonQ2'),
+      answer: t('faqPage.comparisonA2'),
+    },
+    {
+      question: t('faqPage.venueQ1'),
+      answer: t('faqPage.venueA1'),
+    },
+    {
+      question: t('faqPage.venueQ2'),
+      answer: t('faqPage.venueA2'),
+    },
+    {
+      question: t('faqPage.venueQ3'),
+      answer: t('faqPage.venueA3'),
+    },
+    {
+      question: t('faqPage.venueQ4'),
+      answer: t('faqPage.venueA4'),
+    },
+    {
+      question: t('faqPage.eventQ1'),
+      answer: t('faqPage.eventA1'),
+    },
+    {
+      question: t('faqPage.eventQ2'),
+      answer: t('faqPage.eventA2'),
+    },
+    {
+      question: t('faqPage.customizationQ1'),
+      answer: t('faqPage.customizationA1'),
+    },
+    {
+      question: t('faqPage.customizationQ2'),
+      answer: t('faqPage.customizationA2'),
+    },
   ];
 
   return (
