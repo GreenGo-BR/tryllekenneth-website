@@ -33,10 +33,10 @@ export default function BirthdayPartiesPage() {
             <div className="absolute top-1/3 right-1/3 w-72 h-72 bg-sky-200/5 rounded-full blur-3xl animate-drift-right" style={{ animationDelay: '1s' }}></div>
           </div>
 
-          <div className="max-w-5xl mx-auto relative z-10 w-full">
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center">
+          <div className="max-w-6xl mx-auto relative z-10 w-full">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16 items-start">
               {/* Left: Text Content */}
-              <div>
+              <div className="pt-8 lg:pt-0">
                 <h1 className="text-5xl sm:text-6xl font-bold magical-heading magical-text mb-6 text-foreground">
                   {locale === 'da' ? 'Børnefødselsdage' : "Birthday Parties"}
                 </h1>
@@ -67,7 +67,7 @@ export default function BirthdayPartiesPage() {
               </div>
 
               {/* Right: Cinematic Birthday Party Image */}
-              <div className="relative group hidden lg:block">
+              <div className="relative group hidden lg:block lg:pl-4">
                 {/* Outer glow - playful pink/purple theme */}
                 <div className="absolute -inset-1 bg-gradient-to-r from-pink-400 via-purple-400 to-sky-400 rounded-3xl opacity-0 group-hover:opacity-75 transition-all duration-700 blur-2xl group-hover:blur-3xl -z-20"></div>
                 
