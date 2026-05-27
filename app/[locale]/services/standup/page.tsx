@@ -41,14 +41,14 @@ export default function StandUpMagic() {
                 </h1>
                 <p className="text-xl text-slate-700 mb-4 leading-relaxed font-semibold">
                   {locale === 'da' 
-                    ? 'Højenergisk underholdning for store publikummer'
-                    : 'High-energy entertainment for large audiences'
+                    ? 'Sjovt trylleri til din voksenfest'
+                    : 'Fun magic for your adult party'
                   }
                 </p>
                 <p className="text-lg text-slate-600 mb-8 leading-relaxed">
                   {locale === 'da'
-                    ? 'Premium stand-up trylleri med stort apareat, rekvisitter og publikumsinteraktion til store arrangementer og teateropvisninger'
-                    : 'Premium stand-up magic with large apparatus, props and audience interaction for major events and theater performances'
+                    ? 'TrylleKenneth underholder i topklasse til firmafesten, den runde fødselsdag, brylluppet eller til enhver anden festlig lejlighed.'
+                    : 'TrylleKenneth entertains at top class at the company party, the milestone birthday, the wedding or any other festive occasion.'
                   }
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4">
