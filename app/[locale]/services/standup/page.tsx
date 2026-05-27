@@ -37,24 +37,24 @@ export default function StandUpMagic() {
               {/* Left: Text Content */}
               <div className="relative z-20">
                 <h1 className="text-5xl sm:text-6xl font-bold magical-heading magical-text mb-6 text-foreground">
-                  {locale === 'da' ? 'Standup Trylleri' : 'Stand-up Magic'}
+                  {locale === 'da' ? 'Stand-up Trylleri' : 'Stand-up Magic'}
                 </h1>
                 <p className="text-xl text-slate-700 mb-4 leading-relaxed font-semibold">
                   {locale === 'da' 
-                    ? 'Højenergisk underholdning for store publikummer'
-                    : 'High-energy entertainment for large audiences'
+                    ? 'Sjovt trylleri til din voksenfest'
+                    : 'Fun magic for your adult party'
                   }
                 </p>
                 <p className="text-lg text-slate-600 mb-8 leading-relaxed">
                   {locale === 'da'
-                    ? 'Premium standup trylleri med stort apareat, rekvisitter og publikumsinteraktion til store arrangementer og teateropvisninger'
-                    : 'Premium stand-up magic with large apparatus, props and audience interaction for major events and theater performances'
+                    ? 'TrylleKenneth underholder i topklasse til firmafesten, den runde fødselsdag, brylluppet eller til enhver anden festlig lejlighed.'
+                    : 'TrylleKenneth entertains at top class at the company party, the milestone birthday, the wedding or any other festive occasion.'
                   }
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4">
                   <Link href={`/${locale}/contact`}>
                     <Button size="lg" className="btn-primary btn-lg">
-                      {locale === 'da' ? 'Book Standup Trylleri' : 'Book Stand-up Magic'}
+                      {locale === 'da' ? 'Book Stand-up Trylleri' : 'Book Stand-up Magic'}
                     </Button>
                   </Link>
                   <a href="tel:+4540852728">
@@ -98,7 +98,7 @@ export default function StandUpMagic() {
                 {/* Premium badge below image */}
                 <div className="mt-6 flex items-center justify-center gap-2 text-orange-700 font-semibold">
                   <div className="w-2 h-2 bg-gradient-to-r from-orange-500 to-amber-500 rounded-full animate-pulse"></div>
-                  <p className="text-sm">{locale === 'da' ? 'Premium Standup • Højenergisk • Scene Trylleri' : 'Premium Stand-up • High-Energy • Stage Magic'}</p>
+                  <p className="text-sm">{locale === 'da' ? 'Premium Stand-up • Højenergisk • Scene Trylleri' : 'Premium Stand-up • High-Energy • Stage Magic'}</p>
                   <div className="w-2 h-2 bg-gradient-to-r from-amber-500 to-rose-500 rounded-full animate-pulse" style={{ animationDelay: '0.5s' }}></div>
                 </div>
               </div>
@@ -112,9 +112,9 @@ export default function StandUpMagic() {
             <div className="absolute -inset-1 bg-gradient-to-r from-orange-500 via-amber-400 to-rose-500 rounded-3xl opacity-75 blur-2xl -z-20"></div>
             <div className="relative overflow-hidden rounded-3xl shadow-2xl border border-amber-200/30">
               <img 
-                src="/kenneth-stage-audience.png"
-                alt="Kenneth performing stand-up magic on stage"
-                className="w-full h-auto object-cover object-top"
+                src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Stand-up%20Magic-iGoHqm2jyrPd5G4urajOpYSHlzcpnd.png"
+                alt="Kenneth performing stand-up magic on stage with fire effect and audience interaction"
+                className="w-full h-auto object-cover object-center"
               />
             </div>
           </div>
@@ -135,35 +135,35 @@ export default function StandUpMagic() {
               </p>
             </div>
             <div className="space-y-4">
-              {/* High-Energy Performance */}
+              {/* Harmløs Humor */}
               <Card className="p-6 rounded-2xl border-2 border-orange-200/40 hover:border-orange-300/60 transition-all hover:shadow-lg hover:shadow-orange-200/40 magic-card-hover bg-gradient-to-br from-orange-50/50 to-white">
                 <div className="flex items-start gap-3">
                   <Zap className="text-orange-600 mt-1 flex-shrink-0" size={24} />
                   <div>
-                    <h3 className="font-bold mb-1 text-slate-900">{locale === 'da' ? 'Højenergisk' : 'High-Energy'}</h3>
-                    <p className="text-sm text-slate-700">{locale === 'da' ? 'Levende optræden med stor energi og publikumsengagement' : 'Vibrant performance with high energy and audience engagement'}</p>
+                    <h3 className="font-bold mb-1 text-slate-900">{locale === 'da' ? 'Harmløs Humor' : 'Harmless Humor'}</h3>
+                    <p className="text-sm text-slate-700">{locale === 'da' ? 'Sjov og elegant humor hvor gæsterne kan grine med uden at nogen bliver ydmyget.' : 'Fun and elegant humor where guests can laugh without anyone being humiliated.'}</p>
                   </div>
                 </div>
               </Card>
 
-              {/* Stage Effects */}
+              {/* Publikum Deltager */}
               <Card className="p-6 rounded-2xl border-2 border-amber-200/40 hover:border-amber-300/60 transition-all hover:shadow-lg hover:shadow-amber-200/40 magic-card-hover bg-gradient-to-br from-amber-50/50 to-white">
                 <div className="flex items-start gap-3">
                   <Sparkles className="text-amber-600 mt-1 flex-shrink-0" size={24} />
                   <div>
-                    <h3 className="font-bold mb-1 text-slate-900">{locale === 'da' ? 'Scene Effekter' : 'Stage Effects'}</h3>
-                    <p className="text-sm text-slate-700">{locale === 'da' ? 'Spektakulær trylleri med stort apareat og lyseffekter' : 'Spectacular magic with large apparatus and lighting effects'}</p>
+                    <h3 className="font-bold mb-1 text-slate-900">{locale === 'da' ? 'Publikum Deltager' : 'Audience Participates'}</h3>
+                    <p className="text-sm text-slate-700">{locale === 'da' ? 'Frivillige gæster bliver en del af showet og skaber sjove og uforglemmelige øjeblikke.' : 'Volunteer guests become part of the show and create fun and unforgettable moments.'}</p>
                   </div>
                 </div>
               </Card>
 
-              {/* Audience Interaction */}
+              {/* Mystik & Overraskelser */}
               <Card className="p-6 rounded-2xl border-2 border-rose-200/40 hover:border-rose-300/60 transition-all hover:shadow-lg hover:shadow-rose-200/40 magic-card-hover bg-gradient-to-br from-rose-50/50 to-white">
                 <div className="flex items-start gap-3">
                   <Users className="text-rose-600 mt-1 flex-shrink-0" size={24} />
                   <div>
-                    <h3 className="font-bold mb-1 text-slate-900">{locale === 'da' ? 'Publikumsinteraktion' : 'Audience Interaction'}</h3>
-                    <p className="text-sm text-slate-700">{locale === 'da' ? 'Engagering underholdning med publikumdeltagelse' : 'Engaging entertainment with audience participation'}</p>
+                    <h3 className="font-bold mb-1 text-slate-900">{locale === 'da' ? 'Mystik & Overraskelser' : 'Mystery & Surprises'}</h3>
+                    <p className="text-sm text-slate-700">{locale === 'da' ? 'Et voksent trylleshow fyldt med overraskelser, grin og imponerende magiske øjeblikke.' : 'An adult magic show filled with surprises, laughter and impressive magical moments.'}</p>
                   </div>
                 </div>
               </Card>
@@ -181,18 +181,18 @@ export default function StandUpMagic() {
 
           <div className="max-w-2xl mx-auto relative z-10">
             <h2 className="text-4xl font-bold mb-4 text-gray-900">
-              {locale === 'da' ? 'Standup Trylleri Som Imponerer' : 'Stand-up Magic That Impresses'}
+              {locale === 'da' ? 'Stand-up Trylleri Som Imponerer' : 'Stand-up Magic That Impresses'}
             </h2>
             <p className="text-lg text-slate-900 mb-8 leading-relaxed">
               {locale === 'da'
-                ? 'Book TrylleKenneth til standup trylleri og skab spektakulære øjeblikke for dit publikum'
+                ? 'Book TrylleKenneth til stand-up trylleri og skab spektakulære øjeblikke for dit publikum'
                 : 'Book TrylleKenneth for stand-up magic and create spectacular moments for your audience'
               }
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link href={`/${locale}/contact`}>
                 <Button size="lg" className="btn-primary w-[276px] h-[52px] sm:w-full sm:max-w-[320px] flex items-center justify-center text-base font-semibold rounded-lg">
-                  {locale === 'da' ? 'Book Standup Trylleri' : 'Book Stand-up Magic'}
+                  {locale === 'da' ? 'Book Stand-up Trylleri' : 'Book Stand-up Magic'}
                 </Button>
               </Link>
               <a href="tel:+4540852728">

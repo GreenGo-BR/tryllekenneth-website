@@ -43,8 +43,11 @@ export default function ChildrensMagic() {
               <p className="text-muted-foreground mb-4 leading-relaxed">
                 {t('childrensMagicPage.aboutText1')}
               </p>
-              <p className="text-muted-foreground leading-relaxed">
+              <p className="text-muted-foreground mb-4 leading-relaxed">
                 {t('childrensMagicPage.aboutText2')}
+              </p>
+              <p className="text-muted-foreground whitespace-pre-line">
+                {t('childrensMagicPage.aboutText3')}
               </p>
             </div>
             <div className="space-y-4">
