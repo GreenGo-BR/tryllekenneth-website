@@ -37,7 +37,7 @@ export default function StandUpMagic() {
               {/* Left: Text Content */}
               <div className="relative z-20">
                 <h1 className="text-5xl sm:text-6xl font-bold magical-heading magical-text mb-6 text-foreground">
-                  {locale === 'da' ? 'Standup Trylleri' : 'Stand-up Magic'}
+                  {locale === 'da' ? 'Stand-up Trylleri' : 'Stand-up Magic'}
                 </h1>
                 <p className="text-xl text-slate-700 mb-4 leading-relaxed font-semibold">
                   {locale === 'da' 
@@ -47,14 +47,14 @@ export default function StandUpMagic() {
                 </p>
                 <p className="text-lg text-slate-600 mb-8 leading-relaxed">
                   {locale === 'da'
-                    ? 'Premium standup trylleri med stort apareat, rekvisitter og publikumsinteraktion til store arrangementer og teateropvisninger'
+                    ? 'Premium stand-up trylleri med stort apareat, rekvisitter og publikumsinteraktion til store arrangementer og teateropvisninger'
                     : 'Premium stand-up magic with large apparatus, props and audience interaction for major events and theater performances'
                   }
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4">
                   <Link href={`/${locale}/contact`}>
                     <Button size="lg" className="btn-primary btn-lg">
-                      {locale === 'da' ? 'Book Standup Trylleri' : 'Book Stand-up Magic'}
+                      {locale === 'da' ? 'Book Stand-up Trylleri' : 'Book Stand-up Magic'}
                     </Button>
                   </Link>
                   <a href="tel:+4540852728">
@@ -181,18 +181,18 @@ export default function StandUpMagic() {
 
           <div className="max-w-2xl mx-auto relative z-10">
             <h2 className="text-4xl font-bold mb-4 text-gray-900">
-              {locale === 'da' ? 'Standup Trylleri Som Imponerer' : 'Stand-up Magic That Impresses'}
+              {locale === 'da' ? 'Stand-up Trylleri Som Imponerer' : 'Stand-up Magic That Impresses'}
             </h2>
             <p className="text-lg text-slate-900 mb-8 leading-relaxed">
               {locale === 'da'
-                ? 'Book TrylleKenneth til standup trylleri og skab spektakulære øjeblikke for dit publikum'
+                ? 'Book TrylleKenneth til stand-up trylleri og skab spektakulære øjeblikke for dit publikum'
                 : 'Book TrylleKenneth for stand-up magic and create spectacular moments for your audience'
               }
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link href={`/${locale}/contact`}>
                 <Button size="lg" className="btn-primary w-[276px] h-[52px] sm:w-full sm:max-w-[320px] flex items-center justify-center text-base font-semibold rounded-lg">
-                  {locale === 'da' ? 'Book Standup Trylleri' : 'Book Stand-up Magic'}
+                  {locale === 'da' ? 'Book Stand-up Trylleri' : 'Book Stand-up Magic'}
                 </Button>
               </Link>
               <a href="tel:+4540852728">
