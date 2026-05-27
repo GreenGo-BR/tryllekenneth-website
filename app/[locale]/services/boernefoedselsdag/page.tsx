@@ -22,7 +22,7 @@ export default function BirthdayPartiesPage() {
       <VideoSchema videoUrl={videoUrl} thumbnailUrl={videoThumbnail} videoId="birthday-video-schema" />
       <main className="min-h-screen">
         {/* Premium Hero Section - Birthday Parties */}
-        <section className="relative min-h-screen flex items-center justify-center overflow-hidden py-16 px-4 sm:px-6 lg:px-8">
+        <section className="relative min-h-screen flex items-center justify-center overflow-hidden py-20 px-4 sm:px-6 lg:px-8">
           {/* Playful pink/purple gradient background */}
           <div className="absolute inset-0 bg-gradient-to-br from-pink-900/5 via-purple-900/5 to-sky-900/5 z-0"></div>
           
@@ -34,9 +34,9 @@ export default function BirthdayPartiesPage() {
           </div>
 
           <div className="max-w-6xl mx-auto relative z-10 w-full">
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16 items-start">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16 items-center">
               {/* Left: Text Content */}
-              <div className="pt-8 lg:pt-0">
+              <div className="relative z-20">
                 <h1 className="text-5xl sm:text-6xl font-bold magical-heading magical-text mb-6 text-foreground">
                   {locale === 'da' ? 'Børnefødselsdage' : "Birthday Parties"}
                 </h1>
@@ -67,7 +67,7 @@ export default function BirthdayPartiesPage() {
               </div>
 
               {/* Right: Cinematic Birthday Party Image */}
-              <div className="relative group hidden lg:block lg:pl-4">
+              <div className="relative group hidden lg:block">
                 {/* Outer glow - playful pink/purple theme */}
                 <div className="absolute -inset-1 bg-gradient-to-r from-pink-400 via-purple-400 to-sky-400 rounded-3xl opacity-0 group-hover:opacity-75 transition-all duration-700 blur-2xl group-hover:blur-3xl -z-20"></div>
                 
