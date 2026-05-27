@@ -130,7 +130,7 @@ export default function BirthdayPartiesPage() {
               </h2>
               <p className="text-slate-700 mb-4 leading-relaxed font-medium">
                 {locale === 'da'
-                  ? 'TrylleKenneth specialiserer sig i højtideholder børnefødselsdage med professionel og engagerende tryllekunst der fascinerer alle børn.'
+                  ? 'TrylleKenneth skaber magiske børnefødselsdage med professionel og engagerende tryllekunst der fascinerer alle børn.'
                   : "TrylleKenneth specializes in making children's birthday parties memorable with professional and engaging magic entertainment that fascinates all children."
                 }
               </p>
