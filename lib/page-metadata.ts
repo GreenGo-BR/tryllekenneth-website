@@ -16,6 +16,7 @@ export function generatePageMetadata(params: PageMetadataParams): Metadata {
   const alternateUrl = params.locale === 'da' 
     ? `${baseUrl}/en${params.path}`
     : `${baseUrl}/da${params.path}`
+  const ogImage = params.ogImage || '/og-image-1200x630.png'
 
   return {
     title: params.title,
@@ -38,21 +39,21 @@ export function generatePageMetadata(params: PageMetadataParams): Metadata {
       locale: params.locale === 'da' ? 'da_DK' : 'en_US',
       alternateLocale: params.locale === 'da' ? ['en_US'] : ['da_DK'],
       siteName: 'TrylleKenneth',
-      images: params.ogImage ? [
+      images: [
         {
-          url: params.ogImage,
+          url: ogImage,
           width: 1200,
           height: 630,
           alt: params.title,
           type: 'image/png',
         },
-      ] : undefined,
+      ],
     },
     twitter: {
       card: 'summary_large_image',
       title: params.title,
       description: params.description,
-      images: params.ogImage ? [params.ogImage] : undefined,
+      images: [ogImage],
     },
   }
 }
@@ -61,13 +62,13 @@ export function generatePageMetadata(params: PageMetadataParams): Metadata {
 export const pageMetadataConfig = {
   homepage: {
     da: {
-      title: 'Tryllekunstner i København | Professionel Magisk Underholdning til Events',
-      description: 'Professionel tryllekunstner Kenneth i København - magisk underholdning til firmaarrangementer, bryllup og børnefødselsdage. Over 15 års erfaring. Ring: +45 40 85 27 28',
+      title: 'TrylleKenneth | Professionel Tryllekunstner i København',
+      description: 'Eksklusiv tryllekunst til firmaevents, bryllupper, julefrokoster og private arrangementer i hele Danmark.',
       keywords: ['tryllekunstner København', 'magiker Danmark', 'magisk underholdning', 'event underholdning', 'firmaarrangement København', 'bryllups underholtning', 'børne eventunderhaltning', 'nærmagi København'],
     },
     en: {
-      title: 'Magician Copenhagen | Professional Magic Entertainment for Events',
-      description: 'Professional magician Kenneth in Copenhagen - magic entertainment for corporate events, weddings and children\'s parties. 15+ years experience. Call: +45 40 85 27 28',
+      title: 'TrylleKenneth | Professional Magician in Copenhagen',
+      description: 'Premium magic entertainment for corporate events, weddings and private celebrations across Denmark.',
       keywords: ['magician Copenhagen', 'magician Denmark', 'magic entertainment', 'corporate event magician', 'wedding magician', 'children entertainment', 'close-up magic', 'event entertainment Copenhagen'],
     },
   },
