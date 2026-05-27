@@ -56,7 +56,7 @@ export default function ChildrensMagic() {
               </div>
 
               {/* Right: Cinematic Children's Magic Image */}
-              <div className="relative group hidden lg:block">
+              <div className="relative group lg:block">
                 {/* Outer glow - pastel theme */}
                 <div className="absolute -inset-1 bg-gradient-to-r from-pink-400 via-purple-400 to-sky-400 rounded-3xl opacity-0 group-hover:opacity-75 transition-all duration-700 blur-2xl group-hover:blur-3xl -z-20"></div>
                 
@@ -92,20 +92,6 @@ export default function ChildrensMagic() {
                   <div className="w-2 h-2 bg-gradient-to-r from-purple-500 to-sky-500 rounded-full animate-pulse" style={{ animationDelay: '0.5s' }}></div>
                 </div>
               </div>
-            </div>
-          </div>
-        </section>
-
-        {/* Mobile Image */}
-        <section className="py-12 px-4 sm:px-6 lg:px-8 max-w-4xl mx-auto lg:hidden">
-          <div className="relative group">
-            <div className="absolute -inset-1 bg-gradient-to-r from-pink-400 via-purple-400 to-sky-400 rounded-3xl opacity-75 blur-2xl -z-20"></div>
-            <div className="relative overflow-hidden rounded-3xl shadow-2xl border border-pink-200/30">
-              <img 
-                src="/kenneth-family-garden.png"
-                alt="Kenneth performing magic for children and families"
-                className="w-full h-auto object-cover object-top"
-              />
             </div>
           </div>
         </section>

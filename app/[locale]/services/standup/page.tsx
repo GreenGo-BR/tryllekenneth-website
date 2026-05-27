@@ -66,7 +66,7 @@ export default function StandUpMagic() {
               </div>
 
               {/* Right: Cinematic Stage Magic Image */}
-              <div className="relative group hidden lg:block">
+              <div className="relative group lg:block">
                 {/* Outer glow - warm/energetic theme */}
                 <div className="absolute -inset-1 bg-gradient-to-r from-orange-500 via-amber-400 to-rose-500 rounded-3xl opacity-0 group-hover:opacity-75 transition-all duration-700 blur-2xl group-hover:blur-3xl -z-20"></div>
                 
@@ -102,20 +102,6 @@ export default function StandUpMagic() {
                   <div className="w-2 h-2 bg-gradient-to-r from-amber-500 to-rose-500 rounded-full animate-pulse" style={{ animationDelay: '0.5s' }}></div>
                 </div>
               </div>
-            </div>
-          </div>
-        </section>
-
-        {/* Mobile Image - Shown on smaller screens */}
-        <section className="py-12 px-4 sm:px-6 lg:px-8 max-w-4xl mx-auto lg:hidden">
-          <div className="relative group">
-            <div className="absolute -inset-1 bg-gradient-to-r from-orange-500 via-amber-400 to-rose-500 rounded-3xl opacity-75 blur-2xl -z-20"></div>
-            <div className="relative overflow-hidden rounded-3xl shadow-2xl border border-amber-200/30">
-              <img 
-                src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Stand-up%20Magic-iGoHqm2jyrPd5G4urajOpYSHlzcpnd.png"
-                alt="Kenneth performing stand-up magic on stage with fire effect and audience interaction"
-                className="w-full h-auto object-cover object-center"
-              />
             </div>
           </div>
         </section>

@@ -22,7 +22,7 @@ export default function BirthdayPartiesPage() {
       <VideoSchema videoUrl={videoUrl} thumbnailUrl={videoThumbnail} videoId="birthday-video-schema" />
       <main className="min-h-screen">
         {/* Premium Hero Section - Birthday Parties */}
-        <section className="relative min-h-screen flex items-center justify-center overflow-hidden py-16 px-4 sm:px-6 lg:px-8">
+        <section className="relative min-h-screen flex items-center justify-center overflow-hidden py-20 px-4 sm:px-6 lg:px-8">
           {/* Playful pink/purple gradient background */}
           <div className="absolute inset-0 bg-gradient-to-br from-pink-900/5 via-purple-900/5 to-sky-900/5 z-0"></div>
           
@@ -33,10 +33,10 @@ export default function BirthdayPartiesPage() {
             <div className="absolute top-1/3 right-1/3 w-72 h-72 bg-sky-200/5 rounded-full blur-3xl animate-drift-right" style={{ animationDelay: '1s' }}></div>
           </div>
 
-          <div className="max-w-5xl mx-auto relative z-10 w-full">
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center">
+          <div className="max-w-6xl mx-auto relative z-10 w-full">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16 items-center">
               {/* Left: Text Content */}
-              <div>
+              <div className="relative z-20">
                 <h1 className="text-5xl sm:text-6xl font-bold magical-heading magical-text mb-6 text-foreground">
                   {locale === 'da' ? 'Børnefødselsdage' : "Birthday Parties"}
                 </h1>
@@ -67,7 +67,7 @@ export default function BirthdayPartiesPage() {
               </div>
 
               {/* Right: Cinematic Birthday Party Image */}
-              <div className="relative group hidden lg:block">
+              <div className="relative group lg:block">
                 {/* Outer glow - playful pink/purple theme */}
                 <div className="absolute -inset-1 bg-gradient-to-r from-pink-400 via-purple-400 to-sky-400 rounded-3xl opacity-0 group-hover:opacity-75 transition-all duration-700 blur-2xl group-hover:blur-3xl -z-20"></div>
                 
@@ -107,20 +107,6 @@ export default function BirthdayPartiesPage() {
           </div>
         </section>
 
-        {/* Mobile Image - Shown on smaller screens */}
-        <section className="py-12 px-4 sm:px-6 lg:px-8 max-w-4xl mx-auto lg:hidden">
-          <div className="relative group">
-            <div className="absolute -inset-1 bg-gradient-to-r from-pink-400 via-purple-400 to-sky-400 rounded-3xl opacity-75 blur-2xl -z-20"></div>
-            <div className="relative overflow-hidden rounded-3xl shadow-2xl border border-pink-200/30">
-              <img 
-                src="/kenneth-family-garden.png"
-                alt="Kenneth performing magic at children's birthday party"
-                className="w-full h-auto object-cover object-top"
-              />
-            </div>
-          </div>
-        </section>
-
         {/* Premium About Section */}
         <section className="py-16 px-4 sm:px-6 lg:px-8 max-w-4xl mx-auto">
           <div className="grid md:grid-cols-2 gap-12">
@@ -130,7 +116,7 @@ export default function BirthdayPartiesPage() {
               </h2>
               <p className="text-slate-700 mb-4 leading-relaxed font-medium">
                 {locale === 'da'
-                  ? 'TrylleKenneth specialiserer sig i højtideholder børnefødselsdage med professionel og engagerende tryllekunst der fascinerer alle børn.'
+                  ? 'TrylleKenneth skaber magiske børnefødselsdage med professionel og engagerende tryllekunst der fascinerer alle børn.'
                   : "TrylleKenneth specializes in making children's birthday parties memorable with professional and engaging magic entertainment that fascinates all children."
                 }
               </p>
