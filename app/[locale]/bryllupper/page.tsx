@@ -34,9 +34,9 @@ export default function WeddingPage() {
           </div>
 
           <div className="max-w-5xl mx-auto relative z-10 w-full">
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center">
-              {/* Left: Text Content */}
-              <div>
+            <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 lg:gap-16 items-start lg:pt-8">
+              {/* Left: Text Content - 2/3 width on desktop */}
+              <div className="lg:col-span-2 lg:pr-12">
                 <h1 className="text-5xl sm:text-6xl font-bold magical-heading magical-text mb-6 text-foreground">
                   {locale === 'da' ? 'Bryllupper' : 'Weddings'}
                 </h1>
@@ -66,13 +66,13 @@ export default function WeddingPage() {
                 </div>
               </div>
 
-              {/* Right: Cinematic Wedding Image */}
-              <div className="relative group hidden lg:block">
+              {/* Right: Cinematic Wedding Image - 1/3 width on desktop, heavily constrained */}
+              <div className="relative group hidden lg:block lg:col-span-1">
                 {/* Outer glow - romantic theme */}
                 <div className="absolute -inset-1 bg-gradient-to-r from-rose-500 via-pink-400 to-amber-500 rounded-3xl opacity-0 group-hover:opacity-75 transition-all duration-700 blur-2xl group-hover:blur-3xl -z-20"></div>
                 
-                {/* Image container */}
-                <div className="relative overflow-hidden rounded-3xl shadow-2xl group-hover:shadow-3xl transition-all duration-500 border border-rose-200/30 group-hover:border-rose-200/60">
+                {/* Image container - strongly constrained width for premium breathing room */}
+                <div className="relative overflow-hidden rounded-3xl shadow-2xl group-hover:shadow-3xl transition-all duration-500 border border-rose-200/30 group-hover:border-rose-200/60 max-w-xs">
                   
                   {/* Cinematic overlays */}
                   <div className="absolute top-0 left-0 right-0 h-20 bg-gradient-to-b from-black/20 via-transparent to-transparent z-20 pointer-events-none"></div>
