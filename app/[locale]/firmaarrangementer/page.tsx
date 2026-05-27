@@ -34,9 +34,9 @@ export default function CorporateEventsPage() {
           </div>
 
           <div className="max-w-5xl mx-auto relative z-10 w-full">
-            <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 lg:gap-16 items-start lg:pt-8">
-              {/* Left: Text Content - 2/3 width on desktop */}
-              <div className="lg:col-span-2 lg:pr-12">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16 items-start">
+              {/* Left: Text Content */}
+              <div className="lg:pr-8">
                 <h1 className="text-5xl sm:text-6xl font-bold magical-heading magical-text mb-6 text-foreground">
                   {locale === 'da' ? 'Firmaarrangementer' : 'Corporate Events'}
                 </h1>
@@ -66,13 +66,13 @@ export default function CorporateEventsPage() {
                 </div>
               </div>
 
-              {/* Right: Cinematic Corporate Event Image - 1/3 width on desktop, heavily constrained */}
-              <div className="relative group hidden lg:block lg:col-span-1">
+              {/* Right: Cinematic Corporate Event Image */}
+              <div className="relative group hidden lg:block">
                 {/* Outer glow - professional theme */}
                 <div className="absolute -inset-1 bg-gradient-to-r from-blue-500 via-teal-400 to-cyan-500 rounded-3xl opacity-0 group-hover:opacity-75 transition-all duration-700 blur-2xl group-hover:blur-3xl -z-20"></div>
                 
-                {/* Image container - strongly constrained width for premium breathing room */}
-                <div className="relative overflow-hidden rounded-3xl shadow-2xl group-hover:shadow-3xl transition-all duration-500 border border-blue-200/30 group-hover:border-blue-200/60 max-w-xs">
+                {/* Image container - moderate width constraint for premium breathing room */}
+                <div className="relative overflow-hidden rounded-3xl shadow-2xl group-hover:shadow-3xl transition-all duration-500 border border-blue-200/30 group-hover:border-blue-200/60 lg:max-w-md">
                   
                   {/* Cinematic overlays */}
                   <div className="absolute top-0 left-0 right-0 h-20 bg-gradient-to-b from-black/20 via-transparent to-transparent z-20 pointer-events-none"></div>
