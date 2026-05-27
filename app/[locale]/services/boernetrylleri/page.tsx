@@ -5,76 +5,155 @@ import { Header } from '@/components/Header';
 import { Footer } from '@/components/Footer';
 import { Button } from '@/components/ui/button';
 import { Card } from '@/components/ui/card';
-import { Star, Sparkles, Heart } from 'lucide-react';
+import { Heart, Smile, Sparkles } from 'lucide-react';
 import Link from 'next/link';
-import { MagicalBackground } from '@/components/MagicalEffects';
 
 export default function ChildrensMagic() {
   const locale = useLocale();
   const t = useTranslations();
-  
+
   return (
     <>
       <Header />
       <main className="min-h-screen">
-        {/* Hero Section */}
-        <section className="relative py-20 px-4 sm:px-6 lg:px-8 overflow-hidden">
-          <MagicalBackground />
-          <div className="max-w-4xl mx-auto relative z-10">
-            <h1 className="text-5xl sm:text-6xl font-bold magical-heading magical-text mb-4 text-foreground">
-              {t('childrensMagicPage.title')}
-            </h1>
-            <p className="text-xl text-muted-foreground mb-8">
-              {t('childrensMagicPage.subtitle')}
-            </p>
-            <Link href={`/${locale}/contact`}>
-              <Button size="lg" className="btn-primary btn-lg">
-                {t('childrensMagicPage.bookButton')}
-              </Button>
-            </Link>
+        {/* Premium Hero Section - Children's Magic */}
+        <section className="relative min-h-screen flex items-center justify-center overflow-hidden py-20 px-4 sm:px-6 lg:px-8">
+          {/* Pastel gradient background - friendly, playful */}
+          <div className="absolute inset-0 bg-gradient-to-br from-pink-900/5 via-purple-900/5 to-sky-900/5 z-0"></div>
+          
+          {/* Floating premium particles - soft, playful */}
+          <div className="absolute inset-0 overflow-hidden z-0 pointer-events-none">
+            <div className="absolute -top-1/2 -right-1/4 w-96 h-96 bg-pink-200/8 rounded-full blur-3xl animate-float-slow"></div>
+            <div className="absolute -bottom-1/3 -left-1/4 w-80 h-80 bg-purple-200/6 rounded-full blur-3xl animate-float-slow" style={{ animationDelay: '2s' }}></div>
+            <div className="absolute top-1/3 right-1/3 w-72 h-72 bg-sky-200/5 rounded-full blur-3xl animate-drift-right" style={{ animationDelay: '1s' }}></div>
+          </div>
+
+          <div className="max-w-6xl mx-auto relative z-10 w-full">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16 items-center">
+              {/* Left: Text Content */}
+              <div className="relative z-20">
+                <h1 className="text-5xl sm:text-6xl font-bold magical-heading magical-text mb-6 text-foreground">
+                  {t('childrensMagicPage.title')}
+                </h1>
+                <p className="text-xl text-slate-700 mb-4 leading-relaxed font-semibold">
+                  {t('childrensMagicPage.subtitle')}
+                </p>
+                <p className="text-lg text-slate-600 mb-8 leading-relaxed">
+                  {t('childrensMagicPage.aboutText1')}
+                </p>
+                <div className="flex flex-col sm:flex-row gap-4">
+                  <Link href={`/${locale}/contact`}>
+                    <Button size="lg" className="btn-primary btn-lg">
+                      {t('childrensMagicPage.bookButton')}
+                    </Button>
+                  </Link>
+                  <a href="tel:+4540852728">
+                    <Button size="lg" className="btn-primary btn-lg">
+                      {t('childrensMagicPage.callButton')}
+                    </Button>
+                  </a>
+                </div>
+              </div>
+
+              {/* Right: Cinematic Children's Magic Image */}
+              <div className="relative group hidden lg:block">
+                {/* Outer glow - pastel theme */}
+                <div className="absolute -inset-1 bg-gradient-to-r from-pink-400 via-purple-400 to-sky-400 rounded-3xl opacity-0 group-hover:opacity-75 transition-all duration-700 blur-2xl group-hover:blur-3xl -z-20"></div>
+                
+                {/* Image container */}
+                <div className="relative overflow-hidden rounded-3xl shadow-2xl group-hover:shadow-3xl transition-all duration-500 border border-pink-200/30 group-hover:border-pink-200/60">
+                  
+                  {/* Cinematic overlays */}
+                  <div className="absolute top-0 left-0 right-0 h-20 bg-gradient-to-b from-black/20 via-transparent to-transparent z-20 pointer-events-none"></div>
+                  <div className="absolute bottom-0 left-0 right-0 h-28 bg-gradient-to-t from-black/30 via-transparent to-transparent z-20 pointer-events-none"></div>
+                  
+                  {/* Floating sparkles */}
+                  <div className="absolute -top-1 right-8 text-3xl animate-twinkle z-30 pointer-events-none opacity-70">✨</div>
+                  <div className="absolute -bottom-2 left-6 text-2xl animate-twinkle z-30 pointer-events-none opacity-60" style={{ animationDelay: '0.8s' }}>✨</div>
+                  <div className="absolute top-1/3 -right-1 text-2xl animate-twinkle z-30 pointer-events-none opacity-50" style={{ animationDelay: '1.4s' }}>✨</div>
+
+                  {/* Children's Magic Image */}
+                  <img 
+                    src="/kenneth-family-garden.png"
+                    alt="Kenneth performing magic for children and families"
+                    className="w-full h-auto object-cover object-top"
+                  />
+
+                  {/* Magical glow on hover */}
+                  <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none rounded-3xl" style={{
+                    boxShadow: 'inset 0 0 60px rgba(236, 72, 153, 0.15), inset 0 0 100px rgba(168, 85, 247, 0.08)'
+                  }}></div>
+                </div>
+
+                {/* Premium badge below image */}
+                <div className="mt-6 flex items-center justify-center gap-2 text-pink-700 font-semibold">
+                  <div className="w-2 h-2 bg-gradient-to-r from-pink-500 to-purple-500 rounded-full animate-pulse"></div>
+                  <p className="text-sm">{t('childrensMagicPage.badge')}</p>
+                  <div className="w-2 h-2 bg-gradient-to-r from-purple-500 to-sky-500 rounded-full animate-pulse" style={{ animationDelay: '0.5s' }}></div>
+                </div>
+              </div>
+            </div>
           </div>
         </section>
 
-        {/* Service Description */}
+        {/* Mobile Image */}
+        <section className="py-12 px-4 sm:px-6 lg:px-8 max-w-4xl mx-auto lg:hidden">
+          <div className="relative group">
+            <div className="absolute -inset-1 bg-gradient-to-r from-pink-400 via-purple-400 to-sky-400 rounded-3xl opacity-75 blur-2xl -z-20"></div>
+            <div className="relative overflow-hidden rounded-3xl shadow-2xl border border-pink-200/30">
+              <img 
+                src="/kenneth-family-garden.png"
+                alt="Kenneth performing magic for children and families"
+                className="w-full h-auto object-cover object-top"
+              />
+            </div>
+          </div>
+        </section>
+
+        {/* Premium About Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8 max-w-4xl mx-auto">
           <div className="grid md:grid-cols-2 gap-12">
             <div>
-              <h2 className="text-3xl font-bold mb-4">{t('childrensMagicPage.about')}</h2>
-              <p className="text-muted-foreground mb-4 leading-relaxed">
-                {t('childrensMagicPage.aboutText1')}
-              </p>
-              <p className="text-muted-foreground mb-4 leading-relaxed">
+              <h2 className="text-3xl font-bold mb-6 text-foreground magical-heading magical-text">
+                {t('childrensMagicPage.about')}
+              </h2>
+              <p className="text-slate-700 mb-4 leading-relaxed font-medium">
                 {t('childrensMagicPage.aboutText2')}
               </p>
-              <p className="text-muted-foreground whitespace-pre-line">
+              <p className="text-slate-700 leading-relaxed font-medium">
                 {t('childrensMagicPage.aboutText3')}
               </p>
             </div>
             <div className="space-y-4">
-              <Card className="p-6 border-2 border-primary/20 magic-card-hover">
+              {/* Fun & Laughter Card */}
+              <Card className="p-6 rounded-2xl border-2 border-pink-200/40 hover:border-pink-300/60 transition-all hover:shadow-lg hover:shadow-pink-200/40 magic-card-hover bg-gradient-to-br from-pink-50/50 to-white">
                 <div className="flex items-start gap-3">
-                  <Sparkles className="text-primary mt-1 flex-shrink-0" size={24} />
+                  <Smile className="text-pink-500 mt-1 flex-shrink-0" size={24} />
                   <div>
-                    <h3 className="font-bold mb-1">{t('childrensMagicPage.interactiveTitle')}</h3>
-                    <p className="text-sm text-muted-foreground">{t('childrensMagicPage.interactiveText')}</p>
+                    <h3 className="font-bold mb-1 text-slate-900">{t('childrensMagicPage.laughsTitle')}</h3>
+                    <p className="text-sm text-slate-700">{t('childrensMagicPage.laughsText')}</p>
                   </div>
                 </div>
               </Card>
-              <Card className="p-6 border-2 border-accent/20 magic-card-hover">
+
+              {/* Interactive Card */}
+              <Card className="p-6 rounded-2xl border-2 border-purple-200/40 hover:border-purple-300/60 transition-all hover:shadow-lg hover:shadow-purple-200/40 magic-card-hover bg-gradient-to-br from-purple-50/50 to-white">
                 <div className="flex items-start gap-3">
-                  <Star className="text-accent mt-1 flex-shrink-0" size={24} />
+                  <Heart className="text-purple-500 mt-1 flex-shrink-0" size={24} />
                   <div>
-                    <h3 className="font-bold mb-1">{t('childrensMagicPage.laughsTitle')}</h3>
-                    <p className="text-sm text-muted-foreground">{t('childrensMagicPage.laughsText')}</p>
+                    <h3 className="font-bold mb-1 text-slate-900">{t('childrensMagicPage.memoryTitle')}</h3>
+                    <p className="text-sm text-slate-700">{t('childrensMagicPage.memoryText')}</p>
                   </div>
                 </div>
               </Card>
-              <Card className="p-6 border-2 border-secondary/20 magic-card-hover">
+
+              {/* Safe & Professional Card */}
+              <Card className="p-6 rounded-2xl border-2 border-sky-200/40 hover:border-sky-300/60 transition-all hover:shadow-lg hover:shadow-sky-200/40 magic-card-hover bg-gradient-to-br from-sky-50/50 to-white">
                 <div className="flex items-start gap-3">
-                  <Heart className="text-secondary mt-1 flex-shrink-0" size={24} />
+                  <Sparkles className="text-sky-500 mt-1 flex-shrink-0" size={24} />
                   <div>
-                    <h3 className="font-bold mb-1">{t('childrensMagicPage.memoryTitle')}</h3>
-                    <p className="text-sm text-muted-foreground">{t('childrensMagicPage.memoryText')}</p>
+                    <h3 className="font-bold mb-1 text-slate-900">{t('childrensMagicPage.interactiveTitle')}</h3>
+                    <p className="text-sm text-slate-700">{t('childrensMagicPage.interactiveText')}</p>
                   </div>
                 </div>
               </Card>
@@ -82,55 +161,42 @@ export default function ChildrensMagic() {
           </div>
         </section>
 
-        {/* Features Grid */}
-        <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-primary/5 via-accent/5 to-secondary/5">
-          <div className="max-w-4xl mx-auto">
-            <h2 className="text-3xl font-bold mb-12 text-center">{t('childrensMagicPage.title')}</h2>
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-              <Card className="p-6 border border-primary/20 magic-card-hover">
-                <Star className="text-primary mb-3" size={32} />
-                <h3 className="font-bold mb-2">{t('childrensMagicPage.detailsTitle')}</h3>
-                <p className="text-sm text-muted-foreground">{t('childrensMagicPage.detailsText')}</p>
-              </Card>
-              <Card className="p-6 border border-accent/20 magic-card-hover">
-                <Sparkles className="text-accent mb-3" size={32} />
-                <h3 className="font-bold mb-2">{t('childrensMagicPage.interactiveTitle')}</h3>
-                <p className="text-sm text-muted-foreground">{t('childrensMagicPage.interactiveText')}</p>
-              </Card>
-              <Card className="p-6 border border-secondary/20 magic-card-hover">
-                <Heart className="text-secondary mb-3" size={32} />
-                <h3 className="font-bold mb-2">{t('childrensMagicPage.focusTitle')}</h3>
-                <p className="text-sm text-muted-foreground">{t('childrensMagicPage.focusText')}</p>
-              </Card>
-            </div>
+        {/* CTA Section - Premium */}
+        <section className="py-20 px-4 sm:px-6 lg:px-8 text-center bg-gradient-to-r from-pink-600 via-purple-500 to-sky-600 relative overflow-hidden">
+          {/* Playful background shimmer */}
+          <div className="absolute inset-0 opacity-10">
+            <div className="absolute top-0 right-0 w-96 h-96 bg-white rounded-full blur-3xl"></div>
+            <div className="absolute bottom-0 left-1/4 w-72 h-72 bg-pink-200 rounded-full blur-3xl"></div>
           </div>
-        </section>
 
-        {/* CTA Section */}
-        <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-primary via-accent to-secondary">
-          <div className="max-w-2xl mx-auto text-center text-white">
-            <h2 className="text-4xl font-bold mb-6">{t('cta.title')}</h2>
-            <p className="text-lg mb-8 text-slate-900">{t('cta.subtitle')}</p>
+          <div className="max-w-2xl mx-auto relative z-10">
+            <h2 className="text-4xl font-bold mb-4 text-gray-900">
+              {t('childrensMagicPage.ctaTitle')}
+            </h2>
+            <p className="text-lg text-gray-800 mb-8 leading-relaxed">
+              {t('childrensMagicPage.ctaSubtitle')}
+            </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link href={`/${locale}/contact`}>
                 <Button size="lg" className="btn-primary w-[276px] h-[52px] sm:w-full sm:max-w-[320px] flex items-center justify-center text-base font-semibold rounded-lg">
-                  {t('cta.bookButton')}
+                  {t('childrensMagicPage.bookButton')}
                 </Button>
               </Link>
-              <Link href={`tel:${t('footer.phone')}`}>
+              <a href="tel:+4540852728">
                 <Button size="lg" className="btn-secondary w-[276px] h-[52px] sm:w-full sm:max-w-[320px] flex items-center justify-center text-base font-semibold rounded-lg">
-                  {t('cta.callKenneth')}
+                  {t('childrensMagicPage.callButton')}
                 </Button>
-              </Link>
+              </a>
             </div>
           </div>
         </section>
-      </main>
-      
-      {/* Subtle transition gradient before footer */}
-      <div className="h-16 bg-gradient-to-b from-purple-50/50 via-slate-50/30 to-slate-50 pointer-events-none"></div>
 
-      <Footer />
+        {/* Subtle transition gradient before footer */}
+        <div className="h-16 bg-gradient-to-b from-purple-50/50 via-slate-50/30 to-slate-50 pointer-events-none"></div>
+
+        <Footer />
+      </main>
     </>
   );
 }
+
