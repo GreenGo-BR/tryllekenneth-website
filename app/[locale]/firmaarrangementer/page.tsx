@@ -34,9 +34,9 @@ export default function CorporateEventsPage() {
           </div>
 
           <div className="max-w-5xl mx-auto relative z-10 w-full">
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-14 items-center lg:items-start pt-4">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center">
               {/* Left: Text Content */}
-              <div className="lg:pr-8">
+              <div>
                 <h1 className="text-5xl sm:text-6xl font-bold magical-heading magical-text mb-6 text-foreground">
                   {locale === 'da' ? 'Firmaarrangementer' : 'Corporate Events'}
                 </h1>
@@ -66,8 +66,8 @@ export default function CorporateEventsPage() {
                 </div>
               </div>
 
-              {/* Right: Cinematic Corporate Event Image - constrained width for breathing room */}
-              <div className="relative group hidden lg:block lg:max-w-sm">
+              {/* Right: Cinematic Corporate Event Image */}
+              <div className="relative group hidden lg:block">
                 {/* Outer glow - professional theme */}
                 <div className="absolute -inset-1 bg-gradient-to-r from-blue-500 via-teal-400 to-cyan-500 rounded-3xl opacity-0 group-hover:opacity-75 transition-all duration-700 blur-2xl group-hover:blur-3xl -z-20"></div>
                 
