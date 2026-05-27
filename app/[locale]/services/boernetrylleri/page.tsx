@@ -56,7 +56,7 @@ export default function ChildrensMagic() {
               </div>
 
               {/* Right: Cinematic Children's Magic Image */}
-              <div className="relative group md:hidden lg:block">
+              <div className="relative group hidden lg:block">
                 {/* Outer glow - pastel theme */}
                 <div className="absolute -inset-1 bg-gradient-to-r from-pink-400 via-purple-400 to-sky-400 rounded-3xl opacity-0 group-hover:opacity-75 transition-all duration-700 blur-2xl group-hover:blur-3xl -z-20"></div>
                 

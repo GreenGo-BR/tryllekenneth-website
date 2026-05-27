@@ -66,7 +66,7 @@ export default function StandUpMagic() {
               </div>
 
               {/* Right: Cinematic Stage Magic Image */}
-              <div className="relative group md:hidden lg:block">
+              <div className="relative group hidden lg:block">
                 {/* Outer glow - warm/energetic theme */}
                 <div className="absolute -inset-1 bg-gradient-to-r from-orange-500 via-amber-400 to-rose-500 rounded-3xl opacity-0 group-hover:opacity-75 transition-all duration-700 blur-2xl group-hover:blur-3xl -z-20"></div>
                 

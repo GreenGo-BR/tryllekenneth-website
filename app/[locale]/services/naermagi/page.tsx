@@ -66,7 +66,7 @@ export default function CloseupMagic() {
               </div>
 
               {/* Right: Cinematic Close-up Magic Image */}
-              <div className="relative group md:hidden lg:block">
+              <div className="relative group hidden lg:block">
                 {/* Outer glow - indigo/purple theme */}
                 <div className="absolute -inset-1 bg-gradient-to-r from-indigo-500 via-purple-400 to-blue-500 rounded-3xl opacity-0 group-hover:opacity-75 transition-all duration-700 blur-2xl group-hover:blur-3xl -z-20"></div>
                 
