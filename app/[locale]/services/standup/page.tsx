@@ -98,7 +98,7 @@ export default function StandUpMagic() {
                 {/* Premium badge below image */}
                 <div className="mt-6 flex items-center justify-center gap-2 text-orange-700 font-semibold">
                   <div className="w-2 h-2 bg-gradient-to-r from-orange-500 to-amber-500 rounded-full animate-pulse"></div>
-                  <p className="text-sm">{locale === 'da' ? 'Premium Standup • Højenergisk • Scene Trylleri' : 'Premium Stand-up • High-Energy • Stage Magic'}</p>
+                  <p className="text-sm">{locale === 'da' ? 'Premium Stand-up • Højenergisk • Scene Trylleri' : 'Premium Stand-up • High-Energy • Stage Magic'}</p>
                   <div className="w-2 h-2 bg-gradient-to-r from-amber-500 to-rose-500 rounded-full animate-pulse" style={{ animationDelay: '0.5s' }}></div>
                 </div>
               </div>
