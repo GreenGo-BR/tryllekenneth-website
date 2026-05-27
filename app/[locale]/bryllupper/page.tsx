@@ -34,7 +34,7 @@ export default function WeddingPage() {
           </div>
 
           <div className="max-w-5xl mx-auto relative z-10 w-full">
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16 items-start">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-20 items-start">
               {/* Left: Text Content */}
               <div className="lg:pr-8">
                 <h1 className="text-5xl sm:text-6xl font-bold magical-heading magical-text mb-6 text-foreground">
@@ -72,7 +72,7 @@ export default function WeddingPage() {
                 <div className="absolute -inset-1 bg-gradient-to-r from-rose-500 via-pink-400 to-amber-500 rounded-3xl opacity-0 group-hover:opacity-75 transition-all duration-700 blur-2xl group-hover:blur-3xl -z-20"></div>
                 
                 {/* Image container - moderate width constraint for premium breathing room */}
-                <div className="relative overflow-hidden rounded-3xl shadow-2xl group-hover:shadow-3xl transition-all duration-500 border border-rose-200/30 group-hover:border-rose-200/60 lg:max-w-md">
+                <div className="relative overflow-hidden rounded-3xl shadow-2xl group-hover:shadow-3xl transition-all duration-500 border border-rose-200/30 group-hover:border-rose-200/60 lg:max-w-sm">
                   
                   {/* Cinematic overlays */}
                   <div className="absolute top-0 left-0 right-0 h-20 bg-gradient-to-b from-black/20 via-transparent to-transparent z-20 pointer-events-none"></div>
