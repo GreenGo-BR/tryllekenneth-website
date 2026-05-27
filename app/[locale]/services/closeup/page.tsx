@@ -33,9 +33,10 @@ export default function CloseupMagic() {
           </div>
 
           <div className="max-w-6xl mx-auto relative z-10 w-full">
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16 items-center">
-              {/* Left: Text Content */}
-              <div className="relative z-20">
+            <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-10 items-center">
+              {/* Text gets 7/12 columns, image gets 5/12 columns */}
+              {/* Left: Text Content - 7/12 columns */}
+              <div className="relative z-20 lg:col-span-7">
                 <h1 className="text-5xl sm:text-6xl font-bold mb-6 text-foreground magical-heading magical-text">
                   {locale === 'da' ? 'Nærmagi' : 'Close-up Magic'}
                 </h1>
@@ -65,13 +66,13 @@ export default function CloseupMagic() {
                 </div>
               </div>
 
-              {/* Right: Cinematic Close-up Magic Image */}
-              <div className="relative group hidden lg:block">
+              {/* Right: Cinematic Close-up Magic Image - 5/12 columns */}
+              <div className="relative group hidden lg:flex lg:col-span-5 lg:justify-end">
                 {/* Outer glow - indigo/purple theme */}
                 <div className="absolute -inset-1 bg-gradient-to-r from-indigo-500 via-purple-400 to-blue-500 rounded-3xl opacity-0 group-hover:opacity-75 transition-all duration-700 blur-2xl group-hover:blur-3xl -z-20"></div>
                 
-                {/* Image container */}
-                <div className="relative overflow-hidden rounded-3xl shadow-2xl group-hover:shadow-3xl transition-all duration-500 border border-indigo-200/30 group-hover:border-indigo-200/60">
+                {/* Image container - constrained for premium spacing */}
+                <div className="relative overflow-hidden rounded-3xl shadow-2xl group-hover:shadow-3xl transition-all duration-500 border border-indigo-200/30 group-hover:border-indigo-200/60 max-w-md">
                   
                   {/* Cinematic overlays */}
                   <div className="absolute top-0 left-0 right-0 h-20 bg-gradient-to-b from-black/20 via-transparent to-transparent z-20 pointer-events-none"></div>

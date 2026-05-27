@@ -27,10 +27,11 @@ export default function SantaMagic() {
             <div className="absolute top-1/3 right-1/3 w-72 h-72 bg-orange-200/5 rounded-full blur-3xl animate-drift-right" style={{ animationDelay: '1s' }}></div>
           </div>
 
-          <div className="max-w-5xl mx-auto relative z-10 w-full">
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center">
-              {/* Left: Text Content */}
-              <div>
+          <div className="max-w-6xl mx-auto relative z-10 w-full">
+            <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-10 items-center">
+              {/* Text gets 7/12 columns, image gets 5/12 columns */}
+              {/* Left: Text Content - 7/12 columns on desktop */}
+              <div className="lg:col-span-7">
                 <h1 className="text-5xl sm:text-6xl font-bold magical-heading magical-text mb-6 text-foreground">
                   {t('santaPage.title')}
                 </h1>
@@ -54,13 +55,13 @@ export default function SantaMagic() {
                 </div>
               </div>
 
-              {/* Right: Cinematic Santa Image */}
-              <div className="relative group hidden lg:block">
+              {/* Right: Cinematic Santa Image - 5/12 columns on desktop, constrained width */}
+              <div className="relative group hidden lg:flex lg:col-span-5 justify-end">
                 {/* Outer glow - warm festive colors */}
                 <div className="absolute -inset-1 bg-gradient-to-r from-red-500 via-amber-400 to-orange-500 rounded-3xl opacity-0 group-hover:opacity-75 transition-all duration-700 blur-2xl group-hover:blur-3xl -z-20"></div>
                 
-                {/* Image container */}
-                <div className="relative overflow-hidden rounded-3xl shadow-2xl group-hover:shadow-3xl transition-all duration-500 border border-amber-200/30 group-hover:border-amber-200/60">
+                {/* Image container - constrained max-width for premium spacing */}
+                <div className="relative overflow-hidden rounded-3xl shadow-2xl group-hover:shadow-3xl transition-all duration-500 border border-amber-200/30 group-hover:border-amber-200/60 max-w-md">
                   
                   {/* Warm cinematic overlays */}
                   <div className="absolute top-0 left-0 right-0 h-20 bg-gradient-to-b from-black/20 via-transparent to-transparent z-20 pointer-events-none"></div>
