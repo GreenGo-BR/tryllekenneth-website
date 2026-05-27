@@ -135,35 +135,35 @@ export default function StandUpMagic() {
               </p>
             </div>
             <div className="space-y-4">
-              {/* High-Energy Performance */}
+              {/* Harmløs Humor */}
               <Card className="p-6 rounded-2xl border-2 border-orange-200/40 hover:border-orange-300/60 transition-all hover:shadow-lg hover:shadow-orange-200/40 magic-card-hover bg-gradient-to-br from-orange-50/50 to-white">
                 <div className="flex items-start gap-3">
                   <Zap className="text-orange-600 mt-1 flex-shrink-0" size={24} />
                   <div>
-                    <h3 className="font-bold mb-1 text-slate-900">{locale === 'da' ? 'Højenergisk' : 'High-Energy'}</h3>
-                    <p className="text-sm text-slate-700">{locale === 'da' ? 'Levende optræden med stor energi og publikumsengagement' : 'Vibrant performance with high energy and audience engagement'}</p>
+                    <h3 className="font-bold mb-1 text-slate-900">{locale === 'da' ? 'Harmløs Humor' : 'Harmless Humor'}</h3>
+                    <p className="text-sm text-slate-700">{locale === 'da' ? 'Sjov og elegant humor hvor gæsterne kan grine med uden at nogen bliver ydmyget.' : 'Fun and elegant humor where guests can laugh without anyone being humiliated.'}</p>
                   </div>
                 </div>
               </Card>
 
-              {/* Stage Effects */}
+              {/* Publikum Deltager */}
               <Card className="p-6 rounded-2xl border-2 border-amber-200/40 hover:border-amber-300/60 transition-all hover:shadow-lg hover:shadow-amber-200/40 magic-card-hover bg-gradient-to-br from-amber-50/50 to-white">
                 <div className="flex items-start gap-3">
                   <Sparkles className="text-amber-600 mt-1 flex-shrink-0" size={24} />
                   <div>
-                    <h3 className="font-bold mb-1 text-slate-900">{locale === 'da' ? 'Scene Effekter' : 'Stage Effects'}</h3>
-                    <p className="text-sm text-slate-700">{locale === 'da' ? 'Spektakulær trylleri med stort apareat og lyseffekter' : 'Spectacular magic with large apparatus and lighting effects'}</p>
+                    <h3 className="font-bold mb-1 text-slate-900">{locale === 'da' ? 'Publikum Deltager' : 'Audience Participates'}</h3>
+                    <p className="text-sm text-slate-700">{locale === 'da' ? 'Frivillige gæster bliver en del af showet og skaber sjove og uforglemmelige øjeblikke.' : 'Volunteer guests become part of the show and create fun and unforgettable moments.'}</p>
                   </div>
                 </div>
               </Card>
 
-              {/* Audience Interaction */}
+              {/* Mystik & Overraskelser */}
               <Card className="p-6 rounded-2xl border-2 border-rose-200/40 hover:border-rose-300/60 transition-all hover:shadow-lg hover:shadow-rose-200/40 magic-card-hover bg-gradient-to-br from-rose-50/50 to-white">
                 <div className="flex items-start gap-3">
                   <Users className="text-rose-600 mt-1 flex-shrink-0" size={24} />
                   <div>
-                    <h3 className="font-bold mb-1 text-slate-900">{locale === 'da' ? 'Publikumsinteraktion' : 'Audience Interaction'}</h3>
-                    <p className="text-sm text-slate-700">{locale === 'da' ? 'Engagering underholdning med publikumdeltagelse' : 'Engaging entertainment with audience participation'}</p>
+                    <h3 className="font-bold mb-1 text-slate-900">{locale === 'da' ? 'Mystik & Overraskelser' : 'Mystery & Surprises'}</h3>
+                    <p className="text-sm text-slate-700">{locale === 'da' ? 'Et voksent trylleshow fyldt med overraskelser, grin og imponerende magiske øjeblikke.' : 'An adult magic show filled with surprises, laughter and impressive magical moments.'}</p>
                   </div>
                 </div>
               </Card>
