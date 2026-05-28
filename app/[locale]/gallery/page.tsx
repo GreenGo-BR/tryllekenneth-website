@@ -122,7 +122,7 @@ export default function Gallery() {
       <Header />
       <main className="min-h-screen">
         {/* Hero Section */}
-        <section className="py-20 px-4 sm:px-6 lg:px-8">
+        <section className="py-10 px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto">
             <h1 className="text-4xl sm:text-5xl font-bold mb-4 text-foreground">
               {locale === 'da' ? 'Galleri' : 'Gallery'}
@@ -158,9 +158,9 @@ export default function Gallery() {
         </section>
 
         {/* Gallery Grid - Masonry Layout with Flexible Aspect Ratios */}
-        <section className="py-20 px-4 sm:px-6 lg:px-8">
+        <section className="py-12 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
-            <div className="columns-1 md:columns-2 lg:columns-3 gap-8 space-y-8">
+            <div className="columns-1 md:columns-2 lg:columns-3 gap-6 space-y-6">
               {filteredItems.map((item) => (
                 <div
                   key={item.id}
@@ -191,7 +191,7 @@ export default function Gallery() {
         </section>
 
         {/* Video Highlights Section */}
-        <section className="py-20 px-4 sm:px-6 lg:px-8 bg-background">
+        <section className="py-12 px-4 sm:px-6 lg:px-8 bg-background">
           <div className="max-w-7xl mx-auto">
             {/* Section Header */}
             <div className="mb-14 text-center">
@@ -277,7 +277,7 @@ export default function Gallery() {
         </section>
 
         {/* CTA Section */}
-        <section className="py-20 px-4 sm:px-6 lg:px-8 text-center">
+        <section className="py-12 px-4 sm:px-6 lg:px-8 text-center">
           <div className="max-w-2xl mx-auto">
             <h2 className="text-3xl font-bold mb-4">
               {locale === 'da' ? 'Klar til magi?' : 'Ready for Magic?'}
