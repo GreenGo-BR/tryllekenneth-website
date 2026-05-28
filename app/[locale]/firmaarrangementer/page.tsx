@@ -52,7 +52,7 @@ export default function CorporateEventsPage() {
                     : 'Premium entertainment for company Christmas parties, conferences, team building and corporate events that create memorable moments for employees'
                   }
                 </p>
-                <div className="flex flex-col sm:flex-row gap-4 lg:max-w-sm">
+                <div className="flex flex-col sm:flex-row gap-4">
                   <Link href={`/${locale}/contact`}>
                     <Button size="lg" className="btn-primary btn-lg">
                       {locale === 'da' ? 'Book Underholdning' : 'Book Entertainment'}
@@ -72,7 +72,7 @@ export default function CorporateEventsPage() {
                 <div className="absolute -inset-1 bg-gradient-to-r from-blue-500 via-teal-400 to-cyan-500 rounded-3xl opacity-0 group-hover:opacity-75 transition-all duration-700 blur-2xl group-hover:blur-3xl -z-20"></div>
                 
                 {/* Image container - moderate width constraint for premium breathing room */}
-                <div className="relative overflow-hidden rounded-3xl shadow-2xl group-hover:shadow-3xl transition-all duration-500 border border-blue-200/30 group-hover:border-blue-200/60 lg:max-w-sm">
+                <div className="relative overflow-hidden rounded-3xl shadow-2xl group-hover:shadow-3xl transition-all duration-500 border border-blue-200/30 group-hover:border-blue-200/60 lg:max-w-xs">
                   
                   {/* Cinematic overlays */}
                   <div className="absolute top-0 left-0 right-0 h-20 bg-gradient-to-b from-black/20 via-transparent to-transparent z-20 pointer-events-none"></div>
