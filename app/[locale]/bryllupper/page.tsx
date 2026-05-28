@@ -34,7 +34,7 @@ export default function WeddingPage() {
           </div>
 
           <div className="max-w-5xl mx-auto relative z-10 w-full">
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-20 items-start">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-20 items-start lg:items-center">
               {/* Left: Text Content */}
               <div className="lg:pr-8">
                 <h1 className="text-5xl sm:text-6xl font-bold magical-heading magical-text mb-6 text-foreground">
