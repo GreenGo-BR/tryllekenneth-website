@@ -137,7 +137,7 @@ export default function Gallery() {
         </section>
 
         {/* Filter Section */}
-        <section className="sticky top-16 z-40 bg-background/95 backdrop-blur border-b border-primary/10 py-1 px-4 sm:px-6 lg:px-8">
+        <section className="sticky top-16 z-40 bg-background/95 backdrop-blur border-b border-primary/10 py-1 px-4 sm:px-6 lg:px-8 -mt-6">
           <div className="max-w-6xl mx-auto">
             <div className="flex flex-wrap gap-2 justify-center">
               {categories.map((category) => (
