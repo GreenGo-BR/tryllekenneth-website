@@ -59,7 +59,7 @@ export default function WeddingPage() {
                     </Button>
                   </Link>
                   <a href="tel:+4540852728">
-                    <Button size="lg" className="btn-primary btn-lg px-5">
+                    <Button size="lg" className="btn-primary btn-lg pl-2 pr-5">
                       {locale === 'da' ? 'Ring: +45 40 85 27 28' : 'Call: +45 40 85 27 28'}
                     </Button>
                   </a>
