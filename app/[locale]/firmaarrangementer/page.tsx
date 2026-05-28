@@ -52,7 +52,7 @@ export default function CorporateEventsPage() {
                     : 'Premium entertainment for company Christmas parties, conferences, team building and corporate events that create memorable moments for employees'
                   }
                 </p>
-                <div className="flex flex-col sm:flex-row gap-4">
+                <div className="flex flex-col sm:flex-row gap-4 lg:max-w-sm">
                   <Link href={`/${locale}/contact`}>
                     <Button size="lg" className="btn-primary btn-lg">
                       {locale === 'da' ? 'Book Underholdning' : 'Book Entertainment'}
