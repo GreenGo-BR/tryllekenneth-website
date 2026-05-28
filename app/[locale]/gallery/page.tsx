@@ -122,9 +122,9 @@ export default function Gallery() {
       <Header />
       <main className="min-h-screen">
         {/* Hero Section */}
-        <section className="py-10 px-4 sm:px-6 lg:px-8">
+        <section className="py-6 px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto">
-            <h1 className="text-4xl sm:text-5xl font-bold mb-4 text-foreground">
+            <h1 className="text-4xl sm:text-5xl font-bold mb-2 text-foreground">
               {locale === 'da' ? 'Galleri' : 'Gallery'}
             </h1>
             <p className="text-lg text-muted-foreground">
@@ -137,7 +137,7 @@ export default function Gallery() {
         </section>
 
         {/* Filter Section */}
-        <section className="sticky top-16 z-40 bg-background/95 backdrop-blur border-b border-primary/10 py-4 px-4 sm:px-6 lg:px-8">
+        <section className="sticky top-16 z-40 bg-background/95 backdrop-blur border-b border-primary/10 py-2 px-4 sm:px-6 lg:px-8">
           <div className="max-w-6xl mx-auto">
             <div className="flex flex-wrap gap-2 justify-center">
               {categories.map((category) => (
@@ -158,7 +158,7 @@ export default function Gallery() {
         </section>
 
         {/* Gallery Grid - Masonry Layout with Flexible Aspect Ratios */}
-        <section className="py-12 px-4 sm:px-6 lg:px-8">
+        <section className="py-8 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
             <div className="columns-1 md:columns-2 lg:columns-3 gap-6 space-y-6">
               {filteredItems.map((item) => (
