@@ -52,14 +52,14 @@ export default function WeddingPage() {
                     : 'Elegant and romantic entertainment with close-up magic for wedding celebrations, receptions and evening parties that make the day unforgettable'
                   }
                 </p>
-                <div className="flex flex-col sm:flex-row gap-4">
+                <div className="flex flex-col sm:flex-row gap-4 max-w-sm">
                   <Link href={`/${locale}/contact`}>
-                    <Button size="lg" className="btn-primary btn-lg">
+                    <Button size="lg" className="btn-primary btn-lg px-5">
                       {locale === 'da' ? 'Book Bryllupstrylleri' : 'Book Wedding Magic'}
                     </Button>
                   </Link>
                   <a href="tel:+4540852728">
-                    <Button size="lg" className="btn-primary btn-lg">
+                    <Button size="lg" className="btn-primary btn-lg px-5">
                       {locale === 'da' ? 'Ring: +45 40 85 27 28' : 'Call: +45 40 85 27 28'}
                     </Button>
                   </a>
