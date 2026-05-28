@@ -31,7 +31,7 @@ export default function SantaMagic() {
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-20 items-start">
               {/* Left: Text Content */}
               <div className="max-w-md">
-                <h1 className="text-5xl sm:text-6xl font-bold magical-heading magical-text mb-6 text-foreground">
+                <h1 className="text-5xl sm:text-5xl font-bold magical-heading magical-text mb-6 text-foreground">
                   {t('santaPage.title')}
                 </h1>
                 <p className="text-xl text-slate-700 mb-4 leading-relaxed font-semibold">
