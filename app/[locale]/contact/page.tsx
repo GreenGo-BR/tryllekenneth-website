@@ -5,7 +5,7 @@ import { Footer } from '@/components/Footer';
 import { Button } from '@/components/ui/button';
 import { Card } from '@/components/ui/card';
 import { ReviewHighlight } from '@/components/ReviewHighlight';
-import { Mail, Phone, MapPin, Clock } from 'lucide-react';
+import { Mail, Phone, MapPin, Clock, AlertCircle, CheckCircle2 } from 'lucide-react';
 import Link from 'next/link';
 import { useState } from 'react';
 import { useLocale, useTranslations } from 'next-intl';
@@ -23,18 +23,52 @@ export default function Contact() {
     guests: '',
     message: '',
   });
+  
+  const [status, setStatus] = useState<'idle' | 'loading' | 'success' | 'error'>('idle');
+  const [statusMessage, setStatusMessage] = useState('');
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
     const { name, value } = e.target;
     setFormData(prev => ({ ...prev, [name]: value }));
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    console.log('Form submitted:', formData);
-    triggerCelebration();
-    alert(t('contactPage.responseMessage'));
-    setFormData({ name: '', email: '', phone: '', eventDate: '', eventType: '', guests: '', message: '' });
+    
+    setStatus('loading');
+    
+    try {
+      const response = await fetch('/api/contact', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(formData),
+      });
+
+      const data = await response.json();
+
+      if (!response.ok) {
+        setStatus('error');
+        setStatusMessage(data.error || 'Fejl ved sending af formularen. Prøv igen senere.');
+        return;
+      }
+
+      setStatus('success');
+      setStatusMessage(t('contactPage.responseMessage'));
+      triggerCelebration();
+      setFormData({ name: '', email: '', phone: '', eventDate: '', eventType: '', guests: '', message: '' });
+      
+      // Auto-clear success message after 5 seconds
+      setTimeout(() => {
+        setStatus('idle');
+        setStatusMessage('');
+      }, 5000);
+    } catch (error) {
+      setStatus('error');
+      setStatusMessage('Fejl ved forbindelsen. Prøv igen senere.');
+      console.error('Contact form error:', error);
+    }
   };
 
   return (
@@ -105,6 +139,22 @@ export default function Contact() {
               {/* Form */}
               <div>
                 <h2 className="text-3xl font-bold mb-8">{t('contactPage.formTitle')}</h2>
+                
+                {/* Status Messages */}
+                {status === 'success' && (
+                  <div className="mb-6 p-4 rounded-lg bg-green-50 border-2 border-green-200 flex items-start gap-3">
+                    <CheckCircle2 className="text-green-600 flex-shrink-0 mt-0.5" size={20} />
+                    <p className="text-green-800">{statusMessage}</p>
+                  </div>
+                )}
+                
+                {status === 'error' && (
+                  <div className="mb-6 p-4 rounded-lg bg-red-50 border-2 border-red-200 flex items-start gap-3">
+                    <AlertCircle className="text-red-600 flex-shrink-0 mt-0.5" size={20} />
+                    <p className="text-red-800">{statusMessage}</p>
+                  </div>
+                )}
+                
                 <form onSubmit={handleSubmit} className="space-y-6">
                   <div>
                     <label className="block text-sm font-medium mb-2">{t('contactPage.nameLabel')} *</label>
@@ -201,8 +251,13 @@ export default function Contact() {
                     />
                   </div>
 
-                  <Button type="submit" size="lg" className="btn-primary w-full">
-                    {t('contactPage.sendButton')}
+                  <Button 
+                    type="submit" 
+                    size="lg" 
+                    className="btn-primary w-full"
+                    disabled={status === 'loading'}
+                  >
+                    {status === 'loading' ? (locale === 'da' ? 'Sender...' : 'Sending...') : t('contactPage.sendButton')}
                   </Button>
                 </form>
               </div>
