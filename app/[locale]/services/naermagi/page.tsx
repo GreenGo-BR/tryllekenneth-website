@@ -119,6 +119,12 @@ export default function CloseupMagic() {
                   : t('closeUpMagicPage.aboutText1')
                 }
               </p>
+              <p className="text-slate-700 leading-relaxed font-medium">
+                {locale === 'da'
+                  ? 'Den tætte kontakt skaber en særlig forbindelse mellem TrylleKenneth og hver gæst, hvilket gør hvert magisk øjeblik uforglemmeligt.'
+                  : t('closeUpMagicPage.aboutText2')
+                }
+              </p>
             </div>
             <div className="space-y-4">
               {/* Card Tricks */}
