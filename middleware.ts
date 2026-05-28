@@ -10,6 +10,16 @@ const intlMiddleware = createMiddleware({
 
 export function middleware(request: NextRequest) {
   const pathname = request.nextUrl.pathname;
+  
+  // SEO Redirects - Handle old URLs indexed in Google
+  // Capture both ASCII and special character versions (ø = %C3%B8)
+  if (pathname === '/børnetrylleri' || pathname === '/boernetrylleri' || 
+      pathname === '/b%C3%B8rnetrylleri' || pathname === '%2Fb%C3%B8rnetrylleri') {
+    return NextResponse.redirect(new URL('/da/services/boernetrylleri', request.url), {
+      status: 301, // Permanent redirect for SEO
+    });
+  }
+  
   if (pathname.startsWith('/da') || pathname.startsWith('/en')) {
     return intlMiddleware(request);
   }
