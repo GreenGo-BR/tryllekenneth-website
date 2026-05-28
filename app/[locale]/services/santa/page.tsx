@@ -28,10 +28,10 @@ export default function SantaMagic() {
           </div>
 
           <div className="max-w-5xl mx-auto relative z-10 w-full">
-            <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-16 items-start">
-              {/* Left: Text Content - 5 of 12 columns for wider text area */}
-              <div className="lg:col-span-5 relative z-20">
-                <h1 className="text-5xl sm:text-6xl font-bold magical-heading magical-text mb-6 text-foreground">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-20 items-start">
+              {/* Left: Text Content */}
+              <div className="lg:pr-8 relative z-20">
+                <h1 className="text-5xl sm:text-6xl font-bold magical-heading magical-text mb-6 text-foreground relative z-30 max-w-lg">
                   {t('santaPage.title')}
                 </h1>
                 <p className="text-xl text-slate-700 mb-4 leading-relaxed font-semibold">
@@ -60,8 +60,8 @@ export default function SantaMagic() {
                 </div>
               </div>
 
-              {/* Right: Cinematic Santa Image - 7 of 12 columns, offset right for clear separation */}
-              <div className="relative group hidden lg:block lg:col-span-7 lg:col-start-6">
+              {/* Right: Cinematic Santa Image */}
+              <div className="relative group hidden lg:block">
                 {/* Outer glow - warm festive colors */}
                 <div className="absolute -inset-1 bg-gradient-to-r from-red-500 via-amber-400 to-orange-500 rounded-3xl opacity-0 group-hover:opacity-75 transition-all duration-700 blur-2xl group-hover:blur-3xl -z-20"></div>
                 
