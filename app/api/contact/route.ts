@@ -9,15 +9,17 @@ if (missingEnvVars.length > 0) {
   console.warn(`Missing environment variables for email: ${missingEnvVars.join(', ')}`);
 }
 
-// Create transporter using SMTP credentials from environment
+// Create transporter using SMTP credentials from one.com
 const transporter = nodemailer.createTransport({
-  host: process.env.SMTP_HOST,
-  port: parseInt(process.env.SMTP_PORT || '587'),
-  secure: process.env.SMTP_SECURE === 'true', // Use TLS if not secure
+  host: process.env.SMTP_HOST || 'send.one.com',
+  port: parseInt(process.env.SMTP_PORT || '465'),
+  secure: process.env.SMTP_SECURE === 'true' || true, // SSL/TLS on port 465
   auth: {
     user: process.env.SMTP_USER,
     pass: process.env.SMTP_PASS,
   },
+  logger: true,
+  debug: true,
 });
 
 interface ContactFormData {
@@ -34,8 +36,11 @@ export async function POST(request: NextRequest) {
   try {
     const body: ContactFormData = await request.json();
 
+    console.log('[v0] Contact form submission received from:', body.email);
+
     // Validate required fields
     if (!body.name || !body.email || !body.phone || !body.eventDate || !body.eventType || !body.guests) {
+      console.error('[v0] Missing required fields');
       return NextResponse.json(
         { error: 'Missing required fields' },
         { status: 400 }
@@ -45,6 +50,7 @@ export async function POST(request: NextRequest) {
     // Validate email format
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     if (!emailRegex.test(body.email)) {
+      console.error('[v0] Invalid email format:', body.email);
       return NextResponse.json(
         { error: 'Invalid email format' },
         { status: 400 }
@@ -53,6 +59,7 @@ export async function POST(request: NextRequest) {
 
     // Validate phone format (basic validation)
     if (body.phone.length < 8) {
+      console.error('[v0] Invalid phone format');
       return NextResponse.json(
         { error: 'Invalid phone format' },
         { status: 400 }
@@ -90,6 +97,7 @@ export async function POST(request: NextRequest) {
     };
 
     await transporter.sendMail(mailOptions);
+    console.log('[v0] Email sent successfully to Kenneth');
 
     // Send confirmation email to user
     const confirmationContent = `
@@ -111,9 +119,10 @@ export async function POST(request: NextRequest) {
 
     // Send confirmation email (non-blocking)
     transporter.sendMail(confirmationMailOptions).catch(err => {
-      console.error('Error sending confirmation email:', err);
+      console.error('[v0] Error sending confirmation email:', err.message);
     });
 
+    console.log('[v0] Contact form processed successfully');
     return NextResponse.json(
       { 
         success: true,
@@ -122,9 +131,16 @@ export async function POST(request: NextRequest) {
       { status: 200 }
     );
   } catch (error) {
-    console.error('Contact form error:', error);
+    const errorMessage = error instanceof Error ? error.message : 'Unknown error';
+    console.error('[v0] Contact form error:', errorMessage);
+    console.error('[v0] SMTP Configuration:', {
+      host: process.env.SMTP_HOST,
+      port: process.env.SMTP_PORT,
+      user: process.env.SMTP_USER,
+      secure: process.env.SMTP_SECURE,
+    });
     return NextResponse.json(
-      { error: 'Failed to send email. Please try again later.' },
+      { error: 'Desculpe, não conseguimos enviar sua mensagem. Por favor, tente novamente mais tarde ou ligue para +45 40 85 27 28.' },
       { status: 500 }
     );
   }
