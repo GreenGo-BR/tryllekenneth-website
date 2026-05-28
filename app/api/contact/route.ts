@@ -1,12 +1,14 @@
 import { NextRequest, NextResponse } from 'next/server';
 import nodemailer from 'nodemailer';
 
-// Validate required environment variables
-const requiredEnvVars = ['SMTP_HOST', 'SMTP_PORT', 'SMTP_USER', 'SMTP_PASS', 'CONTACT_TO_EMAIL'];
-const missingEnvVars = requiredEnvVars.filter(varName => !process.env[varName]);
-
-if (missingEnvVars.length > 0) {
-  console.warn(`[v0] Missing environment variables for email: ${missingEnvVars.join(', ')}`);
+interface ContactFormData {
+  name: string;
+  email: string;
+  phone: string;
+  eventDate: string;
+  eventType: string;
+  guests: string;
+  message?: string;
 }
 
 // Create transporter using SMTP credentials from one.com
@@ -22,16 +24,6 @@ const transporter = nodemailer.createTransport({
   debug: true,
 });
 
-interface ContactFormData {
-  name: string;
-  email: string;
-  phone: string;
-  eventDate: string;
-  eventType: string;
-  guests: string;
-  message: string;
-}
-
 function escapeHtml(text: string): string {
   const map: { [key: string]: string } = {
     '&': '&amp;',
@@ -40,7 +32,7 @@ function escapeHtml(text: string): string {
     '"': '&quot;',
     "'": '&#039;',
   };
-  return text.replace(/[&<>"']/g, m => map[m]);
+  return text.replace(/[&<>"']/g, (m) => map[m]);
 }
 
 export async function POST(request: NextRequest) {
@@ -79,21 +71,21 @@ export async function POST(request: NextRequest) {
 
     // Build email content
     const emailContent = `
-      <h2>Ny Bookinganmodning</h2>
+      <h2>Ny bookinganmodning</h2>
       <p><strong>Navn:</strong> ${escapeHtml(body.name)}</p>
-      <p><strong>E-mail:</strong> ${escapeHtml(body.email)}</p>
+      <p><strong>Email:</strong> ${escapeHtml(body.email)}</p>
       <p><strong>Telefon:</strong> ${escapeHtml(body.phone)}</p>
       <p><strong>Event dato:</strong> ${escapeHtml(body.eventDate)}</p>
-      <p><strong>Event type:</strong> ${escapeHtml(body.eventType)}</p>
-      <p><strong>Antal gæster:</strong> ${escapeHtml(body.guests)}</p>
-      <p><strong>Besked:</strong></p>
-      <p>${escapeHtml(body.message).replace(/\n/g, '<br>')}</p>
+      <p><strong>Type:</strong> ${escapeHtml(body.eventType)}</p>
+      <p><strong>Antal personer:</strong> ${escapeHtml(body.guests)}</p>
+      ${body.message ? `<p><strong>Besked:</strong> ${escapeHtml(body.message)}</p>` : ''}
     `;
 
+    // Send email to Kenneth
     const mailOptions = {
       from: process.env.SMTP_USER || 'noreply@tryllekenneth.dk',
       to: process.env.CONTACT_TO_EMAIL || 'kenneth@tryllekenneth.dk',
-      subject: `Ny bookinganmodning fra ${escapeHtml(body.name)} - ${escapeHtml(body.eventType)}`,
+      subject: `Ny bookinganmodning fra ${escapeHtml(body.name)} - ${body.eventType}`,
       html: emailContent,
     };
 
