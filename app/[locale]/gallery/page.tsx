@@ -122,12 +122,12 @@ export default function Gallery() {
       <Header />
       <main className="min-h-screen">
         {/* Hero Section */}
-        <section className="py-0 px-4 sm:px-6 lg:px-8 pb-0">
+        <section className="py-16 px-4 sm:px-6 lg:px-8 pb-0">
           <div className="max-w-4xl mx-auto pt-0 pb-0">
-            <h1 className="text-4xl sm:text-5xl font-bold mb-0 text-foreground mt-2">
+            <h1 className="text-6xl sm:text-7xl font-bold mb-4 text-foreground mt-2">
               {locale === 'da' ? 'Galleri' : 'Gallery'}
             </h1>
-            <p className="text-lg text-muted-foreground mt-0.5">
+            <p className="text-2xl text-muted-foreground mt-2">
               {locale === 'da' 
                 ? 'Se TrylleKenneth i aktion på events, fester og til børneunderholdning'
                 : 'See TrylleKenneth in action at events, parties and children\'s entertainment'
