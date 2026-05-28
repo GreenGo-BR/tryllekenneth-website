@@ -113,7 +113,7 @@ export default function CorporateEventsPage() {
             <div className="absolute -inset-1 bg-gradient-to-r from-blue-500 via-teal-400 to-cyan-500 rounded-3xl opacity-75 blur-2xl -z-20"></div>
             <div className="relative overflow-hidden rounded-3xl shadow-2xl border border-blue-200/30">
               <img 
-                src="/kenneth-stage-audience.png"
+                src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Corporate%20Events-KnhDCGk5jvxPEFyCejsbutD5bqUwty.png"
                 alt="Kenneth performing magic at corporate event"
                 className="w-full h-auto object-cover"
               />
