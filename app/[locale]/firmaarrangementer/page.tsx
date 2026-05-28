@@ -58,8 +58,8 @@ export default function CorporateEventsPage() {
                       {locale === 'da' ? 'Book Underholdning' : 'Book Entertainment'}
                     </Button>
                   </Link>
-                  <a href="tel:+4540852728">
-                    <Button size="lg" className="btn-primary btn-lg">
+                  <a href="tel:+4540852728" className="lg:flex-shrink-0">
+                    <Button size="lg" className="btn-primary btn-lg lg:max-w-xs">
                       {locale === 'da' ? 'Ring: +45 40 85 27 28' : 'Call: +45 40 85 27 28'}
                     </Button>
                   </a>
