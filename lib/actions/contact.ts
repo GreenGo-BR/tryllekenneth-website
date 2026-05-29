@@ -37,6 +37,7 @@ function escapeHtml(text: string): string {
 
 export async function submitContactForm(formData: ContactFormData) {
   try {
+    console.log('[contact-form] submitContactForm called');
     console.log('[v0] Contact form submission received from:', formData.email);
 
     // Validate required fields
