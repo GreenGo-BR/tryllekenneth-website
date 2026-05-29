@@ -10,6 +10,7 @@ import Link from 'next/link';
 import { useState } from 'react';
 import { useLocale, useTranslations } from 'next-intl';
 import { triggerCelebration } from '@/lib/animations';
+import { submitContactForm } from '@/lib/actions/contact';
 
 export default function Contact() {
   const locale = useLocale();
@@ -38,19 +39,11 @@ export default function Contact() {
     setStatus('loading');
     
     try {
-      const response = await fetch('/api/contact', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify(formData),
-      });
+      const result = await submitContactForm(formData);
 
-      const data = await response.json();
-
-      if (!response.ok) {
+      if (!result.success) {
         setStatus('error');
-        setStatusMessage(data.error || 'Fejl ved sending af formularen. Prøv igen senere.');
+        setStatusMessage(result.error || 'Fejl ved sending af formularen. Prøv igen senere.');
         return;
       }
 
