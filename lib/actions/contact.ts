@@ -1,6 +1,7 @@
 'use server';
 
 import nodemailer from 'nodemailer';
+import { saveSubmissionToSheets, type SubmissionLog } from '../sheets';
 
 interface ContactFormData {
   name: string;
@@ -158,6 +159,27 @@ export async function submitContactForm(formData: ContactFormData) {
     console.log('[CONTACT-FORM-DEBUG] Message ID:', infoToCustomer.messageId);
     console.log('[CONTACT-FORM-DEBUG] ========== FORM SUBMISSION SUCCESS ==========');
 
+    // Save submission to Google Sheets (async, non-blocking)
+    const submissionLog: SubmissionLog = {
+      timestamp,
+      locale: 'en', // TODO: Get from request context if needed
+      route: '/contact',
+      name: formData.name,
+      email: formData.email,
+      phone: formData.phone,
+      eventDate: formData.eventDate,
+      eventType: formData.eventType,
+      guests: formData.guests,
+      message: formData.message,
+      ownerEmailStatus: infoToKenneth.response ? 'sent' : 'failed',
+      customerEmailStatus: infoToCustomer.response ? 'sent' : 'failed',
+    };
+
+    // Fire and forget - don't wait for sheets response
+    saveSubmissionToSheets(submissionLog).catch(err => {
+      console.error('[CONTACT-FORM-DEBUG] Failed to log to sheets:', err);
+    });
+
     return { success: true, message: 'Din bookinganmodning er blevet sendt. Kenneth kontakter dig snarest.' };
   } catch (error) {
     console.error('[CONTACT-FORM-DEBUG] ========== FORM SUBMISSION ERROR ==========');
@@ -168,7 +190,29 @@ export async function submitContactForm(formData: ContactFormData) {
     
     if (error instanceof Error) {
       console.error('[CONTACT-FORM-DEBUG] Stack trace:', error.stack);
-      return { success: false, error: error.message };
+      
+    // Still log to sheets even if error occurs
+    const failedSubmissionLog: SubmissionLog = {
+      timestamp,
+      locale: 'en',
+      route: '/contact',
+      name: formData.name,
+      email: formData.email,
+      phone: formData.phone,
+      eventDate: formData.eventDate,
+      eventType: formData.eventType,
+      guests: formData.guests,
+      message: formData.message,
+      ownerEmailStatus: 'failed',
+      customerEmailStatus: 'failed',
+      errorMessage: error.message,
+    };
+
+    saveSubmissionToSheets(failedSubmissionLog).catch(err => {
+      console.error('[CONTACT-FORM-DEBUG] Failed to log error to sheets:', err);
+    });
+
+    return { success: false, error: error.message };
     }
     
     return { success: false, error: 'Der skete en fejl ved sending af formularen. Prøv igen senere.' };
