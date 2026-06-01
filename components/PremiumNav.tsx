@@ -141,7 +141,7 @@ export function PremiumNav({ isMobile = false }: PremiumNavProps) {
               <div className="absolute top-0 left-6 w-3 h-3 bg-slate-950/95 border-t border-l border-amber-500/20 rounded-tl transform -translate-y-1.5 rotate-45" />
               
               <div className="pt-3 pb-2">
-                {item.children.map((child, idx) => (
+                {item.children?.map((child, idx) => (
                   <Link
                     key={child.key}
                     href={child.href}
@@ -160,7 +160,7 @@ export function PremiumNav({ isMobile = false }: PremiumNavProps) {
           {/* Mobile Dropdown - Clean and spacious */}
           {isMobileView && isOpen && (
             <div className="pl-6 space-y-1 border-l-2 border-amber-500/20 my-2">
-              {item.children.map((child) => (
+              {item.children?.map((child) => (
                 <Link
                   key={child.key}
                   href={child.href}

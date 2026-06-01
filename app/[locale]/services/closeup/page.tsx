@@ -37,24 +37,24 @@ export default function CloseupMagic() {
               {/* Left: Text Content */}
               <div className="relative z-20">
                 <h1 className="text-5xl sm:text-6xl font-bold mb-6 text-foreground magical-heading magical-text">
-                  {locale === 'da' ? 'Nærmagi' : 'Close-up Magic'}
+                  {locale === 'da' ? 'Close-up magi' : 'Close-up Magic'}
                 </h1>
                 <p className="text-xl text-slate-700 mb-4 leading-relaxed font-semibold">
                   {locale === 'da' 
-                    ? 'Interaktiv magi der finder sted lige foran dine øjne'
+                    ? 'Interaktiv magi der finder sted lige foran dine øjne.'
                     : 'Interactive magic that happens right before your eyes'
                   }
                 </p>
                 <p className="text-lg text-slate-600 mb-8 leading-relaxed">
                   {locale === 'da'
-                    ? 'Premium nærmagi med kort, mønter og hverdagsgenstande til private fester, firmaarrangementer og begivenheder'
+                    ? 'Close-up magi med hverdagssting, spillekort, pengesedler og mønter mm.\nVelegnet til voksenfester, firmafester og runde fødselsdage mm.'
                     : 'Premium close-up magic with cards, coins and everyday objects for private parties, corporate events and special occasions'
                   }
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4">
                   <Link href={`/${locale}/contact`}>
                     <Button size="lg" className="btn-primary btn-lg">
-                      {locale === 'da' ? 'Book Nærmagi' : 'Book Close-up Magic'}
+                      {locale === 'da' ? 'Book Close-up magi' : 'Book Close-up Magic'}
                     </Button>
                   </Link>
                   <a href="tel:+4540852728">
@@ -98,7 +98,7 @@ export default function CloseupMagic() {
                 {/* Premium badge below image */}
                 <div className="mt-6 flex items-center justify-center gap-2 text-indigo-700 font-semibold">
                   <div className="w-2 h-2 bg-gradient-to-r from-indigo-500 to-purple-500 rounded-full animate-pulse"></div>
-                  <p className="text-sm">{locale === 'da' ? 'Premium Nærmagi • Interaktiv • Intimate' : 'Premium Close-up • Interactive • Intimate'}</p>
+                  <p className="text-sm">{locale === 'da' ? 'Premium Close-up magi • Interaktiv • Intimate' : 'Premium Close-up • Interactive • Intimate'}</p>
                   <div className="w-2 h-2 bg-gradient-to-r from-purple-500 to-blue-500 rounded-full animate-pulse" style={{ animationDelay: '0.5s' }}></div>
                 </div>
               </div>
@@ -128,10 +128,10 @@ export default function CloseupMagic() {
                 {t('closeUpMagicPage.about')}
               </h2>
               <p className="text-slate-700 mb-4 leading-relaxed font-medium">
-                {t('closeUpMagicPage.aboutText1')}
-              </p>
-              <p className="text-slate-700 leading-relaxed font-medium">
-                {t('closeUpMagicPage.aboutText2')}
+                {locale === 'da'
+                  ? 'Close-up magi med tryllekunstner TrylleKenneth. Her foregår magien helt under næsen på dig. Her bliver du virkelig inddraget i magiens verden. Her bliver der tryllet med bolde, spillekort, pengesedler og mønter. Ved denne form for trylleri sker magien hurtige end øjet da fingerfærdigheden er i højsædet.'
+                  : t('closeUpMagicPage.aboutText1')
+                }
               </p>
             </div>
             <div className="space-y-4">
@@ -181,18 +181,18 @@ export default function CloseupMagic() {
 
           <div className="max-w-2xl mx-auto relative z-10">
             <h2 className="text-4xl font-bold mb-4 text-gray-900">
-              {locale === 'da' ? 'Nærmagi der Imponerer' : 'Close-up Magic That Impresses'}
+              {locale === 'da' ? 'Close-up magi der Imponerer' : 'Close-up Magic That Impresses'}
             </h2>
             <p className="text-lg text-slate-900 mb-8 leading-relaxed">
               {locale === 'da'
-                ? 'Book TrylleKenneth til nærmagi og skab intime magiske øjeblikke for dine gæster'
+                ? 'Book TrylleKenneth til close-up magi og skab intime magiske øjeblikke for dine gæster'
                 : 'Book TrylleKenneth for close-up magic and create intimate magical moments for your guests'
               }
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link href={`/${locale}/contact`}>
                 <Button size="lg" className="btn-primary w-[276px] h-[52px] sm:w-full sm:max-w-[320px] flex items-center justify-center text-base font-semibold rounded-lg">
-                  {locale === 'da' ? 'Book Nærmagi' : 'Book Close-up Magic'}
+                  {locale === 'da' ? 'Book Close-up magi' : 'Book Close-up Magic'}
                 </Button>
               </Link>
               <a href="tel:+4540852728">
