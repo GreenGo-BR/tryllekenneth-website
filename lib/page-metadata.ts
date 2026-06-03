@@ -97,6 +97,18 @@ export const pageMetadataConfig = {
         keywords: ['children magic Copenhagen', 'birthday magician', 'kids entertainment', 'family magic', 'interactive magic show', 'children\'s party entertainment', 'magic for kids Denmark'],
       },
     },
+    standup: {
+      da: {
+        title: 'Trylleri for Voksne | Stand-up Trylleri til Firmafester og Private Events',
+        description: 'Professionel stand-up trylleri og magisk underholdning for voksne til firmafester, private events, bryllupper og særlige arrangementer i København og hele Danmark.',
+        keywords: ['trylleri for voksne', 'stand-up trylleri', 'tryllekunstner til voksne', 'firmafest', 'voksenfester', 'magisk underholdning til voksne', 'stand-up magic event', 'event underhaltning voksne'],
+      },
+      en: {
+        title: 'Stand-up Magic for Adults | Corporate and Private Event Magician',
+        description: 'Professional stand-up magic and interactive entertainment for adult audiences, corporate events, private parties, weddings and special occasions in Denmark.',
+        keywords: ['stand-up magic', 'magic for adults', 'magician for adult events', 'corporate magic', 'private event magician', 'adult entertainment', 'stand-up performer', 'event magician Denmark'],
+      },
+    },
   },
   events: {
     weddings: {
