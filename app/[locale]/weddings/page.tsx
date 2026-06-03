@@ -8,7 +8,7 @@ export async function generateMetadata({
   params: Promise<{ locale: 'da' | 'en' }>;
 }): Promise<Metadata> {
   const { locale } = await params;
-  const weddings = pageMetadataConfig.weddings;
+  const weddings = pageMetadataConfig.events.weddings;
   const localizedMetadata = weddings[locale];
   const baseUrl = 'https://tryllekenneth.dk';
   
