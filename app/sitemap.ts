@@ -7,6 +7,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   // Core pages that exist in both locales with their path mappings
   const corePages = [
     { da: '', en: '', priority: 1.0, changeFreq: 'weekly' as const, name: 'Homepage' },
+    { da: '/services/standup', en: '/services/standup', priority: 0.9, changeFreq: 'yearly' as const, name: 'Stand-up Magic' },
     { da: '/services/naermagi', en: '/services/closeup', priority: 0.9, changeFreq: 'yearly' as const, name: 'Close-up Magic' },
     { da: '/services/boernetrylleri', en: '/services/childrens', priority: 0.9, changeFreq: 'yearly' as const, name: 'Children Magic' },
     { da: '/bryllupper', en: '/weddings', priority: 0.85, changeFreq: 'monthly' as const, name: 'Wedding Magic' },
