@@ -181,7 +181,7 @@ export function WeddingClient() {
         {/* CTA Section - Premium */}
         <section className="py-16 px-4 sm:px-6 lg:px-8 text-center bg-gradient-to-r from-rose-600 via-pink-500 to-amber-600 relative overflow-hidden">
           {/* Romantic background shimmer */}
-          <div className="absolute inset-0 opacity-10">
+          <div className="absolute inset-0 opacity-10 pointer-events-none">
             <div className="absolute top-0 right-0 w-96 h-96 bg-white rounded-full blur-3xl"></div>
             <div className="absolute bottom-0 left-1/4 w-72 h-72 bg-rose-200 rounded-full blur-3xl"></div>
           </div>
