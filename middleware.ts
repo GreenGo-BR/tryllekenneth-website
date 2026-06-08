@@ -19,6 +19,19 @@ export function middleware(request: NextRequest) {
       status: 301, // Permanent redirect for SEO
     });
   }
+
+  // Additional SEO redirects for old indexed URLs
+  if (pathname === '/da/stand-up-trylleri' || pathname === '/stand-up-trylleri') {
+    return NextResponse.redirect(new URL('/da/services/standup', request.url), {
+      status: 301, // Permanent redirect for SEO
+    });
+  }
+
+  if (pathname === '/blank' || pathname === '/da/blank') {
+    return NextResponse.redirect(new URL('/da/services/boernetrylleri', request.url), {
+      status: 301, // Permanent redirect for SEO
+    });
+  }
   
   if (pathname.startsWith('/da') || pathname.startsWith('/en')) {
     return intlMiddleware(request);
