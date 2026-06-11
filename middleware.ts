@@ -32,6 +32,45 @@ export function middleware(request: NextRequest) {
       status: 301, // Permanent redirect for SEO
     });
   }
+
+  // Legacy Christmas URLs - Santa/Julemand redirects
+  // Map all variations to current pages
+  const christmasRedirects: Record<string, string> = {
+    // DA: Santa/Julemand variants
+    '/da/julemand': '/da/services/julemand',
+    '/da/santa': '/da/services/julemand',
+    '/da/santa-show': '/da/services/julemand',
+    '/da/christmas-show': '/da/services/julemand',
+    '/da/christmas-entertainment': '/da/services/julemand',
+    
+    // EN: Santa/Julemand variants
+    '/en/julemand': '/en/services/santa',
+    '/en/santa': '/en/services/santa',
+    '/en/santa-show': '/en/services/santa',
+    '/en/christmas-show': '/en/services/santa',
+    '/en/christmas-entertainment': '/en/services/santa',
+    
+    // Root level (no locale prefix) - default to DA
+    '/julemand': '/da/services/julemand',
+    '/santa': '/da/services/julemand',
+    '/juleshow': '/da/services/julemand',
+    '/juletraesfest': '/da/julefrokost',
+    
+    // DA: Christmas Party variants
+    '/da/juleshow': '/da/julefrokost',
+    '/da/juletraesfest': '/da/julefrokost',
+    
+    // EN: Christmas Party variants
+    '/en/juleshow': '/en/christmas-party',
+    '/en/juletraesfest': '/en/christmas-party',
+  };
+
+  // Check if current path matches any legacy redirect
+  if (christmasRedirects[pathname]) {
+    return NextResponse.redirect(new URL(christmasRedirects[pathname], request.url), {
+      status: 301, // Permanent redirect for SEO
+    });
+  }
   
   if (pathname.startsWith('/da') || pathname.startsWith('/en')) {
     return intlMiddleware(request);
