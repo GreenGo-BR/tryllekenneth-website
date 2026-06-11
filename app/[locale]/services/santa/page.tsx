@@ -35,16 +35,10 @@ export default function SantaMagic() {
                   {t('santaPage.title')}
                 </h1>
                 <p className="text-xl text-slate-700 mb-4 leading-relaxed font-semibold">
-                  {locale === 'da' 
-                    ? 'Skab uforglemmelige juleminder for børn, familier, virksomheder, julefrokoster og alle slags julefester'
-                    : 'Create unforgettable Christmas moments for children, families, companies and holiday events'
-                  }
+                  {t('santaPage.about')}
                 </p>
                 <p className="text-lg text-slate-600 mb-8 leading-relaxed">
-                  {locale === 'da'
-                    ? 'Autentisk julemand med dans om træet, musik og uddeling af jeres indkøbte gaver/godteposer'
-                    : 'Authentic Santa with magic, songs and activities filled with Christmas spirit'
-                  }
+                  {t('santaPage.aboutText1')}
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4">
                   <Link href={`/${locale}/contact`}>
