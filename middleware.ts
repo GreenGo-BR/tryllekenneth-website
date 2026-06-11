@@ -36,12 +36,12 @@ export function middleware(request: NextRequest) {
   // Legacy Christmas URLs - Santa/Julemand redirects
   // Map all variations to current pages
   const christmasRedirects: Record<string, string> = {
-    // DA: Santa/Julemand variants
-    '/da/julemand': '/da/services/julemand',
-    '/da/santa': '/da/services/julemand',
-    '/da/santa-show': '/da/services/julemand',
-    '/da/christmas-show': '/da/services/julemand',
-    '/da/christmas-entertainment': '/da/services/julemand',
+    // DA: Santa/Julemand variants - all redirect to the current page at /da/services/santa
+    '/da/julemand': '/da/services/santa',
+    '/da/santa': '/da/services/santa',
+    '/da/santa-show': '/da/services/santa',
+    '/da/christmas-show': '/da/services/santa',
+    '/da/christmas-entertainment': '/da/services/santa',
     
     // EN: Santa/Julemand variants
     '/en/julemand': '/en/services/santa',
@@ -51,9 +51,9 @@ export function middleware(request: NextRequest) {
     '/en/christmas-entertainment': '/en/services/santa',
     
     // Root level (no locale prefix) - default to DA
-    '/julemand': '/da/services/julemand',
-    '/santa': '/da/services/julemand',
-    '/juleshow': '/da/services/julemand',
+    '/julemand': '/da/services/santa',
+    '/santa': '/da/services/santa',
+    '/juleshow': '/da/julefrokost',
     '/juletraesfest': '/da/julefrokost',
     
     // DA: Christmas Party variants
