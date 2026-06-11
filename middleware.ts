@@ -77,9 +77,13 @@ export function middleware(request: NextRequest) {
   const serviceRedirects: Record<string, string> = {
     // DA: Children's Magic - old/wrong slugs
     '/da/services/childrens': '/da/services/boernetrylleri',
+    '/da/mere-trylleri': '/da/services/boernetrylleri',
+    '/da/services/mere-trylleri': '/da/services/boernetrylleri',
     
     // EN: Children's Magic - old/wrong slugs  
     '/en/services/boernetrylleri': '/en/services/childrens',
+    '/en/mere-trylleri': '/en/services/childrens',
+    '/en/services/mere-trylleri': '/en/services/childrens',
     
     // DA: Birthday Parties - old/wrong slugs
     '/da/services/birthday-parties': '/da/services/boernefoedselsdag',
@@ -89,9 +93,13 @@ export function middleware(request: NextRequest) {
     
     // DA: Close-up Magic - old/wrong slugs
     '/da/services/closeup': '/da/services/naermagi',
+    '/da/close-up-magi': '/da/services/naermagi',
+    '/da/services/close-up-magi': '/da/services/naermagi',
     
     // EN: Close-up Magic - old/wrong slugs
     '/en/services/naermagi': '/en/services/closeup',
+    '/en/close-up-magi': '/en/services/closeup',
+    '/en/services/close-up-magi': '/en/services/closeup',
   };
 
   // Check if current path matches any Christmas redirect
