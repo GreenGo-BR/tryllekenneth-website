@@ -10,6 +10,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { da: '/services/standup', en: '/services/standup', priority: 0.9, changeFreq: 'yearly' as const, name: 'Stand-up Magic' },
     { da: '/services/naermagi', en: '/services/closeup', priority: 0.9, changeFreq: 'yearly' as const, name: 'Close-up Magic' },
     { da: '/services/boernetrylleri', en: '/services/childrens', priority: 0.9, changeFreq: 'yearly' as const, name: 'Children Magic' },
+    { da: '/services/boernefoedselsdag', en: '/services/birthday-parties', priority: 0.9, changeFreq: 'yearly' as const, name: 'Birthday Parties' },
     { da: '/bryllupper', en: '/weddings', priority: 0.85, changeFreq: 'monthly' as const, name: 'Wedding Magic' },
     { da: '/firmaarrangementer', en: '/corporate-events', priority: 0.85, changeFreq: 'monthly' as const, name: 'Corporate Events' },
     { da: '/julefrokost', en: '/christmas-party', priority: 0.85, changeFreq: 'monthly' as const, name: 'Christmas Events' },
