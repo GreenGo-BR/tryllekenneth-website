@@ -93,7 +93,7 @@ export default function SantaMagic() {
                 {/* Festive badge below image */}
                 <div className="mt-6 flex items-center justify-center gap-2 text-amber-700 font-semibold">
                   <div className="w-2 h-2 bg-gradient-to-r from-red-500 to-amber-500 rounded-full animate-pulse"></div>
-                  <p className="text-sm">{locale === 'da' ? 'Autentisk Julemand • Musik • Juleglæde' : 'Authentic Santa • Magic • Christmas Magic'}</p>
+                  <p className="text-sm">{locale === 'da' ? t('santaPage.badge') : 'Authentic Santa • Magic • Christmas Magic'}</p>
                   <div className="w-2 h-2 bg-gradient-to-r from-amber-500 to-orange-500 rounded-full animate-pulse" style={{ animationDelay: '0.5s' }}></div>
                 </div>
               </div>
