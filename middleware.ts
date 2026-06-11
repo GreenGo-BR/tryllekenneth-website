@@ -38,16 +38,24 @@ export function middleware(request: NextRequest) {
   const christmasRedirects: Record<string, string> = {
     // DA: Santa/Julemand variants - all redirect to the current page at /da/services/santa
     '/da/julemand': '/da/services/santa',
+    '/da/services/julemand': '/da/services/santa',
     '/da/santa': '/da/services/santa',
+    '/da/services/santa-show': '/da/services/santa',
     '/da/santa-show': '/da/services/santa',
+    '/da/services/christmas-show': '/da/services/santa',
     '/da/christmas-show': '/da/services/santa',
+    '/da/services/christmas-entertainment': '/da/services/santa',
     '/da/christmas-entertainment': '/da/services/santa',
     
     // EN: Santa/Julemand variants
     '/en/julemand': '/en/services/santa',
+    '/en/services/julemand': '/en/services/santa',
     '/en/santa': '/en/services/santa',
+    '/en/services/santa-show': '/en/services/santa',
     '/en/santa-show': '/en/services/santa',
+    '/en/services/christmas-show': '/en/services/santa',
     '/en/christmas-show': '/en/services/santa',
+    '/en/services/christmas-entertainment': '/en/services/santa',
     '/en/christmas-entertainment': '/en/services/santa',
     
     // Root level (no locale prefix) - default to DA
@@ -65,9 +73,37 @@ export function middleware(request: NextRequest) {
     '/en/juletraesfest': '/en/christmas-party',
   };
 
-  // Check if current path matches any legacy redirect
+  // Service URL redirects - Old/wrong service slugs to correct current routes
+  const serviceRedirects: Record<string, string> = {
+    // DA: Children's Magic - old/wrong slugs
+    '/da/services/childrens': '/da/services/boernetrylleri',
+    
+    // EN: Children's Magic - old/wrong slugs  
+    '/en/services/boernetrylleri': '/en/services/childrens',
+    
+    // DA: Birthday Parties - old/wrong slugs
+    '/da/services/birthday-parties': '/da/services/boernefoedselsdag',
+    
+    // EN: Birthday Parties - old/wrong slugs
+    '/en/services/boernefoedselsdag': '/en/services/birthday-parties',
+    
+    // DA: Close-up Magic - old/wrong slugs
+    '/da/services/closeup': '/da/services/naermagi',
+    
+    // EN: Close-up Magic - old/wrong slugs
+    '/en/services/naermagi': '/en/services/closeup',
+  };
+
+  // Check if current path matches any Christmas redirect
   if (christmasRedirects[pathname]) {
     return NextResponse.redirect(new URL(christmasRedirects[pathname], request.url), {
+      status: 301, // Permanent redirect for SEO
+    });
+  }
+
+  // Check if current path matches any service redirect
+  if (serviceRedirects[pathname]) {
+    return NextResponse.redirect(new URL(serviceRedirects[pathname], request.url), {
       status: 301, // Permanent redirect for SEO
     });
   }
