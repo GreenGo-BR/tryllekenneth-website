@@ -36,13 +36,13 @@ export default function SantaMagic() {
                 </h1>
                 <p className="text-xl text-slate-700 mb-4 leading-relaxed font-semibold">
                   {locale === 'da' 
-                    ? 'Skab uforglemmelige juleminder for børn, familier, virksomheder og julefester'
+                    ? 'Skab uforglemmelige juleminder for børn, familier, virksomheder, julefrokoster og alle slags julefester'
                     : 'Create unforgettable Christmas moments for children, families, companies and holiday events'
                   }
                 </p>
                 <p className="text-lg text-slate-600 mb-8 leading-relaxed">
                   {locale === 'da'
-                    ? 'Autentisk julemand med magi, sange og aktiviteter der fyldt hjertet af julegløde'
+                    ? 'Autentisk julemand med dans om træet, musik og uddeling af jeres indkøbte gaver/godteposer'
                     : 'Authentic Santa with magic, songs and activities filled with Christmas spirit'
                   }
                 </p>
@@ -93,7 +93,7 @@ export default function SantaMagic() {
                 {/* Festive badge below image */}
                 <div className="mt-6 flex items-center justify-center gap-2 text-amber-700 font-semibold">
                   <div className="w-2 h-2 bg-gradient-to-r from-red-500 to-amber-500 rounded-full animate-pulse"></div>
-                  <p className="text-sm">{locale === 'da' ? 'Autentisk Julemand • Magi • Julegløde' : 'Authentic Santa • Magic • Christmas Magic'}</p>
+                  <p className="text-sm">{locale === 'da' ? 'Autentisk Julemand • Musik • Julegløde' : 'Authentic Santa • Magic • Christmas Magic'}</p>
                   <div className="w-2 h-2 bg-gradient-to-r from-amber-500 to-orange-500 rounded-full animate-pulse" style={{ animationDelay: '0.5s' }}></div>
                 </div>
               </div>
