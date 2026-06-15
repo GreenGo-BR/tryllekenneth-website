@@ -33,6 +33,13 @@ export function middleware(request: NextRequest) {
     });
   }
 
+  // SEO redirect for old magician/tryllekunstner URL
+  if (pathname === '/tryllekunstner') {
+    return NextResponse.redirect(new URL('/da/services/naermagi', request.url), {
+      status: 301, // Permanent redirect for SEO
+    });
+  }
+
   // Legacy Christmas URLs - Santa/Julemand redirects
   // Map all variations to current pages
   const christmasRedirects: Record<string, string> = {
