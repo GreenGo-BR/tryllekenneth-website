@@ -13,16 +13,18 @@ interface ContactFormData {
   message?: string;
 }
 
+// `secure` is derived explicitly from SMTP_SECURE:
+//   true  => implicit SSL/TLS (port 465) — current one.com config (send.one.com:465)
+//   false => STARTTLS (e.g. port 587)
+// With SMTP_SECURE="true" this stays true, preserving the current working setup.
 const transporter = nodemailer.createTransport({
   host: process.env.SMTP_HOST || 'send.one.com',
-  port: parseInt(process.env.SMTP_PORT || '465'),
-  secure: process.env.SMTP_SECURE === 'true' || true,
+  port: parseInt(process.env.SMTP_PORT || '465', 10),
+  secure: process.env.SMTP_SECURE === 'true',
   auth: {
     user: process.env.SMTP_USER,
     pass: process.env.SMTP_PASS,
   },
-  logger: true,
-  debug: true,
 });
 
 function escapeHtml(text: string): string {
@@ -70,11 +72,7 @@ export async function submitContactForm(formData: ContactFormData) {
     }
 
     console.log('[CONTACT-FORM-DEBUG] All validations passed');
-    console.log('[CONTACT-FORM-DEBUG] SMTP_HOST:', process.env.SMTP_HOST);
-    console.log('[CONTACT-FORM-DEBUG] SMTP_PORT:', process.env.SMTP_PORT);
-    console.log('[CONTACT-FORM-DEBUG] SMTP_USER:', process.env.SMTP_USER);
-    console.log('[CONTACT-FORM-DEBUG] CONTACT_TO_EMAIL:', process.env.CONTACT_TO_EMAIL);
-    console.log('[CONTACT-FORM-DEBUG] Creating email content...');
+    // Note: SMTP credentials/config are intentionally NOT logged (no secrets in logs).
 
     // Create HTML email template for Kenneth
     const toKennethHtml = `
@@ -182,16 +180,15 @@ export async function submitContactForm(formData: ContactFormData) {
 
     return { success: true, message: 'Din bookinganmodning er blevet sendt. Kenneth kontakter dig snarest.' };
   } catch (error) {
+    // Full technical error is logged SERVER-SIDE ONLY (never returned to the browser).
+    // SMTP_PASS is never part of these messages, so no secrets are exposed here.
+    const technicalMessage = error instanceof Error ? error.message : String(error);
     console.error('[CONTACT-FORM-DEBUG] ========== FORM SUBMISSION ERROR ==========');
     console.error('[CONTACT-FORM-DEBUG] Timestamp:', timestamp);
     console.error('[CONTACT-FORM-DEBUG] Submitter email:', formData.email);
-    console.error('[CONTACT-FORM-DEBUG] Error type:', error instanceof Error ? error.constructor.name : typeof error);
-    console.error('[CONTACT-FORM-DEBUG] Error message:', error instanceof Error ? error.message : String(error));
-    
-    if (error instanceof Error) {
-      console.error('[CONTACT-FORM-DEBUG] Stack trace:', error.stack);
-      
-    // Still log to sheets even if error occurs
+    console.error('[CONTACT-FORM-DEBUG] Error message:', technicalMessage);
+
+    // Still log the failed submission to sheets (server-side), keeping the technical detail there.
     const failedSubmissionLog: SubmissionLog = {
       timestamp,
       locale: 'en',
@@ -205,16 +202,14 @@ export async function submitContactForm(formData: ContactFormData) {
       message: formData.message,
       ownerEmailStatus: 'failed',
       customerEmailStatus: 'failed',
-      errorMessage: error.message,
+      errorMessage: technicalMessage,
     };
 
     saveSubmissionToSheets(failedSubmissionLog).catch(err => {
       console.error('[CONTACT-FORM-DEBUG] Failed to log error to sheets:', err);
     });
 
-    return { success: false, error: error.message };
-    }
-    
-    return { success: false, error: 'Der skete en fejl ved sending af formularen. Prøv igen senere.' };
+    // Never expose SMTP/technical details to the visitor — the UI shows a friendly, localized message.
+    return { success: false };
   }
 }

@@ -43,7 +43,11 @@ export default function Contact() {
 
       if (!result.success) {
         setStatus('error');
-        setStatusMessage(result.error || 'Fejl ved sending af formularen. Prøv igen senere.');
+        setStatusMessage(
+          locale === 'da'
+            ? 'Vi kunne desværre ikke sende din besked lige nu. Prøv venligst igen om et øjeblik.'
+            : "We couldn't send your message right now. Please try again in a moment."
+        );
         return;
       }
 
@@ -59,8 +63,12 @@ export default function Contact() {
       }, 5000);
     } catch (error) {
       setStatus('error');
-      setStatusMessage('Fejl ved forbindelsen. Prøv igen senere.');
-      console.error('Contact form error:', error);
+      setStatusMessage(
+        locale === 'da'
+          ? 'Vi kunne desværre ikke sende din besked lige nu. Prøv venligst igen om et øjeblik.'
+          : "We couldn't send your message right now. Please try again in a moment."
+      );
+      console.error('[contact] Submission error:', error);
     }
   };
 
