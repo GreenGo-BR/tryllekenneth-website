@@ -39,7 +39,12 @@ async function verifyTurnstile(token: string): Promise<boolean> {
 
   if (!response.ok) return false;
   const result = await response.json() as { success?: boolean; hostname?: string };
-  return result.success === true && typeof result.hostname === 'string' && TURNSTILE_HOSTNAMES.has(result.hostname);
+  const isProduction = process.env.VERCEL_ENV === 'production';
+  const hostnameIsAllowed = typeof result.hostname === 'string' && TURNSTILE_HOSTNAMES.has(result.hostname);
+
+  // Preview uses Cloudflare's official test keys, whose response hostname is not production.
+  // Production remains restricted to the verified public hostnames above.
+  return result.success === true && (!isProduction || hostnameIsAllowed);
 }
 
 function hasExcessiveLength(formData: ContactFormData): boolean {
