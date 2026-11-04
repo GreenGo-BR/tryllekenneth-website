@@ -7,10 +7,11 @@ import { Card } from '@/components/ui/card';
 import { ReviewHighlight } from '@/components/ReviewHighlight';
 import { Mail, Phone, MapPin, Clock, AlertCircle, CheckCircle2 } from 'lucide-react';
 import Link from 'next/link';
-import { useState } from 'react';
+import { useCallback, useState } from 'react';
 import { useLocale, useTranslations } from 'next-intl';
 import { triggerCelebration } from '@/lib/animations';
 import { submitContactForm } from '@/lib/actions/contact';
+import { TurnstileWidget } from '@/components/TurnstileWidget';
 
 export default function Contact() {
   const locale = useLocale();
@@ -27,6 +28,10 @@ export default function Contact() {
   
   const [status, setStatus] = useState<'idle' | 'loading' | 'success' | 'error'>('idle');
   const [statusMessage, setStatusMessage] = useState('');
+  const [turnstileToken, setTurnstileToken] = useState('');
+  const [honeypot, setHoneypot] = useState('');
+  const turnstileSiteKey = process.env.NEXT_PUBLIC_TURNSTILE_SITE_KEY || '';
+  const handleTurnstileError = useCallback(() => setTurnstileToken(''), []);
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
     const { name, value } = e.target;
@@ -39,7 +44,7 @@ export default function Contact() {
     setStatus('loading');
     
     try {
-      const result = await submitContactForm(formData);
+      const result = await submitContactForm({ ...formData, turnstileToken, honeypot });
 
       if (!result.success) {
         setStatus('error');
@@ -157,6 +162,10 @@ export default function Contact() {
                 )}
                 
                 <form onSubmit={handleSubmit} className="space-y-6">
+                  <div className="absolute -left-[9999px]" aria-hidden="true">
+                    <label htmlFor="website">Website</label>
+                    <input id="website" name="website" tabIndex={-1} autoComplete="off" value={honeypot} onChange={(event) => setHoneypot(event.target.value)} />
+                  </div>
                   <div>
                     <label className="block text-sm font-medium mb-2">{t('contactPage.nameLabel')} *</label>
                     <input
@@ -251,6 +260,12 @@ export default function Contact() {
                       placeholder={locale === 'da' ? 'Fortæl mig om dit arrangement og eventuelle særlige ønsker...' : 'Tell me about your event and any special requests...'}
                     />
                   </div>
+
+                  <TurnstileWidget
+                    siteKey={turnstileSiteKey}
+                    onToken={setTurnstileToken}
+                    onError={handleTurnstileError}
+                  />
 
                   <Button 
                     type="submit" 

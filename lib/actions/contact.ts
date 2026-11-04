@@ -11,6 +11,42 @@ interface ContactFormData {
   eventType: string;
   guests: string;
   message?: string;
+  turnstileToken: string;
+  honeypot?: string;
+}
+
+const TURNSTILE_HOSTNAMES = new Set(['tryllekenneth.dk', 'www.tryllekenneth.dk']);
+const MAX_LENGTHS = {
+  name: 120,
+  email: 254,
+  phone: 40,
+  eventDate: 10,
+  eventType: 60,
+  guests: 5,
+  message: 3000,
+} as const;
+
+async function verifyTurnstile(token: string): Promise<boolean> {
+  const secret = process.env.TURNSTILE_SECRET_KEY;
+  if (!secret || !token) return false;
+
+  const response = await fetch('https://challenges.cloudflare.com/turnstile/v0/siteverify', {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+    body: new URLSearchParams({ secret, response: token }),
+    cache: 'no-store',
+  });
+
+  if (!response.ok) return false;
+  const result = await response.json() as { success?: boolean; hostname?: string };
+  return result.success === true && typeof result.hostname === 'string' && TURNSTILE_HOSTNAMES.has(result.hostname);
+}
+
+function hasExcessiveLength(formData: ContactFormData): boolean {
+  return Object.entries(MAX_LENGTHS).some(([key, max]) => {
+    const value = formData[key as keyof typeof MAX_LENGTHS];
+    return typeof value === 'string' && value.length > max;
+  });
 }
 
 // `secure` is derived explicitly from SMTP_SECURE:
@@ -42,15 +78,20 @@ export async function submitContactForm(formData: ContactFormData) {
   const timestamp = new Date().toISOString();
   
   try {
-    console.log('[CONTACT-FORM-DEBUG] ========== FORM SUBMISSION START ==========');
-    console.log('[CONTACT-FORM-DEBUG] Timestamp:', timestamp);
-    console.log('[CONTACT-FORM-DEBUG] Submitter email:', formData.email);
-    console.log('[CONTACT-FORM-DEBUG] Submitter name:', formData.name);
-    console.log('[CONTACT-FORM-DEBUG] Submitter phone:', formData.phone);
-    console.log('[CONTACT-FORM-DEBUG] Event date:', formData.eventDate);
-    console.log('[CONTACT-FORM-DEBUG] Event type:', formData.eventType);
-    console.log('[CONTACT-FORM-DEBUG] Guests:', formData.guests);
-    console.log('[CONTACT-FORM-DEBUG] Message length:', formData.message?.length || 0);
+    if (formData.honeypot) {
+      console.warn('[CONTACT-FORM] Honeypot validation failed');
+      return { success: false };
+    }
+
+    if (!(await verifyTurnstile(formData.turnstileToken))) {
+      console.warn('[CONTACT-FORM] Turnstile validation failed');
+      return { success: false };
+    }
+
+    if (hasExcessiveLength(formData)) {
+      console.warn('[CONTACT-FORM] Length validation failed');
+      return { success: false };
+    }
 
     // Validate required fields
     if (!formData.name || !formData.email || !formData.phone || !formData.eventDate || !formData.eventType || !formData.guests) {
@@ -128,7 +169,7 @@ export async function submitContactForm(formData: ContactFormData) {
       </div>
     `;
 
-    console.log('[CONTACT-FORM-DEBUG] Sending email to Kenneth at:', process.env.CONTACT_TO_EMAIL);
+    console.log('[CONTACT-FORM] Sending owner notification');
     
     // Send email to Kenneth
     const infoToKenneth = await transporter.sendMail({
@@ -138,11 +179,8 @@ export async function submitContactForm(formData: ContactFormData) {
       html: toKennethHtml,
     });
 
-    console.log('[CONTACT-FORM-DEBUG] EMAIL TO KENNETH SENT');
-    console.log('[CONTACT-FORM-DEBUG] Response:', infoToKenneth.response);
-    console.log('[CONTACT-FORM-DEBUG] Message ID:', infoToKenneth.messageId);
-
-    console.log('[CONTACT-FORM-DEBUG] Sending confirmation email to customer at:', formData.email);
+    console.log('[CONTACT-FORM] Owner notification sent');
+    console.log('[CONTACT-FORM] Sending customer confirmation');
     
     // Send confirmation email to customer
     const infoToCustomer = await transporter.sendMail({
@@ -152,10 +190,8 @@ export async function submitContactForm(formData: ContactFormData) {
       html: toCustomerHtml,
     });
 
-    console.log('[CONTACT-FORM-DEBUG] EMAIL TO CUSTOMER SENT');
-    console.log('[CONTACT-FORM-DEBUG] Response:', infoToCustomer.response);
-    console.log('[CONTACT-FORM-DEBUG] Message ID:', infoToCustomer.messageId);
-    console.log('[CONTACT-FORM-DEBUG] ========== FORM SUBMISSION SUCCESS ==========');
+    console.log('[CONTACT-FORM] Customer confirmation sent');
+    console.log('[CONTACT-FORM] Submission emails sent successfully');
 
     // Save submission to Google Sheets (async, non-blocking)
     const submissionLog: SubmissionLog = {
@@ -168,7 +204,7 @@ export async function submitContactForm(formData: ContactFormData) {
       eventDate: formData.eventDate,
       eventType: formData.eventType,
       guests: formData.guests,
-      message: formData.message,
+      message: formData.message || '',
       ownerEmailStatus: infoToKenneth.response ? 'sent' : 'failed',
       customerEmailStatus: infoToCustomer.response ? 'sent' : 'failed',
     };
@@ -183,10 +219,10 @@ export async function submitContactForm(formData: ContactFormData) {
     // Full technical error is logged SERVER-SIDE ONLY (never returned to the browser).
     // SMTP_PASS is never part of these messages, so no secrets are exposed here.
     const technicalMessage = error instanceof Error ? error.message : String(error);
-    console.error('[CONTACT-FORM-DEBUG] ========== FORM SUBMISSION ERROR ==========');
-    console.error('[CONTACT-FORM-DEBUG] Timestamp:', timestamp);
-    console.error('[CONTACT-FORM-DEBUG] Submitter email:', formData.email);
-    console.error('[CONTACT-FORM-DEBUG] Error message:', technicalMessage);
+    console.error('[CONTACT-FORM] Submission failed', {
+      timestamp,
+      error: technicalMessage,
+    });
 
     // Still log the failed submission to sheets (server-side), keeping the technical detail there.
     const failedSubmissionLog: SubmissionLog = {
@@ -199,7 +235,7 @@ export async function submitContactForm(formData: ContactFormData) {
       eventDate: formData.eventDate,
       eventType: formData.eventType,
       guests: formData.guests,
-      message: formData.message,
+      message: formData.message || '',
       ownerEmailStatus: 'failed',
       customerEmailStatus: 'failed',
       errorMessage: technicalMessage,
