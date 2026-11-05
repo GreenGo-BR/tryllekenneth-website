@@ -1,7 +1,8 @@
-import { defineConfig } from 'next-intl/config';
+import { getRequestConfig } from 'next-intl/server';
 
-export default defineConfig({
-  locales: ['en', 'da'],
-  defaultLocale: 'da',
-  localePrefix: 'always',
+export default getRequestConfig(async ({ locale }) => {
+  return {
+    messages: {},
+    locale: locale ?? 'en',
+  };
 });

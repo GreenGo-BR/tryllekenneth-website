@@ -138,7 +138,7 @@ export function middleware(request: NextRequest) {
     }
     
     // Get country from Vercel geo headers - try multiple sources
-    let country = request.geo?.country;
+    let country = request.headers.get('x-vercel-ip-country');
     
     // Fallback to x-vercel-ip-country header if geo is not available (dev mode)
     if (!country) {
