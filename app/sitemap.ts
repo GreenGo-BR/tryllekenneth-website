@@ -15,7 +15,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { da: '/firmaarrangementer', en: '/corporate-events', priority: 0.85, changeFreq: 'monthly' as const, name: 'Corporate Events' },
     { da: '/julefrokost', en: '/christmas-party', priority: 0.85, changeFreq: 'monthly' as const, name: 'Christmas Events' },
     { da: '/galleri', en: '/gallery', priority: 0.7, changeFreq: 'monthly' as const, name: 'Gallery' },
-    { da: '/kontakt', en: '/contact', priority: 0.8, changeFreq: 'monthly' as const, name: 'Contact' },
+    { da: '/contact', en: '/contact', priority: 0.8, changeFreq: 'monthly' as const, name: 'Contact' },
     { da: '/faq', en: '/faq', priority: 0.75, changeFreq: 'monthly' as const, name: 'FAQ' },
   ]
 

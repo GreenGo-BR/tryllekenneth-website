@@ -28,7 +28,7 @@ const routeMappings: RouteMapping[] = [
   // Other pages
   { en: '/gallery', da: '/galleri' },
   { en: '/faq', da: '/faq' },
-  { en: '/contact', da: '/kontakt' },
+  { en: '/contact', da: '/contact' },
 ];
 
 /**

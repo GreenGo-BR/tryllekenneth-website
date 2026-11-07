@@ -40,6 +40,13 @@ export function middleware(request: NextRequest) {
     });
   }
 
+  // Legacy Danish contact URL - consolidated into the Turnstile-protected contact page
+  if (pathname === '/da/kontakt' || pathname === '/da/kontakt/') {
+    return NextResponse.redirect(new URL('/da/contact', request.url), {
+      status: 301, // Permanent redirect for SEO
+    });
+  }
+
   // Legacy Christmas URLs - Santa/Julemand redirects
   // Map all variations to current pages
   const christmasRedirects: Record<string, string> = {
