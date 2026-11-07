@@ -26,8 +26,9 @@ export function LanguageSwitcher() {
   // Use the browser-detected locale, fall back to intlLocale
   const locale = browserLocale || (intlLocale as 'en' | 'da');
   
-  // pathname from usePathname() is already without locale prefix
-  const currentRoute = pathname || '/';
+  // usePathname() includes the locale prefix (e.g. /da/contact); strip it so
+  // route mapping works on the locale-independent path.
+  const currentRoute = (pathname || '/').replace(/^\/(en|da)(?=\/|$)/, '') || '/';
   
   // Get the equivalent route in the other language
   const otherLocale = locale === 'da' ? 'en' : 'da';
