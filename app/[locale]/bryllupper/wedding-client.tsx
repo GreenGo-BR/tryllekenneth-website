@@ -38,17 +38,17 @@ export function WeddingClient() {
               {/* Left: Text Content */}
               <div className="lg:pr-8">
                 <h1 className="text-5xl sm:text-6xl font-bold magical-heading magical-text mb-6 text-foreground">
-                  {locale === 'da' ? 'Bryllupper' : 'Weddings'}
+                  {locale === 'da' ? 'Trylleshow til bryllup' : 'Weddings'}
                 </h1>
                 <p className="text-xl text-slate-700 mb-4 leading-relaxed font-semibold">
                   {locale === 'da' 
-                    ? 'Premium trylleri til dit specielle bryllupssejr'
+                    ? 'Sjovt humoristisk show hvor brudeparret bliver inddraget på en sjov og harmløs måde.'
                     : 'Premium magic for your special wedding day'
                   }
                 </p>
                 <p className="text-lg text-slate-600 mb-8 leading-relaxed">
                   {locale === 'da'
-                    ? 'Elegant og romantisk underholdning med nærmagi til bryllupsfester, receptioner og festkvelder der gør dagen uforglemmelig'
+                    ? 'Trylleriet bliver et godt minde fra bryllupsfesten, hvor man stadig kan tænke ”hvordan gjorde han lige det”'
                     : 'Elegant and romantic entertainment with close-up magic for wedding celebrations, receptions and evening parties that make the day unforgettable'
                   }
                 </p>
@@ -97,11 +97,13 @@ export function WeddingClient() {
                 </div>
 
                 {/* Premium badge below image */}
-                <div className="mt-6 flex items-center justify-center gap-2 text-rose-700 font-semibold">
-                  <div className="w-2 h-2 bg-gradient-to-r from-rose-500 to-pink-500 rounded-full animate-pulse"></div>
-                  <p className="text-sm">{locale === 'da' ? 'Premium Romantisk • Elegant • Bryllup' : 'Premium Romantic • Elegant • Wedding'}</p>
-                  <div className="w-2 h-2 bg-gradient-to-r from-pink-500 to-amber-500 rounded-full animate-pulse" style={{ animationDelay: '0.5s' }}></div>
-                </div>
+                {locale !== 'da' && (
+                  <div className="mt-6 flex items-center justify-center gap-2 text-rose-700 font-semibold">
+                    <div className="w-2 h-2 bg-gradient-to-r from-rose-500 to-pink-500 rounded-full animate-pulse"></div>
+                    <p className="text-sm">Premium Romantic • Elegant • Wedding</p>
+                    <div className="w-2 h-2 bg-gradient-to-r from-pink-500 to-amber-500 rounded-full animate-pulse" style={{ animationDelay: '0.5s' }}></div>
+                  </div>
+                )}
               </div>
             </div>
           </div>
